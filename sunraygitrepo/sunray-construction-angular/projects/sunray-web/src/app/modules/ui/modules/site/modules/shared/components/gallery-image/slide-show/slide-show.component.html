@@ -1,0 +1,18 @@
+<div *ngIf="(collection$ | async) as collection">
+  <div *ngIf="collection.entities.length >  0">
+
+    <ngb-carousel class='custom-carousel' (slide)="onSlideChange($event)">
+      <div *ngFor="let entity of collection">
+        <ng-template ngbSlide>
+          <img class="animated fadeIn" [src]="entity.featuredMediaUrl">
+
+          <div class="content-wrap">
+            <div [innerHTML]="entity.renderedContent" ceoRouteTransformer></div>
+          </div>
+
+        </ng-template>
+      </div>
+    </ngb-carousel>
+
+  </div>
+</div>

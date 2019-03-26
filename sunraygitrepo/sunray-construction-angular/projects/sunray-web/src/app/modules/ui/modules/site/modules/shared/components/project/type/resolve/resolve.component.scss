@@ -1,0 +1,7 @@
+@import "helpers";
+
+:host ::ng-deep {
+  .step-body {
+    padding-top: $spacer-y-md;
+  }
+}

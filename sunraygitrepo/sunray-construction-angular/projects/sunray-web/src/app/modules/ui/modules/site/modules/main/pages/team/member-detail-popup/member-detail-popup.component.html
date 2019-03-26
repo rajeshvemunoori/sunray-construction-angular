@@ -1,0 +1,66 @@
+<div class="modal-body">
+  <div class="our-team-popup" *ngIf="entity">
+    <div class="row">
+      <div class="info-wrap">
+        <div class="avatar-wrap">
+          <img alt="{{entity.fullName" class="round-img line"
+            src={{entity.featuredMediaUrl}}>
+        </div>
+
+        <div class="contact-info-wrap">
+          <h6 class="modal-name mt-4">{{entity.fullName}}</h6>
+          <p class="modal-designation">{{entity.designation}}</p>
+
+          <div [hidden]="true" class="modal-our-team-icons">
+            <a href="http://facebook"><i class="fa fa-facebook-square"></i></a>
+            <a href="http://linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="http://twitter.com"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fav-quote-wrap">
+        <div class="commas">
+          <img alt="Quotations"
+            src="/assets/frontend/quotations.svg">
+        </div>
+        <div class="modal-quote">
+          <p class="mt-2 mb-2">Favorite Quote: </p>
+          <div class="col-12">
+            <i>{{entity.favorite_quote}}</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="color">
+  <h6 class="text-center">
+    <span class="modal-title">Title I wish I had: </span>
+    <span class="modal-title-content">{{entity.fantasy_title}}</span>
+  </h6>
+
+  <div class="our-team-info">
+    <div class="container-fluid border border-border-secondary rounded">
+      <div class="row justify-content-md-center my-4">
+        <div class="trivia-item-wrap text-center" *ngFor="let item of trivia()">
+          <div class="row">
+            <div class="icon-wrap">
+              <img alt="Beleive" class="team-icon" src={{item.image_url}}>
+            </div>
+            <div class="team-data">
+              <span class="modal-our-team">{{item.title}}</span>
+              <p class="modal-our-team-content">{{item.value}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="story-section container-fluid border border-border-secondary rounded">
+    <div class="story">
+      <h5 class="story-heading">My Story</h5>
+      <p class="story-content">{{entity.my_story}}</p>
+    </div>
+  </div>
+</div>

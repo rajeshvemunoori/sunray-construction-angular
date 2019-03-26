@@ -1,0 +1,31 @@
+@import 'helpers';
+
+$icon-width: 80px;
+a.link,
+.content-wrapper {
+  @include make-row;
+}
+
+img {
+  flex-basis: auto;
+  width: $icon-width;
+  max-width: 100%;
+}
+
+.image-wrapper,
+.body-wrapper {
+  @include make-col-ready;
+  padding: 1rem 0.5rem;
+}
+
+.body-wrapper {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+
+  h5, p {
+    width: 100%;
+    flex-shrink: 0;
+  }
+}

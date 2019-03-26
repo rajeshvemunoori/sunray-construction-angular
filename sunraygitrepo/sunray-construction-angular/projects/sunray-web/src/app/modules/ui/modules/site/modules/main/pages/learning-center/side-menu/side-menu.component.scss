@@ -1,0 +1,46 @@
+@import "helpers";
+
+#learning-center-side-menu {
+  li.nav-item {
+    background-color: $gray-200;
+    padding: $spacer * 1;
+    margin-top: $spacer *1;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+
+
+
+    img {
+      width: 2rem;
+    }
+
+    span {
+      vertical-align: middle;
+      color: $gray-600;
+    }
+
+    .mat-form-field {
+      display: block !important;
+      .mat-input-wrapper.mat-form-field-wrapper {
+        padding: 0rem;
+      }
+      .mat-form-field-wrapper {
+        padding: 0rem;
+      }
+    }
+
+
+  }
+
+  li.nav-item.active {
+    background-color: $white;
+    opacity: 1;
+  }
+
+  input {
+    border-radius: 3rem !important;
+  }
+}

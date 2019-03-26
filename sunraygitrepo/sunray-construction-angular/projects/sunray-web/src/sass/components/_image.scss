@@ -1,0 +1,59 @@
+.rounded-img {
+    border-radius: 100%;
+    border: 1px solid #ddd;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.rounded-img.small {
+    width: 51px;
+    height: 51px;
+}
+
+.rounded-img.medium{
+   width: 75px; 
+   height: 75px;
+}
+
+.rounded-img.square {
+    border-radius: 10px;
+    height: 5%;
+    width: 40%;
+}
+
+.rounded-img.mini {
+    border-radius: 0px;
+    height: 200px;
+    width: 300px;
+    object-fit: fill !important;
+
+}
+
+.round-img {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.round-img.line {
+    border: 2px solid#0373BB;
+}
+
+.round-img.mini {
+    width: 130px;
+    height: 130px;
+    box-shadow: 3px 3px 3px #b9b3b3;
+}
+
+.round-img.default {
+    width: 150px;
+    height: 150px;
+}
+
+img.rounded-img.mini.blur{
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden; 
+}

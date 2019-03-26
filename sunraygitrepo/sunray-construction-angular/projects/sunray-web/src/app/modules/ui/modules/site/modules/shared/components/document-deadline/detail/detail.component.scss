@@ -1,0 +1,43 @@
+@import "helpers";
+
+.close {
+  width: 2rem;
+  height: 2rem;
+  background: black;
+  position: relative;
+  left: 11px;
+  top: -11px;
+  text-shadow: none;
+  opacity: unset;
+  span {
+    font-size: x-large;
+    font-weight: bolder;
+    color: $white;
+  }
+}
+
+.modal-banner-image {
+  padding-top: 3rem;
+}
+.deadline-lis-modal {
+  padding: 1rem;
+}
+
+.popup-content {
+  padding-top: 2rem;
+}
+.deadline-date {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.footer-greet {
+  color: $primary;
+  padding: 2rem;
+}
+.modal-footer-image img{
+  width: 100%;
+}
+
+.deadline-date {
+  color: $primary;
+}

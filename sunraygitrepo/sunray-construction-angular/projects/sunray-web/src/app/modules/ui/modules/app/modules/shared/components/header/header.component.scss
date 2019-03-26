@@ -1,0 +1,40 @@
+@import 'helpers';
+
+.header{
+  background-color:$brand-grey;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+shared-declarables-search {
+  float: right;
+  margin-right: 5%;
+  // display: none;
+}
+
+.title{
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 2%;
+}
+
+.btn {
+  background-color:$profile-pane-button;
+  color: white;
+  margin-left: 1%;
+}
+
+.disabled {
+  display: none;
+  // pointer-events:none
+}
+img{
+  float: right;
+  margin-right: -12.2rem !important;
+  display: inline-block;
+  background-color: white;
+  // border: 1px solid #ffffff;
+  width: 1.2rem !important;
+  height: 1.3rem !important;
+  margin-top: 0.7rem !important;
+}

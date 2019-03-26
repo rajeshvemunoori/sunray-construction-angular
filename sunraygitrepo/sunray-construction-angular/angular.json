@@ -1,0 +1,708 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "sunray-angular": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/sunray-angular",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "sunray-angular:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sunray-angular:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sunray-angular:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "sunray-angular-e2e": {
+      "root": "e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "sunray-angular:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "sunray-angular:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "sunray-web": {
+      "root": "projects/sunray-web/",
+      "sourceRoot": "projects/sunray-web/src",
+      "projectType": "application",
+      "prefix": "sunray-web",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
+          }
+        },
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/browser",
+            "fileReplacements": [
+              {
+                "replace": "projects/sunray-web/src/environments/environment.ts",
+                "with": "projects/sunray-web/src/environments/environment.dev.ts"
+              }
+            ],
+            "index": "projects/sunray-web/src/index.html",
+            "main": "projects/sunray-web/src/main.ts",
+            "polyfills": "projects/sunray-web/src/polyfills.ts",
+            "tsConfig": "projects/sunray-web/tsconfig.app.json",
+            "assets": [
+              "projects/sunray-web/src/favicon.ico",
+              "projects/sunray-web/src/assets"
+            ],
+            "styles": [
+              "projects/sunray-web/src/styles.scss",
+              "./node_modules/jqvmap/dist/jqvmap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
+              "./node_modules/animate.css/animate.min.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jqvmap/dist/jquery.vmap.min.js",
+              "node_modules/jqvmap/dist/maps/jquery.vmap.usa.js",
+              "node_modules/@webcomponents/custom-elements/src/native-shim.js",
+              "node_modules/scrollreveal/dist/scrollreveal.js",
+              "node_modules/scrollreveal/dist/scrollreveal.min.js"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                ".",
+                "./node_modules",
+                "./projects/sunray-web/src/sass"
+              ]
+            }
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/sunray-web/src/environments/environment.ts",
+                  "with": "projects/sunray-web/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/sunray-web/src/environments/environment.ts",
+                  "with": "projects/sunray-web/src/environments/environment.dev.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/sunray-web/src/environments/environment.ts",
+                  "with": "projects/sunray-web/src/environments/environment.staging.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
+            "staging-local": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/sunray-web/src/environments/environment.ts",
+                  "with": "projects/sunray-web/src/environments/environment.staging-local.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "sunray-web:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sunray-web:build:production"
+            },
+            "dev": {
+              "browserTarget": "sunray-web:build"
+            },
+            "staging": {
+              "browserTarget": "sunray-web:build"
+            },
+            "staging-local": {
+              "browserTarget": "sunray-web:build:staging-local"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sunray-web:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sunray-web/src/test.ts",
+            "polyfills": "projects/sunray-web/src/polyfills.ts",
+            "tsConfig": "projects/sunray-web/tsconfig.spec.json",
+            "karmaConfig": "projects/sunray-web/karma.conf.js",
+            "styles": [
+              "projects/sunray-web/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/sunray-web/src/favicon.ico",
+              "projects/sunray-web/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/sunray-web/tsconfig.app.json",
+              "projects/sunray-web/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "sunray-web-e2e": {
+      "root": "projects/sunray-web-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/sunray-web-e2e/protractor.conf.js",
+            "devServerTarget": "sunray-web:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "sunray-web:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/sunray-web-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ceo/core": {
+      "root": "projects/ceo/core",
+      "sourceRoot": "projects/ceo/core/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceo/core/tsconfig.lib.json",
+            "project": "projects/ceo/core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ceo/core/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceo/core/src/test.ts",
+            "tsConfig": "projects/ceo/core/tsconfig.spec.json",
+            "karmaConfig": "projects/ceo/core/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceo/core/tsconfig.lib.json",
+              "projects/ceo/core/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ceo/state": {
+      "root": "projects/ceo/state",
+      "sourceRoot": "projects/ceo/state/src",
+      "projectType": "library",
+      "prefix": "ceo-state",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceo/state/tsconfig.lib.json",
+            "project": "projects/ceo/state/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ceo/state/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceo/state/src/test.ts",
+            "tsConfig": "projects/ceo/state/tsconfig.spec.json",
+            "karmaConfig": "projects/ceo/state/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceo/state/tsconfig.lib.json",
+              "projects/ceo/state/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ceo/analytics": {
+      "root": "projects/ceo/analytics",
+      "sourceRoot": "projects/ceo/analytics/src",
+      "projectType": "library",
+      "prefix": "ceo-analytics",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceo/analytics/tsconfig.lib.json",
+            "project": "projects/ceo/analytics/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ceo/analytics/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceo/analytics/src/test.ts",
+            "tsConfig": "projects/ceo/analytics/tsconfig.spec.json",
+            "karmaConfig": "projects/ceo/analytics/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceo/analytics/tsconfig.lib.json",
+              "projects/ceo/analytics/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ceo/vendor": {
+      "root": "projects/ceo/vendor",
+      "sourceRoot": "projects/ceo/vendor/src",
+      "projectType": "library",
+      "prefix": "ceo-vendor",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceo/vendor/tsconfig.lib.json",
+            "project": "projects/ceo/vendor/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ceo/vendor/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceo/vendor/src/test.ts",
+            "tsConfig": "projects/ceo/vendor/tsconfig.spec.json",
+            "karmaConfig": "projects/ceo/vendor/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceo/vendor/tsconfig.lib.json",
+              "projects/ceo/vendor/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ceo/shared": {
+      "root": "projects/ceo/shared",
+      "sourceRoot": "projects/ceo/shared/src",
+      "projectType": "library",
+      "prefix": "ceo-shared",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceo/shared/tsconfig.lib.json",
+            "project": "projects/ceo/shared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ceo/shared/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceo/shared/src/test.ts",
+            "tsConfig": "projects/ceo/shared/tsconfig.spec.json",
+            "karmaConfig": "projects/ceo/shared/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceo/shared/tsconfig.lib.json",
+              "projects/ceo/shared/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ceo/entity": {
+      "root": "projects/ceo/entity",
+      "sourceRoot": "projects/ceo/entity/src",
+      "projectType": "library",
+      "prefix": "ceo-entity",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceo/entity/tsconfig.lib.json",
+            "project": "projects/ceo/entity/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ceo/entity/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceo/entity/src/test.ts",
+            "tsConfig": "projects/ceo/entity/tsconfig.spec.json",
+            "karmaConfig": "projects/ceo/entity/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceo/entity/tsconfig.lib.json",
+              "projects/ceo/entity/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ceo/layout": {
+      "root": "projects/ceo/layout",
+      "sourceRoot": "projects/ceo/layout/src",
+      "projectType": "library",
+      "prefix": "ceo-layout",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceo/layout/tsconfig.lib.json",
+            "project": "projects/ceo/layout/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ceo/layout/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceo/layout/src/test.ts",
+            "tsConfig": "projects/ceo/layout/tsconfig.spec.json",
+            "karmaConfig": "projects/ceo/layout/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceo/layout/tsconfig.lib.json",
+              "projects/ceo/layout/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ceo/wordpress": {
+      "root": "projects/ceo/wordpress",
+      "sourceRoot": "projects/ceo/wordpress/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceo/wordpress/tsconfig.lib.json",
+            "project": "projects/ceo/wordpress/ng-package.json"
+          },
+          "configurations": {
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "projects/sunray-web/src/environments/environment.dev.ts"
+                }
+              ]
+            },
+            "production": {
+              "project": "projects/ceo/wordpress/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceo/wordpress/src/test.ts",
+            "tsConfig": "projects/ceo/wordpress/tsconfig.spec.json",
+            "karmaConfig": "projects/ceo/wordpress/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceo/wordpress/tsconfig.lib.json",
+              "projects/ceo/wordpress/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "sunray-web"
+}

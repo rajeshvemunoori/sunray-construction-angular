@@ -1,0 +1,22 @@
+<div class="invoice-pane-container-detail container-detail">
+  <div class="header-wrapper">
+     <sunray-ui-app-shared-header
+       [headerTitle]="'Unpaid Invoices'"
+       [buttonTitle] = "'Add Invoice'"
+       [searchFlag]="true"
+       (actionEmitter) = "addInvoice()"
+       (searchKeyEmitter) = "search($event)">
+     </sunray-ui-app-shared-header>
+  </div>
+  <div class="invoice-pane-container-body container-body">
+     <sunray-ui-app-shared-table
+       [collection$]="collection$"
+       [configHeader$]="collectionHeader$"
+       [itemActions$]="itemActions$"
+       [collectionActions$]="collectionActions$"
+       (actionEmitter)="triggerAction($event)">
+     </sunray-ui-app-shared-table>
+  </div>
+  <div class="invoice-pane-container-footer container-footer">
+  </div>
+</div>

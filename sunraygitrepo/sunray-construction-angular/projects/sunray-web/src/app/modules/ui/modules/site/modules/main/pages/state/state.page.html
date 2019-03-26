@@ -1,0 +1,117 @@
+<div *ngIf="dataLoaded()" class="animated fadeIn">
+  <div class="content">
+    <!-- Banner section -->
+    <sunray-ui-site-state-page-banner
+      [state$]="appState$"
+      [stateContent$]="cmsState$">
+    </sunray-ui-site-state-page-banner>
+
+    <!-- Introduction section -->
+    <section id="introduction" class="page-section introduction">
+      <sunray-ui-site-state-page-introduction
+        [content$]="cmsState$"
+        [translations$]="appTranslations$">
+      </sunray-ui-site-state-page-introduction>
+
+      <sunray-ui-site-state-page-action-select-list
+        (actionEmitter)="onActionSelected($event)">
+      </sunray-ui-site-state-page-action-select-list>
+    </section>
+
+
+    <!-- Sticky menu-->
+    <div class="actions-menu-wrapper">
+      <sunray-ui-site-state-page-actions-menu
+        [state$]="appState$">
+      </sunray-ui-site-state-page-actions-menu>
+    </div>
+
+
+    <!-- Required Statutory Documents Widget -->
+    <section *ngIf="false" id="statutory-documents" class="page-section statutory-documents">
+      <div class="text-sm-center section-header">
+        <h2 class="text-primary ">{{sections.requiredStatutoryDocuments.heading}}</h2>
+        <h4>{{sections.requiredStatutoryDocuments.subHeading}}</h4> 
+      </div>
+
+      <div class="section-body">
+        <sunray-site-document-deadline-widget
+          [documentTypeProvider]="documentTypeProvider"
+          [jobType]="jobType"
+          [jobTypes$]="appJobTypes$"
+          [projectRole]="projectRole"
+          [projectRoles$]="appProjectRoles$"
+          [projectTypes$]="appProjectTypes$"
+          [state$]="appState$"
+          [states$]="appStates$"
+          [stateRequestTypes$]="appStateRequestTypes$"
+          [statutoryDocuments$]="cmsStatutoryDocuments$">
+        </sunray-site-document-deadline-widget>
+      </div>
+    </section>
+
+    <!-- Learning Center -->
+    <section id="learning-center">
+      <div id="learning-center-menu"
+        class="page-section sticky-header-option">
+
+        <div class="section-header">
+          <div class="title-wrapper text-center">
+            <h2 class="text-primary">{{sections.learningCenter.heading}}</h2> 
+            <h4>{{sections.learningCenter.subHeading}}</h4> 
+          </div>
+        </div>
+
+        <div *ngIf="(slug$ | async) as resourceName" class="section-body">
+          <sunray-site-learning-center-resource-type-list
+            [resourceName]="resourceName"
+            [collection$]="cmsLcCategories$">
+          </sunray-site-learning-center-resource-type-list>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Statutory Document Selection -->
+    <section id="statutory-documents-selection" class="page-section">
+      <div class="section-header text-center">
+        <h2 class="text-primary">{{sections.statutoryDocumentsSelection.heading}}</h2> 
+        <h4>{{sections.statutoryDocumentsSelection.subHeading}}</h4> 
+      </div>
+
+      <sunray-ui-site-statutory-document-select-list
+        [items$]="appStateRequestTypes$">
+      </sunray-ui-site-statutory-document-select-list>
+    </section>
+
+    <!-- Reviews section -->
+    <div id='reviews-section'
+      class='page-section alternate text-center'>
+
+      <div class="section-header text-center">
+        <h2 class="text-primary">{{sections.reviews.heading}}</h2> 
+        <h4>{{sections.reviews.subHeading}}</h4> 
+      </div>
+
+      <div class="section-body">
+        <sunray-site-shared-testimonial-list
+          [collection$]="cmsTestimonials$">
+        </sunray-site-shared-testimonial-list>
+      </div>
+    </div>
+
+    <!-- FAQ's section -->
+    <section *ngIf="true" id="faqs" class="page-section">
+      <div class="section-header text-center">
+        <h2 class="text-primary">{{sections.faqs.heading}}</h2> 
+        <h4>{{sections.faqs.subHeading}}</h4> 
+      </div>
+
+      <sunray-site-faq-accordion
+        [collection$]="cmsFaqs$">
+      </sunray-site-faq-accordion>
+    </section>
+  </div>
+
+</div>
+

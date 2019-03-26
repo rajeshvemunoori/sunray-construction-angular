@@ -1,0 +1,20 @@
+<div class="search">
+  <div class="inner-container">
+    <div class="container">
+      <div class="text-primary">
+        <h4 class="text-center">Search Results For "{{ query }}"</h4>
+      </div>
+      <h5 class="text-black mt-4">Blog Posts</h5>
+      <p *ngFor="let entity of (collection$ | async).entities">
+        <a routerLink="/content/posts/{{entity.id}}">
+          {{ entity.title.rendered }}
+        </a>
+      </p>
+      <h5 class="text-black mt-4">Notices</h5>
+      <p><a href="/notices/miller_act_notice">Miller Act Notice</a></p>
+      <p><a href="/notices/construction_bond">Construction Bond</a></p>
+      <p><a href="/notices/preliminary_notice">Preliminary Notice</a></p>
+      <p><a href="/notices/construction_lien">Construction Lien</a></p>
+    </div>
+  </div>
+</div>

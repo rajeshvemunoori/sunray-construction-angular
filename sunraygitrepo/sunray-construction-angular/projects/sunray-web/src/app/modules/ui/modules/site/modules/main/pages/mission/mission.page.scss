@@ -1,0 +1,42 @@
+@import 'helpers';
+
+.page-inner-wrapper {
+  padding-top: map-get($spacers, 6);
+}
+
+.mission-image-wrapper {
+  text-align: center;
+
+  img {
+    @include img-fluid;
+  }
+}
+
+.mission-list-wrapper {
+  @include make-row;
+  justify-content: center;
+}
+
+.mission-item-wrapper {
+  @include make-col-ready;
+  margin: map-get($spacers, 3) 0px;
+
+  @include media-breakpoint-up(md) {
+    @include make-col(4);
+  }
+
+  img {
+    @include img-fluid;
+    flex-basis: 80px;
+    max-width: 80px;
+    margin-bottom: map-get($spacers, 3);
+  }
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-items: center;
+}

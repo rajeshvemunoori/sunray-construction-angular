@@ -1,0 +1,9 @@
+<div class="header-wrapper">
+  <h4 class="item-title">{{ item?.displayName }}</h4>
+</div>
+
+<sunray-ui-app-print-queue-element
+  [collection$]="elements$"
+  [actionText]="actionText"
+  (selectEmitter)="moveElements($event)">
+</sunray-ui-app-print-queue-element>

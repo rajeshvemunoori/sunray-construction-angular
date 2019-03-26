@@ -1,0 +1,27 @@
+<div class="component-inner-wrapper">
+  <div class="card-deck">
+    <div *ngFor="let card of cards" class="card"
+      (click)="onCardClick(card)">
+      <div class="card-body">
+        <div class="icon-wrapper"
+          [ngClass]="'text-' + card.themeClass">
+
+          <mat-icon class="svg-wrapper" svgIcon="{{card.iconName}}">
+          </mat-icon>
+
+        </div>
+        <h5 class="card-title">{{card.title}}</h5>
+        <p class="card-text">{{card.body}}</p>
+      </div>
+      <div *ngIf="card.footer" class="card-footer">
+
+        <a class="btn btn-rounded"
+          [ngClass]="'btn-' + card.themeClass"
+          (click)="onCardClick(card)" ceoClickStopEventBubble href="#">
+          {{card.actionText}}
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>

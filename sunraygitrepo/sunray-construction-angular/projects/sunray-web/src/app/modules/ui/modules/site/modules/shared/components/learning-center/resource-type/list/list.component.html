@@ -1,0 +1,29 @@
+<div id="learning-center-menu" class="padding-top">
+  <div class="inner-content">
+    <div class="card-deck-wrap">
+      <div class="card-deck">
+        <div class="card" *ngFor="let entity of (collection$ | async).entities">
+          <div class="card-body">
+            <div class="purpose-icon">
+              <img src="{{entity.featuredMediaUrl}}">
+            </div>
+            <p class="lead-heading mt-3">{{entity.renderedTitle}}</p>
+            <div class="content-wrap">
+              <div [innerHTML]="entity.renderedContent"></div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="ml-2">
+              <a class="btn-lg-curved btn btn-primary btn-lg"
+                routerLink="{{getRoute(entity.attributes.url)}}">
+
+                SELECT
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

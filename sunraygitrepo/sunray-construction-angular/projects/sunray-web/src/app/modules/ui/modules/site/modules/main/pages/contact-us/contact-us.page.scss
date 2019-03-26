@@ -1,0 +1,84 @@
+@import 'helpers';
+
+.purpose-icon {
+  width: 100px;
+
+  img {
+    @include img-fluid;
+  }
+}
+
+.lead-heading {
+  color: $primary;
+}
+
+#contact-page{
+  .card-wrapper {
+    margin: 1rem 0rem;
+  }
+
+  .card {
+    padding: $spacer * 2;
+    background-color: $gray-100;
+    .btn-primary {
+      background-color: $primary !important;
+      color: $white;
+    }
+  }
+
+  .card:hover {
+    background-color: $white;
+    .btn-primary {
+      background-color: $primary !important;
+      color: $white;
+    }
+  }
+
+  .office-contact {
+    padding-top: 30px;
+  }
+
+  $size: 30px;
+  $color: $primary;
+  $border-width: 2px;
+  .social-media-icon-wrapper {
+    background-color: $color;
+    border-radius: 50%;
+    width: $size + 2 * $border-width;
+    height: $size + 2 * $border-width;
+    display: inline-block;
+    border: $border-width solid $color;
+    margin-right: $spacer;
+    opacity: 0.95;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    a {
+      height: $size;
+      width: $size;
+    }
+
+    img {
+      height: $size;
+      width: $size;
+    }
+  }
+}
+
+
+.card-header {
+  height: 100px;
+}
+
+.office-details{
+	font-size: 14px;
+	color: #878787;
+	span{
+		line-height: 28px;
+	}
+	a{
+		color: #878787;
+	}
+}

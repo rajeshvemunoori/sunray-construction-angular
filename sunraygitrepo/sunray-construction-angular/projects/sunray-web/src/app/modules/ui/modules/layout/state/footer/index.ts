@@ -1,0 +1,6 @@
+export * from './footer.actions'
+export * from './footer.config'
+export * from './footer.effects'
+export * from './footer.reducer'
+export * from './footer.selectors'
+export * from './footer.state'

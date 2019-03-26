@@ -1,0 +1,17 @@
+@import 'helpers';
+
+.map {
+  width: $map-width;
+  height: $map-width * $map-width-height-ratio;
+  margin: auto;
+
+  @include media-breakpoint-down(md) {
+    width: $map-width-small;
+    height: $map-width-small * $map-width-height-ratio;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: $map-width-xs;
+    height: $map-width-xs * $map-width-height-ratio;
+  }
+}

@@ -1,0 +1,12 @@
+@mixin size-sm() {
+  @include media-breakpoint-down(sm) {
+    @content;
+  }
+}
+
+@mixin size-lg() {
+  @include media-breakpoint-up(sm) {
+    @content;
+  }
+}
+

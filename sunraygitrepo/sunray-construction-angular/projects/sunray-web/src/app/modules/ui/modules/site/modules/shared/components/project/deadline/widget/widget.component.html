@@ -1,0 +1,69 @@
+<div class="widget-inner-wrap bg-white">
+  <div class="project-type-resolve-outer-wrap">
+    <div class="breadcrumb-outer-wrapper">
+      <sunray-site-project-deadline-widget-breadcrumb
+        [projectResolver]="projectTypeResolver"
+        (onItemSelected)="breadcrumbStep($event)">
+      </sunray-site-project-deadline-widget-breadcrumb>
+    </div>
+
+    <div *ngIf="currentStep$ | async as currentStep">
+      <div [ngSwitch]="currentStep">
+        <div *ngSwitchCase="'project-type-resolver'" class="animated fadeIn">
+          <sunray-site-project-type-resolve
+            [resolver]="projectTypeResolver">
+          </sunray-site-project-type-resolve>
+        </div>
+
+        <section *ngSwitchCase="'document-type-list'"
+          class="step-wrap document-type-list animated fadeIn">
+
+          <sunray-site-document-type-detail-list
+            [collection$]="documentTypes$"
+            (onCalculateDeadlinesRequested)="requestedStep$.next('deadline-calculator')">
+          </sunray-site-document-type-detail-list>
+        </section>
+
+        <div *ngSwitchCase="'deadline-calculator'" class="animated fadeIn">
+          <div class="deadline-calculators-wrapper">
+            <div class="inner-wrapper">
+
+              <div class="deadline-calculator-wrapper"
+                *ngFor="let entity of documentTypes$ | async">
+
+                <sunray-site-project-deadline-calculator
+                  [project$]="project$"
+                  [entity]="entity">
+                </sunray-site-project-deadline-calculator>
+
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="theForm" class="form-wrapper">
+            <ceo-form
+              [model]="theForm">
+            </ceo-form>
+          </div>
+
+          <div class="form-wrapper">
+            <shared-declarables-form
+              [inputGroup$]="form$">
+            </shared-declarables-form>
+          </div>
+
+          <div class="button-wrapper">
+            <a aria-pressed="true" ceoClickStopEventBubble
+              (click)="onClickCalculate()"
+              class="btn btn-primary btn-lg btn-rounded"
+              href="#"
+              role="button">
+              
+              Calculate Deadlines
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

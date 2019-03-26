@@ -1,0 +1,7 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+export { providers as dialogTokenProviders, defaultDialogsConfig, } from './providers';
+export { DIALOGS_CONFIG } from './tokens';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9jb21tb24vZGlhbG9ncy90b2tlbnMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFDTCxTQUFTLElBQUksb0JBQW9CLEVBQ2pDLG9CQUFvQixHQUNyQixNQUFNLGFBQWEsQ0FBQTtBQUVwQiwrQkFBYyxVQUFVLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQge1xuICBwcm92aWRlcnMgYXMgZGlhbG9nVG9rZW5Qcm92aWRlcnMsXG4gIGRlZmF1bHREaWFsb2dzQ29uZmlnLFxufSBmcm9tICcuL3Byb3ZpZGVycydcblxuZXhwb3J0ICogZnJvbSAnLi90b2tlbnMnXG4iXX0=

@@ -1,0 +1,23 @@
+<h3>Settings</h3>
+
+<div class='company-setting-list-wrapper list-wrapper'>
+  <shared-declarables-attribute-list
+    [attributeEntity$]="primaryEntity$"
+    [attributeEntityLabels$]="entityHeader$">
+  </shared-declarables-attribute-list>
+</div>
+<h3>Rate</h3>
+<div class='company-rate-list-wrapper list-wrapper'>
+  <shared-declarables-list
+    [collection$]="collection$"
+    [configHeader$]="collectionHeader$">
+  </shared-declarables-list>
+</div>
+
+<!-- <div *ngFor="let contact of this.contacts">
+  <h3>{{ contact.title }}</h3>
+  <shared-declarables-list
+    [collection$]="contact.contacts$"
+    [configHeader$]="contact.header$">
+  </shared-declarables-list>
+</div> -->

@@ -1,0 +1,15 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { ConfigService } from './config.service';
+import { DialogService } from './dialog.service';
+import { MatDialogAdapterService } from './mat-dialog-adapter.service';
+/** @type {?} */
+export var services = [
+    ConfigService,
+    DialogService,
+    MatDialogAdapterService,
+];
+export { ConfigService, DialogService, MatDialogAdapterService, };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9wcm92aWRlcnMvc2VydmljZXMvZGlhbG9nL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUUsYUFBYSxFQUFFLE1BQU0sa0JBQWtCLENBQUE7QUFDaEQsT0FBTyxFQUFFLGFBQWEsRUFBRSxNQUFNLGtCQUFrQixDQUFBO0FBQ2hELE9BQU8sRUFBRSx1QkFBdUIsRUFBRSxNQUFPLDhCQUE4QixDQUFBOztBQUV2RSxNQUFNLEtBQU8sUUFBUSxHQUFVO0lBQzdCLGFBQWE7SUFDYixhQUFhO0lBQ2IsdUJBQXVCO0NBQ3hCO0FBRUQsT0FBTyxFQUNMLGFBQWEsRUFDYixhQUFhLEVBQ2IsdUJBQXVCLEdBQ3hCLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb25maWdTZXJ2aWNlIH0gZnJvbSAnLi9jb25maWcuc2VydmljZSdcbmltcG9ydCB7IERpYWxvZ1NlcnZpY2UgfSBmcm9tICcuL2RpYWxvZy5zZXJ2aWNlJ1xuaW1wb3J0IHsgTWF0RGlhbG9nQWRhcHRlclNlcnZpY2UgfSAgZnJvbSAnLi9tYXQtZGlhbG9nLWFkYXB0ZXIuc2VydmljZSdcblxuZXhwb3J0IGNvbnN0IHNlcnZpY2VzOiBhbnlbXSA9IFtcbiAgQ29uZmlnU2VydmljZSxcbiAgRGlhbG9nU2VydmljZSxcbiAgTWF0RGlhbG9nQWRhcHRlclNlcnZpY2UsXG5dXG5cbmV4cG9ydCB7XG4gIENvbmZpZ1NlcnZpY2UsXG4gIERpYWxvZ1NlcnZpY2UsXG4gIE1hdERpYWxvZ0FkYXB0ZXJTZXJ2aWNlLFxufVxuIl19

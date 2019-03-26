@@ -1,0 +1,27 @@
+<div class="main-wrapper">
+  <div class="job-types-wrapper">
+    <div class="job-types-inner-wrapper">
+
+      <div class="job-type-options-wrapper">
+        <div class="job-type-outer-wrapper"
+          *ngFor="let entity of items$ | async"
+          (click)="select(entity)">
+
+          <div class="job-type-wrapper"
+            [ngClass]="{'active': isSelectedItem(entity)}">
+
+            <div class="job-type-inner-wrapper">
+              <div class="image-wrapper">
+                <mat-icon class="svg-wrapper" svgIcon="{{imageName(entity)}}">
+                </mat-icon>
+              </div>
+              <div class="content-wrapper">
+                <span class="name">{{entity.name}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

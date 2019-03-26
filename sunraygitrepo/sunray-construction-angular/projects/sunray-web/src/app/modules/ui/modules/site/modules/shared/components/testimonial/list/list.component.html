@@ -1,0 +1,29 @@
+<div id="testimonials-vertical main-wrapper">
+  <div class='testimonials-wrapper'>
+    <div class='testimonials-inner-wrapper'>
+      <div class="card-wrapper testimonial-vertical-box"
+        *ngFor="let entity of collection$ | async">
+
+        <div class="card">
+          <img alt="Quote" class="quote"
+            src="/assets/frontend/quote-blue.svg">
+
+          <p style="white-space: initial">
+            <em [innerHTML]= "entity.renderedContent"></em>
+          </p>
+          <br>
+          <img alt="Man" class="rounded-img medium"
+            src="{{entity.featuredMediaUrl}}">
+
+          <br>
+          <h6 class='text-primary font-italic proxima-bold'>
+            {{entity.fullName}}
+          </h6>
+          <h5 class='text-primary font-italic proxima-regular'>
+            {{entity.company}}
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

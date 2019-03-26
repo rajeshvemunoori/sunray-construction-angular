@@ -1,0 +1,21 @@
+{
+  "name": "@ceo/wordpress",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "main": "bundles/ceo-wordpress.umd.js",
+  "module": "fesm5/ceo-wordpress.js",
+  "es2015": "fesm2015/ceo-wordpress.js",
+  "esm5": "esm5/ceo-wordpress.js",
+  "esm2015": "esm2015/ceo-wordpress.js",
+  "fesm5": "fesm5/ceo-wordpress.js",
+  "fesm2015": "fesm2015/ceo-wordpress.js",
+  "typings": "ceo-wordpress.d.ts",
+  "metadata": "ceo-wordpress.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

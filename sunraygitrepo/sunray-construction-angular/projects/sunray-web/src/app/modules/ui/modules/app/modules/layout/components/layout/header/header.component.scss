@@ -1,0 +1,28 @@
+@import "helpers";
+
+$header-height: 100px;
+header.header-wrapper {
+  height: $header-height;
+  background-color: $white;
+
+  .header-inner-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-wrapper {
+    width: 200px;
+    height: $header-height;
+    padding: 1rem;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .search-wrapper {
+    padding-left: $spacer * 5;
+  }
+}
+

@@ -1,0 +1,197 @@
+<div class="animated fadeIn">
+  <div id="banner" class="text-center">
+    <sunray-ui-site-home-page-banner
+      [collection$]="cmsGalleryImages$">
+    </sunray-ui-site-home-page-banner>
+  </div>
+
+  <div id="home">
+    <div id="shortcuts">
+      <div class="inner-content">
+        <div class="container">
+          <div class="row">
+            <div class="shortcut-wrapper col-sm-4 int-shortcut s-block"
+              *ngFor="let item of primaryShortcuts">
+
+              <div class="shortcut-inner-wrapper">
+                <a class="shortcut-link" routerLink="{{item.url}}">
+                  <img alt="{{item.image.alt}}" src="{{item.image.src}}">
+
+                  <div class="content-wrapper d-inline-block">
+                    <h5 class="font-weight-bold">{{item.headline}}</h5>
+                    <p>{{item.subheadline}}</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="videos" class ="page-section alternate">
+
+      <sunray-ui-site-home-page-video-testimonials
+        [section]="sections.videoTestimonials">
+      </sunray-ui-site-home-page-video-testimonials>
+
+    </div>
+
+    <div *ngIf="false" id="integrations" class="text-center page-section" >
+      <div class="inner-content">
+        <div class="container">
+          <sunray-site-shared-content-header
+            [heading]="sections.integrations.heading">
+          </sunray-site-shared-content-header>
+
+
+          <ul class="d-inline-block">
+            <li class="d-table-cell">
+              <img alt="Quickbooks logo preferred rgb"
+                class="first-integration"
+                src="/assets/frontend/integrations/integration1.jpg"
+                style="width: 187px">
+            </li>
+
+
+            <li class="d-table-cell">
+              <img alt="Foundation"
+                src="/assets/frontend/integrations/integration2.jpg"
+                style="width: 155px">
+            </li>
+
+
+            <li class="d-table-cell">
+              <img alt="Dropbox"
+                src="/assets/frontend/integrations/integration3.jpg"
+                style="width: 66px">
+            </li>
+
+
+            <li class="d-table-cell">
+              <img alt="Procore"
+                src="/assets/frontend/integrations/integration4.jpg"
+                style="width: 146px">
+            </li>
+
+
+            <li class="d-table-cell">
+              <img alt="Sage"
+                src="/assets/frontend/integrations/integration5.jpg"
+                style="width: 88px">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="features" class ="page-section alternate">
+      <sunray-site-shared-content-header
+        [heading]="sections.features.heading">
+      </sunray-site-shared-content-header>
+
+      <sunray-ui-site-home-page-features>
+      </sunray-ui-site-home-page-features>
+    </div>
+
+
+
+    <div class="text-center page-section" id="states">
+      <div class="inner-content">
+        <div class="container">
+          <sunray-site-shared-content-header
+            [heading]="sections.map.heading"
+            [subHeading]="sections.map.subHeading">
+          </sunray-site-shared-content-header>
+
+          <div id="state-select-wrapper" class="state-select-wrapper">
+            <div class="state-select-inner-wrapper">
+              <sunray-site-state-select
+                [states$]="appStates$"
+                (stateEmitter)="onRegionSelect($event)">
+              </sunray-site-state-select>
+            </div>
+          </div>
+
+          <div class="d-inline-block" id="state-map-wrapper">
+            <sunray-site-clickable-map
+              (regionEmitter)="onRegionSelect($event)">
+            </sunray-site-clickable-map>
+          </div>
+
+          <div class="state-data-list-wrapper">
+            <div class="state-box">
+              <h4 class="font-weight-bold">2 Million +</h4>
+              <h6>Notices sent through SunRay system</h6>
+            </div>
+
+
+            <div class="state-box">
+              <h4 class="font-weight-bold">9 Billion +</h4>
+              <h6>Dollars Secured</h6>
+            </div>
+
+
+            <div class="state-box">
+              <h4 class="font-weight-bold">10000 +</h4>
+              <h6>Subcontractors and Suppliers relied on SunRay to get paid</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="states-map">
+    </div>
+
+    <div class="text-center page-section" id="publications">
+      <div class="inner-content">
+        <sunray-site-shared-content-header
+          [heading]="sections.publications.heading">
+        </sunray-site-shared-content-header>
+
+        <sunray-ui-site-home-page-publications
+          [collection$]="cmsPublications$">
+        </sunray-ui-site-home-page-publications>
+      </div>
+    </div>
+
+    <div class="text-center" id="for-beginners">
+      <div class="inner-content">
+        <div class="container">
+          <h5>Not sure where to begin?</h5>
+
+          <div class="beginner-button">
+            <a aria-pressed="true" class="btn btn-light text-primary" [routerLink]="'/solutions'"
+            id="button-beginner" role="button">SEE ALL SOLUTIONS</a>
+          </div>
+
+          <div class='beginner-link'>
+            <span>
+              <a class="" href="#states">50 States Resources</a>
+              |
+              <a [routerLink]="'/contact-us'">Ask us a question</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="page-section newsletter-subscription-wrapper text-center bg-body-gray-100 text-primary">
+
+      <sunray-site-shared-content-header
+        [heading]="sections.newsletterForm.heading">
+      </sunray-site-shared-content-header>
+
+      <sunray-site-shared-newsletter-subscription>
+      </sunray-site-shared-newsletter-subscription>
+    </div>
+
+
+    <div class="page-section primary owner-quote">
+      <sunray-ui-site-home-page-owner-quote>
+      </sunray-ui-site-home-page-owner-quote>
+    </div>
+  </div>
+</div>

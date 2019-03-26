@@ -1,0 +1,120 @@
+<div *ngIf="(state$ | async) as state">
+  <div *ngIf="true">
+    <div class="content">
+      <div class="container">
+        <div class="public-notice mx-5 px-5">
+        </div>
+      </div>
+
+      <sunray-site-state-page-banner>
+      </sunray-site-state-page-banner>
+
+
+      <!-- Deadlines Widget -->
+      <div id="deadline-widget" class="page-section">
+        <div class="text-center text-primary">
+          <h1>{{sections.deadlineWidget.heading}}</h1> 
+        </div>
+
+        <sunray-site-document-deadline-widget
+          [jobTypes$]="jobTypes$"
+          [projectRoles$]="projectRoles$"
+          [projectTypes$]="projectTypes$"
+          [projectTypeRequestTypes$]="projectTypeRequestTypes$"
+          [state$]="state$">
+        </sunray-site-document-deadline-widget>
+      </div>
+
+      <div class="page-section">
+
+        <h1> dates </h1>
+
+        <table style="width:100%">
+          <tr>
+            <th *ngFor="let attr of dateAttrs">{{attr}}</th>
+          </tr>
+          <tr *ngFor="let entity of statutoryDates$ | async">
+            <td *ngFor="let attr of dateAttrs">{{entity[attr]}}</td>
+          </tr>
+        </table>
+
+
+
+      <!-- Deadlines Calculator -->
+      <div id="deadline-calculator"
+        class="page-section sticky-header-option alternate">
+
+        <div class="inner-wrapper">
+          <div class="title-wrapper text-center">
+            <h1 class="text-primary">{{sections.deadlineCalculator.heading}}</h1> 
+            <h3>{{sections.deadlineCalculator.heading}}</h3> 
+          </div>
+
+          <sunray-site-document-deadline-calculator
+            [state$]="state$"
+            [states$]="states$"
+            [projectRoles$]="projectRoles$"
+            [jobTypes$]="jobTypes$"
+            [stateRequestTypes$]="stateRequestTypes$">
+          </sunray-site-document-deadline-calculator>
+
+          <div *ngFor="let entity of stateRequestTypes$ | async" >
+            <span> {{ entity.name }} </span>
+          </div>
+
+        </div>
+      </div>
+
+      <div *ngIf="false">
+        <!-- Learning Center -->
+        <div id="learning-center-menu"
+          class="page-section sticky-header-option">
+
+          <sunray-site-learning-center-resource-type-list
+            [state]="slug">
+          </sunray-site-learning-center-resource-type-list>
+        </div>
+      </div>
+
+      <!-- Reviews section -->
+      <div *ngIf="false" id='reviews-section'
+        class='page-section alternate text-center'>
+
+        <sunray-site-shared-testimonial
+          [title]="sections.reviews.heading"
+          [term]="sections.reviews.term">
+        </sunray-site-shared-testimonial>
+      </div>
+
+      <!-- FAQ's section -->
+
+      <div id="faqs" class="page-section">
+        <div class="text-center">
+          <h1 class="text-primary">{{sections.faqs.heading}}</h1> 
+          <h3>{{sections.faqs.heading}}</h3> 
+        </div>
+
+        <sunray-site-faq-accordion
+          [collection$]="faqs$">
+        </sunray-site-faq-accordion>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="false" class="page-section">
+
+  <h1> dates </h1>
+
+  <table style="width:100%">
+    <tr>
+      <th *ngFor="let attr of dateAttrs">{{attr}}</th>
+    </tr>
+    <tr *ngFor="let entity of statutoryDates$ | async">
+      <td *ngFor="let attr of dateAttrs">{{entity[attr]}}</td>
+    </tr>
+  </table>
+
+</div>
+

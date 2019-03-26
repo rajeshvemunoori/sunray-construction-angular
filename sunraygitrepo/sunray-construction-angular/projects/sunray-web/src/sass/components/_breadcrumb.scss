@@ -1,0 +1,9 @@
+@import 'helpers';
+
+.breadcrumb {
+  background-color: transparent;
+
+  .breadcrumb-item {
+    font-size: $font-size-lg;
+  }
+}

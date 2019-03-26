@@ -1,0 +1,38 @@
+import { Observable } from 'rxjs';
+import { AttributeGetterSetter, AttributeUpdater } from '@ceo/shared';
+import { iDataService, iDataServiceOpts, iEntity, iEntityAttributes, iEntityRelationships, EntityData, EntityIdentifier, EntityRelationshipIdentifier, EntityTypeIdentifier } from '../../../interfaces/index';
+export declare class JsonApiEntity implements iEntity, AttributeGetterSetter, AttributeUpdater {
+    static _sliceName: string;
+    static config: any;
+    static defaultAttributes: any;
+    static readonly sliceName: string;
+    id: EntityIdentifier;
+    type: EntityTypeIdentifier;
+    attributes: iEntityAttributes;
+    relationships: iEntityRelationships;
+    defaultAttributes: any;
+    private _dataService;
+    constructor(init?: Partial<iEntity>, dataService?: iDataService);
+    setAttributes(): void;
+    getAttr(attrName: string): any;
+    setAttr(attrName: string, value: any): void;
+    dataService: iDataService;
+    readonly isNew: boolean;
+    nameStartsWith(name: string): boolean;
+    getSliceName(): string;
+    relationship(type: any): any;
+    relationshipSize(relationshipName: EntityRelationshipIdentifier): number;
+    relationship$(relationshipName: EntityRelationshipIdentifier, opts?: iDataServiceOpts): Observable<EntityData>;
+    save$(opts?: iDataServiceOpts): Observable<iEntity>;
+    private toResourceIdentifier;
+    private hasRelationship;
+    updatedKeys: string[];
+    updateAttributes(attributes: any): void;
+    createAttributeSettersAndGetters(): void;
+    createSettersAndGetters(props: any): void;
+    createGetSet(obj: any, props: any, key: string, name: string): void;
+    generateGetSet(props: any, key: any, name: any): any;
+    setProp(props: any, key: any, value: any): void;
+    getProp(props: any, key: any): any;
+    memoized(property: string, value: any): any;
+}

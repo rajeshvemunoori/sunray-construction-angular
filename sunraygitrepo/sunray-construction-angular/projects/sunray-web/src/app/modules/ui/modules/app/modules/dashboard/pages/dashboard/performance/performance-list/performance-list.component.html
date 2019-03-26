@@ -1,0 +1,19 @@
+<div class="card">
+ <div class="card-block">
+   <h6 class="card-title"><span>{{ collection$.unit }}</span>
+     <span><button type="button" class="btn-secondary btn-xs">Export</button></span>
+   </h6>
+   <div class="card-inner-details">
+   <span>Total: {{ collection$.total}}</span>
+   <span class="verify_value">Avg: {{ collection$.average}}</span>
+   </div>
+   <div class="card-body">
+     <div *ngFor="let item of collection$.items; let i = index">
+       <span>{{ item.display_name }}</span><span class="verify_value">{{item.value}}/{{item.max_value}}</span>
+       <div class="progress">
+         <div class="progress-bar progress-bar-striped" role="progressbar" [style.width]="(item.value*100/item.max_value)+'%'" aria-valuenow="1" aria-valuemin="0" aria-valuemax="item.max_value+'%'" [ngClass]="cardStyle(i)"></div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>

@@ -1,0 +1,21 @@
+{
+  "name": "@ceo/vendor",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "main": "bundles/ceo-vendor.umd.js",
+  "module": "fesm5/ceo-vendor.js",
+  "es2015": "fesm2015/ceo-vendor.js",
+  "esm5": "esm5/ceo-vendor.js",
+  "esm2015": "esm2015/ceo-vendor.js",
+  "fesm5": "fesm5/ceo-vendor.js",
+  "fesm2015": "fesm2015/ceo-vendor.js",
+  "typings": "ceo-vendor.d.ts",
+  "metadata": "ceo-vendor.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

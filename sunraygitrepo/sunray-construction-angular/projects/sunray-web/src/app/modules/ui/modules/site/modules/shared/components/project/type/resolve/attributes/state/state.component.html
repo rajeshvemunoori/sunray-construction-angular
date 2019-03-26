@@ -1,0 +1,29 @@
+<div *ngIf="attribute.options$" class="inner-content">
+  <div>
+    <sunray-site-project-type-resolve-attribute-prompt
+      [attribute]="attribute">
+    </sunray-site-project-type-resolve-attribute-prompt>
+
+    <div class="step-body">
+      <div class="state-select-wrapper">
+        <div class="state-select-inner-wrapper">
+          <sunray-site-state-select
+            [states$]="attribute.options$"
+            (stateEmitter)="onRegionSelect($event)">
+          </sunray-site-state-select>
+        </div>
+      </div>
+
+      <div id="state-map-wrapper">
+        <sunray-site-clickable-map
+          [backgroundColor]="'#FFF'"
+          [hoverColor]="'#0373BB'"
+          [color]="'#FFF'"
+          [borderColor]="'#686868'"
+          [selectedColor]="'#0373BB'"
+          (regionEmitter)="onRegionSelect($event)">
+        </sunray-site-clickable-map>
+      </div>
+    </div>
+  </div>
+</div>

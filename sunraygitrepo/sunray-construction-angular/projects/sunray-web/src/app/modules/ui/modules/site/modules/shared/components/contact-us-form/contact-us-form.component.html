@@ -1,0 +1,235 @@
+<div id="contact-us-form" class="container">
+  <form novalidate [formGroup]="entityForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="col">
+        <div class="form-group">
+          <label for="firstName">First Name*</label>
+
+          <div class="form-group" [ngClass]="{
+             'has-dirty': firstName.dirty, 
+             'has-danger': firstName.invalid && firstName.dirty, 
+             'has-success': firstName.valid && firstName.dirty }">
+            <input name="firstName" formControlName="firstName" type="text" class="form-control border-0 border-bottom" id="firstName">
+
+            <div class="form-control-feedback-wrapper">
+              <div class="form-control-feedback has-danger" 
+                *ngIf="firstName.invalid && firstName.dirty"> 
+                First Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="lastName">Last Name*</label>
+
+          <div class="form-group" [ngClass]="{
+             'has-dirty': lastName.dirty, 
+             'has-danger': lastName.invalid && lastName.dirty, 
+             'has-success': lastName.valid && lastName.dirty }">
+            <input name="lastName" formControlName="lastName" type="text" class="form-control border-0 border-bottom" id="lastName">
+
+            <div class="form-control-feedback-wrapper">
+              <div class="form-control-feedback has-danger" 
+                *ngIf="lastName.invalid && lastName.dirty"> 
+                Last Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="col">
+        <div class="form-group">
+          <label for="companyName">Company Name*</label>
+
+          <div class="form-group" [ngClass]="{
+             'has-dirty': companyName.dirty, 
+             'has-danger': companyName.invalid && companyName.dirty, 
+             'has-success': companyName.valid && companyName.dirty }">
+            <input name="companyName" formControlName="companyName" type="text" class="form-control border-0 border-bottom" id="companyName">
+
+            <div class="form-control-feedback-wrapper">
+              <div class="form-control-feedback has-danger" 
+                *ngIf="companyName.invalid && companyName.dirty"> 
+                Company Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number*</label>
+
+          <div class="form-group" [ngClass]="{
+             'has-dirty': phoneNumber.dirty, 
+             'has-danger': phoneNumber.invalid && phoneNumber.dirty, 
+             'has-success': phoneNumber.valid && phoneNumber.dirty }">
+            <input name="phoneNumber" formControlName="phoneNumber" type="text" class="form-control border-0 border-bottom" id="phoneNumber">
+
+            <div class="form-control-feedback-wrapper">
+              <div class="form-control-feedback has-danger" 
+                *ngIf="phoneNumber.invalid && phoneNumber.dirty"> 
+                Phone Number is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col">
+        <div class="form-group">
+          <label for="emailAddress">Email Address*</label>
+
+          <div class="form-group" [ngClass]="{
+             'has-dirty': emailAddress.dirty, 
+             'has-danger': emailAddress.invalid && emailAddress.dirty, 
+             'has-success': emailAddress.valid && emailAddress.dirty }">
+            <input name="emailAddress" formControlName="emailAddress" type="text" class="form-control border-0 border-bottom" id="emailAddress">
+
+            <div class="form-control-feedback-wrapper">
+              <div class="form-control-feedback has-danger" 
+                *ngIf="emailAddress.invalid && emailAddress.dirty"> 
+                Email Address is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group" *ngIf="isCustomerSupport()">
+          <label for="helpOption">How can we help you?</label>
+
+          <div class="form-group" [ngClass]="{
+            'has-dirty': helpOption.dirty, 
+            'has-danger': helpOption.invalid && helpOption.dirty, 
+            'has-success': helpOption.valid && helpOption.dirty }">
+
+            <select class="form-control custom-select" formControlName="helpOption" name="helpOption" id="helpOption" required>
+              <option *ngFor="let option of helpOptions" [value]="option.value">{{option.viewValue}}</option>
+            </select>
+
+            <div class="form-control-feedback-wrapper">
+              <div class="form-control-feedback has-danger" 
+                *ngIf="helpOption.invalid && helpOption.dirty"> 
+
+                Please select an option.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row" *ngIf="isCustomerSupport()">
+
+      <div class="col">
+        <div class="form-group animated fadeIn" *ngIf="helpOption.value == 'work-order-help'">
+          <label for="workOrderNumber">Project #</label>
+          <input name="workOrderNumber"
+            formControlName="workOrderNumber" type="text"
+            class="form-control border-0 border-bottom"
+            id="workOrderNumber">
+        </div>
+      </div>
+
+      <div class="col">
+        <div id="fileselector">
+          <label class="selector upload-file-label" for="upload-file-selector">
+            <input name="filePath" formControlName="filePath" (change)=attachFile($event) id="upload-file-selector" type="file">
+            <span>Any Attachment?</span>
+            <img src="/assets/frontend/attach-file.svg" width='30%' alt="Attach File">
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enterprise Checkboxes -->
+    <div id="enterpriseCheckbox" *ngIf="isEnterprise()">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Are you interested in Sunray's API?</label>
+          <div class="">
+            <mat-radio-group class="radio-group" name="usingSunrayApi" formControlName="usingSunrayApi">
+              <mat-radio-button class="radio-button" *ngFor="let usingOption of usingOptions" [value]="usingOption">
+                {{ usingOption }}
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Are you interested in uploading requests via an excel sheet?</label> 
+          <div class="">
+            <mat-radio-group class="radio-group" name="usingExcel" formControlName="usingExcel">
+              <mat-radio-button class="radio-button" *ngFor="let usingOption of usingOptions" [value]="usingOption">
+                {{ usingOption }}
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Do you need help developing a process to better secure your lien & bond claim rights?</label> 
+        <div class="">
+          <mat-radio-group class="radio-group" name="bondClaimRights" formControlName="bondClaimRights">
+            <mat-radio-button class="radio-button" *ngFor="let usingOption of usingOptions" [value]="usingOption">
+              {{ usingOption }}
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Us Checkboxes -->
+    <div id="contactUsCheckbox" *ngIf="isDemoRequest() || isInquiry()">
+      <div class="form-row">
+        <div class="form-group">
+          <label>How many NTO's are you currently processing per month?</label> 
+          <div class="">
+            <mat-radio-group class="radio-group" name="ntosPerMonth" formControlName="ntosPerMonth">
+              <mat-radio-button class="radio-button" *ngFor="let ntoScale of ntoScales" [value]="ntoScale">
+                {{ ntoScale }}
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Are you currently using a document service?</label>
+          <div class="">
+            <mat-radio-group class="radio-group" name="usingService" formControlName="usingService">
+              <mat-radio-button class="radio-button" *ngFor="let usingOption of usingOptions" [value]="usingOption">
+                {{ usingOption }}
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Support -->
+    <div id="contactUsCheckbox" *ngIf="isCustomerSupport()">
+      <div class="form-row">
+        <div class="col">
+          <textarea name="description" formControlName="description" class="form-control" placeholder="Please provide additional details." rows="5"></textarea>
+        </div>
+      </div>
+    </div>
+
+  </form>
+  <br/>
+</div>

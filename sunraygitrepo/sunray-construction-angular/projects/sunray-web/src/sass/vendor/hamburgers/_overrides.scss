@@ -1,0 +1,6 @@
+.hamburger:hover {
+  @include media-breakpoint-down(sm) {
+    opacity: 1;
+  }
+}
+

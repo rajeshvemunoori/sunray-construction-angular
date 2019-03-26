@@ -1,0 +1,14 @@
+<!--component html goes here -->
+<div class="box-header with-border">
+  <div class="form-group voffset row">
+    <label for="" class="vertical-label col-sm-4 col-md-8 text-right"> Select Account Manager</label>
+    <div class="col-sm-8 col-md-4">
+      <select id="Id" #Id="ngModel" class="hideLabel form-control" [(ngModel)]="nameId" name="id" (change)="selectName($event);">
+        <option selected="" value="">All Account Managers</option>
+        <option [ngValue]="item.id" *ngFor="let item of (collection)">
+          {{ item.getAttr('name') }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>

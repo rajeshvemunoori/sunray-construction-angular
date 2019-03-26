@@ -1,0 +1,8 @@
+<div *ngIf="(content$ | async) as content"
+  class="component-inner-wrapper">
+  <div class="content-wrapper">
+    <div [innerHTML]="content.introduction" ceoRouteTransformer>
+    </div>
+    <h3 class="prompt">{{translate('prompt')}}</h3>
+  </div>
+</div>

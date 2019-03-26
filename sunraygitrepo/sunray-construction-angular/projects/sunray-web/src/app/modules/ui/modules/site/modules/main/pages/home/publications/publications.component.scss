@@ -1,0 +1,49 @@
+@import 'helpers';
+
+.main-wrapper {
+  @include make-container;
+  @include make-container-max-widths;
+}
+
+.item-wrapper {
+  @include media-breakpoint-up(md) {
+    @include make-col(3);
+  }
+}
+
+.publications-wrapper {
+  @include media-breakpoint-down(md) {
+    padding: 30px;
+  }
+}
+
+.item-wrapper {
+  padding-top: $spacer * 2;
+  padding-bottom: $spacer * 2;
+  border-right: 2px solid $border-color;
+  border-bottom: 2px solid $border-color;
+  @include flex-parent-vertical-aligner;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    border-right: none;
+  }
+}
+
+.publication-item-inner-wrapper {
+  img {
+    max-width: 100%;
+  }
+}
+
+
+#center-image{
+  margin: auto;
+}
+
+.inner-content{
+  padding: 40px 100px 150px 100px;
+}

@@ -1,0 +1,26 @@
+<div class="item-inner-wrapper">
+
+  <a class="link" routerLink="{{entity.url}}" *ngIf="entity.url">
+    <div class="image-wrapper">
+      <img alt="{{entity.image.alt}}" src="{{entity.image.src}}">
+    </div>
+
+    <div class="body-wrapper">
+      <h5 *ngIf="entity.title" class="font-weight-bold">{{entity.title}}</h5>
+      <p *ngIf="entity.content">{{entity.content}}</p>
+    </div>
+  </a>
+
+  <div class="content-wrapper" *ngIf="! entity.url">
+    <div class="image-wrapper">
+      <img alt="{{entity.image.alt}}" src="{{entity.image.src}}">
+    </div>
+
+    <div class="body-wrapper">
+      <h5 *ngIf="entity.title" class="font-weight-bold">{{entity.title}}</h5>
+      <p *ngIf="entity.content">{{entity.content}}</p>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,21 @@
+{
+  "name": "@ceo/entity",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "main": "bundles/ceo-entity.umd.js",
+  "module": "fesm5/ceo-entity.js",
+  "es2015": "fesm2015/ceo-entity.js",
+  "esm5": "esm5/ceo-entity.js",
+  "esm2015": "esm2015/ceo-entity.js",
+  "fesm5": "fesm5/ceo-entity.js",
+  "fesm2015": "fesm2015/ceo-entity.js",
+  "typings": "ceo-entity.d.ts",
+  "metadata": "ceo-entity.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

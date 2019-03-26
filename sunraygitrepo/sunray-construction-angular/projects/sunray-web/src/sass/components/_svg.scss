@@ -1,0 +1,11 @@
+@import 'helpers';
+
+@each $color, $value in $theme-colors {
+  @include text-svg-variant(".text-#{$color}", $value);
+}
+
+@each $color, $value in $colors {
+  @include text-svg-variant(".text-#{$color}", $value);
+}
+
+@include text-svg-variant(".text-gray-700", $gray-700);

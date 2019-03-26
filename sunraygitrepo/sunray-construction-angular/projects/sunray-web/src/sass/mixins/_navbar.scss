@@ -1,0 +1,5 @@
+@mixin navbar-toggler-wrapper-variant($parent, $color) {
+  #{$parent} {
+    @include hamburger-color($color);
+  }
+}

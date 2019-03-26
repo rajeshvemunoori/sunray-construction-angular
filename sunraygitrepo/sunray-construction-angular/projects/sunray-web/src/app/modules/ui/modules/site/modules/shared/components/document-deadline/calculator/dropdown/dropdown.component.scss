@@ -1,0 +1,29 @@
+@import 'helpers';
+
+#deadline-dropdown {
+  .deadline-dropdown {
+    width: 30rem;
+    background: white;
+    text-align: left;
+    color: gray;
+    border-radius: 9px;
+    height: 50px;
+    border-color: $gray-200;
+    /* border: none; */
+  }
+
+
+    .dropdown-menu {
+      width: 100%;
+      border-radius: 5px;
+      border-color: $gray-500;
+    }
+
+    .dropdown-toggle::after {
+      float: right;
+      position: relative;
+      top: 8px;
+      color: $primary;
+      font-size: xx-small;
+    }
+}

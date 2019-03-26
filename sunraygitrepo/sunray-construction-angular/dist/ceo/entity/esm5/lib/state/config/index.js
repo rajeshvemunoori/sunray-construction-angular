@@ -1,0 +1,12 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import * as EntityConfigActions from './actions';
+export { EntityConfigActions };
+export { EntityConfigEffects } from './effects';
+export { configInitialState } from './initial-state';
+export { entityConfigReducer } from './reducer';
+export { selectAppFeature } from './selectors';
+export {} from './state';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL2VudGl0eS8iLCJzb3VyY2VzIjpbImxpYi9zdGF0ZS9jb25maWcvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sS0FBSyxtQkFBbUIsTUFBTSxXQUFXLENBQUE7QUFDaEQsT0FBTyxFQUFFLG1CQUFtQixFQUFFLENBQUE7QUFFOUIsb0NBQWMsV0FBVyxDQUFBO0FBQ3pCLG1DQUFjLGlCQUFpQixDQUFBO0FBQy9CLG9DQUFjLFdBQVcsQ0FBQTtBQUN6QixpQ0FBYyxhQUFhLENBQUE7QUFDM0IsZUFBYyxTQUFTLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBFbnRpdHlDb25maWdBY3Rpb25zIGZyb20gJy4vYWN0aW9ucydcbmV4cG9ydCB7IEVudGl0eUNvbmZpZ0FjdGlvbnMgfVxuXG5leHBvcnQgKiBmcm9tICcuL2VmZmVjdHMnXG5leHBvcnQgKiBmcm9tICcuL2luaXRpYWwtc3RhdGUnXG5leHBvcnQgKiBmcm9tICcuL3JlZHVjZXInXG5leHBvcnQgKiBmcm9tICcuL3NlbGVjdG9ycydcbmV4cG9ydCAqIGZyb20gJy4vc3RhdGUnXG4iXX0=

@@ -1,0 +1,18 @@
+@import "helpers";
+
+.user-status-inner-wrapper {
+  @include flex-parent-vertical-aligner
+
+  .image-wrapper {
+    @include round-image-container(50px);
+    
+    img {
+      @include img-fluid;
+    }
+  }
+
+  .content-wrapper {
+    padding-left: $spacer-x-sm;
+    color: $white;
+  }
+}

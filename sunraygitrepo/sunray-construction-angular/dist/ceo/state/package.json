@@ -1,0 +1,21 @@
+{
+  "name": "@ceo/state",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "main": "bundles/ceo-state.umd.js",
+  "module": "fesm5/ceo-state.js",
+  "es2015": "fesm2015/ceo-state.js",
+  "esm5": "esm5/ceo-state.js",
+  "esm2015": "esm2015/ceo-state.js",
+  "fesm5": "fesm5/ceo-state.js",
+  "fesm2015": "fesm2015/ceo-state.js",
+  "typings": "ceo-state.d.ts",
+  "metadata": "ceo-state.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

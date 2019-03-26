@@ -1,0 +1,49 @@
+@import "helpers";
+
+#our-solution {
+  padding-top: 1rem;
+
+  .card {
+    background-color: $gray-100;
+    .question {
+      font-size: 1rem;
+    }
+    .card-body {
+      .btn-primary {
+        background-color: $white !important;
+        color: $primary;
+      }
+    }
+  }
+
+  .card:hover {
+    background-color: $white;
+    .card-body {
+      .btn-primary {
+        background-color: $primary !important;
+        color: $white;
+      }
+    }
+  }
+
+  .lead-heading {
+    padding: $spacer * 1;
+    color: $primary;
+    font-weight: bold;
+    display: inline-block;
+    height: 70px;
+  }
+
+  .btn-wrapper {
+    margin-top: $spacer;
+  }
+
+  .purpose-icon {
+    img, svg {
+      width: 100px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+}

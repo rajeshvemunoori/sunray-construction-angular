@@ -1,0 +1,17 @@
+<div class="preferences-container">
+  <div class="preferences-pane-container-detail container-detail" *ngFor="let table of tables">
+    <div class="table-header-wrapper">
+       <sunray-ui-app-shared-header
+         [headerTitle]="table.title"
+         [buttonTitle]="'Edit '+ table.title"
+         (actionEmitter) = "editCompany(table.title)">
+       </sunray-ui-app-shared-header>
+    </div>
+    <div class="preferences-pane-container-body container-body">
+       <shared-declarables-attribute-list
+         [attributeEntity$]="table.attributeEntity$"
+         [attributeEntityLabels$]="table.configHeaders$">
+       </shared-declarables-attribute-list>
+    </div>
+  </div>
+</div>

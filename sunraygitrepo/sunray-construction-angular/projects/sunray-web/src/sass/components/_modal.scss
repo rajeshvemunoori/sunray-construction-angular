@@ -1,0 +1,79 @@
+@import 'helpers';
+
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-dialog {
+  max-width: 1000px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 2rem;
+  }
+}
+
+body.login-form-modal-wrapper {
+  .modal-dialog {
+    max-width: 500px;
+  }
+}
+
+.mat-dialog-container {
+  overflow: visible !important;
+  position: relative;
+
+  .close.modal-close {
+    position: absolute;
+    width: 2.2rem;
+    height: 2.2rem;
+    background: black;
+    right: -15px;
+    top: -15px;
+    text-shadow: none;
+    opacity: unset;
+    z-index: 1;
+
+    span {
+      font-weight: bolder;
+      color: $white;
+    }
+  }
+}
+
+
+.modal-header {
+  border-bottom: none !important;
+}
+
+
+.modal-header-inner-wrapper {
+  border-bottom: none !important;
+  padding: 2rem;
+  width: 100%;
+
+  .mat-dialog-title,
+  .title {
+    width: 100%;
+    color: $primary;
+    font-family: $headings-font-family;
+    font-size: $h3-font-size;
+    line-height: $headings-line-height;
+    text-align: center;
+  }
+
+}
+
+.mat-dialog-content {
+  //max-height: none !important;
+}
+
+ceo-modal-footer {
+  &.text-center {
+    mat-dialog-actions {
+      //justify-content: space-around !important;
+      a {
+        margin-left: 10px;
+      }
+    }
+  }
+}

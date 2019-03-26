@@ -1,0 +1,289 @@
+@import "helpers";
+
+.states-wrapper,
+.map-box {
+  @include make-col-ready;
+}
+
+.states-wrapper {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    @include make-col(3);
+  }
+}
+
+.states-inner-wrapper {
+  height: 100%;
+  background-color: $gray-100;
+}
+
+.map-box {
+  @include media-breakpoint-up(md) {
+    @include make-col(9);
+  }
+
+  .inner-wrapper {
+    background-color: $white;
+  }
+}
+
+.map-legend-wrapper {
+  padding-top: map-get($spacers, 4);
+  padding-bottom: map-get($spacers, 4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i, p {
+    display: inline-block;
+    padding: 0px map-get($spacers, 2);
+  }
+
+  i {
+    color: $gray-300;
+    font-size: $h2-font-size;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.state-map-wrapper {
+  padding: 1rem;
+}
+
+#notices {
+	@-moz-document url-prefix(){
+		.notice-states{
+			overflow-y: scroll;
+		}
+	}
+  .notice-heading {
+    padding: 25px;
+
+    h4{
+      margin: 0px;
+    }
+
+    p.paragraph{
+    	font-size: 15px;
+    	padding: 0px 150px;
+    	margin-top: 10px;
+    	margin-bottom: 0;
+    }
+  }
+
+  .notices-container{
+    padding: map-get($spacers, 6) 0px;
+    color: $gray-700;
+
+		.container{
+		  max-width: 1300px;
+		}
+
+    .states-box {
+      padding-top: map-get($spacers, 3);
+
+      form {
+       img {
+         width: 30px;
+         top: 5px;
+       }
+
+       input {
+        padding-left: 20px;
+        background: none;
+        border: 0px;
+       }
+      }
+
+      p {
+        margin: 0px;
+        padding: 0px 20px;
+      }
+
+      ul {
+        padding: 0px;
+        list-style-type: none;
+        overflow: overlay;
+        margin-bottom: 0px;
+        li{
+          padding: 5px 20px;
+          cursor: pointer;
+          a:hover{
+           text-decoration: none;
+          }
+        }
+        li:hover, li.active{
+          background-color: #E5E5E5;
+        }
+      }
+
+      a.notice-state{
+        margin-bottom: 0.5em;
+        font-size: 15px;
+      }
+      .notice-name{
+        font-family: ProximaNovaSemiBold;
+      }
+
+		  .map-box{
+		    padding: 20px 0;
+		    background-color: $white;
+		    .state-legend{
+		      font-size: 2em;
+          color: #D5D5D5;
+		    }
+		    .diabled-states{
+          display: inline;
+			    margin-left: 5px;
+			    vertical-align: super;
+		    }
+		  }
+		  #vmap{
+		      width: 670px;
+		      height: 400px;
+		      margin: 0px;
+		      cursor: pointer;
+		    }
+		  #descriptive_accordion{
+		    padding:0px;
+		    background: #fff;
+		    border-left: 1px solid #F4F4F4;
+		    height: 425px;
+        overflow: overlay;
+        .ui-accordion-header-active{
+					font-family: ProximaNovaSemiBold;
+					color: #686868 !important;
+				}
+	      .question{
+	        background-color: #F8F8F8;
+	        padding: 20px 20px 20px 45px;
+	        margin-bottom: 0px;
+	        border: 0px;
+	        border-bottom: 1px solid #F4F4F4;
+	        font-size: 15px;
+	        color: #737373;
+			    border-radius: 0px;
+			    margin-top: 0px;
+	      }
+	      .answer{
+	        padding: 20px;
+	        background-color: #FFF;
+	        margin-bottom: 0px;
+	        font-size: 13px;
+	        color: #686868;
+	      }
+	    }
+		}
+	}
+	#common-faqs .inner-content{
+	  padding-bottom: 20px;
+	}
+	#disclaimer .inner-content{
+	  padding-bottom: 35px;
+	}
+	#tracking {
+	  .inner-content{
+	    .float-my-children{
+	       padding-bottom: 10px;
+	    }
+	  }
+	}
+}
+
+#notice-deadline {
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+
+  .deadline-text {
+  } 
+
+  .button-wrapper {
+    @include media-breakpoint-up(md) {
+      text-align: right;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: map-get($spacers, 4);
+    }
+  }
+}
+
+.tracking-box {
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-up(md) {
+    @include make-col-ready;
+    @include make-col(6);
+  }
+
+  .tracking-box-inner {
+    background-color: $body-bg-dark-2;
+    padding: map-get($spacers, 4);
+
+    @include media-breakpoint-up(md) {
+      border-radius: $border-radius;
+    }
+  }
+
+  img{
+    margin-bottom: map-get($spacers, 4);
+    @include img-fluid;
+  }
+
+}
+
+
+.shortcut-wrapper {
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+
+  @include make-col-ready;
+}
+
+
+$shortcut-icon-width: 80px;
+a.shortcut-link {
+  display: flex;
+  align-items: flex-start;
+  color: $gray-900;
+
+  img {
+    flex-basis: auto;
+    width: $shortcut-icon-width;
+  }
+
+  .content-wrapper {
+    flex-basis: auto;
+    padding-left: $spacer;
+    padding-top: map-get($spacers, 1);
+  }
+}
+
+.states-box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.state-selection-list {
+  height: $map-width * $map-width-height-ratio;
+  overflow-y: scroll;
+
+  @include media-breakpoint-down(md) {
+    height: $map-width-small * $map-width-height-ratio;
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: $map-width-xs * $map-width-height-ratio;
+  }
+}
+

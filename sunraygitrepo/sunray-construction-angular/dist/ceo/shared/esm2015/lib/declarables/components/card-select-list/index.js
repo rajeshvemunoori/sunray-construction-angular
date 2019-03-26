@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { CardSelectListComponent } from './card-select-list.component';
+/** @type {?} */
+export const components = [
+    CardSelectListComponent,
+];
+export { CardSelectListComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9kZWNsYXJhYmxlcy9jb21wb25lbnRzL2NhcmQtc2VsZWN0LWxpc3QvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFBRSx1QkFBdUIsRUFBRSxNQUFNLDhCQUE4QixDQUFBOztBQUV0RSxNQUFNLE9BQU8sVUFBVSxHQUFVO0lBQy9CLHVCQUF1QjtDQUN4QjtBQUVELE9BQU8sRUFBRSx1QkFBdUIsRUFBRSxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ2FyZFNlbGVjdExpc3RDb21wb25lbnQgfSBmcm9tICcuL2NhcmQtc2VsZWN0LWxpc3QuY29tcG9uZW50J1xuXG5leHBvcnQgY29uc3QgY29tcG9uZW50czogYW55W10gPSBbXG4gIENhcmRTZWxlY3RMaXN0Q29tcG9uZW50LFxuXVxuXG5leHBvcnQgeyBDYXJkU2VsZWN0TGlzdENvbXBvbmVudCB9XG4iXX0=

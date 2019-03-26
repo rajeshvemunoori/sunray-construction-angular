@@ -1,0 +1,99 @@
+<div class="content">
+   <div class="container">
+      <div class="public-notice mx-5 px-5">
+      </div>
+   </div>
+
+   <div class="page">
+      <div class="container">
+         <div class="pricing-block">
+            <div class="container">
+              <div class="text-center">
+                <h1 class="text-primary">Great. Let's get you paid!</h1>
+              </div>
+
+              <div class="subheader">
+                <div class="already-account" align="right">
+                  <div class="already-account">Already have an account?
+                    <span>
+                      <a class="login" (click)="loginFormWindow()" href="#">&nbsp;Log in</a>
+                    </span>
+                  </div>
+                </div>
+                <div align="left"><h4>Please signup to get started</h4></div>
+              </div>
+
+
+                <form #f='ngForm' (ngSubmit)="onSubmit(f)">
+                  <div class="form-row">
+                    <div class="col">
+                      <div class="form-group">
+                        <input type="text" class="form-control border-1" id="firstName" placeholder="First Name">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                        <input type="text" class="form-control border-1"  placeholder="Last Name" id="lastName">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="col">
+                      <div class="form-group">
+                        <input type="text" class="form-control border-1" placeholder="company Name" id="companyName">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="col">
+                      <div class="form-group">
+                        <input type="text" class="form-control border-1" placeholder="Your Work Email" id="emailAddress">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                        <input type="text" class="form-control border-1" placeholder="Phone Number" id="phoneNumber">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="submit-button row text-center">
+                    <div class="col-md-12">
+                      <div class="button-wrapper">
+                        <button class="btn btn-primary btn-lg-curved" (click)="congratsPopupWindow()">create my free account</button>
+                      </div>
+                    </div>
+                    <div class='privacy-policy'>
+                       By clicking this button, I agree to the
+                         <a href="#">Privacy Policy</a> and
+                         <a href="#">Terms of Use.</a>
+                    </div>
+                  </div>
+
+                </form>
+
+               <div class="row justify-content-md-center">
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="card-body">
+                              <img src="/assets/frontend/100-percent-satisfaction-guaranteed.svg" alt="100 percent satisfaction guaranteed">
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="card-body">
+                              <img src="/assets/frontend/2m-notices-sent.svg" alt="2m notices sent">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+

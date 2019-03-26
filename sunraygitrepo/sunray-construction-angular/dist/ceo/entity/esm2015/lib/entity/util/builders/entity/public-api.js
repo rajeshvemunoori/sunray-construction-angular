@@ -1,0 +1,12 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+export { buildEntityEffects } from './build-entity-effects';
+export { buildEntityConfigs } from './build-entity-configs';
+export { buildEntityInitialState } from './build-entity-initial-state';
+export { buildEntityRelationshipProperty, defineEntityRelationshipGetSet, buildEntityRelationshipProperties } from './build-entity-relationship-properties';
+export { buildEntityService } from './build-entity-service';
+export { buildEntityTypeProvider } from './build-entity-type-provider';
+export { buildEntityTypes } from './build-entity-types';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BjZW8vZW50aXR5LyIsInNvdXJjZXMiOlsibGliL2VudGl0eS91dGlsL2J1aWxkZXJzL2VudGl0eS9wdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxtQ0FBYyx3QkFBd0IsQ0FBQTtBQUN0QyxtQ0FBYyx3QkFBd0IsQ0FBQTtBQUN0Qyx3Q0FBYyw4QkFBOEIsQ0FBQTtBQUM1QyxtSEFBYyx3Q0FBd0MsQ0FBQTtBQUN0RCxtQ0FBYyx3QkFBd0IsQ0FBQTtBQUN0Qyx3Q0FBYyw4QkFBOEIsQ0FBQTtBQUM1QyxpQ0FBYyxzQkFBc0IsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCAqIGZyb20gJy4vYnVpbGQtZW50aXR5LWVmZmVjdHMnXG5leHBvcnQgKiBmcm9tICcuL2J1aWxkLWVudGl0eS1jb25maWdzJ1xuZXhwb3J0ICogZnJvbSAnLi9idWlsZC1lbnRpdHktaW5pdGlhbC1zdGF0ZSdcbmV4cG9ydCAqIGZyb20gJy4vYnVpbGQtZW50aXR5LXJlbGF0aW9uc2hpcC1wcm9wZXJ0aWVzJ1xuZXhwb3J0ICogZnJvbSAnLi9idWlsZC1lbnRpdHktc2VydmljZSdcbmV4cG9ydCAqIGZyb20gJy4vYnVpbGQtZW50aXR5LXR5cGUtcHJvdmlkZXInXG5leHBvcnQgKiBmcm9tICcuL2J1aWxkLWVudGl0eS10eXBlcydcbiJdfQ==

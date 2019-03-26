@@ -1,0 +1,27 @@
+<div class="project-info-container container-detail">
+  <div class='project-detail-attrbuite-list-wrapper attribute-list-wrapper'>
+    <shared-declarables-attribute-list
+      [attributeEntity$]="projectJobEntity$"
+      [attributeEntityLabels$]="projectDetailHeader$">
+    </shared-declarables-attribute-list>
+  </div>
+</div>
+
+<div class="project-participants-container container-detail">
+  <div class="header-wrapper">
+     <sunray-ui-app-shared-header
+       [headerTitle]="'Project Participants'"
+       [buttonTitle]="'Add a Participant'"
+       [searchFlag]="false"
+       (actionEmitter) = "edit()"
+       (searchKeyEmitter) = "search($event,contact)">
+     </sunray-ui-app-shared-header>
+  </div>
+  <div class="project-participants-container-body container-body">
+    <sunray-ui-app-shared-table
+      [collection$]="projectParticipants$"
+      [configHeader$]="projectParticipantsHeader$"
+      (actionEmitter)="triggerAction($event)">
+    </sunray-ui-app-shared-table>
+  </div>
+</div>

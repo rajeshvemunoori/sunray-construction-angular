@@ -1,0 +1,16 @@
+@import 'helpers';
+
+@media screen {
+  .modal-lg {
+    width: 80% !important;
+    max-width: calc(80%);
+  }
+}
+
+.team-member {
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray-100;
+  }
+}

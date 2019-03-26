@@ -1,0 +1,19 @@
+@import 'helpers';
+
+:host ::ng-deep {
+  .breadcrumb-item {
+    @include size-sm {
+      width: 100%;
+      display: block;
+    }
+
+    &:before {
+      color: $primary;
+    }
+
+    a {
+      font-weight: bold;
+      font-size: $font-size-lg;
+    }
+  }
+}

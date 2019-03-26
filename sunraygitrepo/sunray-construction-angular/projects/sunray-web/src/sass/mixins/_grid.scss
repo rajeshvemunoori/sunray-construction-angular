@@ -1,0 +1,18 @@
+// Mixin to remove gutter from a grid; use
+// the mixin on the container tag
+
+@mixin no-gutter {
+  padding-left: 0px;
+  padding-right: 0px;
+
+  > div {
+    margin-left: 0px;
+    margin-right: 0px;
+
+    > div {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}
+

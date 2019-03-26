@@ -1,0 +1,10 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { EntityTypeProviderService } from '../../../services';
+/** @type {?} */
+export const buildEntityTypeProvider = (featureConfig) => {
+    return new EntityTypeProviderService(featureConfig);
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVpbGQtZW50aXR5LXR5cGUtcHJvdmlkZXIuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL2VudGl0eS8iLCJzb3VyY2VzIjpbImxpYi91dGlsL2J1aWxkZXJzL2VudGl0eS9idWlsZC1lbnRpdHktdHlwZS1wcm92aWRlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLHlCQUF5QixFQUFFLE1BQU0sbUJBQW1CLENBQUM7O0FBRTlELE1BQU0sT0FBTyx1QkFBdUIsR0FBRyxDQUFDLGFBQWEsRUFBRSxFQUFFO0lBQ3ZELE9BQU8sSUFBSSx5QkFBeUIsQ0FBQyxhQUFhLENBQUMsQ0FBQTtBQUNyRCxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgRW50aXR5VHlwZVByb3ZpZGVyU2VydmljZSB9IGZyb20gJy4uLy4uLy4uL3NlcnZpY2VzJztcblxuZXhwb3J0IGNvbnN0IGJ1aWxkRW50aXR5VHlwZVByb3ZpZGVyID0gKGZlYXR1cmVDb25maWcpID0+IHtcbiAgcmV0dXJuIG5ldyBFbnRpdHlUeXBlUHJvdmlkZXJTZXJ2aWNlKGZlYXR1cmVDb25maWcpXG59XG4iXX0=

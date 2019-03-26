@@ -1,0 +1,3 @@
+type,id,attributes.name,attributes.resource-type,relationships.form-fields.data.id,relationships.form-fields.data.type
+forms,users.edit,users.edit,users,21,form-fields
+forms,users.edit,users.edit,users,22,form-fields

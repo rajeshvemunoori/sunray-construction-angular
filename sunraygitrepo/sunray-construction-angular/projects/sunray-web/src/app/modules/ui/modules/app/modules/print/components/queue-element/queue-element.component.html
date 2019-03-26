@@ -1,0 +1,17 @@
+<div class="component-inner-wrapper">
+  <div class="widget-wrapper">
+    <div class="widget-inner-wrapper">
+      <div class="widget-header-wrapper">
+        <span>Documents</span>
+      </div>
+      <div class="widget-body-wrapper">
+        <sunray-common-table
+          [items$]="collection$"
+          [tableHeaders]="attrNames"
+          [actionText]="actionText"
+          (selectEmitter)="selectQueueElement($event)">
+        </sunray-common-table>
+      </div>
+    </div>
+  </div>
+</div>

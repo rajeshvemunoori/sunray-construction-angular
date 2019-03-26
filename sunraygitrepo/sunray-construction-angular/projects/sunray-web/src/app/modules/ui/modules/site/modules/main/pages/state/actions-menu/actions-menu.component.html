@@ -1,0 +1,48 @@
+<div *ngIf="false">
+  <div *ngIf="(state$ | async) as state" id="sticky-menu">
+    <div class="inner-content floating-image-options-menu sticky-menu-wrapper">
+      <div class="inner-wrapper">
+        <ul class="nav justify-content-center">
+
+          <li class="nav-item" role="presentation">
+            <a class="nav-link text-primary" href="#" routerLink="." (click)="goToAnchor('deadline-calculator')">
+              <img alt="Deadline Calculator" src="assets/frontend/Deadline-calculator.svg">
+              <span>DEADLINE CALCULATOR</span>
+            </a>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <a class="nav-link text-primary" href="#" routerLink="." (click)="goToAnchor('learning-center-menu')">
+              <img alt="{{state.name}} Learning Center" src="assets/frontend/learning-center.svg">
+              <span>{{state.name}} LEARNING CENTER</span>
+            </a>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <a class="nav-link text-primary" href="#" routerLink="." (click)="goToAnchor('reviews-section')">
+              <img alt="Reviews" src="assets/frontend/Reviews.svg">
+              <span>REVIEWS</span>
+            </a>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <a class="nav-link text-primary" href="#" routerLink="." (click)="goToAnchor('faqs')">
+              <img alt="Faqs" src="assets/frontend/FAQs.svg">
+              <span>FAQS</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="project-details-wrapper">
+        <span> Your project: Private Commercial, General Contractor</span>
+        <span> Date of first furnishing: 07/10/18</span>
+        <span> Date of last furnishing: 07/10/18</span>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+

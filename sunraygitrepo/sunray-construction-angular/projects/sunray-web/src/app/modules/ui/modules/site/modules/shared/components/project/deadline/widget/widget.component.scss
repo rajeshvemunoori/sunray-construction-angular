@@ -1,0 +1,58 @@
+@import 'helpers';
+
+.widget-inner-wrap {
+  margin-top: $spacer-y-md;
+}
+
+.project-type-resolve-outer-wrap {
+  padding-bottom: $spacer-y-xl;
+}
+
+.step-wrap {
+  @include size-lg {
+    margin-left: $spacer-x-md;
+  }
+}
+
+.deadline-calculators-wrapper {
+  .inner-wrapper {
+    @include make-row;
+    justify-content: space-around;
+  }
+}
+
+.deadline-calculator-wrapper {
+  @include make-col-ready;
+  @include size-lg {
+    @include make-col(4);
+  }
+  margin-top: $spacer-y-md;
+  margin-bottom: $spacer-y-md;
+}
+
+.form-wrapper {
+  padding-top: $spacer-y-lg;
+}
+
+.button-wrapper {
+  padding-top: $spacer-y-lg;
+  text-align: center;
+}
+
+:host ::ng-deep {
+  ceo-shared-form-group {
+    @include make-row;
+
+    > div {
+      @include make-col-ready;
+
+      @include size-lg {
+        @include make-col(6);
+      }
+
+      label {
+        display: none;
+      }
+    }
+  }
+}

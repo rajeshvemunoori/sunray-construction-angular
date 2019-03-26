@@ -1,0 +1,9 @@
+<div class="card-list">
+  <div class="card-group">
+    <div *ngFor="let item of (collection$ | async)" class="card-inner-group">
+      <sunray-ui-app-dashboards-performance-list
+        [collection$]="item.attributes">
+      </sunray-ui-app-dashboards-performance-list>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div *ngIf="item" class="container">
+  <div class="card-inner-wrapper">
+    <div class="item-wrapper">
+      <div class="value-wrapper">
+        <li>
+          <label>
+            <b> {{ item.getAttr('display-name') }} Mail </b>
+            <span *ngIf="(children() | async).length > 0" class="verify_value">
+               <a (click)="item.showDetails = !item.showDetails">
+                 {{ item.showDetails == true ? 'Hide Details' : 'Show Details'}}
+               </a>
+            </span>
+          </label>
+          <span class="item-status" [ngClass]="getMsgClass(item)">
+            {{ item.printMessage() }}
+          </span>
+        </li>
+      </div>
+      <div *ngIf=item.showDetails>
+        <div *ngFor="let childItem of children(item) | async">
+          <sunray-ui-app-print-batch-item-status
+            [item]="childItem"
+            [collection$] = "collection$">
+          </sunray-ui-app-print-batch-item-status>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

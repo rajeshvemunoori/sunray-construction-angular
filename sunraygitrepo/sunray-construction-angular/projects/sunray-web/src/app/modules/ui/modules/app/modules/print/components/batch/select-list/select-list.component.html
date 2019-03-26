@@ -1,0 +1,30 @@
+<!--
+<div *ngIf='collection$.length == 0'>
+  <h2> Loading data..</h2>
+</div>
+-->
+
+<div class="cards-outer-wrapper">
+  <div class="cards-wrapper">
+    <div *ngFor="let item of collection$ | async" class="card-wrapper height-15" (click)="select(item)">
+      <!--<div class="card-inner-wrapper clickable" appDirectiveThemeStyle [config]="themeConfig(item)">-->
+        <div class="checkbox-wrapper">
+          <div class="checkbox-inner-wrapper" (click)="toggleItemActive($event, item)">
+            <div class="checkbox" [ngClass]="checkboxStyle(item)">
+              <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+            </div>
+          </div>
+        </div>
+        <div class="value-wrapper">
+          <span> {{item["name"]}} </span>
+        </div>
+        <div class="title-wrapper">
+          <span> No of Mails: {{item["mailpieces-count"]}} </span>
+        </div>
+        <div class="title-wrapper">
+          <span>No of Forms: {{item["forms_count"]}}</span>
+        </div>
+        <!--</div>-->
+    </div>
+  </div>
+</div>

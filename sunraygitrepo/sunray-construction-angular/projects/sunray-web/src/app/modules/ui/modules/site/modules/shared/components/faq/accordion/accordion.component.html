@@ -1,0 +1,48 @@
+<div class="inner-content">
+  <div class="container">
+    <div class="faq-content">
+      <div class="faq-inner-wrapper">
+        <div class="search-form-wrapper">
+          <div class="input-group">
+            <input type="text" class="form-control"
+              placeholder="Search" aria-label="Search"
+              aria-describedby="basic-addon2"/>
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordions-wrapper" >
+          <div class="accordions-inner-wrapper" >
+            <div class="accordion-wrapper" *ngFor="let entity of collection$ | async">
+              <div class="accordion"
+                [ngClass]="{'active': isActive(entity)}">
+                <div class="text-primary accordion-header accordion-control">
+                  <a href="#" (click)="toggle($event, entity)"
+                    class="accordion-link" aria-expanded="false"
+                    aria-disabled="false">
+
+                    <span class="text-wrapper">
+                      {{entity.title.rendered}}
+                    </span>
+                    <span class="down-arrow-faq">
+                      <i class="fa fa-arrow-down"></i>
+                    </span>
+                  </a>
+                </div>
+                <div class="accordion-body accordion-pane bg-white">
+                  <div class="accordion-content"
+                    [innerHTML]="entity.content.rendered">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

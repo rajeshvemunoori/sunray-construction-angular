@@ -1,0 +1,4 @@
+type,id,attributes.name,attributes.resource-type
+forms,companies.edit,companies.edit,companies
+forms,users.edit,users.edit,users
+forms,users.settings,users.settings,users

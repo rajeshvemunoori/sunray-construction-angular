@@ -1,0 +1,13 @@
+<div *ngIf="attribute.options$" class="attribute-wrapper">
+  <sunray-site-project-type-resolve-attribute-prompt
+    [attribute]="attribute">
+  </sunray-site-project-type-resolve-attribute-prompt>
+
+  <div class="step-body">
+    <sunray-ui-site-job-type-select-list
+      [selectedItem]="jobType"
+      [items$]="attribute.options$"
+      (itemEmitter)="onAttributeSelected($event)">
+    </sunray-ui-site-job-type-select-list>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.braintree-toggle {
+  background: #F5F5F5;
+}
+.notice-error{
+	background-color: #FF6161;
+  color: #fff;
+  padding: 15px;
+}
+#checkout-section{
+	padding: 30px 200px;
+}
+.braintree-section{
+	text-align: left;
+	.col{
+	  max-width: 75%;
+	}
+}

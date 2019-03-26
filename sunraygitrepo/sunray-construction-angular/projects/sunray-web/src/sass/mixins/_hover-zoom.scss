@@ -1,0 +1,18 @@
+@mixin hover-zoom($transition-delay: 0.15s, $zoom-amount: 1.0001) {
+  transition: $transition-delay linear all;
+
+  -webkit-transform: scale(1) rotate(0.0001deg);
+  -moz-transform: scale(1) rotate(0.0001deg);
+  -ms-transform: scale(1) rotate(0.0001deg);
+  -o-transform: scale(1) rotate(0.0001deg);
+  transform: scale(1) rotate(0.0001deg);
+
+  &:hover {
+    -webkit-transform: scale($zoom-amount) rotate(0.0001deg);
+    -moz-transform: scale($zoom-amount) rotate(0.0001deg);
+    -ms-transform: scale($zoom-amount) rotate(0.0001deg);
+    -o-transform: scale($zoom-amount) rotate(0.0001deg);
+    transform: scale($zoom-amount) rotate(0.0001deg);
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+  }
+}

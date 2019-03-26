@@ -1,0 +1,12 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { DialogConfigService, DialogService, MatDialogAdapterService, } from './index';
+/** @type {?} */
+export const services = [
+    DialogConfigService,
+    DialogService,
+    MatDialogAdapterService,
+];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VydmljZXMuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9jb21tb24vZGlhbG9ncy9zZXJ2aWNlcy9zZXJ2aWNlcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUNMLG1CQUFtQixFQUNuQixhQUFhLEVBQ2IsdUJBQXVCLEdBQ3hCLE1BQU0sU0FBUyxDQUFBOztBQUVoQixNQUFNLE9BQU8sUUFBUSxHQUFVO0lBQzdCLG1CQUFtQjtJQUNuQixhQUFhO0lBQ2IsdUJBQXVCO0NBQ3hCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtcbiAgRGlhbG9nQ29uZmlnU2VydmljZSxcbiAgRGlhbG9nU2VydmljZSxcbiAgTWF0RGlhbG9nQWRhcHRlclNlcnZpY2UsXG59IGZyb20gJy4vaW5kZXgnXG5cbmV4cG9ydCBjb25zdCBzZXJ2aWNlczogYW55W10gPSBbXG4gIERpYWxvZ0NvbmZpZ1NlcnZpY2UsXG4gIERpYWxvZ1NlcnZpY2UsXG4gIE1hdERpYWxvZ0FkYXB0ZXJTZXJ2aWNlLFxuXVxuIl19

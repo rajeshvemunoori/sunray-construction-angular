@@ -1,0 +1,117 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "paths": {
+      "wordpress": [
+        "dist/wordpress"
+      ],
+      "wordpress/*": [
+        "dist/wordpress/*"
+      ],
+      "@sunray-web": [
+        "projects/sunray-web/src/app/modules"
+      ],
+      "@sunray-web/*": [
+        "projects/sunray-web/src/app/modules/*"
+      ],
+      "@sunray-api": [
+        "projects/sunray-web/src/app/modules/api"
+      ],
+      "@sunray-api/*": [
+        "projects/sunray-web/src/app/modules/api/*"
+      ],
+      "@sunray-ui": [
+        "projects/sunray-web/src/app/modules/ui"
+      ],
+      "@sunray-ui/*": [
+        "projects/sunray-web/src/app/modules/ui/*"
+      ],
+      "@sunray-ui-layout": [
+        "projects/sunray-web/src/app/modules/ui/modules/layout"
+      ],
+      "@sunray-ui-layout/*": [
+        "projects/sunray-web/src/app/modules/ui/modules/layout/*"
+      ],
+      "@sunray-ui-shared": [
+        "projects/sunray-web/src/app/modules/ui/modules/shared"
+      ],
+      "@sunray-ui-shared/*": [
+        "projects/sunray-web/src/app/modules/ui/modules/shared/*"
+      ],
+      "@sunray-ui-app": [
+        "projects/sunray-web/src/app/modules/ui/modules/app"
+      ],
+      "@sunray-ui-app/*": [
+        "projects/sunray-web/src/app/modules/ui/modules/app/*"
+      ],
+      "@sunray-ui-site": [
+        "projects/sunray-web/src/app/modules/ui/modules/site"
+      ],
+      "@sunray-ui-site/*": [
+        "projects/sunray-web/src/app/modules/ui/modules/site/*"
+      ],
+      "@sunray-environment": [
+        "projects/sunray-web/src/environments/environment"
+      ],
+      "@ceo/core": [
+        "dist/ceo/core"
+      ],
+      "@ceo/core/*": [
+        "dist/ceo/core/*"
+      ],
+      "@ceo/state": [
+        "dist/ceo/state"
+      ],
+      "@ceo/state/*": [
+        "dist/ceo/state/*"
+      ],
+      "@ceo/analytics": [
+        "dist/ceo/analytics"
+      ],
+      "@ceo/analytics/*": [
+        "dist/ceo/analytics/*"
+      ],
+      "@ceo/vendor": [
+        "dist/ceo/vendor"
+      ],
+      "@ceo/vendor/*": [
+        "dist/ceo/vendor/*"
+      ],
+      "@ceo/shared": [
+        "dist/ceo/shared"
+      ],
+      "@ceo/shared/*": [
+        "dist/ceo/shared/*"
+      ],
+      "@ceo/entity": [
+        "dist/ceo/entity"
+      ],
+      "@ceo/entity/*": [
+        "dist/ceo/entity/*"
+      ],
+      "@ceo/wordpress": [
+        "dist/ceo/wordpress"
+      ],
+      "@ceo/wordpress/*": [
+        "dist/ceo/wordpress/*"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { ModalNavigationItemComponent, } from './index';
+/** @type {?} */
+export const components = [
+    ModalNavigationItemComponent,
+];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29tcG9uZW50cy5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BjZW8vc2hhcmVkLyIsInNvdXJjZXMiOlsibGliL2NvbW1vbi9kaWFsb2dzL2NvbXBvbmVudHMvbW9kYWwtbmF2aWdhdGlvbi1pdGVtL2NvbXBvbmVudHMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFDTCw0QkFBNEIsR0FDN0IsTUFBTSxTQUFTLENBQUE7O0FBRWhCLE1BQU0sT0FBTyxVQUFVLEdBQVU7SUFDL0IsNEJBQTRCO0NBQzdCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtcbiAgTW9kYWxOYXZpZ2F0aW9uSXRlbUNvbXBvbmVudCxcbn0gZnJvbSAnLi9pbmRleCdcblxuZXhwb3J0IGNvbnN0IGNvbXBvbmVudHM6IGFueVtdID0gW1xuICBNb2RhbE5hdmlnYXRpb25JdGVtQ29tcG9uZW50LFxuXVxuIl19

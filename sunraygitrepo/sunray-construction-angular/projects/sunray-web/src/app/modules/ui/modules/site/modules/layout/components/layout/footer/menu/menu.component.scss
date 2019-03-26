@@ -1,0 +1,29 @@
+@import 'helpers';
+
+:host ::ng-deep {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar {
+    padding: 0px;
+
+    a {
+      color: $gray-600;
+      font-size: $font-size-base;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .nav-item {
+    margin-top: 0px;
+  }
+
+  .nav-link {
+    padding: 0.25rem 0rem;
+  }
+}
+

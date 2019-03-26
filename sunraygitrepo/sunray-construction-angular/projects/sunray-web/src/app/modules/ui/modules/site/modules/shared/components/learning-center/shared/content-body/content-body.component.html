@@ -1,0 +1,60 @@
+<div id="content-body" *ngIf="(contentList$  | async).entities as contentList">
+  <div class="container">
+    <div class="seminar-items-wrapper pt-2">
+      <div class="seminar-item-wrapper"
+        *ngFor="let item of contentList | slice : startPage:paginationLimit">
+        <div class="seminar-item-inner-wrapper">
+          <div class="card">
+            <div>
+              <a (click)="lightBoxPopup(item.link)"
+              [ngClass]="{'playable':isPlayable()}">
+                <img class="card-img-top" src="{{ item.featuredMediaUrl }}">
+              </a>
+            </div>
+            <p class="mt-3">{{ item.title.rendered }}</p>
+            <p *ngIf="isContentType('webinar')" class="card-text">
+              <small class="text-muted">
+                <span *ngFor="let presenter of item.presenters">
+                  {{ presenter["full-name"] }},
+                </span>
+              </small>
+            </p>
+            <p *ngIf="isContentType('video') || isContentType('webinar')"
+            class="card-text">
+              <small class="text-muted">
+                <div class="row">
+                  <div class="col-md-4">
+                    <span>
+                      <i class="far fa-clock"></i>
+                      {{ item["video-length"] }}
+                    </span>
+                  </div>
+                  <div class="col-md-8">
+                    <span>
+                      <i class="fas fa-eye"></i>
+                      {{ "10" }} Views
+                    </span>
+                  </div>
+                </div>
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-md-12">
+      <div class="load-more">
+        <a ceoClickStopEventBubble
+          class="btn-lg-curved btn btn-primary btn-lg"
+          href="#" *ngIf ="paginationLimit < contentList.length"
+          (click)="loadMoreItems()">
+
+          Load More
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

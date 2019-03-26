@@ -1,0 +1,137 @@
+h2.heading{
+	font-size:28px;
+  color: #0373BB;
+  margin: 0px;
+  font-family: ProximaNovaBold;
+  line-height: 2.5rem;
+}
+.blog-icons a{
+  padding: 7px;
+}
+
+.blog-icons a:first-child{
+	padding-left: 0px;
+}
+.blog-icons img{
+	width: 25px;
+}
+
+.blog-title, .blog-content, .blog-tag, .load-more, .comment-btn, .read-btn
+{
+	font-family: ProximaNovaRegular;
+}
+.blog-title, .blog-title > a
+{
+	font-size: 18px;
+	color: #0373BB ;
+}
+
+#blog-page{
+  padding-bottom: 60px;
+	.blog-content
+	{
+		font-size: 16px;
+		color:#686868; 
+	}
+}
+.blog-tag{
+	font-size: 19px;
+	color: #2C3E50;
+}
+ #comment-form{
+ 	background-color: #0373BB;
+ 	border-radius: 5px;
+ 	.container{
+ 	  padding: 0px 30px;
+ 	}
+ }
+h4.comment-heading{
+	color: #fff;
+}
+.load-more, .read-btn{
+	font-size: 14px;
+	border-radius: 100px;
+	cursor: pointer;
+}
+.related-posts, #blog-container{
+	.btn-primary:hover {background-color: #024 !important;border-color: #024 !important;}
+}
+.load-more.comment-btn,.read-btn{
+	background-color: #fff;
+	color: #0373BB !important;
+}
+h4.comment-heading, .related-post{
+	font-family: ProximaNovaSemibold;	
+}
+.related-posts{
+	.related-post{
+		font-size: 20px;
+	}
+}
+.read-more{
+  transition: .8s ease;
+  opacity: 0;
+  position: absolute;
+  top: 26%;
+  left: 32%;
+}
+.related-posts{
+	  .read-more{
+	  	top: 30% !important;
+	}
+}
+
+.post-image:hover .read-more {
+  opacity: 1;
+}
+.post-image:hover > p > .blur {
+  -webkit-filter: brightness(70%);
+  box-shadow: 0px 0px 5px 3px #aaa;
+  transition: .8s ease;
+}
+.right-arrow{
+	margin-top: -145px;
+}
+.left-arrow{
+	margin-bottom: 145px;
+}
+.sign-img > img{
+	height: 100px;
+}
+#blog-page{
+max-width: 30%;
+padding: 0;
+margin-right: 40px;
+margin-bottom: 20px;
+}
+
+#blog-page:nth-child(3n+3){
+	margin-right: 0px !important;
+}
+
+.blog{
+  padding: 40px 0 30px; 
+  h4.heading{
+   margin-bottom: 40px;
+  }
+}
+
+#blog{
+	width: 103.2%;
+	margin-left: -15px;
+}
+
+.article-left {
+    position: fixed;
+    top: 25%;
+    text-align:left;
+    z-index: 1;
+
+}
+.article-right {
+	position: fixed;
+	top: 25%;
+	left: 84.5%;
+	text-align:right;
+	z-index: 1;
+}

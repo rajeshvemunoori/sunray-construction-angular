@@ -1,0 +1,70 @@
+<div *ngIf="false">
+  <div *ngFor="let entity of statutoryDocuments$ | async">
+    <span>{{entity.id}}</span>
+  </div>
+
+  <h1> All Project Types </h1>
+
+  <div class="widget-temp-wrapper">
+    <h1> Project type request types </h1>
+    <div *ngFor="let entity of projectTypeRequestTypes$ | async">
+      <span>ID: {{entity.id}}</span>
+      <span>Job Type ID; {{entity.jobTypeId}}</span>
+      <span>State ID: {{entity.stateId}}</span>
+      <span>Request Type Name: {{entity.requestTypeName}}</span>
+      <span>Request Type ID: {{entity.requestTypeId}}</span>
+      <span>Step: {{entity.sequenceOrder}}</span>
+    </div>
+
+    <h1> Project types </h1>
+    <div *ngFor="let entity of projectTypes$ | async">
+      <span>ID: {{entity.id}}</span>
+      <span>Job Type ID; {{entity.jobTypeId}}</span>
+      <span>State ID: {{entity.stateId}}</span>
+      <span>Client Project Role ID: {{entity.clientProjectRoleId}}</span>
+      <span>Lienor Project Role ID: {{entity.lienorProjectRoleId}}</span>
+    </div>
+
+    <span>Selected Lienor Project Role ID: {{projectRole?.id}}</span>
+    <span>Selected Job Type ID: {{jobType?.id}}</span>
+
+    <div *ngFor="let entity of activeProjectTypes$ | async">
+      {{entity.id}}
+    </div>
+  </div>
+
+
+
+  <table style="width:100%">
+    <tr>
+      <th *ngFor="let attr of projectTypeAttrs">{{attr}}</th>
+    </tr>
+    <tr *ngFor="let entity of projectTypes$ | async">
+      <td *ngFor="let attr of projectTypeAttrs">{{entity[attr]}}</td>
+    </tr>
+  </table>
+
+  <h1> Active Project Types </h1>
+
+  <table style="width:100%">
+    <tr>
+      <th *ngFor="let attr of projectTypeAttrs">{{attr}}</th>
+    </tr>
+    <tr *ngFor="let entity of activeProjectTypes$ | async">
+      <td *ngFor="let attr of projectTypeAttrs">{{entity[attr]}}</td>
+    </tr>
+  </table>
+
+  <h1> Project Type Request Types </h1>
+
+  <table style="width:100%">
+    <tr>
+      <th *ngFor="let attr of projectTypeRequestTypeAttrs">{{attr}}</th>
+    </tr>
+    <tr *ngFor="let entity of projectTypeRequestTypes$ | async">
+      <td *ngFor="let attr of projectTypeRequestTypeAttrs">{{entity[attr]}}</td>
+    </tr>
+  </table>
+
+  <h1>{{jobType?.name}}</h1>
+</div>

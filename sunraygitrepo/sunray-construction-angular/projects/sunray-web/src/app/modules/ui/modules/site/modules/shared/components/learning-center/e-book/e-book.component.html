@@ -1,0 +1,29 @@
+<sunray-site-learning-center-shared-content-header
+  [heading]="heading"
+  [subHeading]="subHeading">
+</sunray-site-learning-center-shared-content-header>
+
+<div id="e-books" *ngIf="(collection$  | async).entities as collection">
+  <div class="container">
+    <div class="row text-center" *ngFor="let list of paginate(collection) | slice : startPage:paginationLimit">
+      <div class="col-md-4" id="lead-icon" *ngFor="let item of list">
+        <div class="card">
+          <div>
+            <img src="{{ item.featuredMediaUrl }}">
+          </div>
+          <p class="mt-3">{{ item.title.rendered }}</p>
+          <div class="ml-2" [innerHTML]="item.content.rendered">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-12">
+        <div class="load-more">
+          <a class="btn-lg-curved btn btn-primary btn-lg" href="#" *ngIf ="paginationLimit < collection.length" (click)="loadMoreItems()">Load More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

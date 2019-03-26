@@ -1,0 +1,199 @@
+<div *ngIf="requestType$ | async as requestType" id="notices" class="animated fadeIn">
+  <div class="text-heading-primary">
+    <sunray-site-shared-content-header
+      *ngIf="requestType"
+      [heading]="requestType.heading"
+      [subHeading]="requestType.subHeading">
+    </sunray-site-shared-content-header>
+  </div>
+
+   <div class="notices-container bg-primary">
+      <div class="container">
+         <div class="row justify-content-md-center">
+
+            <div class="states-wrapper">
+              <div class="states-inner-wrapper">
+                <div class="text-left states-box">
+                  <p class="notice-name">
+                    States that REQUIRE {{requestType.heading}}
+                  </p>
+
+                  <form *ngIf="true" action="#" class="state-search" data-remote="true">
+                    <div class="inner-addon right-addon">
+                      <img src="/assets/frontend/search.svg" alt="Search">
+                      <input class="form-control" [formControl]="stateControl"
+                        placeholder="Search" type="text">
+                    </div>
+                  </form>
+
+
+                  <div *ngIf="true" class="state-selection-list notice-states-inner">
+                    <ul>
+                      <li class="state-list" *ngFor="let state of filteredStates$ | async">
+
+                        <a ceoClickStopEventBubble
+                          (click)="onRegionSelect(state.name)"
+                          class="notice-state text-primary" href="#" rel="ak">
+
+                          {{state.name}} 
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div *ngIf="false" class="state-select-wrapper">
+                    <div class="state-select-inner-wrapper">
+                      <sunray-site-state-select
+                        [states$]="filteredStates$"
+                        (stateEmitter)="onRegionSelect($event)">
+                      </sunray-site-state-select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center map-box">
+              <div class="inner-wrapper bg-body-white-muted">
+                <div class="map-legend-wrapper" id="map-legend">
+                  <i aria-hidden="true" class="fa fa-square state-legend"></i>
+                  <p class="diabled-states proxima-semi-bold">
+                    {{requestType.heading}} Not Required
+                  </p>
+                </div>
+                <div class="state-map-wrapper d-inline-block" id="state-map-wrapper">
+                  <sunray-site-clickable-map
+                    [enabledStates$]="requestTypeStates$"
+                    [backgroundColor]="'#FFF'"
+                    [hoverColor]="'#0373BB'"
+                    [color]="'#FFF'"
+                    [borderColor]="'#686868'"
+                    [selectedColor]="'#0373BB'"
+                    (regionEmitter)="onRegionSelect($event)">
+                  </sunray-site-clickable-map>
+                </div>
+              </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="text-center" id="notice-shortcuts">
+      <div class="inner-content">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4 notice-shortcut-box">
+                  <a routerLink="../../features" href="#">
+                    <img src="/assets/frontend/notice-intelligent.svg" alt="Notice intelligent">
+                    <br>
+                    <br>
+                    <p class="text-grey">Intelligent Construction Payment Platform</p>
+                  </a>
+               </div>
+               <div class="col-md-4 notice-shortcut-box">
+                  <a routerLink="../../learning-center/florida/e-books" href="#">
+                    <img src="/assets/frontend/ebooks.svg" alt="Ebooks">
+                  </a>
+                  <br>
+                  <br>
+                  <p class="text-grey">Download E-books, Infographics &amp; more</p>
+               </div>
+               <div class="col-md-4 notice-shortcut-box">
+                  <a routerLink="../../seminars" href="#">
+                    <img src="/assets/frontend/webinars.svg" alt="Webinars">
+                  </a>
+                  <br>
+                  <br>
+                  <p class="text-grey">Seminars &amp; Free Webinars</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="notice-deadline">
+      <div class="inner-content">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8 deadline-text">
+                  <p>Remember you only have 40 days from first furnishing to send your Notice</p>
+                  <p>to Owner and 90 days from your last day on the property to lien the property.</p>
+               </div>
+               <div class="col-md-4 button-wrapper">
+                  <a class="notice-btn" routerLink="/states/florida">
+                    <button class="btn btn-primary btn-lg">CALCULATE YOUR DEADLINE</button>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="tracking">
+      <div class="inner-content">
+         <div class="container">
+            <h4 class="bold font-weight-bold text-primary text-center">SunRay Can Help You Get Paid</h4>
+            <br>
+            <div class="row text-grey">
+               <div class="col-md-6">
+                  <div class="row">
+                    <div class="shortcut-wrapper int-shortcut s-block"
+                    *ngFor="let item of features">
+
+                      <div class="shortcut-inner-wrapper">
+                        <a class="shortcut-link" routerLink="{{item.url}}">
+                          <img alt="{{item.image.alt}}" src="{{item.image.src}}">
+
+                          <div class="content-wrapper d-inline-block">
+                            <p>{{item.body}}</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+               </div>
+
+               <div class="tracking-box">
+                 <div class="tracking-box-inner">
+                    <img class="float-none" src="/assets/frontend/get-paid-banner.png" alt="Get paid banner">
+                    <h5 class="text-white get-paid-text">Our flat fee of <b>$30.00</b> plus postage everything required in preparing. delivering and tracking your notices</h5>
+                    <br>
+                    <a class="notice-btn" routerLink="../../pricing" href="#">
+                      <button class="btn btn-primary btn-lg">GET PAID NOW</button>
+                    </a>
+                 </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="notice-contact">
+      <div class="inner-content">
+         <div class="container">
+            <div class="row text-center">
+               <div class="col">
+                  <h5 class="font-color">
+                     New to SunRay? Call us at
+                     <span class="proxima-bold">
+                       <a class="phone-link font-color" href="tel:800-403-7660">800-403-7660</a>
+                     </span>
+                  </h5>
+                  <h5 class="font-color">We promise you won't get a voice recorder! We are customer service</h5>
+                  <h5 class="font-color">and support friendly!</h5>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="disclaimer">
+      <div class="inner-content">
+         <div class="container">
+            <div class="disclaimer-box">
+               <h5>Disclaimer:</h5>
+               <p>
+                  The Information On This Webpage Is Not The Same As Legal Advice. SunRay Construction Solutions, LIc IS Not an Attorney Or A Law Firm.
+                  We Recommend That You Consult with An Attorney.
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

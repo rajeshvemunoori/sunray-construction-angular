@@ -1,0 +1,105 @@
+@import 'mixins';
+@import 'variables';
+
+button {
+  &:focus {
+    outline: none !important;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.95;
+
+  @include hover-focus {
+    opacity: 1;
+  }
+
+  &.btn-secondary {
+    color: $white;
+  }
+
+  &.btn-lg {
+    line-height: $line-height-lg;
+  }
+
+  &.btn-xl {
+    @include media-breakpoint-up(sm) {
+      @include button-size(
+        $input-btn-padding-y-xl,
+        $input-btn-padding-x-xl,
+        $font-size-xl,
+        $input-btn-line-height-xl,
+        $btn-border-radius-xl
+      );
+    }
+  }
+
+  &.btn-xxl {
+    @include media-breakpoint-up(sm) {
+      @include button-size(
+        $input-btn-padding-y-xxl,
+        $input-btn-padding-x-xxl,
+        $font-size-xxl,
+        $input-btn-line-height-xxl,
+        $btn-border-radius-xxl
+      );
+    }
+  }
+
+  &.btn-lg-curved {
+    border-radius: 2rem;
+  }
+
+  &.btn-rounded {
+    border-radius: 2em;
+  }
+
+  &.btn-lg-square {
+    border-radius: 0.5em;
+  }
+
+  &.btn-animated {
+    opacity: 0.95;
+
+    &:hover{
+      opacity: 0.95;
+    }
+  }
+
+  $background: $white;
+  $hover-background: darken($background, 7.5%);
+
+  @each $color, $value in $theme-colors {
+    &.btn-white-#{$color} {
+
+      @include button-outline-variant($value, $color-hover: color-yiq($value),
+        $active-background: $value, $active-border: $value)
+
+      background-color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+}
+
+@each $color, $value in $colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}

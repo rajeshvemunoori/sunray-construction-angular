@@ -1,0 +1,52 @@
+@import 'mixins';
+@import 'variables';
+
+.vertical-tabs-wrapper {
+  .tab-control {
+    &.active {
+      svg.svg {
+        path {
+          fill: $primary !important;
+        }
+      }
+    }
+
+    svg.svg {
+      path {
+        fill: $gray-700 !important;
+      }
+    }
+  }
+}
+
+.sunray-site-document-deadline-widget-wrapper {
+  .job-type-wrapper {
+    &.active {
+      svg.svg {
+        path {
+          fill: $white !important;
+        }
+      }
+    }
+
+    &:not(.active) {
+      &:hover {
+        svg.svg {
+          path {
+            //fill: $primary !important;
+          }
+        }
+      }
+      svg.svg {
+        path {
+          fill: $gray-700 !important;
+        }
+      }
+    }
+  }
+}
+
+svg.svg {
+  max-width: 100%;
+  max-height: 100%;
+}

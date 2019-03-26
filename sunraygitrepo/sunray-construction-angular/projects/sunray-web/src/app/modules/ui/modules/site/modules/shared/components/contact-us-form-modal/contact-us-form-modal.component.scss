@@ -1,0 +1,27 @@
+@import "helpers";
+
+
+.close {
+  width: 2.2rem;
+  height: 2.2rem;
+  background: black;
+  position: relative;
+  left: 11px;
+  top: -11px;
+  text-shadow: none;
+  opacity: unset;
+  span {
+    font-weight: bolder;
+    color: $white;
+  }
+}  
+
+.modal-header {
+  border-bottom: none !important;
+  padding: $spacer * 2;
+
+  .title {
+    color: $brand-blue;
+    text-align: center;
+  }
+}

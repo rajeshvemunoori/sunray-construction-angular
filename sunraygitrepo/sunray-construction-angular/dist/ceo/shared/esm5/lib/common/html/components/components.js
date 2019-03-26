@@ -1,0 +1,9 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import * as tslib_1 from "tslib";
+import { components as htmlVideoComponents } from './html-video/components';
+/** @type {?} */
+export var components = tslib_1.__spread(htmlVideoComponents);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29tcG9uZW50cy5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BjZW8vc2hhcmVkLyIsInNvdXJjZXMiOlsibGliL2NvbW1vbi9odG1sL2NvbXBvbmVudHMvY29tcG9uZW50cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7OztBQUFBLE9BQU8sRUFBRSxVQUFVLElBQUksbUJBQW1CLEVBQUUsTUFBTSx5QkFBeUIsQ0FBQTs7QUFFM0UsTUFBTSxLQUFPLFVBQVUsb0JBQ2xCLG1CQUFtQixDQUN2QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNvbXBvbmVudHMgYXMgaHRtbFZpZGVvQ29tcG9uZW50cyB9IGZyb20gJy4vaHRtbC12aWRlby9jb21wb25lbnRzJ1xuXG5leHBvcnQgY29uc3QgY29tcG9uZW50czogYW55W10gPSBbXG4gIC4uLmh0bWxWaWRlb0NvbXBvbmVudHMsXG5dXG4iXX0=

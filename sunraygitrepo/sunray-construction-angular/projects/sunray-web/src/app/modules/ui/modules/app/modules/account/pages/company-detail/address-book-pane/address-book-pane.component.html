@@ -1,0 +1,32 @@
+<div class="address-book-pane-container container-detail">
+  <div class="header-wrapper">
+    <sunray-ui-app-shared-header
+      [headerTitle]="'Address Book'"
+      [buttonTitle]="'Add a Contact'"
+      [searchFlag]="true"
+      (actionEmitter) = "addContact('project-contact')"
+      (searchKeyEmitter) = "search($event)">
+    </sunray-ui-app-shared-header>
+  </div>
+  <div class="address-book-pane-container-body container-body">
+    <!-- <div class='company-address-book-list-wrapper list-wrapper'> -->
+       <shared-declarables-list>
+       </shared-declarables-list>
+    <!-- </div> -->
+  </div>
+  <div class="address-book-pane-container-footer container-footer">
+  </div>
+</div>
+<div class="signor-wrapper">
+  <sunray-ui-app-shared-signor
+    [dataService]="dataService"
+    (actionEmitter) = "edit($event)">
+ </sunray-ui-app-shared-signor>
+</div>
+
+<div class="notary-wrapper">
+  <sunray-ui-app-shared-notary
+    [dataService]="dataService"
+    (actionEmitter) = "edit($event)">
+  </sunray-ui-app-shared-notary>
+</div>

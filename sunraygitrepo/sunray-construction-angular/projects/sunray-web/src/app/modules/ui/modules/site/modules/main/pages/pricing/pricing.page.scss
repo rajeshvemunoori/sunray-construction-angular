@@ -1,0 +1,386 @@
+@import "helpers";
+
+$green-button-color: #3BB450;
+@mixin green-button {
+  color: $white;
+  background-color: $green-button-color;
+  border-color: $green-button-color;
+}
+
+.pricing {
+  @include make-row;
+  justify-content: center;
+
+  @include media-breakpoint-up(md) {
+    height: 650px;
+  }
+}
+
+.pricing-item-wrapper {
+  @include make-col-ready;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: map-get($spacers, 4);
+  }
+
+  @include media-breakpoint-up(md) {
+    @include make-col(3);
+  }
+}
+
+.btn-wrapper {
+  margin-top: $spacer;
+
+}
+
+h1.heading{
+  //font-size:35px;
+  color: #0373BB;
+  padding-bottom:15px;
+}
+
+h4.sub-heading{
+  //font-size: 30px;
+  color: #464a4e;
+  padding-bottom:50px;
+}
+
+h3.number{
+  //font-size: 35px;
+  color: #464a4e;
+  padding-top: 10px;
+}
+
+sup {
+  top: -0.8em;
+  //font-size: 20px;
+}
+
+a.paid-btn > button {
+  border-color: $border-color;
+}
+
+p.text{
+  color: #495057;
+  margin-bottom: 5px;
+}
+
+p.heading {
+  color: #74747d;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.pricing > .row > .col-md-3 {
+  transition: transform .25s, background .25s;
+  margin-bottom: 20px;
+}
+
+.pricing-contact > .card > .card-body {
+  background-image: url("/assets/frontend/PRICING.svg");
+  border-radius: 15px;
+}
+.pricing-contact > .card {
+  border-radius: 60px;
+  border: 0px;
+}
+
+.card-header:first-child {
+  border-radius: 0px;
+}
+
+h4.plan{
+  margin-top: 20px;
+  margin-bottom: 15px;
+  //font-size: 30px;
+}
+p.plan{
+  margin-bottom: 15px;
+  //font-size: 20px;
+  font-family:ProximaNovalight;
+}
+a.pricing-btn > button{
+  //font-size: 15px;
+  border-radius: 150px;
+  height: 40px;
+  cursor: pointer;
+}
+.btn-block > .row {
+  margin-bottom: 10px;
+}
+.btn-block > .row > .col-md-2 {
+  margin-bottom: 10px;
+}
+
+.pricing-tick {
+  margin-left: 0px;
+  margin-right: 8px;
+  display: inline-block;
+  @include flex-child;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: $font-size-base;
+}
+
+.pricing >.row >.col-md-3 >.card {
+  border-radius: 0px;
+}
+.background-white{
+  background: $white;
+}
+.background-light-grey{
+  background: $gray-100 !important;
+}
+
+.pricing-block {
+  padding-bottom: 20px;
+}
+
+.pricing-block {
+  .btn {
+    @include green-button;
+  }
+}
+
+// Card Styles
+.pricing .card {
+  $duration: 0.1s;
+  $delay: 0s;
+  $timing-function: ease-in;
+  $property: transform;
+  transition: $property $duration $timing-function $delay;
+
+  height: 100%;
+
+  @mixin active-style {
+    border: 1px solid $primary;
+    border-radius: 10px !important;
+    background: none !important;
+
+
+    button.btn {
+      @include green-button;
+    }
+
+    .card-header {
+      color: $primary;
+      background-color: #0075B6;
+    }
+
+    p.text{
+      color: #FDFCFF !important;
+    }
+
+    h3.number{
+      color: #FDFCFF !important;
+    }
+
+    .price-option-header {
+      color: $primary;
+    }
+
+    .list-group-item {
+      background: none !important;
+      padding: 0.25rem 0.75rem;
+    }
+  }
+
+
+  .price-option-header {
+    color: $gray-700;
+  }
+
+  .list-group-item {
+    padding: 0.25rem 0.75rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    @include active-style;
+  }
+
+  @include media-breakpoint-up(md) {
+    &:hover {
+      @include active-style;
+      transform: scale(1.04);
+      position: relative;
+      z-index: 1;
+      box-shadow: 0px 0px 10px #888888;
+    }
+  }
+}
+
+
+.card {
+  @include media-breakpoint-down(sm) {
+    margin: auto;
+  }
+}
+
+.card-header {
+  border-bottom: none;
+}
+
+.card-body {
+  .list-group {
+    .list-group-item {
+      &:first-child  {
+        text-align: center;
+      }
+
+      &.value-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+
+h1.heading, h3.number, sup, p.blue, h4.sub-heading, h4.plan 
+{
+	font-family: ProximaNovaBold;
+} 
+a.paid-btn > button, p.text, p.heading, a.pricing-btn > button
+{
+	font-family: ProximaNovaRegular;
+}
+h1.heading{
+  font-size:35px;
+  color: #0373BB;
+  padding-bottom:15px;
+}
+
+h4.sub-heading{
+  font-size: 30px;
+  color: #464a4e;
+  padding-bottom:50px;
+}
+
+h3.number{
+  font-size: 35px;
+  color: #464a4e;
+  padding-top: 10px;
+}
+
+a.paid-btn > button{
+	font-size: 15px;
+	border-radius: 150px;
+	height: 40px;
+	cursor: pointer;
+  color: #0075B6; 
+  border: 1px solid #000038;
+	}
+
+p.text{
+	color: #495057;
+  font-size: $font-size-sm;
+	margin-bottom: 5px;
+}
+
+p.heading{
+	color: #74747d;
+	margin-bottom: 5px;
+        margin-top: 5px;
+}
+
+p.blue{
+	color:#0373BB;
+	font-size: 20px;
+	margin-bottom: 0px;
+}
+
+.pricing > .row > .col-md-3 {
+  transition: transform .25s, background .25s;
+  margin-bottom: 20px;
+}
+
+.card-header:first-child {
+  border-radius: 0px;
+}
+
+.level2 > .card:hover,.level1 > .card:hover,.level3 > .card:hover,.level4> .card:hover{
+  border: 0px;border-radius: 0px;
+}
+
+.level1:hover,.level2:hover, .level3:hover, .level44:hover {
+  transform: scale(1.04);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 0px 5px #888888;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 20px !important;
+}
+
+.hover{transform: scale(1.04);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 0px 5px #888888;
+  .card{border: 0px; border-radius: 0px;}
+  }
+
+.pricing-contact > .card  {border-radius: 60px; border:0px;}
+
+h4.plan{margin-top: 20px; margin-bottom: 15px; font-size: 30px;}
+
+p.plan{margin-bottom: 15px; font-size: 20px; font-family:ProximaNovalight;}
+
+a.pricing-btn > button{
+	font-size: 15px;
+	border-radius: 150px;
+	height: 40px;
+	cursor: pointer;
+}
+.btn-block > .row {margin-bottom: 10px;}
+.btn-block > .row > .col-md-2 {margin-bottom: 10px;}
+.pricing >.row >.col-md-3 >.card {border-radius: 0px;}
+
+.background-white{
+  background: white;
+}
+.background-light-grey{
+  background: $gray-100 !important;
+}
+.pricing .card:hover {
+  transform: scale(1.04);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 0px 10px #888888;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 10px !important;
+
+  .card-header{
+    background-color: #0075B6;
+  }
+  background: none !important;
+  p.text{
+    color: #FDFCFF !important;
+  }
+  h3.number{
+    color: #FDFCFF !important;
+  }
+  a.paid-btn > button{
+    font-size: 15px;
+    border-radius: 150px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #3BB450;
+    color: #FFF; 
+    border: 0px;
+  }
+}
+
+.card-body .list-group-item {
+  background-color: transparent;
+}
+
+.pricing .card .card-header{
+  padding: 0rem;
+}
+.pricing .card .card-header .no-padding{
+  padding: 0rem;
+}
+
+.card-body.level-wrapper {
+  flex-grow: 0;
+}

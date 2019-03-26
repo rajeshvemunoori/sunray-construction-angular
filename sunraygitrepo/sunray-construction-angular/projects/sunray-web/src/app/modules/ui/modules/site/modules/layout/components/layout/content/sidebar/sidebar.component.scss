@@ -1,0 +1,35 @@
+@import "helpers";
+
+.sidebar-inner-wrapper {
+  background-color: $primary;
+  height: 100%;
+  padding-top: 1rem;
+
+
+  .list-group-item {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &.menu-item-wrapper {
+      > .menu-link span {
+        text-transform: uppercase;
+      }
+    }
+
+    a {
+      color: $gray-100 !important;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &:hover, &.active {
+      > a {
+        color: $white !important;
+      }
+    }
+  }
+
+}

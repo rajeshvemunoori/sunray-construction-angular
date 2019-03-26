@@ -1,0 +1,243 @@
+#seminars-container{
+	#upcoming-seminars-section{
+		padding: 40px 180px 50px;
+		h4{
+			margin-bottom: 20px;
+			font-family: ProximaNovaBold;
+		}
+		p{
+			margin: 0px;
+			font-size: 15px;
+			color: #686868;
+			padding: 0px 50px;
+		}
+		.seminar-box{
+			background-image: url("/assets/frontend/seminars/bg.png");
+			color: #ffffff;
+			background-size: cover;
+			margin: 30px 0px 35px;
+			border-radius: 5px;
+			.seminar-content{
+				padding: 20px 75px 30px 65px;
+				.seminar-info{
+					padding: 0px;
+					h5{
+						font-family: ProximaNovaRegular;
+					}
+					.mic-icon{
+						width: 80px;
+						margin-bottom: 15px;
+					}
+					p{
+						color: #ffffff;
+						padding: 0px;
+					}
+					.seminar-details{
+						margin-bottom: 5px;
+						font-size: 15px;
+						> span{
+							margin-right: 20px;
+						}
+					}
+					.price-details{
+						margin-bottom: 20px;
+						.credit-details{
+							position: relative;
+							.credits{
+								position: absolute;
+								left: 42px;
+								color: #000;
+							}
+						}
+					}
+					.start-time,.price{
+						width: 150px;
+						display: inline-block;
+					}
+					.badge-icon{
+						width: 20px;
+						margin: 0 2px;
+					}
+					.calendar{
+						font-size: 13px;
+						img{
+							width: 15px;
+							margin-left: 5px;
+						}
+					}
+					.register{
+						margin-right: 10px !important;
+					}
+					button{
+						font-size: 13px;
+						padding: 0px 15px;
+						height: 40px;
+					}
+					button:hover{
+						color: #FFF !important;
+					}
+				}
+				.presenter-info{
+					background-color: #54A0E1;
+					padding: 20px;
+					margin: 20px 0;
+					h6{
+					 margin: 0px;
+					}
+					.presenter-details{
+						margin-top: 20px;
+						.presenter-image{
+							width: 70px;
+							height: 70px;
+							margin-right: 10px;
+						}
+						p{
+							padding: 0px;
+							color: #ffffff;
+						}
+					}
+				}
+			}
+			p.seminar-desc{
+				background-color: #2B3F61;
+				color: #ffffff;
+				padding: 15px 50px;
+				font-size: 13px;
+				border-radius: 0 0 5px 5px;
+			}
+		}
+		.seminar-box:last-child{
+			margin-bottom: 0px;
+		}
+		.view-all-container{
+			margin-left: 110px;
+			hr{
+				clear: none;
+				position: relative;
+				top: 2.5em;
+				right: 7em;
+			}
+		}
+	}
+	#testimonials-vertical{
+		h4{
+			color: #686868 !important;
+		}
+	}
+}
+#registrations-container{
+	font-family: ProximaNovaRegular;
+	.inner-content{
+		padding: 40px 180px 20px;
+		h4{
+			font-family: ProximaNovaBold;
+			margin: 0px;
+		}
+		.faqs,.form{
+			padding: 40px 0 0;
+		}
+		.faqs{
+			max-width: 55%;
+			overflow: overlay;
+			.event-faqs{
+				#common_accordion{
+					max-height: none;
+				}
+				.question{
+					font-size: 20px;
+					span{
+						margin-top: 5px;
+					}
+				}
+				.answer{
+					font-size: 15px;
+				}
+			}
+		}
+		.form{
+			max-width: 45%;
+			.event-registration-form{
+				background-color: #0373BB;
+				padding-top: 30px;
+				font-size: 15px;
+				.details-section{
+					padding-bottom: 20px;
+					color: #FFF;
+					h4{
+						margin: 0px;
+						font-family: ProximaNovaSemiBold;
+						padding: 15px 15px 0px;
+					}
+				}
+				form{
+					 .select2-container--bootstrap{
+						 width: 100% !important;
+					 }
+					.select2-container--bootstrap .select2-selection--single .select2-selection__rendered{
+						text-align: left;
+					}
+					.contact-btn{
+						font-family: ProximaNovaSemiBold;
+					}
+				}
+			}
+		}
+	}
+}
+#credits-container{
+	font-family: ProximaNovaRegular;
+	color: #FFF;
+	background-color: #2D4051;
+	.inner-content{
+		padding: 50px 180px;
+		h4{
+			margin-bottom: 15px;
+		}
+		p{
+			font-size: 15px;
+			margin-bottom: 10px;
+		}
+		span{
+			font-size: 15px;
+			font-family: ProximaNovaBold;
+		}
+		.credits-section, .coffee-section{
+			padding: 0px;
+		}
+		.coffee-section{
+			img{
+				width: 170px;
+				padding: 30px 15px 0;
+			}
+		}
+	}
+}
+.event-section{
+	padding: 0px 15px;
+	th{
+		text-align: center;
+	}
+	.payment-btn{
+		padding: 10px;
+		a{
+			color: #fff;
+			text-decoration: none;
+			font-size: 15px
+		}
+	}
+}
+.event-registration-form{
+	.fields{
+		width: 100%;
+		.form-group{
+			padding: 0px;
+		}
+	}
+}
+.add_nested_fields, .remove_nested_fields, .add_nested_fields:hover, .remove_nested_fields:hover{
+	color: #FFF;
+	text-decoration: none;
+}
+.promo-input{
+	width: 30%;
+}

@@ -1,0 +1,19 @@
+<sunray-ui-app-print-batch-list-selector
+  [status]="status"
+  [statuses]="statuses"
+  (loadEmitter)="loadCollection($event)">
+</sunray-ui-app-print-batch-list-selector>
+
+<div class="select-list-wrapper">
+  <sunray-ui-app-print-batch-select-list
+    [collection$]="collection$"
+    (itemEmitter)="updateActiveItems($event)">
+  </sunray-ui-app-print-batch-select-list>
+</div>
+
+<div class="actions-wrapper">
+  <sunray-common-button *ngIf='showPrintButton()'
+    [buttonText]="'Print'"
+    (clickEmitter)="submit()">
+  </sunray-common-button>
+</div>

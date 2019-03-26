@@ -1,0 +1,21 @@
+@mixin bg-variant-with-color($parent, $bg-color, $color) {
+  #{$parent} {
+    background-color: $bg-color !important;
+
+    a {
+      @include plain-hover-focus {
+        color: $color;
+      }
+    }
+
+  }
+  @include text-emphasis-variant($parent,$color);
+
+  a#{$parent},
+  button#{$parent} {
+    @include hover-focus {
+      background-color: darken($bg-color, 10%) !important;
+      color: darken($color, 10%);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<div class="sidebar-inner-wrapper">
+  <div class="status-wrapper">
+  </div>
+  <div class="items-wrapper">
+    <ul class="menu-items-wrapper list-group">
+      <li *ngFor="let item of (menuItems$ | async)" class="menu-item-wrapper list-group-item">
+        <a routerLink="{{item.attributes.url}}" class="menu-link">
+          <span> {{item.attributes.title}} </span>
+        </a>
+        <ul class="submenu-items-wrapper list-group">
+          <li *ngFor="let submenuItem of (item.attributes.children)" class="submenu-item-wrapper list-group-item">
+            <a  routerLink="{{submenuItem.url}}" class="menu-link">
+              <span> {{submenuItem.title}} </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

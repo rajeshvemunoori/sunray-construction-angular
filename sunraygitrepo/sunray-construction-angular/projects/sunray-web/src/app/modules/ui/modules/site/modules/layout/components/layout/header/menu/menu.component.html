@@ -1,0 +1,9 @@
+<div *ngIf="menu$ | async as menu" class="main"
+  [ngClass]="{'submenus-disabled': submenusDisabled}">
+
+  <ceo-navigation
+    [navigationMenu]="menu"
+    (itemEvent)="onItemEvent($event)">
+  </ceo-navigation>
+
+</div>

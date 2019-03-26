@@ -1,0 +1,12 @@
+<div class="sidebar-inner-wrapper">
+  <div class="user-status-wrapper">
+    <sunray-ui-layout-sidebar-user-status
+      [userAccount$]="dataService.currentUserAccount$">
+    </sunray-ui-layout-sidebar-user-status>
+  </div>
+  <div class="navigation-wrapper">
+    <sunray-ui-layout-sidebar-navigation
+      [menu$]="dataService.navigationMenu$">
+    </sunray-ui-layout-sidebar-navigation>
+  </div>
+</div>

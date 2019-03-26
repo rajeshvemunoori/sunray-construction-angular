@@ -1,0 +1,63 @@
+// Colors
+$gray-100: #f8f9fa;
+$white:    #fff;
+
+
+// Spacing
+$spacer: 1rem !default;
+
+$spacers: (
+  6: ($spacer * 5)
+);
+
+// Fonts
+$font-primary: 'ProximaNovaRegular', sans-serif;
+$font-family-sans-serif: $font-primary;
+$headings-font-family: 'ProximaNovaSemibold', sans-serif;
+$font-family-light: 'ProximaNovaLight', sans-serif;
+
+$font-size-base:              1rem;
+$h1-font-size:                $font-size-base * 3;
+
+
+// Modals
+$modal-dialog-margin-y-sm-up: 5rem;
+
+// Grid breakpoints
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1920px
+);
+
+// Grid containers
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1170px
+) !default;
+
+
+// Components
+$transition-fade: opacity 0.2s ease-in;
+
+
+// Body
+$body-bg: $gray-100;
+
+// Links
+$link-color:                $primary;
+$link-hover-color:          darken($link-color, 5%);
+
+// Forms
+$input-group-addon-bg: $white;

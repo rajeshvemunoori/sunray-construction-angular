@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { FieldComponent } from './field.component';
+/** @type {?} */
+export const components = [
+    FieldComponent,
+];
+export { FieldComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9kZWNsYXJhYmxlcy9jb21wb25lbnRzL2ZpZWxkL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUUsY0FBYyxFQUFFLE1BQU0sbUJBQW1CLENBQUE7O0FBRWxELE1BQU0sT0FBTyxVQUFVLEdBQVU7SUFDL0IsY0FBYztDQUNmO0FBRUQsT0FBTyxFQUFFLGNBQWMsRUFBRSxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgRmllbGRDb21wb25lbnQgfSBmcm9tICcuL2ZpZWxkLmNvbXBvbmVudCdcblxuZXhwb3J0IGNvbnN0IGNvbXBvbmVudHM6IGFueVtdID0gW1xuICBGaWVsZENvbXBvbmVudCxcbl1cblxuZXhwb3J0IHsgRmllbGRDb21wb25lbnQgfVxuXG4iXX0=

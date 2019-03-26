@@ -1,0 +1,16 @@
+<button type="button"
+class="close btn btn-lg btn-lg-curved"
+aria-label="Close"
+(click)="activeModal.dismiss('Cross click')">
+  <span aria-hidden="true">&times;</span>
+</button>
+
+<div class="modal-header">
+  <h3 class="title">Please provide some details.</h3>
+</div>
+
+<div class="modal-body">
+  <sunray-site-shared-contact-us-form
+  [formType]="formType">
+  </sunray-site-shared-contact-us-form>
+</div>

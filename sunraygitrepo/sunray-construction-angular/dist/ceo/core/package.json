@@ -1,0 +1,21 @@
+{
+  "name": "@ceo/core",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "main": "bundles/ceo-core.umd.js",
+  "module": "fesm5/ceo-core.js",
+  "es2015": "fesm2015/ceo-core.js",
+  "esm5": "esm5/ceo-core.js",
+  "esm2015": "esm2015/ceo-core.js",
+  "fesm5": "fesm5/ceo-core.js",
+  "fesm2015": "fesm2015/ceo-core.js",
+  "typings": "ceo-core.d.ts",
+  "metadata": "ceo-core.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

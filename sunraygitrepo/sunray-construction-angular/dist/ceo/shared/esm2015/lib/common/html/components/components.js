@@ -1,0 +1,10 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { components as htmlVideoComponents } from './html-video/components';
+/** @type {?} */
+export const components = [
+    ...htmlVideoComponents,
+];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29tcG9uZW50cy5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BjZW8vc2hhcmVkLyIsInNvdXJjZXMiOlsibGliL2NvbW1vbi9odG1sL2NvbXBvbmVudHMvY29tcG9uZW50cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLFVBQVUsSUFBSSxtQkFBbUIsRUFBRSxNQUFNLHlCQUF5QixDQUFBOztBQUUzRSxNQUFNLE9BQU8sVUFBVSxHQUFVO0lBQy9CLEdBQUcsbUJBQW1CO0NBQ3ZCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY29tcG9uZW50cyBhcyBodG1sVmlkZW9Db21wb25lbnRzIH0gZnJvbSAnLi9odG1sLXZpZGVvL2NvbXBvbmVudHMnXG5cbmV4cG9ydCBjb25zdCBjb21wb25lbnRzOiBhbnlbXSA9IFtcbiAgLi4uaHRtbFZpZGVvQ29tcG9uZW50cyxcbl1cbiJdfQ==

@@ -1,0 +1,10 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+export { EntityFormManager } from './classes/index';
+export { FormEntity, FormFieldEntity } from './entities/index';
+export {} from './interfaces/index';
+export { EntityFormFactory, EntityFormManagerFactory, ResourceConfigurationFormFactory, FormControlDataFactory, FormControlValidatorFactory, FormGroupDataFactory, FormItemDataFactory, DropdownFactory, DropdownOptionsFactory, FormMemberFactoryParamsService, RelationshipDataFactory, RelationshipDataFactoryResolver, RelationshipProvider, RelationshipsProvider } from './services/index';
+export { CeoEntityFormsModule } from './forms.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BjZW8vZW50aXR5LyIsInNvdXJjZXMiOlsibGliL2Zvcm1zL3B1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLGtDQUFjLGlCQUFpQixDQUFBO0FBQy9CLDRDQUFjLGtCQUFrQixDQUFBO0FBQ2hDLGVBQWMsb0JBQW9CLENBQUE7QUFDbEMsOFdBQWMsa0JBQWtCLENBQUE7QUFFaEMscUNBQWMsZ0JBQWdCLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tICcuL2NsYXNzZXMvaW5kZXgnXG5leHBvcnQgKiBmcm9tICcuL2VudGl0aWVzL2luZGV4J1xuZXhwb3J0ICogZnJvbSAnLi9pbnRlcmZhY2VzL2luZGV4J1xuZXhwb3J0ICogZnJvbSAnLi9zZXJ2aWNlcy9pbmRleCdcblxuZXhwb3J0ICogZnJvbSAnLi9mb3Jtcy5tb2R1bGUnXG4iXX0=

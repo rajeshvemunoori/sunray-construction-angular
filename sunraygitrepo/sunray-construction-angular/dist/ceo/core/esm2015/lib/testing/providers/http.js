@@ -1,0 +1,38 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+// angular
+import { ReflectiveInjector } from '@angular/core';
+import { BaseRequestOptions } from '@angular/http';
+import { MockBackend } from '@angular/http/testing';
+/** @type {?} */
+let providers = [
+    BaseRequestOptions,
+    MockBackend,
+];
+/*
+* For instances where you need the injector
+* @returns `ReflectiveInjector`
+*/
+/**
+ * @param {?=} additionalProviders
+ * @return {?}
+ */
+export function GET_HTTP_PROVIDERS_INJECTOR(additionalProviders) {
+    if (additionalProviders) {
+        providers = providers.concat(additionalProviders);
+    }
+    return ReflectiveInjector.resolveAndCreate(providers);
+}
+/*
+* For testing http services
+* @returns `Array<any>`
+*/
+/**
+ * @return {?}
+ */
+export function TEST_HTTP_PROVIDERS() {
+    return providers;
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaHR0cC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BjZW8vY29yZS8iLCJzb3VyY2VzIjpbImxpYi90ZXN0aW5nL3Byb3ZpZGVycy9odHRwLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQ0EsT0FBTyxFQUFFLGtCQUFrQixFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQ25ELE9BQU8sRUFBRSxrQkFBa0IsRUFBcUIsTUFBTSxlQUFlLENBQUM7QUFDdEUsT0FBTyxFQUFFLFdBQVcsRUFBRSxNQUFNLHVCQUF1QixDQUFDOztJQUloRCxTQUFTLEdBQWU7SUFDMUIsa0JBQWtCO0lBQ2xCLFdBQVc7Q0FDWjs7Ozs7Ozs7O0FBTUQsTUFBTSxVQUFVLDJCQUEyQixDQUFDLG1CQUFnQztJQUUxRSxJQUFJLG1CQUFtQixFQUFFO1FBQ3ZCLFNBQVMsR0FBRyxTQUFTLENBQUMsTUFBTSxDQUFDLG1CQUFtQixDQUFDLENBQUM7S0FDbkQ7SUFFRCxPQUFPLGtCQUFrQixDQUFDLGdCQUFnQixDQUFDLFNBQVMsQ0FBQyxDQUFDO0FBQ3hELENBQUM7Ozs7Ozs7O0FBTUQsTUFBTSxVQUFVLG1CQUFtQjtJQUNqQyxPQUFPLFNBQVMsQ0FBQztBQUNuQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLy8gYW5ndWxhclxuaW1wb3J0IHsgUmVmbGVjdGl2ZUluamVjdG9yIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBCYXNlUmVxdWVzdE9wdGlvbnMsIENvbm5lY3Rpb25CYWNrZW5kIH0gZnJvbSAnQGFuZ3VsYXIvaHR0cCc7XG5pbXBvcnQgeyBNb2NrQmFja2VuZCB9IGZyb20gJ0Bhbmd1bGFyL2h0dHAvdGVzdGluZyc7XG5pbXBvcnQgeyBIdHRwQ2xpZW50IH0gZnJvbSAnQGFuZ3VsYXIvY29tbW9uL2h0dHAnO1xuaW1wb3J0IHsgSHR0cENsaWVudFRlc3RpbmdNb2R1bGUsIEh0dHBUZXN0aW5nQ29udHJvbGxlciB9IGZyb20gJ0Bhbmd1bGFyL2NvbW1vbi9odHRwL3Rlc3RpbmcnO1xuXG5sZXQgcHJvdmlkZXJzOiBBcnJheTxhbnk+ID0gW1xuICBCYXNlUmVxdWVzdE9wdGlvbnMsXG4gIE1vY2tCYWNrZW5kLFxuXTtcblxuLypcbiogRm9yIGluc3RhbmNlcyB3aGVyZSB5b3UgbmVlZCB0aGUgaW5qZWN0b3JcbiogQHJldHVybnMgYFJlZmxlY3RpdmVJbmplY3RvcmBcbiovXG5leHBvcnQgZnVuY3Rpb24gR0VUX0hUVFBfUFJPVklERVJTX0lOSkVDVE9SKGFkZGl0aW9uYWxQcm92aWRlcnM/OiBBcnJheTxhbnk+KTogUmVmbGVjdGl2ZUluamVjdG9yIHtcblxuICBpZiAoYWRkaXRpb25hbFByb3ZpZGVycykge1xuICAgIHByb3ZpZGVycyA9IHByb3ZpZGVycy5jb25jYXQoYWRkaXRpb25hbFByb3ZpZGVycyk7XG4gIH1cblxuICByZXR1cm4gUmVmbGVjdGl2ZUluamVjdG9yLnJlc29sdmVBbmRDcmVhdGUocHJvdmlkZXJzKTtcbn1cblxuLypcbiogRm9yIHRlc3RpbmcgaHR0cCBzZXJ2aWNlc1xuKiBAcmV0dXJucyBgQXJyYXk8YW55PmBcbiovXG5leHBvcnQgZnVuY3Rpb24gVEVTVF9IVFRQX1BST1ZJREVSUygpOiBBcnJheTxhbnk+IHtcbiAgcmV0dXJuIHByb3ZpZGVycztcbn1cblxuXG5cbiJdfQ==

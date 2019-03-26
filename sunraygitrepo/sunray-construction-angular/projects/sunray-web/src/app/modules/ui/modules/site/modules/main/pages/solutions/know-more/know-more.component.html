@@ -1,0 +1,20 @@
+<button type="button" class="close btn btn-lg btn-lg-curved" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+  <span aria-hidden="true">&times;</span>
+</button>
+
+<div class="modal-header">
+  <div class="image-wrapper text-center">
+    <img alt={{imagePath}} src={{imagePath}}>
+  </div>
+  <h3 class="title">{{ title }}</h3>
+</div>
+
+<div class="modal-body">
+  <div class="text-wrapper">
+    {{ description }}
+  </div>
+</div>
+
+<div class="modal-footer text-center">
+  <img src="/assets/frontend/our-solutions/popup-footer.svg" >
+</div>

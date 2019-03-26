@@ -1,0 +1,27 @@
+// Styleguide colors
+$brand-teal: #70c0b3;
+$brand-salmon: #f5654d;
+$brand-green: #85bb65;
+$brand-pink: #eb547d;
+$brand-yellow: #f3ffbd;
+$brand-orange: #ff8800;
+
+$staging-blue: #0373bb;
+$styleguide-blue: #257a9f;
+$demo-blue: #0070B9;
+$brand-blue-two: #0faae0;
+
+// Replacing as per staging website --
+// does not match styleguide
+$brand-blue: $staging-blue;
+
+/////////////////////////////////////////////
+
+$primary: $brand-blue;
+$secondary: $brand-orange;
+
+$due-date-modal-header: #f4f1f1;
+$due-date-modal-title: #ff4a54;
+
+$brand-grey:rgb(242, 242, 241);
+$profile-pane-button: #066bac;

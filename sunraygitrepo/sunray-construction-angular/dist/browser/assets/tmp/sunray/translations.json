@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": "site.pages.state.introduction.body",
+      "type": "translations",
+      "attributes": {
+        "value": "We know securing your lien rights can be a complicated process. With industry know-how, extraordinary customer service, and world-class technology, SunRay has your back."
+      }
+    },
+    {
+      "id": "site.pages.state.introduction.prompt",
+      "type": "translations",
+      "attributes": {
+        "value": "How can we help?"
+      }
+    }
+  ]
+}

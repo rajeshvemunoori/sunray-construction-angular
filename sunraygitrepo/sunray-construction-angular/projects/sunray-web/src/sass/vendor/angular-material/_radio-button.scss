@@ -1,0 +1,9 @@
+@import 'helpers';
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: $secondary;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-inner-circle {
+  background-color: $secondary;
+}

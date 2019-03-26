@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+<!--
+<div [ngSwitch]="activePane">
+  <div *ngSwitchCase="'list'">
+    <sunray-ui-app-print-batch-list-selector
+      [status]="status"
+      [statuses]="statuses"
+      (loadEmitter)="loadCollection($event)">
+    </sunray-ui-app-print-batch-list-selector>
+
+    <sunray-ui-app-print-batch-list
+      [collection$]="collection$"
+      (selectEmitter)="showItemDetails($event)"
+      (printEmitter)="printBatches($event)">
+    </sunray-ui-app-print-batch-list>
+  </div>
+
+  <sunray-ui-app-print-batch-details *ngSwitchCase="'details'"
+    [collection$]="printBatchItems$"
+    [status]="status"
+    (printEmitter)="print($event)">
+  </sunray-ui-app-print-batch-details>
+
+  <sunray-ui-app-print-batch-print-status *ngSwitchCase="'printStatus'"
+    [item]="selectedBatch"
+    [status]="status">
+  </sunray-ui-app-print-batch-print-status>
+</div>
+-->

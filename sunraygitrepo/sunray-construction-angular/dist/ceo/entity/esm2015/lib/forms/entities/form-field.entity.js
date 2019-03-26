@@ -1,0 +1,8 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { JsonApiEntity } from '../../entity/index';
+export class FormFieldEntity extends JsonApiEntity {
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZm9ybS1maWVsZC5lbnRpdHkuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL2VudGl0eS8iLCJzb3VyY2VzIjpbImxpYi9mb3Jtcy9lbnRpdGllcy9mb3JtLWZpZWxkLmVudGl0eS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLGFBQWEsRUFBRSxNQUFNLG9CQUFvQixDQUFBO0FBRWxELE1BQU0sT0FBTyxlQUFnQixTQUFRLGFBQWE7Q0FBRyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEpzb25BcGlFbnRpdHkgfSBmcm9tICcuLi8uLi9lbnRpdHkvaW5kZXgnXG5cbmV4cG9ydCBjbGFzcyBGb3JtRmllbGRFbnRpdHkgZXh0ZW5kcyBKc29uQXBpRW50aXR5IHt9XG4iXX0=

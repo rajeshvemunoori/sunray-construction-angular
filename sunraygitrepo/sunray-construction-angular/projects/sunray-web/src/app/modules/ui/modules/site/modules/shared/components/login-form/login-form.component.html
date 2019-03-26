@@ -1,0 +1,105 @@
+<div>
+  <div class="bg-wrapper">
+    <img class="sunray-smiley" src="assets/frontend/login/modal-bg.png">
+  </div>
+
+  <div>
+    <div class="modal-header">
+      <div class="modal-header-inner-wrapper">
+        <h2 class="title">Log In</h2>
+      </div>
+    </div>
+
+    <div class="modal-body">
+      <div class="container">
+        <form novalidate [formGroup]="myForm" (ngSubmit)="onSubmit()">
+          <div class="col">
+            <div class="form-group">
+              <label for="login">Email*</label>
+              <div class="input-group" [ngClass]="{
+                'has-dirty': email.dirty, 
+                'has-danger': email.invalid && email.dirty, 
+                'has-success': email.valid && email.dirty }">
+
+                <div class="input-group-addon">
+                  <i class="fa fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                  <input class="form-control"
+                     id="loginFormEmail" name="email"
+                     placeholder="someone@example.com"
+                     formControlName="email"
+                     type="text">
+                </div>
+              </div>
+              <div class="form-control-feedback-wrapper"> 
+                <div class="form-control-feedback has-danger" 
+                  *ngIf="email.invalid && email.dirty"> 
+                  Email is required.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <label for="password">Password*</label>
+              <div class="input-group" [ngClass]="{
+                'has-dirty': password.dirty, 
+                'has-danger': password.invalid && password.dirty, 
+                'has-success': password.valid && password.dirty }">
+                <div class="input-group-addon password-image">
+                  <i class="fa fa-lock"></i>
+                </div>
+                <div class="form-group">
+                  <input class="form-control"
+                     id="password" name="password"
+                     placeholder="password"
+                     formControlName="password" type="password" >
+
+                </div>
+              </div>
+              <div class="form-control-feedback-wrapper">
+                <div class="form-control-feedback has-danger" 
+                  *ngIf="password.invalid && password.dirty"> 
+
+                  Password is required.
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="additional-options-wrap">
+            <div class="checkbox-container" id="remember_me">
+              <span>
+                <input id="html_news" name="user-age" type="checkbox"
+                  value="html-news">
+              </span>
+              <span class="remember-text">Remember Me</span>
+            </div>
+
+            <div class="additional-option-wrap">
+              <span class="forgot-password-wrap">
+                <a class="forgot_password" routerLink="/user-account/password-reset">
+                  Forgot Password?
+                </a>
+              </span>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="button-wrapper">
+                <button class="btn btn-primary btn-lg-curved">
+                  LOG ME IN NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="main-message-wrapper">
+  <div class="button-wrapper">
+    <button type="button" class="btn btn-secondary btn-xl" (click)="createBatch()" [disabled]="!isItemsSelected()">
+      <span>
+        Create batch
+      </span>
+    </button>
+  </div>
+
+  <h2 class="main-message"> Please select one or more queues to continue</h2>
+</div>
+
+<div class="cards-outer-wrapper">
+  <div class="cards-wrapper">
+    <div *ngFor="let item of collection$ | async" class="card-wrapper"
+      (click)="select(item)">
+      <div class="card-inner-wrapper clickable" [ngClass]="cardStyle(item)">
+        <div class="checkbox-wrapper">
+          <div class="checkbox-inner-wrapper" (click)="toggleItemActive($event, item)">
+            <div class="checkbox" [ngClass]="checkboxStyle(item)">
+              <input class="form-check-input position-static"
+              type="checkbox" id="blankCheckbox" value="option1"
+              aria-label="...">
+            </div>
+          </div>
+        </div>
+        <div class="value-wrapper">
+          <span> {{item.getAttr("number-of-elements")}} </span>
+        </div>
+        <div class="title-wrapper">
+          <span> {{item.getAttr("display-name")}} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

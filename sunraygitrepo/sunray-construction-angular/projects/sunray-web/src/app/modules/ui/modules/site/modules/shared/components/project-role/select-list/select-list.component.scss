@@ -1,0 +1,212 @@
+@import "helpers";
+
+.main-wrapper {
+  @include make-container;
+  @include make-container-max-widths;
+}
+
+:host {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.tab-control {
+  width: 100%;
+  cursor: pointer;
+  background-color: $gray-100;
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    @include base-border-bottom;
+  }
+
+  &:not(.active) {
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .active-arrow {
+      display: none;
+    }
+  }
+
+  &.active {
+    background-color: $white;
+    color: $primary;
+
+    .active-arrow {
+      font-size: $font-size-xl;
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform: translate(50%, -50%);
+      background-color: $white;
+    }
+  }
+}
+
+.inner-wrapper {
+  margin: $spacer-y-md 0px;
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-up(sm) {
+    flex-flow: column;
+  }
+}
+
+
+.svg-image-wrapper {
+  display: inline-block;
+  width: 50px;
+}
+
+.item-value {
+  padding-left: $spacer;
+
+  @include media-breakpoint-up(sm) {
+    padding-left: 0px;
+  }
+}
+
+.active-arrow {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+
+:host  /deep/ .tab-control {
+  span, svg, svg path {
+    color: $gray-700;
+    fill: $gray-700 !important;
+  }
+
+  &.active {
+    span, svg, svg path {
+      color: $primary;
+      fill: $primary !important;
+    }
+  }
+}
+
+// Project Roles
+.entities-wrapper {
+  .entities-inner-wrapper {
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+
+  .entity-options-wrapper {
+    @include make-row;
+    justify-content: flex-start;
+    justify-content: center;
+    margin-top: $spacer-y-md;
+  }
+
+  .entity-outer-wrapper {
+    @include make-col-ready;
+    @include make-col(12);
+    margin-bottom: $spacer;
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(3);
+    }
+  }
+
+  $vertical-spacer: map-get($spacers, 4);
+  $horizontal-spacer: $spacer * 3;
+  .entity-wrapper {
+    text-align: center;
+    @include base-border;
+    border-color: $gray-400;
+    border-radius: 5px;
+    cursor: pointer !important;
+    color: $gray-700;
+    background-color: $gray-100;
+    height: 100%;
+    padding: $spacer;
+
+    @include media-breakpoint-up(sm) {
+      padding: $vertical-spacer $horizontal-spacer;
+    }
+
+    $duration: 0.1s;
+    $delay: 0s;
+    $timing-function: ease-in;
+    $property: background-color;
+    transition: $property $duration $timing-function $delay;
+
+    &:first-child {
+      margin-left: 0px;
+    }
+
+    &.active {
+      background-color: $primary;
+      color: $white;
+      border-color: transparent;
+    }
+
+    &:not(.active) {
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .entity-inner-wrapper {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+
+      @include media-breakpoint-up(sm) {
+        flex-flow: column;
+      }
+    }
+
+    .image-wrapper {
+      width: 80px;
+      height: 50px;
+      margin-top: $spacer;
+      margin-bottom: $spacer;
+
+      @include media-breakpoint-up(sm) {
+        margin: auto;
+      }
+    }
+
+    .svg-wrapper, img, svg {
+      width: 50px;
+    }
+
+    span {
+      display: inline-block;
+      cursor: pointer;
+      margin-top: $spacer/2;
+      line-height: 1.15;
+    }
+  }
+}
+
+:host  /deep/ .entity-wrapper {
+  span, svg, svg path {
+    color: $gray-700;
+    fill: $gray-700 !important;
+  }
+
+  &.active {
+    span, svg, svg path {
+      color: $white;
+      fill: $white !important;
+    }
+  }
+}

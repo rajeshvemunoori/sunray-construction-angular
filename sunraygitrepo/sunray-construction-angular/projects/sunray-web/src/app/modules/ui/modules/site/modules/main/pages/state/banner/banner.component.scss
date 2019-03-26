@@ -1,0 +1,55 @@
+@import "helpers";
+
+:host ::ng-deep .inner-wrapper {
+  position: relative;
+  overflow: hidden;
+  color: $body-color-light;
+
+  .inner-content {
+    position: relative;
+    padding: 100px 0px;
+  }
+
+  h1 {
+    font-size: 4.0em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  p {
+    font-size: 1em;
+    margin: 0px;
+  }
+
+  .pricing-path-link {
+    margin-top: $spacer;
+
+    a {
+      color: $body-color-light;
+      font-size: 1rem;
+    }
+  }
+
+  .btn-white-primary {
+    border-color: $white;
+  }
+
+  .banner-image-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    @include img-fluid;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  a.btn {
+    margin: $spacer-y-md 0px;
+  }
+}

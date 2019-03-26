@@ -1,0 +1,112 @@
+<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal'
+id='searchModal' role='dialog' tabindex='-1'>
+</div>
+  <div class='content' *ngIf="entity$ | async as entity">
+    <div class='container'>
+      <div class='public-notice mx-5 px-5'></div>
+    </div>
+    <div class='page'>
+      <div class='container'>
+        <h4 class='heading text-center'>Upcoming Webinar</h4>
+      </div>
+    </div>
+    <div id='webinar'>
+      <div class='inner-content'>
+        <div class='container'>
+          <img alt="Calendar" class="calendar"
+           src="/assets/frontend/webinars/calendar.svg">
+          <span class='time'>{{ dateTimeDisplay(entity) }}</span>
+          <hr>
+          <div class='row'>
+            <div class='col-md-7'>
+              <div class='webinar-box'>
+                <img alt="5th webinar" class="cover-img" src={{entity.featuredMediaUrl}}>
+                <div class='row detail-info'>
+                    <div class='col-md-9'>
+                      <h4>{{ entity.title.rendered }}</h4><br>
+                      <p class='text-grey' [innerHTML]="entity.content.rendered"></p>
+                    </div>
+                    <div class='col-md-3'>
+                      <div class='more-btn'>
+                        <a class='int-btn' href="{{ entity['registration-uri'] }}" target='_blank'>
+                          <button class='btn btn-primary btn-lg'>REGISTER</button>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class='col-md-5'>
+              <div class='presenter-box'>
+                <div class='text-box'>
+                  <h5 class='text-grey'>Presented By:</h5>
+                  <div class='row presenter-padding' *ngFor="let presenter of entity.presenters">
+                    <div class='col-md-3'>
+                      <p><img alt="Ariela" class="rounded-img medium" src="{{ presenter.picture.guid }}"></p>
+                    </div>
+                    <div class='col-md-9 mt-3 presenter-field'>
+                      <h6 class='text-primary'>{{ presenter['full-name']}}</h6>
+                      <p class='designation text-grey'> {{ presenter['designation'] }}</p>
+                    </div>
+                  </div>
+                </div>
+                <p class='text-grey'>Can't make it to the live webinar?<br>
+                  No problem, Check out our
+                   <span class="text-primary">
+                     <a routerLink='/site/webinars'>Previous Webinars</a>
+                   </span>
+                </p>
+                <div class='webinar-icons'>
+                  <a href="http://www.facebook.com/sharer/sharer.php?u=http://162.216.17.108/upcoming_webinar/don_t_make_this_1_change_order_mistake_or_it_will_cost_you_big_time" onclick="window.open(this.href, &#39;facebookwindow&#39;,&#39;left=20,top=20,width=600,height=700,toolbar=0,resizable=1&#39;); return false;"><img alt="Facebook" id="fb-root" src="/assets/frontend/footer-icons/facebook.svg"></a>
+                  <script>
+                  (function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=306275599888952";
+                  fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'facebook-jssdk'));
+                  </script>
+                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://162.216.17.108/upcoming_webinar/don_t_make_this_1_change_order_mistake_or_it_will_cost_you_big_time&amp;title=Don&#39;t%20Make%20This%201%20change%20Order%20Mistake,%20or%20it%20Will%20Cost%20You%20Big%20Time." onclick="window.open(this.href, &#39;linkedinwindow&#39;,&#39;left=20,top=20,width=600,height=700,toolbar=0,resizable=1&#39;); return false;">
+                    <img alt="Linkedin" src="/assets/frontend/footer-icons/linkedin.svg">
+                  </a>
+                  <a href="http://twitter.com/intent/tweet?status=Don&#39;t%20Make%20This%201%20change%20Order%20Mistake,%20or%20it%20Will%20Cost%20You%20Big%20Time.+http://162.216.17.108/upcoming_webinar/don_t_make_this_1_change_order_mistake_or_it_will_cost_you_big_time" onclick="window.open(this.href, &#39;twitterwindow&#39;,&#39;left=20,top=20,width=600,h eight=300,toolbar=0,resizable=1&#39;); return false;">
+                    <img alt="Twitter" src="/assets/frontend/footer-icons/twitter.svg">
+                  </a>
+                  <a href="https://plus.google.com/share?url=http://162.216.17.108/upcoming_webinar/don_t_make_this_1_change_order_mistake_or_it_will_cost_you_big_time" onclick="window.open(this.href, &#39;googlepluswindow&#39;,&#39;left=20,top=20,width=600,height=700,toolbar=0,resizable=1&#39;); return false;">
+                    <img alt="Google Plus" src="/assets/frontend/footer-icons/google-plus.svg">
+                  </a>
+                  <script>
+                  (function() {
+                  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                  po.src = 'https://apis.google.com/js/platform.js';
+                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                  })();
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div id='credits-container'>
+      <div class='inner-content'>
+        <div class='container'>
+          <div class='row custom-row'>
+            <div class='col-10 credits-section text-left'>
+              <h4>Receive TWO CEU Credits for completing this seminar!</h4>
+              <p>PROVIDER: 0003661</p>
+              <p>CILB COURSE: 0010788</p>
+              <p>ECLB COURSE: 0800770</p>
+              <span>Bagels and coffee will be served</span>
+            </div>
+            <div class='col-2 coffee-section text-right'>
+              <img alt="Cup and donut" class="badge-icon" src="/assets/frontend/seminars/cup-and-donut.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

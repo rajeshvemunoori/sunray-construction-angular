@@ -1,0 +1,16 @@
+@import 'helpers';
+
+.main-message-wrapper {
+  padding-top: $spacer-x-lg;
+  padding-bottom: $spacer-x-lg;
+  text-align: center;
+
+  .button-wrapper {
+    padding-bottom: $spacer-x-lg;
+  }
+
+  .main-message {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

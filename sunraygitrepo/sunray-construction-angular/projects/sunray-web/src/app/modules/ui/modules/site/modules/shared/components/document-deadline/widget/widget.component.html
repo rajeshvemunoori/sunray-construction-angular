@@ -1,0 +1,118 @@
+<div class="sunray-site-document-deadline-widget-wrapper">
+  <div class="widget-outer-wrapper">
+
+    <div [ngSwitch]="this.currentStep.name">
+
+      <div *ngSwitchCase="'state'">
+        <div class="text-center">
+          <div class="inner-content">
+            <div class="container">
+
+              
+              <div class="step-heading">
+                <div class="text-sm-center section-header">
+                  <span class="step-prompt">{{steps.state.step}}. {{steps.state.prompt}}</span> 
+                </div>
+              </div>
+
+              <div class="step-body">
+                <div class="state-select-wrapper">
+                  <div class="state-select-inner-wrapper">
+                    <sunray-site-state-select
+                      [states$]="states$"
+                      (stateEmitter)="onRegionSelect($event)">
+                    </sunray-site-state-select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-inline-block" id="state-map-wrapper">
+                <sunray-site-clickable-map
+                  [backgroundColor]="'#FFF'"
+                  [hoverColor]="'#0373BB'"
+                  [color]="'#FFF'"
+                  [borderColor]="'#686868'"
+                  [selectedColor]="'#0373BB'"
+                  (regionEmitter)="onRegionSelect($event)">
+                </sunray-site-clickable-map>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Job Type -->
+      <div *ngSwitchCase="'jobType'">
+        <div class="step-wrapper animated fadeIn">
+          <div class="job-types-wrapper">
+            <h5 class="question">1. What type of construction project are you working on?</h5>
+
+            <sunray-ui-site-job-type-select-list
+              [selectedItem]="jobType"
+              [items$]="jobTypes$"
+              (itemEmitter)="jobTypeChanges$.next($event)">
+            </sunray-ui-site-job-type-select-list>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Project Role -->
+      <div *ngSwitchCase="'projectRole'">
+        <div class="question-wrapper animated fadeIn">
+          <div class="project-role-deadlines-wrapper">
+            <h5 class="question">2. What was your role on the project?</h5>
+
+            <div class="project-roles-wrapper">
+              <sunray-ui-site-project-role-select-list
+                [selectedItem]="projectRole"
+                [items$]="projectRoles$"
+                (itemEmitter)="projectRoleChanges$.next($event)">
+              </sunray-ui-site-project-role-select-list>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Document Type -->
+      <div *ngSwitchCase="'documentType'">
+        <div class="question-wrapper animated fadeIn">
+          <div class="project-roles-and-details-wrapper">
+            <div class="inner-wrapper">
+              <div class="details-wrapper">
+                <sunray-ui-site-document-deadline-widget-project-role-deadlines
+                  [jobType]="jobType"
+                  [jobTypes$]="jobTypes$"
+                  [projectRole]="projectRole"
+                  [projectRoles$]="projectRoles$"
+                  [projectTypeRequestTypes$]="projectTypeRequestTypes$"
+                  [statutoryDocuments$]="statutoryDocuments$"
+                  (itemEmitter)="onCalculateDeadlines($event)">
+                </sunray-ui-site-document-deadline-widget-project-role-deadlines>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Date -->
+      <div *ngSwitchCase="'projectDate'">
+        <div class="question-wrapper animated fadeIn">
+          <div class="deadline-calculator inner-wrapper">
+
+            <sunray-site-document-deadline-calculator
+              [state$]="state$"
+              [states$]="states$"
+              [projectRoles$]="projectRoles$"
+              [jobTypes$]="jobTypes$"
+              [statutoryDocuments$]="statutoryDocuments$"
+              [stateRequestTypes$]="stateRequestTypes$">
+            </sunray-site-document-deadline-calculator>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

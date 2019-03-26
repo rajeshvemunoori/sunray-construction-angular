@@ -1,0 +1,119 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "type": "navbar-items",
+      "attributes": {
+      "title": "Dashboard",
+      "url": "/app/dashboard",
+      "children": [
+        {
+          "id": 8,
+          "title": "Create Request",
+          "url": "/create-request"
+        },
+        {
+          "id": 9,
+          "title": "Sync Research",
+          "url": "/sync-research"
+        },
+        {
+          "id": 10,
+          "title": "Upload Research",
+          "url": "/upload-research"
+        }
+      ]
+      }
+    },
+    {
+      "id": 2,
+      "type": "navbar-items",
+      "attributes": {
+      "title": "Progress Data",
+      "url": "/progress-data",
+      "children": []
+      }
+    },
+    {
+      "id": 3,
+      "type": "navbar-items",
+      "attributes": {
+      "title": "Companies",
+      "url": "/companies",
+      "children": []
+      }
+    },
+    {
+      "id": 4,
+      "type": "navbar-items",
+      "attributes": {
+      "title": "Search Requests",
+      "url": "/search",
+      "children": []
+      }
+    },
+    {
+      "id": 5,
+      "type": "navbar-items",
+      "attributes": {
+      "title": "SunRay Brain",
+      "url": "/sunray-brain",
+      "children": []
+      }
+    },
+    {
+      "id": 6,
+      "type": "navbar-items",
+      "attributes": {
+      "title": "Mail",
+      "url": "/app/print/queues",
+      "children": []
+      }
+    },
+    {
+      "id": 11,
+      "type": "navbar-items",
+      "attributes": {
+      "title": "Profile",
+      "url": "/profile",
+      "children": []
+      }
+    },
+    {
+      "id": 8,
+      "type": "navbar-items",
+      "attributes": {
+      "title": "batches",
+      "url": "/app/print/batches",
+      "children": []
+      }
+    },
+    {
+      "id": 12,
+      "type": "navbar-items",
+      "attributes": {
+      "title": "Performance",
+      "url": "/app/dashboard/performance",
+      "children": []
+      }
+    },
+    {
+      "id": 13,
+      "type": "navbar-items",
+      "attributes": {
+      "title": "Supervisor",
+      "url": "/app/dashboard/supervisor",
+      "children": []
+      }
+    },
+    {
+      "id": 14,
+      "type": "navbar-items",
+      "attributes": {
+      "title": "Barbie",
+      "url": "/app/dashboard/account-manager-hard",
+      "children": []
+      }
+    }
+  ]
+}

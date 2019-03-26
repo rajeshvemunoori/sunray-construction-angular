@@ -1,0 +1,38 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import * as _ from 'lodash';
+import { createFeatureSelector, createSelector } from '@ngrx/store';
+/** @type {?} */
+export const selectEntityFeature = createFeatureSelector('entity');
+/** @type {?} */
+let selectFeatures = (state) => {
+    return state.features;
+};
+const ɵ0 = selectFeatures;
+/** @type {?} */
+let selectPrimaryEntityIdentifier = (state) => {
+    return _.get(state, 'primaryEntity.resourceIdentifier');
+};
+const ɵ1 = selectPrimaryEntityIdentifier;
+/** @type {?} */
+let selectPrimaryEntity = (state) => {
+    return _.get(state, 'primaryEntity.entity');
+};
+const ɵ2 = selectPrimaryEntity;
+/** @type {?} */
+let selectors = {
+    features: selectFeatures,
+    primaryEntity: selectPrimaryEntity,
+    primaryEntityIdentifier: selectPrimaryEntityIdentifier,
+};
+/** @type {?} */
+let buildFeatureSelector = (selector, name) => {
+    return createSelector(selectEntityFeature, selector);
+};
+const ɵ3 = buildFeatureSelector;
+/** @type {?} */
+export const entityFeatureSelectors = _.mapValues(selectors, buildFeatureSelector);
+export { ɵ0, ɵ1, ɵ2, ɵ3 };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VsZWN0b3JzLmpzIiwic291cmNlUm9vdCI6Im5nOi8vQGNlby9lbnRpdHkvIiwic291cmNlcyI6WyJsaWIvZW50aXR5L3N0YXRlL2ZlYXR1cmUvc2VsZWN0b3JzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEtBQUssQ0FBQyxNQUFNLFFBQVEsQ0FBQTtBQUszQixPQUFPLEVBRUwscUJBQXFCLEVBQ3JCLGNBQWMsRUFDZixNQUFNLGFBQWEsQ0FBQTs7QUFRcEIsTUFBTSxPQUFPLG1CQUFtQixHQUFHLHFCQUFxQixDQUFPLFFBQVEsQ0FBQzs7SUFFcEUsY0FBYyxHQUFHLENBQUMsS0FBb0IsRUFBZSxFQUFFO0lBQ3pELE9BQU8sS0FBSyxDQUFDLFFBQVEsQ0FBQTtBQUN2QixDQUFDOzs7SUFFRyw2QkFBNkIsR0FBRyxDQUFDLEtBQW9CLEVBQUUsRUFBRTtJQUMzRCxPQUFPLENBQUMsQ0FBQyxHQUFHLENBQUMsS0FBSyxFQUFFLGtDQUFrQyxDQUFDLENBQUE7QUFDekQsQ0FBQzs7O0lBRUcsbUJBQW1CLEdBQUcsQ0FBQyxLQUFvQixFQUFFLEVBQUU7SUFDakQsT0FBTyxDQUFDLENBQUMsR0FBRyxDQUFDLEtBQUssRUFBRSxzQkFBc0IsQ0FBQyxDQUFBO0FBQzdDLENBQUM7OztJQUVHLFNBQVMsR0FBRztJQUNkLFFBQVEsRUFBRSxjQUFjO0lBQ3hCLGFBQWEsRUFBRSxtQkFBbUI7SUFDbEMsdUJBQXVCLEVBQUUsNkJBQTZCO0NBQ3ZEOztJQUVHLG9CQUFvQixHQUFHLENBQUMsUUFBUSxFQUFFLElBQUksRUFBRSxFQUFFO0lBQzVDLE9BQU8sY0FBYyxDQUNuQixtQkFBbUIsRUFDbkIsUUFBUSxDQUNULENBQUE7QUFDSCxDQUFDOzs7QUFHRCxNQUFNLE9BQU8sc0JBQXNCLEdBQ2pDLENBQUMsQ0FBQyxTQUFTLENBQUMsU0FBUyxFQUFFLG9CQUFvQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgXyBmcm9tICdsb2Rhc2gnXG5cbmltcG9ydCB7IHBpcGUgfSAgIGZyb20gJ3J4anMnXG5pbXBvcnQgeyBmaWx0ZXIgfSBmcm9tICdyeGpzL29wZXJhdG9ycydcblxuaW1wb3J0IHsgXG4gIHNlbGVjdCxcbiAgY3JlYXRlRmVhdHVyZVNlbGVjdG9yLFxuICBjcmVhdGVTZWxlY3RvciwgTWVtb2l6ZWRTZWxlY3RvclxufSBmcm9tICdAbmdyeC9zdG9yZSdcblxuaW1wb3J0IHtcbiAgaUZlYXR1cmVNYXAsXG59IGZyb20gJy4uLy4uL2ludGVyZmFjZXMvaW5kZXgnXG5cbmltcG9ydCB7IGlGZWF0dXJlU3RhdGUgfSBmcm9tICcuL3N0YXRlJ1xuXG5leHBvcnQgY29uc3Qgc2VsZWN0RW50aXR5RmVhdHVyZSA9IGNyZWF0ZUZlYXR1cmVTZWxlY3Rvcjxhbnk+ICgnZW50aXR5JylcblxubGV0IHNlbGVjdEZlYXR1cmVzID0gKHN0YXRlOiBpRmVhdHVyZVN0YXRlKTogaUZlYXR1cmVNYXAgPT4ge1xuICByZXR1cm4gc3RhdGUuZmVhdHVyZXNcbn1cblxubGV0IHNlbGVjdFByaW1hcnlFbnRpdHlJZGVudGlmaWVyID0gKHN0YXRlOiBpRmVhdHVyZVN0YXRlKSA9PiB7XG4gIHJldHVybiBfLmdldChzdGF0ZSwgJ3ByaW1hcnlFbnRpdHkucmVzb3VyY2VJZGVudGlmaWVyJylcbn1cblxubGV0IHNlbGVjdFByaW1hcnlFbnRpdHkgPSAoc3RhdGU6IGlGZWF0dXJlU3RhdGUpID0+IHtcbiAgcmV0dXJuIF8uZ2V0KHN0YXRlLCAncHJpbWFyeUVudGl0eS5lbnRpdHknKVxufVxuXG5sZXQgc2VsZWN0b3JzID0ge1xuICBmZWF0dXJlczogc2VsZWN0RmVhdHVyZXMsXG4gIHByaW1hcnlFbnRpdHk6IHNlbGVjdFByaW1hcnlFbnRpdHksXG4gIHByaW1hcnlFbnRpdHlJZGVudGlmaWVyOiBzZWxlY3RQcmltYXJ5RW50aXR5SWRlbnRpZmllcixcbn1cblxubGV0IGJ1aWxkRmVhdHVyZVNlbGVjdG9yID0gKHNlbGVjdG9yLCBuYW1lKSA9PiB7XG4gIHJldHVybiBjcmVhdGVTZWxlY3RvcihcbiAgICBzZWxlY3RFbnRpdHlGZWF0dXJlLFxuICAgIHNlbGVjdG9yLFxuICApXG59XG5cblxuZXhwb3J0IGNvbnN0IGVudGl0eUZlYXR1cmVTZWxlY3RvcnMgPVxuICBfLm1hcFZhbHVlcyhzZWxlY3RvcnMsIGJ1aWxkRmVhdHVyZVNlbGVjdG9yKVxuIl19

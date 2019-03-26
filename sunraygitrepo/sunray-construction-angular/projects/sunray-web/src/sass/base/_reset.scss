@@ -1,0 +1,95 @@
+@import 'variables';
+@import 'mixins';
+
+/* Reset */
+html, body, div {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  //scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Box-sizing border-box */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Set up a default font and some padding to provide breathing room */
+body {
+  font-family: $font-primary;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 20px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+ul {
+  margin: 10px 0 0;
+  padding: 0 0 0 20px;
+}
+
+li {
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+input {
+  border: 1px solid $primary;
+  font-size: 14px;
+  height: 40px;
+  outline: none;
+  padding: 8px;
+}
+
+button:hover {
+  background-color: $secondary;
+}
+
+/* platform specific */
+.desktop lang-switcher {
+  display: none;
+}
+
+.m-wrapper {
+  background-color: $body-bg;
+}
+
+.m-stack__item.m-brand.m-brand--skin-dark {
+  background-color: $white !important;
+}
+
+.m-stack__item.m-stack__item--middle.m-brand__tools {
+  display: none !important;
+}
+
+#m_header_menu {
+display: none !important;}
+
+header {
+  @include base-border-bottom;
+}
+
+.m-grid__item.m-aside-left.m-aside-left--skin-dark {
+  min-height: 2000px !important;
+}

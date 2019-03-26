@@ -1,0 +1,82 @@
+{
+  "data": [
+     {
+       "type": "forms",
+       "id": "company-edit",
+       "attributes": {
+          "name": "company-edit",
+          "resource-type": "companies"
+       }
+    },
+    {
+      "type": "forms",
+      "id": "company-primary-contacts",
+      "attributes": {
+         "name": "company-primary-contacts",
+         "resource-type": "users"
+      }
+    },
+    {
+       "type": "forms",
+       "id": "company-account-payable-contats",
+       "attributes": {
+          "name": "company-account-payable-contats",
+          "resource-type": "users"
+       }
+    },
+    {
+       "type": "forms",
+       "id": "company-project-contacts",
+       "attributes": {
+          "name": "company-project-contacts",
+          "resource-type": "users"
+       }
+    },
+    {
+       "type": "forms",
+       "id": "users.edit",
+       "attributes": {
+          "name": "users.edit",
+          "resource-type": "users"
+       },
+       "relationships": {
+         "form-fields": {
+           "data": [
+             {
+               "id": 21,
+               "type": "form-fields"
+             },
+
+             {
+               "id": 22,
+               "type": "form-fields"
+             }
+           ]
+         }
+       }
+    },
+    {
+       "type": "forms",
+       "id": "addresses.edit",
+       "attributes": {
+          "name": "addresses.edit",
+          "resource-type": "addresses"
+       },
+       "relationships": {
+         "form-fields": {
+           "data": [
+             {
+               "id": 25,
+               "type": "form-fields"
+             },
+
+             {
+               "id": 26,
+               "type": "form-fields"
+             }
+           ]
+         }
+       }
+    }
+  ]
+}

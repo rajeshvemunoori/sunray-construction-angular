@@ -1,0 +1,5 @@
+@import 'helpers';
+
+.company-detail-page {
+  @include make-container;
+}

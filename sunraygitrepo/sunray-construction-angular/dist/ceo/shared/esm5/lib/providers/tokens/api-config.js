@@ -1,0 +1,8 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { InjectionToken } from '@angular/core';
+/** @type {?} */
+export var API_CONFIG = new InjectionToken("API Config");
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBpLWNvbmZpZy5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BjZW8vc2hhcmVkLyIsInNvdXJjZXMiOlsibGliL3Byb3ZpZGVycy90b2tlbnMvYXBpLWNvbmZpZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLGNBQWMsRUFBRSxNQUFRLGVBQWUsQ0FBQTs7QUFFaEQsTUFBTSxLQUFPLFVBQVUsR0FDckIsSUFBSSxjQUFjLENBQU0sWUFBWSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSW5qZWN0aW9uVG9rZW4gfSAgIGZyb20gJ0Bhbmd1bGFyL2NvcmUnXG5cbmV4cG9ydCBjb25zdCBBUElfQ09ORklHID1cbiAgbmV3IEluamVjdGlvblRva2VuPGFueT4oXCJBUEkgQ29uZmlnXCIpXG4iXX0=

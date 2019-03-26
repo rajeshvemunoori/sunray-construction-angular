@@ -1,0 +1,8 @@
+<nav>
+  <a [routerLinkActiveOptions]="{exact:true}"
+    [routerLinkActive]="['router-link-active']"
+    [attr.href]="[item.url]"
+    *ngFor="let item of (collection$ | async)">
+    {{item.title}}
+  </a>
+</nav>

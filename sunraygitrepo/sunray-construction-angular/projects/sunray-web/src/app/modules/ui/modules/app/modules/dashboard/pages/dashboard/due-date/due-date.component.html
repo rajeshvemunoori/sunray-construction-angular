@@ -1,0 +1,20 @@
+<div class="modal-header">
+  <h4 class="modal-title">WARNING</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="container">
+      <h4> PLEASE COMPLETE YOUR DUE DATES BEFORE PROCEEDING WITH REQUESTS </h4>
+      <div class="container-data">
+        <h4> you have
+          <span class="container-innerdata">{{ dueDateCount }}</span>due dates
+        </h4>
+      </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success">Take me there</button>
+  <button type="button" class="btn btn-primary">Request Override</button>
+</div>

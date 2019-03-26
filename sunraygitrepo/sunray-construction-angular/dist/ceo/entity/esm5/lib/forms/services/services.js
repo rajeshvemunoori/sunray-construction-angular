@@ -1,0 +1,13 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import * as tslib_1 from "tslib";
+import { EntityFormFactory, EntityFormManagerFactory, } from './public-api';
+import { services as resourceConfigurationServices } from './resource-configurations/services';
+/** @type {?} */
+export var services = tslib_1.__spread([
+    EntityFormFactory,
+    EntityFormManagerFactory
+], resourceConfigurationServices);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VydmljZXMuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL2VudGl0eS8iLCJzb3VyY2VzIjpbImxpYi9mb3Jtcy9zZXJ2aWNlcy9zZXJ2aWNlcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7OztBQUFBLE9BQU8sRUFDTCxpQkFBaUIsRUFDakIsd0JBQXdCLEdBQ3pCLE1BQU0sY0FBYyxDQUFBO0FBRXJCLE9BQU8sRUFBRSxRQUFRLElBQUksNkJBQTZCLEVBQUUsTUFBTSxvQ0FBb0MsQ0FBQTs7QUFFOUYsTUFBTSxLQUFPLFFBQVE7SUFDbkIsaUJBQWlCO0lBQ2pCLHdCQUF3QjtHQUNyQiw2QkFBNkIsQ0FDakMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xuICBFbnRpdHlGb3JtRmFjdG9yeSxcbiAgRW50aXR5Rm9ybU1hbmFnZXJGYWN0b3J5LFxufSBmcm9tICcuL3B1YmxpYy1hcGknXG5cbmltcG9ydCB7IHNlcnZpY2VzIGFzIHJlc291cmNlQ29uZmlndXJhdGlvblNlcnZpY2VzIH0gZnJvbSAnLi9yZXNvdXJjZS1jb25maWd1cmF0aW9ucy9zZXJ2aWNlcydcblxuZXhwb3J0IGNvbnN0IHNlcnZpY2VzOiBhbnlbXSA9IFtcbiAgRW50aXR5Rm9ybUZhY3RvcnksXG4gIEVudGl0eUZvcm1NYW5hZ2VyRmFjdG9yeSxcbiAgLi4ucmVzb3VyY2VDb25maWd1cmF0aW9uU2VydmljZXMsXG5dXG4iXX0=

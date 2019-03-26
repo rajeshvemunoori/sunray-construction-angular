@@ -1,0 +1,13 @@
+<div class="card-deck">
+  <div *ngFor="let item of collection$ | async" class="card clickable"
+    (click)="select($event, item)">
+
+    <div class="value-wrapper">
+      <span> ID: {{item.id}} </span>
+      <span> {{item.value}} </span>
+    </div>
+    <div class="title-wrapper">
+      <span> {{item['display-value']}} </span>
+    </div>
+  </div>
+</div>

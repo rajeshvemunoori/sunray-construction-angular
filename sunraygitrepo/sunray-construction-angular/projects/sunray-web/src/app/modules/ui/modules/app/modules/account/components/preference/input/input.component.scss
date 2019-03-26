@@ -1,0 +1,29 @@
+
+span{
+  margin-left: 3%;
+  float: right;
+  margin-right: 25%;
+  margin-top: 19%;
+}
+
+.radiobuttonlabel{
+  width: 20%;
+  margin-left:1%;
+  border-radius: 0.3rem;
+  color: white;
+}
+
+.radiobuttonlabel:nth-of-type(1){
+  background-color: #0373bb;
+}
+.radiobuttonlabel:nth-of-type(2){
+  background-color: #a3e6df;
+  margin-left:3%;
+}
+.radiobutton{
+  margin-left:18%;
+}
+input[type="radio"]{
+  margin-top:9%;
+  width: 29%;
+}

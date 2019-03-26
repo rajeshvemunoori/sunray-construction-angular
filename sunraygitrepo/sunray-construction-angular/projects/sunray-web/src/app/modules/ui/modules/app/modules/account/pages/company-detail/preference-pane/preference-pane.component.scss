@@ -1,0 +1,15 @@
+@import 'helpers';
+
+.preferences-container{
+  display: flex;
+}
+.preferences-pane-container-detail{
+    border:1px solid #e6dede;
+    // margin-bottom: 20px;
+    // margin-top: 15px;
+    // margin-left: 15px;
+    // margin-right: 20px;
+    width: -webkit-fill-available;
+    height: max-content;
+    margin-right: 8px;
+}

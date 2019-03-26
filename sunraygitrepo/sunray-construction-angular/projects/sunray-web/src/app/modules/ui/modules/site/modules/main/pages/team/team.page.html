@@ -1,0 +1,13 @@
+<div class="page-inner-wrapper animated fadeIn">
+  <sunray-site-shared-content-header
+    [heading]="'Our Awesome Team'"
+    [subHeading]="'We are driven by the idea that the best work is born from diligence, craftsmanship and fun.'">
+  </sunray-site-shared-content-header>
+
+  <div class='our-team'>
+    <sunray-site-team-member-list
+      [collection$]="cmsTeamMembers$"
+      (entitySelected)="onEntitySelected($event)">
+    </sunray-site-team-member-list>
+  </div>
+</div>

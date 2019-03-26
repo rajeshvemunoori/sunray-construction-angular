@@ -1,0 +1,35 @@
+<!-- <div class='notary-list-wrapper list-wrapper'>
+  <h3>Notaries</h3>
+  <a>Add</a>
+  <sunray-ui-app-shared-table
+    [collection$]="collection$"
+    [configHeader$]="header$"
+    [itemActions$]="itemActions$"
+    [collectionActions$]="collectionActions$"
+    (actionEmitter)="triggerAction($event)">
+  </sunray-ui-app-shared-table>
+</div> -->
+<div class="notary-pane-container container-detail">
+  <div class="header-wrapper">
+    <sunray-ui-app-shared-header
+      [headerTitle]="'Notaries'"
+      [buttonTitle]="'Add Notary'"
+      [searchFlag]="true"
+      (actionEmitter) = "add()"
+      (searchKeyEmitter) = "search($event)">
+    </sunray-ui-app-shared-header>
+  </div>
+  <div class="notary-pane-container-body container-body">
+    <sunray-ui-app-shared-table
+      [collection$]="collection$"
+      [inlineEdit] ="true"
+      [configHeader$]="header$"
+      [paginationId]="'notaries'"
+      [itemActions$]="itemActions$"
+      [searchAttributes]="searchAttributes"
+      (actionEmitter)="triggerAction($event)">
+    </sunray-ui-app-shared-table>
+  </div>
+  <div class="notary-pane-container-footer container-footer">
+  </div>
+</div>

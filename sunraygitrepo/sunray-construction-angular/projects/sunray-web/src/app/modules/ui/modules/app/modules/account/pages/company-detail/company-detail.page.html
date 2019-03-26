@@ -1,0 +1,18 @@
+<div class="company-detail-page" *ngIf="(primaryEntity$ | async) as entity">
+  <h1>
+    {{entity.name}}
+  </h1>
+
+  <div class='company-detail-pane-manager-wrapper pane-manager-wrapper'>
+    <ceo-shared-declarables-card-select-list
+      [cards$]="paneCards$"
+      (itemEmitter)="activatePane($event)">
+    </ceo-shared-declarables-card-select-list>
+  </div>
+
+  <div class='pane-wrapper company-detail-pane-wrapper'>
+    <ceo-shared-declarables-pane
+      [pane$]="paneManager.activePane$">
+    </ceo-shared-declarables-pane>
+  </div>
+</div>

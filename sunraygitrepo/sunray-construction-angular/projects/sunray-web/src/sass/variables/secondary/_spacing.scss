@@ -1,0 +1,11 @@
+$spacer-y-xs: map-get($spacers, 2);
+$spacer-y-sm: map-get($spacers, 3);
+$spacer-y-md: map-get($spacers, 4);
+$spacer-y-lg: map-get($spacers, 5);
+$spacer-y-xl: map-get($spacers, 6);
+
+$spacer-x-xs: map-get($spacers, 2);
+$spacer-x-sm: map-get($spacers, 3);
+$spacer-x-md: map-get($spacers, 4);
+$spacer-x-lg: map-get($spacers, 5);
+$spacer-x-xl: map-get($spacers, 6);

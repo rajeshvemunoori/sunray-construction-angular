@@ -1,0 +1,50 @@
+@import "helpers";
+
+.page-content-wrap {
+  background-color: $white;
+  padding-bottom: 0px;
+}
+
+.page-heading {
+  text-align: center;
+  margin-bottom: $spacer-y-lg;
+}
+
+.section-body {
+  @include make-container;
+  @include make-container-max-widths;
+  margin-top: $spacer-y-lg;
+  margin-bottom: $spacer-y-lg;
+  padding-top: $spacer-y-lg;
+  padding-bottom: $spacer-y-lg;
+}
+
+.section-heading {
+  margin-bottom: $spacer-y-lg;
+  display: none;
+}
+
+.widget-wrap {
+  @include make-container;
+  @include make-container-max-widths;
+  @include base-border;
+  border-radius: $border-radius;
+
+  @include size-lg {
+    padding-left: $spacer-x-lg;
+    padding-right: $spacer-x-lg;
+  }
+}
+
+.deadline-calculators-wrapper {
+  @include make-container;
+
+  .inner-wrapper {
+    @include make-row;
+
+    .deadline-calculator-wrapper {
+      @include make-col-ready;
+      @include make-col(4);
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@import 'helpers';
+
+.header-wrapper {
+  @include make-container;
+  padding-bottom: $spacer-x-md;
+}
+
+.item-title {
+  font-weight: bold;
+  color: $brand-blue;
+}
+
+
+
+
+
+.workspace-body-wrapper  {
+  @include make-container;
+  padding-top: $spacer-x-md;
+  padding-bottom: $spacer-x-md;
+}
+
+.queues-row-wrapper {
+  @include make-row;
+
+  .queues-wrapper {
+    @include make-col-ready;
+  }
+
+  .standard-queues-wrapper {
+    @include make-col(3);
+  }
+
+  .important-queues-wrapper {
+    @include make-col(9);
+  }
+}
+
+// Widgets styles
+.widgets-wrapper {
+  @include make-row;
+}
+
+.widget-wrapper {
+  margin-top: $spacer-x-xl;
+  @include make-col-ready;
+
+  .widget-inner-wrapper {
+    border: 1px solid $primary;
+    border-radius: 5px;
+
+    .widget-header-wrapper {
+      font-weight: bold;
+      color: #222;
+      border-bottom: 1px solid $primary;
+      padding: $spacer-y-sm;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      text-transform: uppercase;
+    }
+
+    .widget-body-wrapper {
+      background-color: $white;
+      padding: $spacer-y-sm;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+
+.quality-control-wrapper {
+  @include make-col(3);
+}
+
+.comments-wrapper {
+  @include make-col(5);
+}
+
+.leaderboard-wrapper {
+  @include make-col(4);
+}
+
+.breadcrumbs-wrapper {
+  .breadcrumb-wrapper {
+    display: inline-block;
+    color: $brand-blue;
+    padding: $spacer-y-sm;
+    font-weight: 600;
+  }
+}
+
+
+.m-subheader__title {
+  font-weight: bold !important;
+  font-size: 3em !important;
+  text-transform: uppercase !important;
+  padding-left: 15px !important;
+  font-family: $font-primary !important;
+}
+
+.badge {
+  background-color: $brand-pink;
+  text-transform: uppercase;
+  padding: 0.5em;
+}

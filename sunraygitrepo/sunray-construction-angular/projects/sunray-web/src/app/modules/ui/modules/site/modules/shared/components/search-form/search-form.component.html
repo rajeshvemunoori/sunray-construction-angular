@@ -1,0 +1,9 @@
+<div id="search-form">
+  <div class="text-wrapper">
+    <form #f='ngForm' (keyup.enter)="onSubmit($event)">
+      <mat-form-field>
+        <input matInput placeholder="Search" autofocus="autofocus">
+      </mat-form-field>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+export { CloseComponent as DialogCloseComponent } from './close/close.component';
+export { DialogComponent } from './dialog.component';
+export { DialogWidgetComponent, DialogWidgetHeaderComponent, DialogWidgetFooterComponent } from './widget/index';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9kZWNsYXJhYmxlcy9jb21wb25lbnRzL2RpYWxvZy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLGNBQWMsSUFBSSxvQkFBb0IsRUFBRSxNQUFNLHlCQUF5QixDQUFBO0FBQ2hGLE9BQU8sRUFBRSxlQUFlLEVBQUUsTUFBTSxvQkFBb0IsQ0FBQTtBQUVwRCxnR0FBYyxnQkFBZ0IsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCB7IENsb3NlQ29tcG9uZW50IGFzIERpYWxvZ0Nsb3NlQ29tcG9uZW50IH0gZnJvbSAnLi9jbG9zZS9jbG9zZS5jb21wb25lbnQnXG5leHBvcnQgeyBEaWFsb2dDb21wb25lbnQgfSBmcm9tICcuL2RpYWxvZy5jb21wb25lbnQnXG5cbmV4cG9ydCAqIGZyb20gJy4vd2lkZ2V0L2luZGV4J1xuIl19

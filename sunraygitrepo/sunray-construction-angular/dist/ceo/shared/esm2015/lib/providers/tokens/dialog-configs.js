@@ -1,0 +1,8 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { InjectionToken } from '@angular/core';
+/** @type {?} */
+export const DIALOG_CONFIGS = new InjectionToken("Dialog Configs");
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGlhbG9nLWNvbmZpZ3MuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9wcm92aWRlcnMvdG9rZW5zL2RpYWxvZy1jb25maWdzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUUsY0FBYyxFQUFFLE1BQVEsZUFBZSxDQUFBOztBQUVoRCxNQUFNLE9BQU8sY0FBYyxHQUN6QixJQUFJLGNBQWMsQ0FBTSxnQkFBZ0IsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEluamVjdGlvblRva2VuIH0gICBmcm9tICdAYW5ndWxhci9jb3JlJ1xuXG5leHBvcnQgY29uc3QgRElBTE9HX0NPTkZJR1MgPVxuICBuZXcgSW5qZWN0aW9uVG9rZW48YW55PihcIkRpYWxvZyBDb25maWdzXCIpXG5cbiJdfQ==

@@ -1,0 +1,59 @@
+<ul id="nav-bar" class="navbar-nav">
+  <li class="nav-item">
+    <div class="nav-link link">
+      <a class="phone-link" href="tel:1-800-403-7660">
+        1-800-403-7660
+      </a>
+    </div>
+  </li>
+
+  <li class="nav-item">
+    <div class="nav-link link">
+      <a routerLink="/contact-us">Contact Us</a>
+    </div>
+  </li>
+
+  <li class="nav-item">
+    <div class="nav-link link">
+      <a ceoClickStopEventBubble
+        class="text-primary" href="#"
+        (click)="onSearch()">
+
+        <mat-icon alt="Search" svgIcon="search"></mat-icon>
+      </a>
+    </div>
+  </li>
+
+  <ng-template [ngIf]="!authService.userSignedIn()">
+    <li class="nav-item">
+      <div class="nav-link link text-gray-700">
+        <a class="user-link " routerLink="/signup">
+          <mat-icon alt="Sign up" svgIcon="signup"></mat-icon>
+          Sign up
+        </a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <div class="nav-link link text-gray-700">
+        <a class="user-link"
+          ceoClickStopEventBubble
+          href="#" (click)="onLogin()">
+          <mat-icon alt="Login" svgIcon="logout"></mat-icon>
+          Login
+        </a>
+      </div>
+    </li>
+  </ng-template>
+
+  <ng-template [ngIf]="authService.userSignedIn()">
+    <li class="nav-item">
+      <div class="nav-link link">
+        <a href="#" (click)="signOut()" *ngIf="authService.userSignedIn()">
+          <mat-icon alt="Logout" svgIcon="logout"></mat-icon>
+          Logout
+        </a>
+      </div>
+    </li>
+  </ng-template>
+</ul>

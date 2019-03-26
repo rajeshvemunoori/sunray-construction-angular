@@ -1,0 +1,54 @@
+@import 'helpers';
+@import "helpers";
+
+$size: 20px;
+$margin: 0px;
+
+.close {
+  width: 2.2rem;
+  height: 2.2rem;
+  background: black;
+  position: relative;
+  left: 11px;
+  top: -11px;
+  text-shadow: none;
+  opacity: unset;
+  span {
+    font-weight: bolder;
+    color: $white;
+  }
+}  
+.modal-header {
+  border-bottom: none !important;
+  padding-top: $spacer * 3;
+  display: block !important;
+  .image-wrapper {
+    padding-bottom: $spacer * 2;
+    img {
+      width: 25%;
+    }
+  }
+  .title {
+    color: $brand-blue;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 100;
+    width: 100%;
+    text-transform: uppercase;
+  }
+}
+
+.modal-body {
+  .text-wrapper {
+    color: $gray-700;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding-left: $spacer * 4;
+    padding-right: $spacer * 4;
+  }
+}
+
+.modal-footer img{
+  width: 100%;
+}

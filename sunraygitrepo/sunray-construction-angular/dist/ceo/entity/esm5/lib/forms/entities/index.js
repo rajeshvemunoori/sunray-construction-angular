@@ -1,0 +1,7 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+export { FormEntity } from './form.entity';
+export { FormFieldEntity } from './form-field.entity';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL2VudGl0eS8iLCJzb3VyY2VzIjpbImxpYi9mb3Jtcy9lbnRpdGllcy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLFVBQVUsRUFBRSxNQUFXLGVBQWUsQ0FBQTtBQUMvQyxPQUFPLEVBQUUsZUFBZSxFQUFFLE1BQU0scUJBQXFCLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgeyBGb3JtRW50aXR5IH0gICAgICBmcm9tICcuL2Zvcm0uZW50aXR5J1xuZXhwb3J0IHsgRm9ybUZpZWxkRW50aXR5IH0gZnJvbSAnLi9mb3JtLWZpZWxkLmVudGl0eSdcbiJdfQ==

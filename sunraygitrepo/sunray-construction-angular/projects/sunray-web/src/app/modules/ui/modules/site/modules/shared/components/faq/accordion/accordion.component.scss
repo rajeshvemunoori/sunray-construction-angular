@@ -1,0 +1,185 @@
+@import "helpers";
+
+.faq-content {
+  padding-top: 1rem;
+  @include make-container;
+}
+
+.faq-inner-wrapper {
+  @include make-row;
+}
+
+h1.faq-heading {
+  color: $primary !important;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 15px;
+}
+
+h4.faq-sub-heading {
+  color: #838383;
+  text-align: center;
+  padding: 2px;
+  font-size: 22px;
+}
+
+#custom-search-input {
+  @include make-col-ready;
+  @include make-col(12);
+  margin-top: 10px;
+}
+
+.accordion-wrapper,
+.search-form-wrapper {
+  @include make-col-ready;
+  @include make-col(12);
+
+}
+
+.accordion-wrapper {
+  &:last-child {
+    .accordion {
+      @include base-border-bottom;
+    }
+  }
+}
+.accordion {
+  @include base-border;
+  border-bottom: none;
+
+  &.active {
+    .accordion-header {
+    }
+
+    .accordion-pane {
+      max-height: 200px !important;
+    }
+  }
+
+
+  a {
+    @include make-container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 3;
+    font-weight: bold;
+
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .accordion-body {
+  }
+}
+
+.search-form-wrapper {
+  margin-bottom: $spacer * 2;
+
+  input {
+    height: 4rem;
+  }
+
+  .btn {
+    border-color: #ced4da;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    &:hover {
+      background-color: $white;
+      border-color: $primary;
+      color: $primary;
+    }
+  }
+}
+
+#custom-search-input button {
+  border: 0;
+  background: none;
+  /** belows styles are working good */
+  padding: 2px 5px;
+  margin-top: 2px;
+  position: relative;
+  left: -28px;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  font-style: 2rem;
+  border-radius: 3px;
+  color: $primary !important;
+}
+
+.search-query:focus+button {
+  z-index: 3;
+}
+
+#single-faq {
+  padding: 45px;
+}
+
+.faq-load-more {
+  text-align: center;
+}
+
+.tglbtn  {
+  float: right;
+  margin: -40px 0px 0px 15px;
+  height: 40px;
+  width: 40px;
+}
+
+.accordions-wrapper {
+  @include make-container;
+
+  .accordions-inner-wrapper {
+    @include make-row;
+
+    .accordion-wrapper {
+      @include make-col-ready;
+
+      &:last-child {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+      
+      &:first-child {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+      }
+
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+
+      border-radius: 0px;
+    }
+
+    .accordion-control {
+      a:hover {
+        text-decoration: none;
+        color: $primary;
+      }
+    }
+
+    .accordion-pane {
+      padding: 0px;
+      max-height: 0px;
+      @include clearfix;
+      overflow: hidden;
+
+      $duration: 0.3s;
+      $delay: 0s;
+      $timing-function: ease-in-out;
+      $property: max-height;
+      @include component-animation($property, $duration, $delay, $timing-function);
+
+      .accordion-content {
+        padding: $spacer;
+      }
+
+    }
+  }
+}

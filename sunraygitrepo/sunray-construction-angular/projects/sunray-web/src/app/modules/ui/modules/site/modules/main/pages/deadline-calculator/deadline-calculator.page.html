@@ -1,0 +1,43 @@
+<div *ngIf="cmsPage$ | async as cmsPage"
+  class="page-content-wrap animated fadeIn">
+
+  <div *ngIf="false">
+    <ceo-form
+      [model]="formModel">
+    </ceo-form>
+
+    <shared-declarables-form
+      [inputGroup$]="form$">
+    </shared-declarables-form>
+  </div>
+
+
+  <div class="page-heading">
+    <h1 class="title text-primary"
+      [innerHTML]="cmsPage.renderedTitle"
+      ceoRouteTransformer>
+    </h1>
+
+    <h4 class="content"
+      [innerHTML]="cmsPage.renderedContent"
+      ceoRouteTransformer>
+    </h4>
+  </div>
+
+  <div class="page-body">
+    <section class="page-section bg-primary">
+      <div class="text-sm-center text-white section-heading">
+        <h2>{{sections.deadlineCalculator.heading}}</h2>
+        <h4>{{sections.deadlineCalculator.subHeading}}</h4> 
+      </div>
+
+      <div class="widget-wrap bg-white">
+        <sunray-site-project-deadline-widget
+          [projectTypeResolver]="projectTypeResolver"
+          [form$]="form$"
+          [project$]="project$">
+        </sunray-site-project-deadline-widget>
+      </div>
+    </section>
+  </div>
+</div>

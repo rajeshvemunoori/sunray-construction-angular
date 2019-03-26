@@ -1,0 +1,39 @@
+ <div class="profile-pane-container container-detail">
+    <div class="header-wrapper">
+     <sunray-ui-app-shared-header
+       [headerTitle]="'Contact Details'"
+       [buttonTitle]="'Edit Contact'"
+       (actionEmitter) = "editCompany(event)">
+     </sunray-ui-app-shared-header>
+    </div>
+    <div class="profile-pane-container-body container-body">
+     <div class='company-setting-attrbuite-list-wrapper attribute-list-wrapper'>
+       <shared-declarables-attribute-list
+         [attributeEntity$]="attributeEntity$"
+         [attributeEntityLabels$]="contactDetailHeader$">
+       </shared-declarables-attribute-list>
+     </div>
+    </div>
+ </div>
+ <div class="profile-pane-container container-detail" *ngFor="let contact of this._contacts">
+   <div class="header-wrapper">
+      <sunray-ui-app-shared-header
+        [headerTitle]="contact.title"
+        [buttonTitle]="'Add a Contact'"
+        [searchFlag]="true"
+        (actionEmitter) = "editContact(this.loadEmptyEntity(contact.type))"
+        (searchKeyEmitter) = "search($event,contact)">
+      </sunray-ui-app-shared-header>
+   </div>
+   <div class="profile-pane-container-body container-body">
+     <shared-declarables-table
+       [collection$]="contact.contacts$"
+       [configHeader$]="contact.header$"
+       [searchAttributes]="contact.searchAttributes"
+       [itemActions$]="contact.itemActions$"
+       (actionEmitter)="triggerAction($event)">
+     </shared-declarables-table>
+   </div>
+   <div class="profile-pane-container-footer container-footer">
+   </div>
+ </div>

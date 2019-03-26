@@ -1,0 +1,12 @@
+<div class="title">
+  <div class="project" *ngIf="(primaryEntity$ | async) as project">
+    <div> Project Name </div>
+    <div> {{ project.name }} </div>
+    <div> {{ project.jobFullAddress }} </div>
+  </div>
+  <div class="customer" *ngIf="(customer$ | async) as customer">
+    <div> Your Customer </div>
+    <div> {{ customer.contactName }} </div>
+    <div> {{ customer.fullAddress }} </div>
+  </div>
+</div>

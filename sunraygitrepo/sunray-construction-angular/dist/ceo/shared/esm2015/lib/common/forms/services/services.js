@@ -1,0 +1,16 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { FormControlFactory, FormFactory, FormGroupFactory, FormItemFactory, FormMemberFactory, } from './index';
+import { services as ngFormsServices } from './ng-forms/services';
+/** @type {?} */
+export const services = [
+    FormControlFactory,
+    FormFactory,
+    FormGroupFactory,
+    FormItemFactory,
+    FormMemberFactory,
+    ...ngFormsServices,
+];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VydmljZXMuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9jb21tb24vZm9ybXMvc2VydmljZXMvc2VydmljZXMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFDTCxrQkFBa0IsRUFDbEIsV0FBVyxFQUNYLGdCQUFnQixFQUNoQixlQUFlLEVBQ2YsaUJBQWlCLEdBQ2xCLE1BQU0sU0FBUyxDQUFBO0FBRWhCLE9BQU8sRUFBRSxRQUFRLElBQUksZUFBZSxFQUFFLE1BQU0scUJBQXFCLENBQUE7O0FBRWpFLE1BQU0sT0FBTyxRQUFRLEdBQVU7SUFDN0Isa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCxnQkFBZ0I7SUFDaEIsZUFBZTtJQUNmLGlCQUFpQjtJQUNqQixHQUFHLGVBQWU7Q0FDbkIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xuICBGb3JtQ29udHJvbEZhY3RvcnksXG4gIEZvcm1GYWN0b3J5LFxuICBGb3JtR3JvdXBGYWN0b3J5LFxuICBGb3JtSXRlbUZhY3RvcnksXG4gIEZvcm1NZW1iZXJGYWN0b3J5LFxufSBmcm9tICcuL2luZGV4J1xuXG5pbXBvcnQgeyBzZXJ2aWNlcyBhcyBuZ0Zvcm1zU2VydmljZXMgfSBmcm9tICcuL25nLWZvcm1zL3NlcnZpY2VzJ1xuXG5leHBvcnQgY29uc3Qgc2VydmljZXM6IGFueVtdID0gW1xuICBGb3JtQ29udHJvbEZhY3RvcnksXG4gIEZvcm1GYWN0b3J5LFxuICBGb3JtR3JvdXBGYWN0b3J5LFxuICBGb3JtSXRlbUZhY3RvcnksXG4gIEZvcm1NZW1iZXJGYWN0b3J5LFxuICAuLi5uZ0Zvcm1zU2VydmljZXMsXG5dXG4iXX0=

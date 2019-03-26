@@ -1,0 +1,11 @@
+@import 'helpers';
+
+.main-wrapper {
+  @include make-row;
+}
+
+.item-wrapper {
+  @include make-col-ready();
+  margin-top: map-get($spacers, 2);
+  margin-bottom: map-get($spacers, 2);
+}

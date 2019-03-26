@@ -1,0 +1,16 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import * as tslib_1 from "tslib";
+import { FormControlFactory, FormFactory, FormGroupFactory, FormItemFactory, FormMemberFactory, } from './index';
+import { services as ngFormsServices } from './ng-forms/services';
+/** @type {?} */
+export var services = tslib_1.__spread([
+    FormControlFactory,
+    FormFactory,
+    FormGroupFactory,
+    FormItemFactory,
+    FormMemberFactory
+], ngFormsServices);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VydmljZXMuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9jb21tb24vZm9ybXMvc2VydmljZXMvc2VydmljZXMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQSxPQUFPLEVBQ0wsa0JBQWtCLEVBQ2xCLFdBQVcsRUFDWCxnQkFBZ0IsRUFDaEIsZUFBZSxFQUNmLGlCQUFpQixHQUNsQixNQUFNLFNBQVMsQ0FBQTtBQUVoQixPQUFPLEVBQUUsUUFBUSxJQUFJLGVBQWUsRUFBRSxNQUFNLHFCQUFxQixDQUFBOztBQUVqRSxNQUFNLEtBQU8sUUFBUTtJQUNuQixrQkFBa0I7SUFDbEIsV0FBVztJQUNYLGdCQUFnQjtJQUNoQixlQUFlO0lBQ2YsaUJBQWlCO0dBQ2QsZUFBZSxDQUNuQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7XG4gIEZvcm1Db250cm9sRmFjdG9yeSxcbiAgRm9ybUZhY3RvcnksXG4gIEZvcm1Hcm91cEZhY3RvcnksXG4gIEZvcm1JdGVtRmFjdG9yeSxcbiAgRm9ybU1lbWJlckZhY3RvcnksXG59IGZyb20gJy4vaW5kZXgnXG5cbmltcG9ydCB7IHNlcnZpY2VzIGFzIG5nRm9ybXNTZXJ2aWNlcyB9IGZyb20gJy4vbmctZm9ybXMvc2VydmljZXMnXG5cbmV4cG9ydCBjb25zdCBzZXJ2aWNlczogYW55W10gPSBbXG4gIEZvcm1Db250cm9sRmFjdG9yeSxcbiAgRm9ybUZhY3RvcnksXG4gIEZvcm1Hcm91cEZhY3RvcnksXG4gIEZvcm1JdGVtRmFjdG9yeSxcbiAgRm9ybU1lbWJlckZhY3RvcnksXG4gIC4uLm5nRm9ybXNTZXJ2aWNlcyxcbl1cbiJdfQ==

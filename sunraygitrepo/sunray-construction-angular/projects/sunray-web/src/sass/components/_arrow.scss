@@ -1,0 +1,17 @@
+@import 'helpers';
+
+.arrow-up {
+  @include arrow-up;
+}
+
+.arrow-down {
+  @include arrow-down;
+}
+
+.arrow-right {
+  @include arrow-right;
+}
+
+.arrow-left {
+  @include arrow-left;
+}

@@ -1,0 +1,11 @@
+export { camelCase } from './camel-case';
+export { classify } from './classify';
+export { kebabCase } from './kebab-case';
+export { pascalCase } from './pascal-case';
+export { pluralize } from './pluralize';
+export { removePrefix } from './remove-prefix';
+export { singularize } from './singularize';
+export { slugify } from './slugify';
+export { snakeCase } from './snake-case';
+export { startsWith } from './starts-with';
+export { words } from './words';

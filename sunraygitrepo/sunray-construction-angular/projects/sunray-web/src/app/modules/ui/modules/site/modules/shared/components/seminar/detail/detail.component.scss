@@ -1,0 +1,31 @@
+@import "helpers";
+
+$color: $white;
+
+.seminar-detail-section {
+  padding: 20px;
+  ul {
+    li {
+      text-align: justify;
+    }
+  }
+  .seminar-registration-form {
+    background-color: $primary;
+    font-size: 15px;
+    padding: $spacer * 1;
+
+    .details-section {
+      color: $color;
+    }
+
+    p {
+      color: $color;
+      text-align: left;
+    }
+  }
+}
+
+.button-wrap {
+  text-align: center;
+  margin-top: $spacer-y-lg;
+}

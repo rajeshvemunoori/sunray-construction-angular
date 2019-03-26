@@ -1,0 +1,12 @@
+<form>
+  <input matInput placeholder="Select a state" aria-label="state"
+   class="state-select" [matAutocomplete]="statesAutocomplete"
+    [formControl]="stateControl">
+  <mat-autocomplete #statesAutocomplete="matAutocomplete"
+    (optionSelected)="onSelectionChanged($event)">
+    <mat-option *ngFor="let state of filteredStates$ | async"
+    [value]="state.getAttr('name')">
+      <span>{{state.getAttr('name')}}</span>
+    </mat-option>
+  </mat-autocomplete>
+</form>

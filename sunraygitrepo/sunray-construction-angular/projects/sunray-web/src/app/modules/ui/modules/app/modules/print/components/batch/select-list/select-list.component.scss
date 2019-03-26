@@ -1,0 +1,65 @@
+@import 'helpers';
+
+.card-wrapper {
+  @include make-col(3);
+  .card-inner-wrapper {
+    position: relative;
+  }
+}
+
+$size: 30px;
+$margin: 0px;
+.checkbox-wrapper {
+  position: relative;
+  width: 100%;
+  height: $size;
+  top: $margin;
+  left: 0px;
+  text-align: center;
+
+  .checkbox-inner-wrapper {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid $white;
+    display: inline-block;
+    margin-top: $margin;
+
+    .checkbox {
+      height: 100%;
+      width: 100%;
+      background-color: $white;
+      border-radius: 50%;
+
+      &:not(.active) {
+        display: none;
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+}
+
+// Queue Cards
+.cards-wrapper {
+  height: 100%;
+  @include make-row;
+
+  .card-wrapper {
+    .card-inner-wrapper {
+      .value-wrapper {
+        font-size: 2em;
+      }
+
+      .title-wrapper {
+        text-transform: unset;
+        font-size: 1em;
+        line-height: 1;
+        color: $white !important;
+      }
+    }
+  }
+}

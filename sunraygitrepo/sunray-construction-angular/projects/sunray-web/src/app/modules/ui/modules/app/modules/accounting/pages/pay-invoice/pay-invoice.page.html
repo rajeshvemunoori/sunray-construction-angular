@@ -1,0 +1,14 @@
+<div class="invoice-pay-page" *ngIf="entity">
+  <b>Please enter your credit card information below.</b>
+  <div class='payment-detail-attribute-list-wrapper attribute-list-wrapper'>
+    <h5>
+      Invoice # 
+      {{entity.id}}  
+    </h5>
+    <a (click)="editContact()">Edit Invoice</a>
+    <shared-declarables-attribute-list
+      [attributeEntity$]="entity$"
+      [attributeEntityLabels$]="entityLabels$">
+    </shared-declarables-attribute-list>
+  </div>
+</div>

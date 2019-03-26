@@ -1,0 +1,37 @@
+<div class="mobile-navbar-main-wrapper"
+  [ngClass]="backgroundColor">
+
+  <div class="mobile-navbar-inner-wrapper">
+    <div class="navbar-toggle-wrapper contrast-navbar-toggle">
+      <div class="logo-wrapper intro"
+        [@logoIntro]="logoStatus"
+        (@logoIntro.done)="logoIntroDone($event)">
+
+        <a routerLink="/">
+          <mat-icon class="svg-wrapper" svgIcon="sunray/logo">
+          </mat-icon>
+        </a>
+      </div>
+
+
+      <div class="navs-wrapper" *ngIf="showNavs">
+        <div class="get-paid-wrapper">
+          <sunray-ui-site-layout-header-get-paid-button>
+          </sunray-ui-site-layout-header-get-paid-button>
+        </div>
+
+        <div class="menu-wrapper">
+          <sunray-ui-site-layout-header-menu
+            [layoutService]="layoutService"
+            [menu$]="layoutService.headerNavigationMenu$">
+          </sunray-ui-site-layout-header-menu>
+        </div>
+
+        <div class="nav-wrapper">
+          <sunray-ui-site-layout-header-navbar>
+          </sunray-ui-site-layout-header-navbar>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

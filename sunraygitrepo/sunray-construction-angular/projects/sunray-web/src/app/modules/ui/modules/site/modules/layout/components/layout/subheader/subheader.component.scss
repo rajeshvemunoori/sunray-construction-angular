@@ -1,0 +1,35 @@
+@import "helpers";
+
+.main-wrap {
+  @include base-border-bottom;
+}
+
+.subheader-container {
+  @include make-container;
+  @include make-container-max-widths;
+}
+
+.navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  @include make-col-ready;
+  @include flex-child;
+}
+
+.subheader-inner-wrapper {
+  @include make-row;
+
+  @include media-breakpoint-up(md) {
+    align-items: center;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-flow: column-reverse;
+  }
+}
+
+:host ::ng-deep {
+  .nav-link {
+    text-transform: uppercase;
+  }
+}

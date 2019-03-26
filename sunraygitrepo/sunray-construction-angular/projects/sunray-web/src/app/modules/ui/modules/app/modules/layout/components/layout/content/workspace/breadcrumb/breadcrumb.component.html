@@ -1,0 +1,11 @@
+<div class="breadcrumb-inner-wrapper">
+  <nav aria-label="breadcrumb" role="navigation" class="breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <li *ngFor="let bc of breadcrumbs" class="breadcrumb-item" (click)="select(bc)">
+        <a href="{{bc.url}}">
+          <span>{{bc.displayValue}}</span>
+        </a>
+      </li>
+    </ol>
+  </nav>
+</div>

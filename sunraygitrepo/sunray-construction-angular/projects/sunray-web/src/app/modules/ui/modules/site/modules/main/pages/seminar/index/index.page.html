@@ -1,0 +1,80 @@
+<div class='text-center animated fadeIn' id='seminars-container'>
+  <div id='upcoming-seminars-section'>
+    <div class='container'>
+      <h4 class='text-primary'> Upcoming Seminars</h4>
+      <p></p>
+      <div class='seminar-box text-left' *ngFor="let entity of cmsSeminars$ | async ">
+      	<div class='row seminar-content'>
+      	  <div class='seminar-info'>
+      	    <img alt="Mic icon" class="mic-icon" src="/assets/frontend/seminars/mic-icon.svg"><br>
+      	    <h5>{{ entity.title.rendered }}</h5>
+      	    <div class='seminar-details'>
+      	      <span>{{ entity['event-date'] | date : "fullDate" }}</span>
+      	    </div>
+      	    <div class='seminar-details proxima-semi-bold'>
+      	      <span class='start-time'>Start Time: {{entity['start-time']}}</span>
+      	      <span>End Time: {{entity['end-time'] }}</span>
+      	    </div>
+      	    <div class='seminar-details price-details proxima-semi-bold'>
+      	      <span class='price'>Price: {{ entity.price | currency }}</span>
+      	      <div class='credit-details d-inline'>
+                Earn
+                <img alt="Badge icon" class="badge-icon" src="/assets/frontend/seminars/badge-icon.svg">
+                <span class='credits pl-1'>{{ entity.ceuCredits }}</span>
+                CEU Credits
+              </div>
+      	    </div>
+      	    <div class='seminar-details'>
+      	      <div class='button-wrap'>
+                <a class="btn btn-lg btn-lg-curved btn-outline-secondary btn-white-secondary" [routerLink]="entity.id">
+                  LEARN MORE
+                </a>
+              </div>
+      	    </div>
+      	  </div>
+      	  <div class='presenter-info'>
+      	    <h6>Presented By:</h6>
+      	    <div class='presenter-details' *ngFor="let presenter of entity.presenters">
+              <img alt="Ariela" class="presenter-image" src="{{ presenter.picture.guid }}">
+              <div class='d-inline-block align-middle'>
+                <p class='proxima-semi-bold'>{{ presenter['full-name'] }}</p>
+                <p>{{ presenter.designation }}</p>
+              </div>
+      	    </div>
+      	  </div>
+      	</div>
+      </div>
+      <p></p>
+      <div class='upcoming-seminar-row'></div>
+    </div>
+  </div>
+
+  <!-- Testimonials section -->
+  <div class='text-center' id='testimonials-vertical'>
+    <div id='reviews-section'
+      class='page-section alternate text-center'>
+
+      <div class="section-header text-center">
+        <h2 class="text-primary">{{sections.reviews.heading}}</h2> 
+        <h4>{{sections.reviews.subHeading}}</h4> 
+      </div>
+
+      <div class="section-body">
+        <sunray-site-shared-testimonial-list
+          [collection$]="cmsTestimonials$">
+        </sunray-site-shared-testimonial-list>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div id="button">
+      <div class='row'>
+        <div class='col-12'>
+          <a class='btn btn-primary btn-lg btn-lg-curved' [routerLink]="'/signup'">SIGN ME UP</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

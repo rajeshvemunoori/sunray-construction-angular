@@ -1,0 +1,50 @@
+<div id="header" class="main-wrapper"
+  [ngClass]="mainWrapperClass()"
+  [@backgroundStyle]="mobileNavbarState"
+  (@backgroundStyle.done)="onBackgroundStyleDone($event)">
+
+  <div class="inner-wrapper">
+    <div class="navbar-wrapper">
+      <div class="navbar-inner-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="navbar-brand logo">
+            <a routerLink="/">
+              <img src="/assets/frontend/logo.svg" alt="Logo">
+            </a>
+          </div>
+
+          <div class="collapse navbar-collapse">
+            <div class="navbar-text">
+              <span class="tagline">OUR BUSINESS IS GETTING YOU PAID</span>
+            </div>
+          </div>
+
+          <div class="header-navbar-wrapper">
+            <sunray-ui-site-layout-header-navbar
+              [layoutService]="layoutService">
+            </sunray-ui-site-layout-header-navbar>
+          </div>
+
+          <div class="navbar-toggler-wrapper"
+            [ngClass]="navbarTogglerWrapperClass()">
+
+            <sunray-shared-navbar-toggle
+              [isActive]="mobileNavbarActive"
+              (toggleEmitter)="onMobileNavbarToggleEmit($event)">
+            </sunray-shared-navbar-toggle>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="mobile-navbar-wrapper"
+      *ngIf="shouldShowMobileNavbar()">
+      
+      <sunray-ui-site-layout-header-mobile-navbar
+        (animationEmitter)="onMobileNavbarAnimationEmit($event)"
+        [layoutService]="layoutService">
+      </sunray-ui-site-layout-header-mobile-navbar>
+
+    </div>
+  </div>
+</div>

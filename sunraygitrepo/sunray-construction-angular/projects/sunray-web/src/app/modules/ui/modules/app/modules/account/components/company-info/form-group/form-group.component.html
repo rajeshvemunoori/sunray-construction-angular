@@ -1,0 +1,33 @@
+<div class="form-field-group">
+  <div *ngFor="let input of inputGroup">
+    <div *ngIf="isInputGroup(input); then inputGroupTemplate else fieldTemplate">
+    </div>
+
+      <ng-template #inputGroupTemplate>
+        <div class="inputGroupTemplate">
+          <div><b>{{input.name}}</b>
+            <label *ngIf="buttonEnable(input)">
+              <button class="btn">
+                Copy Physical to Billing
+              </button>
+            </label>
+          </div>
+          <sunray-ui-app-account-company-edit-company-info-form-group
+            [inputGroup]="input"
+            [inputGroupFlag]="true"
+            [formGroup]="formGroup.get(input.key)">
+          </sunray-ui-app-account-company-edit-company-info-form-group>
+        </div>
+      </ng-template>
+
+      <ng-template #fieldTemplate>
+        <div class="fieldTemplate">
+          <sunray-ui-app-account-company-edit-company-info-field
+            [field]="input"
+            [inputGroupFlag]="inputGroupFlag"
+            [formGroup]="formGroup">
+          </sunray-ui-app-account-company-edit-company-info-field>
+        </div>
+      </ng-template>
+  </div>
+</div>

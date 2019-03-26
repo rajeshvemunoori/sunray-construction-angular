@@ -1,0 +1,19 @@
+@import 'helpers';
+
+.card-list{
+  display: block;
+  width: 100%;
+}
+/*.card-group{
+  float: none;
+  justify-content: center;
+  width: 100%;
+}*/
+.card-group{
+  padding-left:0px;
+}
+.card-inner-group{
+  padding-left: 10px;
+  display: inline-block;
+  width: 33%;
+}

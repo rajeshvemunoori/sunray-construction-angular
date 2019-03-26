@@ -1,0 +1,61 @@
+@import 'helpers';
+
+$shortcut-spacer: $spacer * 3;
+$shortcut-icon-width: 80px;
+#shortcuts {
+  .shortcut-wrapper {
+    padding-top: $shortcut-spacer;
+    padding-bottom: $shortcut-spacer;
+    background-color: $white;
+
+
+    a.shortcut-link {
+      display: flex;
+      align-items: flex-start;
+
+      img {
+        flex-basis: auto;
+        width: $shortcut-icon-width;
+      }
+
+      .content-wrapper {
+        flex-basis: auto;
+        padding-left: $spacer;
+      }
+    }
+  }
+
+	.inner-content {
+		.container {
+		  .s-block {
+		    a {
+		      text-decoration: none;
+          color: $black;
+		    }
+
+		    div {
+		      vertical-align: middle;
+		    }
+		  }
+		}
+	}
+
+	p {
+		font-size: 15px;
+		line-height: 1.3em;
+		margin: 0px;
+	}
+
+	img {
+		margin-right: 10px;
+		width: 72px;
+	}
+
+
+  .shortcut-wrapper {
+    @include media-breakpoint-down(md) {
+      text-align: left;
+    }
+  }
+}
+

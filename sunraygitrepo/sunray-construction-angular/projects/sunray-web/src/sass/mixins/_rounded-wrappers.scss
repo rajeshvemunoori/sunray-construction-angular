@@ -1,0 +1,32 @@
+@mixin round-border($radius, $border-color, $border-width: 1px) {
+  width: ($radius * 2);
+  min-width: ($radius * 2);
+  height: ($radius * 2);
+  @include border-radius($radius);
+  border: $border-width solid $border-color;
+  overflow: hidden;
+}
+
+@mixin round-image-container($total-width, $border-color: $border-color)  {
+  @include round-border($total-width/2, $border-color);
+   
+  > img {
+    width: $total-width - 2px;
+    height: $total-width - 2px;
+  }
+}
+
+@mixin no-avatar-container($width, $color, $background-color: $background-light-grey) {
+  @include round-image-container($width);
+  background-color: $background-color;
+
+  figure {
+    padding-top: 0.1 * $width;
+    text-align: center;
+
+    i {
+      font-size: 0.7 * $width;
+      color: $color;
+    }
+  }
+}

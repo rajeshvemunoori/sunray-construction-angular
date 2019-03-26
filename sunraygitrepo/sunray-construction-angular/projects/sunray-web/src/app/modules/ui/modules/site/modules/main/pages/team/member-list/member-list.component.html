@@ -1,0 +1,12 @@
+<div class='our-team-page'>
+  <div class='inner-content'>
+    <div class='row justify-content-md-center'>
+      <div class="col-md-3 text-center our-team-box team-member"
+      *ngFor="let entity of collection$ | async" (click)="onClickEntity(entity)">
+        <sunray-site-team-member-detail
+          [entity]="entity">
+        </sunray-site-team-member-detail>
+      </div>
+    </div>
+  </div>
+</div>

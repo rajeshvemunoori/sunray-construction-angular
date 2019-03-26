@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { RequestOptionsBuilder as ApiRequestOptionsBuilder } from './request-options-builder.service';
+/** @type {?} */
+export const services = [
+    ApiRequestOptionsBuilder,
+];
+export { ApiRequestOptionsBuilder };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3dvcmRwcmVzcy8iLCJzb3VyY2VzIjpbImxpYi9hcGkvc2VydmljZXMvYXBpL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUUscUJBQXFCLElBQUksd0JBQXdCLEVBQUUsTUFBTSxtQ0FBbUMsQ0FBQTs7QUFHckcsTUFBTSxPQUFPLFFBQVEsR0FBVTtJQUM3Qix3QkFBd0I7Q0FDekI7QUFFRCxPQUFPLEVBQ0wsd0JBQXdCLEVBQ3pCLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBSZXF1ZXN0T3B0aW9uc0J1aWxkZXIgYXMgQXBpUmVxdWVzdE9wdGlvbnNCdWlsZGVyIH0gZnJvbSAnLi9yZXF1ZXN0LW9wdGlvbnMtYnVpbGRlci5zZXJ2aWNlJ1xuXG5cbmV4cG9ydCBjb25zdCBzZXJ2aWNlczogYW55W10gPSBbXG4gIEFwaVJlcXVlc3RPcHRpb25zQnVpbGRlcixcbl1cblxuZXhwb3J0IHtcbiAgQXBpUmVxdWVzdE9wdGlvbnNCdWlsZGVyXG59XG4iXX0=

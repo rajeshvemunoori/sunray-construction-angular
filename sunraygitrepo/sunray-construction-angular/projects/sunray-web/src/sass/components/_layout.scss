@@ -1,0 +1,46 @@
+@import "helpers";
+
+.page-content-wrap {
+  padding-top: $spacer-y-lg;
+}
+
+.page-content-wrap,
+.page-inner-wrapper.page-section,
+section, .section, .page-section {
+  &.alternate {
+    background-color: $body-bg-2;
+  }
+
+  &.primary {
+    background-color: $primary;
+    color: $white;
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+.page-inner-wrapper.page-section,
+.section, .page-section {
+  padding: $spacer-y-xl $spacer-y-xs;
+
+  @include size-lg {
+    padding: $spacer-y-lg 0px;
+  }
+
+  .section-header {
+    @include make-container;
+    @include spacing(m, y, 3);
+
+    .text-center {
+      @include media-breakpoint-down(sm) {
+        text-align: left;
+      }
+    }
+  }
+
+  .section-body {
+    padding-top: $spacer-y-lg;
+  }
+}

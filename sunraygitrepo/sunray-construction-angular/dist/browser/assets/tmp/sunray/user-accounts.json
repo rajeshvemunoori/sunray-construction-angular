@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "id": 11,
+      "type": "user-accounts",
+      "attributes": {
+        "email": "nicole@sunraynotice.com",
+        "primary-dashboard-data-point-context-id": 5 
+      },
+      "relationships": {
+        "primary-dashboard-data-point-context": {
+          "data": {
+            "type": "dashboards-data-points-contexts", 
+            "id": 5
+          }
+        }
+      }
+    },
+    {
+      "id": 5,
+      "type": "user-accounts",
+      "attributes": {
+        "email": "luis@sunraynotice.com",
+        "primary-dashboard-data-point-context-id": 6
+      },
+      "relationships": {
+        "primary-dashboard-data-point-context": {
+          "data": {
+            "type": "dashboards-data-points-contexts", 
+            "id": 6
+          }
+        }
+      }
+    },
+    {
+      "id": 2005,
+      "type": "user-accounts",
+      "attributes": {
+        "email": "laura.hicks@abcsupply.com",
+        "primary-dashboard-data-point-context-id": 44
+      },
+      "relationships": {
+        "primary-dashboard-data-point-context": {
+          "data": {
+            "type": "dashboards-data-points-contexts", 
+            "id": 44
+          }
+        }
+      }
+    }
+  ]
+}

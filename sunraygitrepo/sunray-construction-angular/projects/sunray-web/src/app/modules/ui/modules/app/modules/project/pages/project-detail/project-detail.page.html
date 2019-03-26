@@ -1,0 +1,22 @@
+<div class="project-detail-page">
+  <div class="project-title">
+    <sunray-ui-app-project-project-detail-title
+      [primaryEntity$]="primaryEntity$"
+      [dataService]="dataService">
+    </sunray-ui-app-project-project-detail-title>
+  </div>
+  <div class="project-detail">
+    <div class='project-detail-pane-manager-wrapper pane-manager-wrapper'>
+      <ceo-shared-declarables-card-select-list
+        [cards$]="paneCards$"
+        (itemEmitter)="activatePane($event)">
+      </ceo-shared-declarables-card-select-list>
+    </div>
+
+    <div class='pane-wrapper project-detail-pane-wrapper'>
+      <ceo-shared-declarables-pane
+        [pane$]="paneManager.activePane$">
+      </ceo-shared-declarables-pane>
+    </div>
+  </div>
+</div>

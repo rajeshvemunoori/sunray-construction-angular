@@ -1,0 +1,17 @@
+<div id='deadline-dropdown'>
+  <div ngbDropdown class="d-inline-block">
+    <button class="btn btn-outline-primary deadline-dropdown"
+      id="dropdownBasic1" ngbDropdownToggle>
+
+      {{displayText}}
+    </button>
+
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <div *ngFor="let model of dropdownItems"
+        (click)="changeDisplayText(model)">
+
+        <button class="dropdown-item">{{model}}</button>
+      </div>
+    </div>
+  </div>
+</div>

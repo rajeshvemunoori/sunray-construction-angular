@@ -1,0 +1,60 @@
+<div class="widgets-wrapper">
+  <div class="widget-wrapper quality-control-wrapper">
+    <div class="widget-inner-wrapper">
+      <div class="widget-header-wrapper">
+        <span> Quality Control </span>
+      </div>
+      <div class="widget-body-wrapper">
+        <sunray-ui-app-dashboards-data-points
+          [dashboardDataPointTypes$]="dashboardDataPointTypes$"
+          [collection$]="qualityControlDataPoints$"
+          (model)="selectModel($event)"
+          (selectEmitter)="selectItem($event)">
+        </sunray-ui-app-dashboards-data-points>
+      </div>
+    </div>
+  </div>
+
+  <div class="widget-wrapper comments-wrapper">
+    <div class="widget-inner-wrapper">
+      <div class="widget-header-wrapper">
+        <span> Work Order Notes </span>
+      </div>
+      <div class="widget-body-wrapper">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Work Order #</th>
+              <th scope="col">Last Noted</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let comment of comments$ | async" class="comment-wrapper">
+              <td>{{comment.getAttr("resource-id")}}</td>
+              <td>{{comment.getAttr("created-at") | date: 'short'}}</td>
+              <td>
+                <h5>
+                  <span class="badge badge-primary">
+                    Check Notes
+                  </span>
+                </h5>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="widget-wrapper leaderboard-wrapper">
+    <div class="widget-inner-wrapper">
+      <div class="widget-header-wrapper">
+        <span> Leaderboard </span>
+      </div>
+      <div class="widget-body-wrapper">
+        <span> </span>
+      </div>
+    </div>
+  </div>
+</div>

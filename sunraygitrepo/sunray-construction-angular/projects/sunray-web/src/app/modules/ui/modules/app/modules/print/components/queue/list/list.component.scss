@@ -1,0 +1,63 @@
+@import 'helpers';
+
+.main-message-wrapper {
+  padding-top: $spacer-x-lg;
+  padding-bottom: $spacer-x-lg;
+  text-align: center;
+
+  .button-wrapper {
+    padding-bottom: $spacer-x-lg;
+  }
+
+  .main-message {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.card-wrapper {
+  @include make-col(3);
+
+  .card-inner-wrapper {
+    position: relative;
+  }
+}
+
+
+$size: 30px;
+$margin: 5px;
+.checkbox-wrapper {
+  position: absolute;
+  width: 100%;
+  height: $size;
+  top: $margin;
+  left: 0px;
+  text-align: center;
+
+  .checkbox-inner-wrapper {
+    width: $size;
+    height: $size;
+    background-color: transparent;
+    display: inline-block;
+    margin-top: $margin;
+
+    .checkbox {
+      height: 100%;
+      width: 100%;
+      input {
+        display: none;
+      }
+
+      background-size: cover !important;
+      background-position: center center !important;
+
+      &.active {
+        background-image: url("/assets/img/icons/select-white.png");
+      }
+
+      &:not(.active) {
+        background-image: url("/assets/img/icons/deselect-white.png");
+      }
+    }
+  }
+}

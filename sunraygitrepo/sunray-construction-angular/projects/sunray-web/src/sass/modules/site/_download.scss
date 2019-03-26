@@ -1,0 +1,136 @@
+//Notice forms
+#notice-forms{
+	.inner-content{
+	  padding:30px 265px;
+	}
+	p{
+	 font-size: 18px;
+	 font-family: ProximaNovaSemibold;
+	}
+	img{
+		height: 100px;
+		width: 100px;
+	}
+	img:hover{
+    cursor: pointer;
+	}
+}
+
+#wavier-forms{
+	.inner-content{
+	  padding:20px 180px;
+	}
+	#wavier-block, #common-block, #other-block{
+		box-shadow: 0 0 10px grey;
+		padding: 30px;
+		margin-bottom: -10px;
+	}
+	img{
+		height: 75px;
+		width: 75px;
+	}
+	p{
+	 font-size: 16px;
+	 font-family: ProximaNovaRegular;
+	}
+	p.size{
+		font-size: 15px;
+	}
+	p.padding-text{
+        padding: 0px 30px;
+	}
+    p.padding-heading{
+        padding: 0px 20px;
+    }
+    p.padding-lien{
+        padding: 0px 60px;
+    }
+}
+#arrow-block{
+	.inner-content{
+	 padding:0px 265px;
+	}
+	.common-block-arrow, .wavier-block-arrow, .other-block-arrow{
+		width: 0;
+		height: 0;
+		border-left: 30px solid transparent;
+		border-right: 30px solid transparent;
+		border-top: 30px solid #0373BB;
+		display: block;
+        margin-left: auto;
+        margin-right: auto;
+	}
+}
+#download-form{
+	.inner-content{
+	  padding:30px 10px;
+	}
+	img{
+		width: 425px;
+        height: 280px;
+        object-fit: cover;
+    }
+	p.video-tag{
+	background-color: #fff;
+	width: 425px;
+	color: #0373BB;
+	font-size: 14px;
+	font-family: ProximaNovaRegular;
+	padding: 8px;
+	}
+}
+
+#download-contact{
+	background-color:#2D4051;
+	.inner-content{
+	  padding: 30px 0px;
+	}
+}
+
+#download-modal{
+	.inner-content{
+		padding: 50px 30px !important;
+	}
+	a{
+	font-family: ProximaNovaRegular;
+	}
+	.download_link{
+		margin-right: 100px;
+	}
+}
+
+#download-ebook{
+	
+	.inner-content{
+	  padding:40px 185px;
+	}
+
+	.ebook-default-img{
+		width: 480px;
+	}
+
+	.ebook-img{
+        width: 80%;
+        height: 70%;
+        object-fit: contain;
+        }
+
+	.download-form{
+		background-color:#0373BB;
+		margin-right: -20px;
+        margin-left: 30px;
+	}
+	p{
+	 font-size: 15px;
+	 font-family: ProximaNovaRegular;
+	}
+
+	h4{
+		color: #0373BB;
+		font-family: ProximaNovaSemibold;
+		margin-bottom: 15px;
+		font-size: 25px;
+	}
+
+}
+

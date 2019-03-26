@@ -1,0 +1,15 @@
+@mixin text-svg-variant($parent, $color) {
+  @include text-emphasis-variant($parent, $color);
+
+  #{$parent} {
+    a {
+      @include plain-hover-focus {
+        color: $color;
+      }
+    }
+
+    svg, svg path {
+      fill: $color !important;
+    }
+  }
+}

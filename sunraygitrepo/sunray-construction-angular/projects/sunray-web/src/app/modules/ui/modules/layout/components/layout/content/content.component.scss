@@ -1,0 +1,30 @@
+@import "helpers";
+
+.content-inner-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.app-sidebar, .app-workspace {
+  height: 100%;
+  overflow: scroll;
+}
+
+.app-sidebar {
+  @include size-lg {
+    flex-basis: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  @include size-sm {
+    display: none;
+  }
+}
+
+.app-workspace {
+  flex-grow: 1;
+  background-color: $body-bg;
+}

@@ -1,0 +1,10 @@
+<div class="header">
+  <span class='title'>{{ headerTitle }}</span>
+   <button *ngIf="buttonTitle" type = "button" class = "btn" (click)="handleClick()"> {{ buttonTitle}}</button>
+  <shared-declarables-search  *ngIf="searchFlag"
+    (searchKeyEmitter)="search($event)"
+    (focusin)="focusin()"
+    (focusout)="focusout()">
+  </shared-declarables-search>
+  <img [ngClass]="getImageStatus()" *ngIf="searchFlag" src="assets/img/icons/search.png">
+</div>

@@ -1,0 +1,52 @@
+@font-face {
+    font-family:ProximaNovaThin;
+    src: url('fonts/ProximaNova/Mark Simonson - Proxima Nova Thin.otf');
+}
+@font-face {
+    font-family: LatoLight;
+    src: url('fonts/Lato-Light.ttf');
+}
+@font-face {
+    font-family: ProximaNovaRegular;
+    src: url('fonts/ProximaNova/Mark Simonson - Proxima Nova Regular.otf');
+}
+
+@font-face {
+    font-family: ProximaNovaBold;
+    src: url('fonts/ProximaNova/Mark Simonson - Proxima Nova Bold.otf');
+}
+
+@font-face {
+    font-family: ProximaNovaSemibold;
+    src: url('fonts/ProximaNova/Mark Simonson - Proxima Nova Semibold.otf');
+}
+
+@font-face {
+    font-family: ProximaNovaRegularItalic;
+    src: url('fonts/ProximaNova/Mark Simonson - Proxima Nova Regular Italic.otf');
+}
+
+@font-face {
+    font-family: ProximaNovaBoldItalic;
+    src: url('fonts/ProximaNova/Mark Simonson - Proxima Nova Bold Italic.otf');
+}
+
+@font-face {
+    font-family: ProximaNovaLight;
+    src: url('fonts/ProximaNova/Mark Simonson - Proxima Nova Light.otf');
+}
+
+@font-face {
+    font-family: ProximaNovaBlack;
+    src: url('fonts/ProximaNova/Mark Simonson - Proxima Nova Black.otf');
+}
+
+@font-face {
+    font-family: ProximaNovaSemiboldItalic;
+    src: url('fonts/ProximaNova/Mark Simonson - Proxima Nova Semibold Italic.otf');
+}
+
+@font-face {
+    font-family: ProximaNovaExtraBold;
+    src: url('fonts/ProximaNova/Mark Simonson - Proxima Nova Extrabold Italic.otf');
+}

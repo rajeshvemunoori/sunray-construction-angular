@@ -1,0 +1,17 @@
+<div class="inner-content" [style.height.px]="bannerHeight()">
+  <sunray-site-gallery-image-slide-show
+    [collection$]="collection$">
+  </sunray-site-gallery-image-slide-show>
+
+  <div *ngIf="false" class="banner-caption-wrapper">
+    <h3>You Get The Job.</h3>
+    <h2>We Get You Paid!</h2>
+
+    <div class="button-wrapper">
+      <a aria-pressed="true" class="btn btn-xl orange-button"
+        routerLink="/signup" role="button">
+        Create a free account
+      </a>
+    </div>
+  </div>
+</div>

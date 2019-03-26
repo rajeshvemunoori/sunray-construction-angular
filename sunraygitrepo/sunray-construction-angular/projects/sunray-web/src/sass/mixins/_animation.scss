@@ -1,0 +1,49 @@
+/*
+  Example usage: 
+  @include animation(10s, 5s, ease-in changecolour)
+
+*/
+
+$delay: 0.2s;
+$duration: 0.2s;
+$timing-function: ease-in;
+$animation: all;
+
+@mixin animation ($delay: $delay, $duration: $duration, $timing-function: $timing-function, $animation: $animation) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -o-animation-delay: $delay;
+  -o-animation-duration: $duration;
+  -o-animation-name: $animation;
+  -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+@mixin animation-duration($duration) {
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -o-animation-duration: $duration;
+  animation-duration: $duration;
+}
+
+
+@mixin component-animation(
+  $property: all,
+  $duration: 0.1s,
+  $delay: 0s,
+  $timing-function: ease-in
+) {
+  transition: $property $duration $timing-function $delay;
+}

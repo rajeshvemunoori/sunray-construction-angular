@@ -1,0 +1,21 @@
+<div class="inner-wrapper" [hidden]="!dataReady">
+  <div *ngIf="(state$ | async) as state">
+
+    <div *ngIf="(stateContent$ | async) as stateContent">
+      <div id="state-header">
+
+        <div class="banner-image-wrap">
+          <img [src]="state.publicPageBannerImageUrl" (load)="onImageLoad()">
+        </div>
+        
+        <div class="inner-content">
+          <div [innerHTML]="stateContent.renderedContent" ceoRouteTransformer
+            (routeEvent)="onRouteEvent($event)">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

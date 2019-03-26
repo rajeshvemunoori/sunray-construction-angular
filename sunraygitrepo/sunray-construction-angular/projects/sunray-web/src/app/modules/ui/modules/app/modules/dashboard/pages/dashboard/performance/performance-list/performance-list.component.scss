@@ -1,0 +1,39 @@
+@import 'helpers';
+
+.card-block{
+  padding-right: 7px;
+}
+.card-title{
+  font-variant:small-caps;
+  padding-left: 7px;
+  padding-top: 5px;
+  /*margin-bottom: 1.55em;*/
+}
+button, html [type="button"]{
+border: 0;
+border-radius: 10px;
+padding: 7px 8px 5px;
+font-size: 11px;
+color: white;
+font-weight: bold;
+background: green-400;
+text-transform: uppercase;
+float: right;
+}
+.card-inner-details{
+  font-variant: inherit;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left: 7px;
+  word-spacing:10px;
+}
+.card-body{
+  padding: 0.5rem;
+}
+.verify_value{
+  float: right;
+}
+.card{
+  padding-left: 7px;
+  padding-right: 7px;
+}

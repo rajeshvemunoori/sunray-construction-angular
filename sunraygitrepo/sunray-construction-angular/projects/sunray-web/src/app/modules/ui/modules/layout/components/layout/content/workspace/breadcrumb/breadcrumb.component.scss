@@ -1,0 +1,16 @@
+@import 'helpers';
+
+.breadcrumb {
+  background-color: transparent;
+  padding-left: 0px;
+}
+
+.breadcrumb-item {
+  color: $primary;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:before, &:after {
+    color: $primary;
+  }
+}

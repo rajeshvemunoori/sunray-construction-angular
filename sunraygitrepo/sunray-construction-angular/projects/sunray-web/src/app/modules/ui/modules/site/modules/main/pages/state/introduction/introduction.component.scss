@@ -1,0 +1,22 @@
+@import "helpers";
+
+.component-inner-wrapper {
+  @include make-container;
+  @include make-container-max-widths;
+
+  text-align: center;
+}
+
+.content-wrapper {
+  max-width: 800px;
+  margin: auto;
+
+  .body {
+    font-family: $font-family-light;
+  }
+
+  .prompt {
+    margin-top: $spacer-y-lg;
+    margin-bottom: $spacer-y-lg;
+  }
+}

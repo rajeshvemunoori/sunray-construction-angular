@@ -1,0 +1,5 @@
+@import 'helpers';
+
+.app-workspace-inner {
+  @include make-container;
+}

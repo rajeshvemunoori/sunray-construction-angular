@@ -1,0 +1,12 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import * as tslib_1 from "tslib";
+import * as base from './base/index';
+import * as jsonApi from './json-api/index';
+/** @type {?} */
+export var services = tslib_1.__spread(base.services, jsonApi.services);
+export { ApiRequestOptionsBuilder, ApiRequestUrlBuilder, ApiResponseParser, ApiService, } from './base/index';
+export { JsonApiResponseParser, } from './json-api/index';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9wcm92aWRlcnMvc2VydmljZXMvYXBpL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUEsT0FBTyxLQUFLLElBQUksTUFBUyxjQUFjLENBQUE7QUFDdkMsT0FBTyxLQUFLLE9BQU8sTUFBTSxrQkFBa0IsQ0FBQTs7QUFFM0MsTUFBTSxLQUFPLFFBQVEsb0JBQ2hCLElBQUksQ0FBQyxRQUFRLEVBQ2IsT0FBTyxDQUFDLFFBQVEsQ0FDcEI7QUFFRCxPQUFPLEVBQ0wsd0JBQXdCLEVBQ3hCLG9CQUFvQixFQUNwQixpQkFBaUIsRUFDakIsVUFBVSxHQUNYLE1BQU0sY0FBYyxDQUFBO0FBRXJCLE9BQU8sRUFDTCxxQkFBcUIsR0FDdEIsTUFBTSxrQkFBa0IsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIGJhc2UgICAgZnJvbSAnLi9iYXNlL2luZGV4J1xuaW1wb3J0ICogYXMganNvbkFwaSBmcm9tICcuL2pzb24tYXBpL2luZGV4J1xuXG5leHBvcnQgY29uc3Qgc2VydmljZXM6IGFueVtdID0gW1xuICAuLi5iYXNlLnNlcnZpY2VzLFxuICAuLi5qc29uQXBpLnNlcnZpY2VzLFxuXVxuXG5leHBvcnQge1xuICBBcGlSZXF1ZXN0T3B0aW9uc0J1aWxkZXIsXG4gIEFwaVJlcXVlc3RVcmxCdWlsZGVyLFxuICBBcGlSZXNwb25zZVBhcnNlcixcbiAgQXBpU2VydmljZSxcbn0gZnJvbSAnLi9iYXNlL2luZGV4J1xuXG5leHBvcnQge1xuICBKc29uQXBpUmVzcG9uc2VQYXJzZXIsXG59IGZyb20gJy4vanNvbi1hcGkvaW5kZXgnXG4iXX0=

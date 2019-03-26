@@ -1,0 +1,9 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * @record
+ */
+export function iFormWrapper() { }
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZm9ybS13cmFwcGVyLmludGVyZmFjZS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BjZW8vc2hhcmVkLyIsInNvdXJjZXMiOlsibGliL2NvbW1vbi9mb3Jtcy9pbnRlcmZhY2VzL2Zvcm0td3JhcHBlci5pbnRlcmZhY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUVBLGtDQUFtRCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGlGb3JtR3JvdXAgfSAgIGZyb20gJy4vZm9ybS1ncm91cC5pbnRlcmZhY2UnXG5cbmV4cG9ydCBpbnRlcmZhY2UgaUZvcm1XcmFwcGVyIGV4dGVuZHMgaUZvcm1Hcm91cCB7fVxuIl19

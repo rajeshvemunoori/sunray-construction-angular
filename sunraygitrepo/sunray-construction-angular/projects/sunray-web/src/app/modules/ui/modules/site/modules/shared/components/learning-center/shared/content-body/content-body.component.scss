@@ -1,0 +1,40 @@
+@import "helpers";
+
+#content-body {
+  .container {
+    padding-top: $spacer * 1;
+  }
+  .card {
+    color: $primary;
+    img {
+      max-width: 100%;
+    }
+    p {
+      margin: 0rem;
+      padding: $spacer * 0.5;
+    }
+  }
+  .load-more{
+    padding-top: $spacer * 1;
+  }
+}
+
+.seminar-items-wrapper {
+  @include make-row;
+}
+
+.seminar-item-wrapper {
+  @include make-col-ready;
+  @include media-breakpoint-up(md) {
+    @include make-col(4);
+  }
+}
+
+.seminar-item-inner-wrapper {
+  padding-top: $spacer * 2;
+  padding-bottom: $spacer * 2;
+}
+
+.playable {
+  cursor: pointer;
+}

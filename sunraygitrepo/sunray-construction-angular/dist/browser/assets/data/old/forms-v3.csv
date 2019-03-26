@@ -1,0 +1,9 @@
+type,id,attributes.name,attributes.resource-type,relationships.form-fields.data.id,relationships.form-fields.data.type
+forms,company-edit,company-edit,companies,,
+forms,company-primary-contacts,company-primary-contacts,users,,
+forms,company-account-payable-contats,company-account-payable-contats,users,,
+forms,company-project-contacts,company-project-contacts,users,,
+forms,users.edit,users.edit,users,21,form-fields
+forms,users.edit,,22,form-fields
+forms,addresses.edit,addresses.edit,addresses,25,form-fields
+,,,,26,form-fields

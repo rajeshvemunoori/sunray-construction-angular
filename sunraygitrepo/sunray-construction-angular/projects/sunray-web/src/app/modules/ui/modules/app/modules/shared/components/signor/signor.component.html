@@ -1,0 +1,35 @@
+<!-- <div class='signor-list-wrapper list-wrapper'>
+  <h3>Signors</h3>
+  <a>Add</a>
+  <sunray-ui-app-shared-table
+    [collection$]="collection$"
+    [configHeader$]="header$"
+    [itemActions$]="itemActions$"
+    [collectionActions$]="collectionActions$"
+    (actionEmitter)="triggerAction($event)">
+  </sunray-ui-app-shared-table>
+</div> -->
+<div class="signor-pane-container container-detail">
+  <div class="header-wrapper">
+    <sunray-ui-app-shared-header
+      [headerTitle]="'Signors'"
+      [buttonTitle]="'Add signor'"
+      [searchFlag]="true"
+      (actionEmitter) = "add()"
+      (searchKeyEmitter) = "search($event)">
+    </sunray-ui-app-shared-header>
+  </div>
+  <div class="signor-pane-container-body container-body">
+    <sunray-ui-app-shared-table
+      [collection$]="collection$"
+      [inlineEdit]= "true"
+      [configHeader$]="header$"
+      [paginationId]="'signors'"
+      [itemActions$]="itemActions$"
+      [searchAttributes]="searchAttributes"
+      (actionEmitter)="triggerAction($event)">
+    </sunray-ui-app-shared-table>
+  </div>
+  <div class="signor-pane-container-footer container-footer">
+  </div>
+</div>

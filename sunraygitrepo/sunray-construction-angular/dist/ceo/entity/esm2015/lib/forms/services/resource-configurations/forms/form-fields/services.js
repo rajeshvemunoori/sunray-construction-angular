@@ -1,0 +1,10 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { FormMemberFactoryParamsService, } from './index';
+/** @type {?} */
+export const services = [
+    FormMemberFactoryParamsService,
+];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VydmljZXMuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL2VudGl0eS8iLCJzb3VyY2VzIjpbImxpYi9mb3Jtcy9zZXJ2aWNlcy9yZXNvdXJjZS1jb25maWd1cmF0aW9ucy9mb3Jtcy9mb3JtLWZpZWxkcy9zZXJ2aWNlcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUNMLDhCQUE4QixHQUMvQixNQUFNLFNBQVMsQ0FBQTs7QUFHaEIsTUFBTSxPQUFPLFFBQVEsR0FBVTtJQUM3Qiw4QkFBOEI7Q0FDL0IiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xuICBGb3JtTWVtYmVyRmFjdG9yeVBhcmFtc1NlcnZpY2UsXG59IGZyb20gJy4vaW5kZXgnXG5cblxuZXhwb3J0IGNvbnN0IHNlcnZpY2VzOiBhbnlbXSA9IFtcbiAgRm9ybU1lbWJlckZhY3RvcnlQYXJhbXNTZXJ2aWNlLFxuXVxuIl19

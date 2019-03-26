@@ -1,0 +1,23 @@
+@import "helpers";
+
+.navbar-nav {
+  @include media-breakpoint-down(sm) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.nav-item {
+  img, svg {
+    width: 1rem;
+    margin: 0.25rem;
+    margin-top: 0;
+  }
+}
+
+:host  /deep/ mat-icon {
+  display: inline-block;
+  width: 1rem !important;
+  height: 1rem !important;
+}

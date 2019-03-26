@@ -1,0 +1,31 @@
+.custom-carousel {
+  display: block;
+  position: absolute;
+  background-image: url("/assets/frontend/bg.png");
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+}
+
+.content-wrap {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+:host ::ng-deep {
+  .carousel-inner,
+  .carousel-item,
+  .carousel-item img {
+    height: 100%;
+  }
+}

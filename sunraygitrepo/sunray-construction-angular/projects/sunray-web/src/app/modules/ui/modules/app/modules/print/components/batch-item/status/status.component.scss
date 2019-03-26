@@ -1,0 +1,62 @@
+@import 'helpers';
+
+ol {
+  padding-left: 2em;
+}
+li {
+  list-style-type: none;
+}
+
+.text-message {
+  font-size: x-small;
+}
+
+.main-message-wrapper {
+  padding-top: $spacer-x-lg;
+  padding-bottom: $spacer-x-lg;
+  text-align: center;
+
+  .button-wrapper {
+    padding-bottom: $spacer-x-lg;
+  }
+
+  .main-message {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.card-wrapper {
+  @include make-col(3);
+}
+.container {
+  text-align: justify;
+  .card-inner-wrapper {
+    // border: 1px solid $black;
+    background-color: $gray-400;
+    position: relative;
+    .value-wrapper {
+      width: 600px;
+      display: inline-flex;
+      padding-left: 2em;
+    }
+    .verify_value {
+      font-size:13px;
+      padding-left: 15px;
+      color: #257a9f
+    }
+  }
+  span.item-status {
+    display: block;
+  }
+  span.item-status::before {
+    margin-left: 5px;
+    content: "-";
+  }
+  label {
+    margin-bottom: 0 !important;
+  }
+}
+.list-style-none {
+  list-style-type: none;
+}

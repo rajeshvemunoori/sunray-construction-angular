@@ -1,0 +1,14 @@
+<div class='company-filter-wrapper filter-wrapper'>
+  <shared-declarables-search
+    (searchKeyEmitter)="search($event)">
+  </shared-declarables-search>
+</div>
+
+
+<div class='company-list-wrapper list-wrapper'>
+  <shared-declarables-list
+    [collection$]="appCompanies$"
+    [configHeader$]="configHeader$"
+    [searchAttributes]="searchAttributes">
+  </shared-declarables-list>
+</div>

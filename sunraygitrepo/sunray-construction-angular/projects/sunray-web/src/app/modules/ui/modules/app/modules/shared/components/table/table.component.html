@@ -1,0 +1,37 @@
+<a *ngFor="let action of collectionActions$ | async">
+  {{ action.displayValue }}
+</a>
+<table class='table table-bordered'>
+  <thead>
+    <tr>
+      <th *ngFor="let header of configHeader$ | async">
+        {{ header.displayName }}
+      </th>
+      <th>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let entity of (entities(collection$ | async)) | customSearch:searchAttributes | paginate: { id: paginationId, itemsPerPage: itemsPerPage, currentPage: page }"
+      sunray-ui-app-shared-item
+      [entity]="entity"
+      [inlineEdit]="inlineEdit"
+      [configHeader$]="configHeader$"
+      [itemActions$]="itemActions$"
+      (actionEmitter)="triggerAction($event)">
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="total()>0" class="ngx-pagination-item-count">
+   Showing {{ startItemNum() }} - {{ endItemNum() }}
+  of {{ total() }}
+</div>
+
+<pagination-controls
+  [id]="paginationId"
+  (pageChange)="page = $event"
+  [maxSize]="maxSize"
+  [autoHide]="autoHide"
+  [previousLabel]="previousLabel"
+  [nextLabel]="nextLabel">
+</pagination-controls>

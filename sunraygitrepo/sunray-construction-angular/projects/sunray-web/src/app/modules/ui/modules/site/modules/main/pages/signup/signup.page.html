@@ -1,0 +1,151 @@
+<div class="page-inner-wrapper page-section animated fadeIn">
+  <div class="content-wrapper">
+    <div class="content-inner-wrapper">
+      <div class="text-center">
+        <h2 class="text-primary">Great. Let's get you paid!</h2>
+        <h4>Please sign up to get started.</h4>
+      </div>
+
+      <div class="additional-links-wrapper">
+        <div class="already-account">
+          <div *ngIf="!pageService.userSignedIn()" class="already-account">
+            <span class="text-primary">
+              Already have an account?
+            </span>
+            <span class="text-secondary">
+
+              <a ceoClickStopEventBubble
+                class="login" (click)="loginFormWindow()" href="#">
+
+                Log in
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <form novalidate [formGroup]="entityForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-row">
+          <div class="col">
+            <div class="form-group" [ngClass]="{
+              'has-dirty': firstName.dirty, 
+              'has-danger': firstName.invalid && firstName.dirty, 
+              'has-success': firstName.valid && firstName.dirty }">
+
+              <input name="firstName" formControlName="firstName" class="form-control border-1"
+                id="firstName" placeholder="First Name" type="text">
+
+              <div class="form-control-feedback has-danger" 
+                *ngIf="firstName.invalid && firstName.dirty"> 
+                First Name is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group" [ngClass]="{
+              'has-dirty': lastName.dirty, 
+              'has-danger': lastName.invalid && lastName.dirty, 
+              'has-success': lastName.valid && lastName.dirty }">
+
+              <input name="lastName" formControlName="lastName" class="form-control border-1"
+                id="lastName" placeholder="Last Name" type="text">
+
+              <div class="form-control-feedback has-danger" 
+                *ngIf="lastName.invalid && lastName.dirty"> 
+                Last Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <div class="form-group" [ngClass]="{
+              'has-dirty': companyName.dirty, 
+              'has-danger': companyName.invalid && companyName.dirty, 
+              'has-success': companyName.valid && companyName.dirty }">
+
+              <input name="companyName" formControlName="companyName" class="form-control border-1"
+                id="companyName" placeholder="Company Name" type="text">
+
+              <div class="form-control-feedback has-danger" 
+                *ngIf="companyName.invalid && companyName.dirty"> 
+                Company Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <div class="form-group" [ngClass]="{
+              'has-dirty': email.dirty, 
+              'has-danger': email.invalid && email.dirty, 
+              'has-success': email.valid && email.dirty }">
+
+              <input name="email" formControlName="email" class="form-control border-1"
+                id="email" placeholder="Email" type="text">
+
+              <div class="form-control-feedback has-danger" 
+                *ngIf="email.invalid && email.dirty"> 
+                Email is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group" [ngClass]="{
+              'has-dirty': phoneNumber.dirty, 
+              'has-danger': phoneNumber.invalid && phoneNumber.dirty, 
+              'has-success': phoneNumber.valid && phoneNumber.dirty }">
+
+              <input name="phoneNumber" formControlName="phoneNumber" class="form-control border-1"
+                id="phoneNumber" placeholder="Phone Number" type="text">
+
+              <div class="form-control-feedback has-danger" 
+                *ngIf="phoneNumber.invalid && phoneNumber.dirty"> 
+                Phone Number is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="submit-section-wrapper">
+          <div class="icon-wrapper">
+            <div class="icon-inner-wrapper">
+              <img alt="100 percent satisfaction guaranteed"
+                src="/assets/frontend/100-percent-satisfaction-guaranteed.svg">
+            </div>
+          </div>
+      
+
+          <div class="icon-wrapper">
+            <div class="icon-inner-wrapper">
+              <img alt="2m notices sent"
+                src="/assets/frontend/2m-notices-sent.svg">
+            </div>
+          </div>
+
+          <div class="button-outer-wrapper">
+            <div class="privacy-policy">
+            <div class="checkbox-wrapper">
+              <input name="accept" formControlName="accept" id="accept" type="checkbox">
+            </div>
+              I agree to the 
+              <a routerLink="../privacy-policy">Privacy Policy</a>
+               and
+              <a routerLink="../terms"> Terms of use.</a>
+            </div> 
+
+            <div class="button-wrapper">
+              <button class="btn btn-primary btn-lg-curved">
+                Create my Free Account
+              </button>
+            </div>
+          </div>
+        </div> 
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+@import 'helpers';
+
+.integration-list-wrapper {
+  @include make-row;
+  justify-content: space-around;
+
+  .integration-item-wrapper {
+    @include make-col-ready;
+    margin: map-get($spacers, 5) 0px;
+
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+  }
+
+  .int-heading {
+    margin-top: map-get($spacers, 4);
+  }
+}

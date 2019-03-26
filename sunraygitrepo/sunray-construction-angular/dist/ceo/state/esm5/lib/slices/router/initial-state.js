@@ -1,0 +1,10 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+export var routerInitialState = {
+    state: null,
+    navigationId: null,
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5pdGlhbC1zdGF0ZS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BjZW8vc3RhdGUvIiwic291cmNlcyI6WyJsaWIvc2xpY2VzL3JvdXRlci9pbml0aWFsLXN0YXRlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBRUEsTUFBTSxLQUFLLGtCQUFrQixHQUFnQjtJQUMzQyxLQUFLLEVBQUUsSUFBSTtJQUNYLFlBQVksRUFBRSxJQUFJO0NBQ25CIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUm91dGVyU3RhdGUgfSBmcm9tICcuL3N0YXRlJztcblxuZXhwb3J0IHZhciByb3V0ZXJJbml0aWFsU3RhdGU6IFJvdXRlclN0YXRlID0ge1xuICBzdGF0ZTogbnVsbCxcbiAgbmF2aWdhdGlvbklkOiBudWxsLFxufVxuIl19

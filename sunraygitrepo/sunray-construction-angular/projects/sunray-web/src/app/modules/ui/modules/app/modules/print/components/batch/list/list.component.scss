@@ -1,0 +1,11 @@
+@import 'helpers';
+
+.select-list-wrapper {
+  @include clearfix;
+  padding-top: 30px;
+}
+
+.actions-wrapper {
+  text-align: center;
+  padding-top: 30px;
+}

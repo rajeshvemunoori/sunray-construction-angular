@@ -1,0 +1,17 @@
+@import 'helpers';
+
+.mat-icon {
+  fill: inherit;
+  height: 100% !important;
+  width: 100% !important;
+
+  .input-group-append &,
+  .input-group-prepend & {
+    display: flex !important;
+    align-items: center;
+
+    svg {
+      fill: $input-color !important;
+    }
+  }
+}

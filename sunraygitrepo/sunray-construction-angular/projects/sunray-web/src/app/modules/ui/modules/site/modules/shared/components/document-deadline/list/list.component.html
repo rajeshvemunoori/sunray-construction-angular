@@ -1,0 +1,36 @@
+<button type="button" class="close btn btn-lg btn-lg-curved" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+  <span aria-hidden="true">&times;</span>
+</button>
+
+<div id="deadline-list">
+  <div class="modal-banner-image">
+    <div class="modal-image text-center">
+      <img src="/assets/frontend/states/calculate-popup.png" >
+    </div>
+    <div class="modal-title text-center">
+      <h2> here are your deadlines</h2>
+    </div>
+    <div class="card-inner-group deadline-lis-modal">
+      <div class="row text-center">
+        <div *ngFor="let item of selectedDocumentTypes" class={{classWidth()}}>
+          <div class="card modal-card">
+            <div class="purpose-icon">
+              <img src="{{item.getAttr('imageUrl')}}">
+            </div>
+            <p class="lead-heading mt-3">{{item.getAttr('title')}}</p>
+            <p class="lead-content">{{item.getAttr('popupContent')}}</p>
+            <div class="deadline-date"><h3>{{dayToDisplay(item.getAttr('submissionDate'))}}</h3></div>
+            <div class="deadline-date"><h3>{{dateToDisplay(item.getAttr('submissionDate'))}}</h3></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-text text-center">
+      <h5>You will also receive an Email with Details</h5>
+    </div>
+    <div class="footer-greet text-center"><h5>Have a Sunny Day!</h5></div>
+    <div class="modal-footer-image text-center">
+      <img src="/assets/frontend/states/calculate-popup-footer.png" >
+    </div>
+  </div>
+</div>

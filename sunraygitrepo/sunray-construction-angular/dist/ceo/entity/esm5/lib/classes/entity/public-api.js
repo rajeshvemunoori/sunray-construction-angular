@@ -1,0 +1,18 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import * as EntityActions from './entity.action-classes';
+export { EntityActions };
+export { EntityAction } from './entity.action-classes';
+export { actions as EntityActionsMap } from './entity.actions';
+export { EntityAdapter } from './entity.adapter';
+export { EntityAdapterFactory } from './entity-adapter.factory';
+export { EntityTypeFactory } from './entity-type.factory';
+export { EntityCollection } from './entity.collection';
+export { EntityConfig } from './entity.config';
+export { EntityEffectsConfig } from './entity.effects-config';
+export { BaseEntity } from './entity.model';
+export { actionType, addMany, addOne, removeMany, removeOne, setScopeIds, updateMany, updateOne, entityReducer } from './reducer/index';
+export { JsonApiEntity } from './json-api-entity';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BjZW8vZW50aXR5LyIsInNvdXJjZXMiOlsibGliL2NsYXNzZXMvZW50aXR5L3B1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sS0FBSyxhQUFhLE1BQU0seUJBQXlCLENBQUE7QUFDeEQsT0FBTyxFQUFFLGFBQWEsRUFBRSxDQUFBO0FBQ3hCLE9BQU8sRUFBRSxZQUFZLEVBQUUsTUFBTSx5QkFBeUIsQ0FBQTtBQUV0RCxPQUFPLEVBQUUsT0FBTyxJQUFJLGdCQUFnQixFQUFFLE1BQU0sa0JBQWtCLENBQUE7QUFFOUQsOEJBQWMsa0JBQWtCLENBQUE7QUFDaEMscUNBQWMsMEJBQTBCLENBQUE7QUFDeEMsa0NBQWMsdUJBQXVCLENBQUE7QUFDckMsaUNBQWMscUJBQXFCLENBQUE7QUFDbkMsNkJBQWMsaUJBQWlCLENBQUE7QUFDL0Isb0NBQWMseUJBQXlCLENBQUE7QUFDdkMsMkJBQWMsZ0JBQWdCLENBQUE7QUFDOUIsc0hBQWMsaUJBQWlCLENBQUE7QUFFL0IsOEJBQWMsbUJBQW1CLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBFbnRpdHlBY3Rpb25zIGZyb20gJy4vZW50aXR5LmFjdGlvbi1jbGFzc2VzJ1xuZXhwb3J0IHsgRW50aXR5QWN0aW9ucyB9XG5leHBvcnQgeyBFbnRpdHlBY3Rpb24gfSBmcm9tICcuL2VudGl0eS5hY3Rpb24tY2xhc3NlcydcblxuZXhwb3J0IHsgYWN0aW9ucyBhcyBFbnRpdHlBY3Rpb25zTWFwIH0gZnJvbSAnLi9lbnRpdHkuYWN0aW9ucydcblxuZXhwb3J0ICogZnJvbSAnLi9lbnRpdHkuYWRhcHRlcidcbmV4cG9ydCAqIGZyb20gJy4vZW50aXR5LWFkYXB0ZXIuZmFjdG9yeSdcbmV4cG9ydCAqIGZyb20gJy4vZW50aXR5LXR5cGUuZmFjdG9yeSdcbmV4cG9ydCAqIGZyb20gJy4vZW50aXR5LmNvbGxlY3Rpb24nXG5leHBvcnQgKiBmcm9tICcuL2VudGl0eS5jb25maWcnXG5leHBvcnQgKiBmcm9tICcuL2VudGl0eS5lZmZlY3RzLWNvbmZpZydcbmV4cG9ydCAqIGZyb20gJy4vZW50aXR5Lm1vZGVsJ1xuZXhwb3J0ICogZnJvbSAnLi9yZWR1Y2VyL2luZGV4J1xuXG5leHBvcnQgKiBmcm9tICcuL2pzb24tYXBpLWVudGl0eSdcbiJdfQ==

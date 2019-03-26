@@ -1,0 +1,10 @@
+@import 'helpers';
+
+.component-inner-wrapper {
+  @include make-container;
+  @include make-container-max-widths;
+}
+
+.card {
+  cursor: pointer;
+}

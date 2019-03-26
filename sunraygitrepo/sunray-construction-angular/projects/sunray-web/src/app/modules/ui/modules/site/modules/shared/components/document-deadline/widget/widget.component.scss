@@ -1,0 +1,109 @@
+@import "helpers";
+
+.title {
+  color: $primary !important;
+  text-align: center;
+  padding: 15px;
+}
+
+.project-role-deadlines-wrapper {
+  margin-top: map-get($spacers, 3);
+  margin-bottom: map-get($spacers, 6);
+}
+
+.job-types-wrapper,
+.project-roles-and-details-wrapper {
+  margin-top: $spacer-y-md;
+}
+
+.question-wrapper,
+.job-types-wrapper,
+.project-roles-wrapper {
+  text-align: center;
+}
+
+.widget-outer-wrapper {
+  @include make-container;
+}
+
+.project-roles-and-details-wrapper {
+  @include make-container;
+  @include make-container-max-widths;
+}
+
+.inner-wrapper {
+  @include make-row;
+  margin: 0px;
+}
+
+.project-roles-wrapper,
+.details-wrapper {
+  @include make-col-ready();
+}
+
+.inner-wrapper,
+.project-roles-wrapper,
+.details-wrapper {
+  padding: 0px;
+}
+
+//.project-roles-wrapper {
+//  @include base-border-right;
+//
+//  @include media-breakpoint-up(sm) {
+//    @include make-col(3);
+//  }
+//}
+//.details-wrapper {
+//  @include media-breakpoint-up(sm) {
+//    @include make-col(9);
+//  }
+//}
+
+.question {
+  font-family: $font-primary;
+}
+
+.question-wrapper {
+  &:not(.active) {
+    display: none;
+  }
+
+}
+
+.widget-temp-wrapper {
+  display: none;
+}
+
+.deadline-calculator.inner-wrapper {
+  justify-content: space-around;
+
+}
+
+
+.state-select-wrapper {
+  text-align: center;
+  margin-bottom: $spacer-y-lg;
+
+  .state-select-inner-wrapper {
+    display: inline-block;
+    margin: auto;
+    padding: $spacer;
+    border-radius: $border-radius-lg;
+  }
+}
+
+:host ::ng-deep {
+}
+
+.section-header {
+  margin-top: 0px;
+}
+
+.step-prompt {
+  font-size: $font-size-lg;
+}
+
+.breadcrumb-outer-wrapper {
+  padding-bottom: $spacer-y-md;
+}

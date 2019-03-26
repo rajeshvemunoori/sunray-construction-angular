@@ -1,0 +1,15 @@
+<div class="requested-documents-container container-detail">
+  <div class="header-wrapper">
+     <sunray-ui-app-shared-header
+       [headerTitle]="'Requested Documents'"
+       [searchFlag]="false">
+     </sunray-ui-app-shared-header>
+  </div>
+  <div class="requested-documents-container-body container-body">
+    <sunray-ui-app-shared-table
+      [collection$]="collection$"
+      [configHeader$]="header$"
+      (actionEmitter)="triggerAction($event)">
+    </sunray-ui-app-shared-table>
+  </div>
+</div>

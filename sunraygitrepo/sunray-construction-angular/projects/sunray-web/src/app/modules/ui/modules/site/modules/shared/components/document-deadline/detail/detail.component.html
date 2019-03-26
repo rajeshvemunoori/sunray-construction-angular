@@ -1,0 +1,18 @@
+<button type="button" class="close btn btn-lg btn-lg-curved" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+  <span aria-hidden="true">&times;</span>
+</button>
+<div class="modal-banner-image">
+  <div class="modal-image text-center">
+    <img src="/assets/frontend/states/calculate-popup.png" >
+  </div>
+  <div class="popup-content text-center"><h5>{{selectedDocument.getAttr('popupContent')}}</h5></div>
+  <div class="deadline-date text-center"><h2>{{dateDisplay(selectedDocument.getAttr('submissionDate'))}}</h2></div>
+
+  <div class="footer-text text-center">
+    <h6>You will also receive an Email with Details</h6>
+  </div>
+  <div class="footer-greet text-center"><h6>Have a Sunny Day!</h6></div>
+  <div class="modal-footer-image text-center">
+    <img src="/assets/frontend/states/calculate-popup-footer.png" >
+  </div>
+</div>

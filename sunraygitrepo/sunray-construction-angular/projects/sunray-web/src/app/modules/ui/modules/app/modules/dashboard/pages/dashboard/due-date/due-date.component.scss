@@ -1,0 +1,30 @@
+@import 'helpers';
+
+.modal-header{
+  background-color: $due-date-modal-header;
+}
+.modal-title{
+  color: $due-date-modal-title;
+  padding-left: 38%;
+}
+.container{
+  padding-left:10%;
+}
+.container-data {
+  color: $due-date-modal-title;
+  padding-left: 3%;
+  padding-top: 3%;
+  text-transform: uppercase;
+}
+.container-innerdata {
+  background-color: $due-date-modal-title;
+  padding: 5px;
+  border-radius: 8px;
+  margin: 6px;
+  color: white;
+}
+.modal-footer{
+  padding: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

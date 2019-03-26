@@ -1,0 +1,41 @@
+<div class="project-type-resolve-attribute-wrapper"
+  *ngFor="let attribute of resolver.attributes">
+
+  <div *ngIf="(resolver.currentAttribute$ | async) as currenAttribute">
+    <div *ngIf="currenAttribute?.name == attribute.name">
+      <div [ngSwitch]="attribute.name">
+        <div *ngSwitchCase="'state'">
+          <div class="step-wrapper animated fadeIn">
+            <sunray-site-project-type-resolve-attributes-state
+              (attributeSelected)="onAttributeSelected($event)"
+              [attribute]="attribute">
+            </sunray-site-project-type-resolve-attributes-state>
+          </div>
+        </div>
+
+
+        <!-- Job Type -->
+        <div *ngSwitchCase="'job-type'">
+          <div class="attribute-wrapper animated fadeIn">
+            <sunray-site-project-type-resolve-attributes-job-type
+              (attributeSelected)="onAttributeSelected($event)"
+              [attribute]="attribute">
+            </sunray-site-project-type-resolve-attributes-job-type>
+          </div>
+        </div>
+
+
+        <!-- Project Role -->
+        <div *ngSwitchCase="'claimant-project-role'">
+          <div class="attribute-wrapper animated fadeIn">
+            <sunray-site-project-type-resolve-attributes-project-role
+              (attributeSelected)="onAttributeSelected($event)"
+              [attribute]="attribute">
+            </sunray-site-project-type-resolve-attributes-project-role>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

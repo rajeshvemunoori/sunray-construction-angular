@@ -1,0 +1,132 @@
+<div class="text-center">
+  <div class="container">
+        <div class="form-group">
+          <select class="form-control" id="power" required>
+            <option *ngFor="let state of states$ | async" [value]="state.id">{{state.name}}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <select class="form-control" id="power" required>
+            <option *ngFor="let state of projectRoles$ | async" [value]="state.id">{{state.name}}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <select class="form-control" id="power" required>
+            <option *ngFor="let state of projectRoles$ | async" [value]="state.id">{{state.name}}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <select class="form-control" id="power" required>
+            <option *ngFor="let state of jobTypes$ | async" [value]="state.id">{{state.name}}</option>
+          </select>
+        </div>
+
+
+    <h1 class="text-primary">Florida Deadline Calculator</h1>
+    <h4>Provide Your Project Date to Calculate Deadlines</h4>
+
+    <form #f='ngForm' (ngSubmit)="onSubmit(f)">
+      <div class="deadline-dropdowns">
+        <div class="row text-center">
+          <div class="col">
+            <sunray-site-document-deadline-calculator-dropdown
+            [displayText]="jobLocations['displayText']"
+            [dropdownItems]="jobLocations['values']">
+            </sunray-site-document-deadline-calculator-dropdown>
+          </div>
+          <div class="col text-right">
+            <sunray-site-document-deadline-calculator-dropdown
+            [displayText]="hiredBy['displayText']"
+            [dropdownItems]="hiredBy['values']">
+            </sunray-site-document-deadline-calculator-dropdown>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col">
+            <sunray-site-document-deadline-calculator-dropdown
+            [displayText]="projectTypes['displayText']"
+            [dropdownItems]="projectTypes['values']">
+            </sunray-site-document-deadline-calculator-dropdown>
+          </div>
+          <div class="col text-right">
+            <sunray-site-document-deadline-calculator-dropdown
+            [displayText]="roles['displayText']"
+            [dropdownItems]="roles['values']">
+            </sunray-site-document-deadline-calculator-dropdown>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-4" *ngFor="let entity of stateRequestTypes$ | async">
+          <sunray-site-document-deadline-calculator-document-type
+          [documentType]="entity">
+          </sunray-site-document-deadline-calculator-document-type>
+        </div>
+      </div>
+
+      <div *ngIf="!show">
+        <div class="deadline-your-info row text-center">
+          <div class="col-md-12">
+            <div class="button-wrapper">
+              <a class="btn btn-primary btn-lg btn-lg-curved"
+                (click)="displayInformation()">
+                Calculate Deadlines
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="show">
+        <div class="information text-left">
+          <h3>Your Information</h3>
+        </div>
+        <div class="user-information">
+          <div class="form-row">
+            <div class="col">
+              <div class="form-group">
+                <input type="text" name="firstName" class="form-control border-1" id="firstName" placeholder="First Name" ngModel #firstName="ngModel" required>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <input type="text" name="lastName" class="form-control border-1"  placeholder="Last Name" id="lastName" ngModel #lastName="ngModel" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col">
+              <div class="form-group">
+                <input type="text" name="companyName" class="form-control border-1" placeholder="company Name" id="companyName" ngModel #companyName="ngModel" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col">
+              <div class="form-group">
+                <input type="email" name="emailAddress" class="form-control border-1" placeholder="Your Work Email" id="emailAddress" ngModel #emailAddress="ngModel" required>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <input type="number" name="phoneNumber" class="form-control border-1" placeholder="Phone Number" id="phoneNumber" ngModel #phoneNumber="ngModel" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="deadline-submit-button row text-center">
+          <div class="col-md-12">
+            <div class="button-wrapper">
+              <button class="btn btn-primary btn-lg btn-lg-curved">Show My Deadlines</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

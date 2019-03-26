@@ -1,0 +1,266 @@
+.main-container {
+    margin: 0px auto;
+    padding: 0px;
+}
+
+.content {
+    margin: 0 auto 0px;
+}
+
+.page {
+    margin-top: 30px;
+}
+
+#homeModal>.modal-dialog {
+    max-width: 85%;
+}
+
+#homeModal>.modal-dialog>.modal-content,
+#message-block,
+#form-block {
+    border-radius: 0;
+    margin: 10px 0px 10px 0px;
+}
+
+#homeModal>.modal-dialog>.modal-content>.modal-body {
+    margin: 30px 30px 30px 30px;
+}
+
+#homeModal,#learn-more-modal,#form-block,#searchModal{
+    .close {
+        position: absolute;
+           top: -13px;
+           right: -15px;
+           width: 30px;
+           opacity: 10;
+           cursor: pointer;
+           z-index: 1;
+    }
+}
+
+.error {
+    border: 1px solid #d9534f;
+    border-radius: 0.25rem;
+}
+
+label.error {
+    color: #d9534f;
+    border: none;
+    font-size: 14px;
+}
+
+#comment-form,
+#lead-form,
+#form-block, #form, .event-registration-form {
+    label,
+    input,
+    .form-control,
+    i {
+        font-size: 15px;
+        font-family: ProximaNovaRegular;
+        color: #878787;
+    }
+    .field_with_errors input,
+    .field_with_errors textarea,
+    .field_with_errors select {
+        border: 1px solid #f0967a !important;
+    }
+    label.message {
+        color: #f0967a !important;
+        font-size: 15px;
+        font-family: ProximaNovaSemibold;
+    }
+    .btn {
+        font-size: 14px;
+    }
+}
+#comment-form,
+#lead-form,
+#form-block {
+  label {
+    margin-bottom: 0px;
+  }
+  .form-group {
+      margin-bottom: 0.5rem;
+  }
+}
+
+#form {
+  .form-control {
+    padding: 0.65rem 1rem !important;
+  }
+}
+
+.ui-icon {
+    margin-top: 0px;
+}
+
+// Image Preview Styling
+.home-banner {
+    cursor: pointer;
+}
+
+
+/* The Modal (background) */
+
+#previewModal {
+    display: none;
+    /* Hidden by default */
+    padding-top: 100px;
+    /* Location of the box */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content (image) */
+
+.preview-modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+
+/* Caption of Modal Image */
+
+#image-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+/* Add Animation */
+
+.preview-modal-content,
+#preview-caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+
+/* The Close Button */
+
+.close-preview {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-preview:hover,
+.close-preview:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+} 
+#searchModal{
+    .modal-dialog {
+        max-width: 500px;
+        margin-top: 250px;
+        }   
+    input[type=text] {
+        width: 100%;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url("/assets/frontend/search_icon.svg");
+        background-size: 40px 30px;
+        background-position: 2px 10px; 
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+
+}
+.page-scaling{
+  height: 100vh;
+}
+
+.fb_reset{
+    cursor: pointer !important;
+}
+
+.ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 15px;
+    padding-right: 10px;
+    font-family: ProximaNovaRegular;
+}
+// Light Box Styling
+#html5-watermark{
+   display: none !important; 
+}
+.lightboxcontainer {
+  width:100%;
+  text-align:left;
+}
+.lightboxleft {
+  width: 40%;
+  float:left;
+}
+.lightboxright {
+  width: 60%;
+  float:left;
+}
+.lightboxright iframe {
+  min-height: 390px;
+}
+.divtext {
+  margin: 36px;
+}
+@media (max-width: 800px) {
+  .lightboxleft {
+    width: 100%;
+  }
+  .lightboxright {
+    width: 100%;
+  }
+  .divtext {
+    margin: 12px;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+

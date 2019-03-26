@@ -1,0 +1,15 @@
+<div class="attribute-wrapper">
+  <sunray-site-project-type-resolve-attribute-prompt
+    [attribute]="attribute">
+  </sunray-site-project-type-resolve-attribute-prompt>
+
+  <div class="step-body">
+    <div class="project-roles-wrapper">
+      <sunray-ui-site-project-role-select-list
+        [selectedItem]="projectRole"
+        [items$]="attribute.options$"
+        (itemEmitter)="onAttributeSelected($event)">
+      </sunray-ui-site-project-role-select-list>
+    </div>
+  </div>
+</div>

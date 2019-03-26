@@ -1,0 +1,25 @@
+<div class="widget-wrapper">
+  <div class="widget-inner-wrapper">
+    <div class="widget-header-wrapper">
+      <span>Work Orders</span>
+    </div>
+    <div class="widget-body-wrapper">
+      <table class="table">
+        <thead class="thead-inverse">
+          <tr>
+            <th >Work Order #</th>
+            <th *ngFor="let name of tableHeaders">{{name}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let model of projectRequests$ | async">
+            <td>
+              {{model.id}}
+            </td>
+            <td *ngFor="let name of attrNames">{{model.attributes[name]}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

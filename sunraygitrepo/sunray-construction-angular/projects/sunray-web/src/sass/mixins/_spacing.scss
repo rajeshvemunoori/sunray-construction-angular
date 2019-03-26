@@ -1,0 +1,46 @@
+@import 'variables';
+
+/*
+* Spacing mixins that resemble the spacing utility classes 
+* from Bootstrap 4.1
+* https://getbootstrap.com/docs/4.1/utilities/spacing/
+*/
+
+// property + side(s) + size
+
+$default-prop: p;
+$default-sides: y;
+$default-size: 1;
+
+$spacing-props: (
+  p: padding,
+  m: margin
+);
+
+
+
+@mixin spacing($prop-key: $default-prop, $sides: $default-sides, $size: $default-size) {
+  $prop: map-get($spacing-props, $prop-key);
+
+  $spacer-size: map-get($spacers, $size);
+
+  @if $sides == y {
+    #{$prop}-top: $spacer-size;
+    #{$prop}-bottom: $spacer-size;
+  } @else if $sides == t {
+    #{$prop}-top: $spacer-size;
+  } @else if $sides == b {
+    #{$prop}-bottom: $spacer-size;
+  } @else if $sides == x {
+    #{$prop}-left: $spacer-size;
+    #{$prop}-right: $spacer-size;
+  } @else if $sides == l {
+    #{$prop}-left: $spacer-size;
+  } @else if $sides == r {
+    #{$prop}-right: $spacer-size;
+  } 
+}
+
+@mixin spacing-m-y($size: $default-size) {
+  @include spacing(m, y, $size);
+}

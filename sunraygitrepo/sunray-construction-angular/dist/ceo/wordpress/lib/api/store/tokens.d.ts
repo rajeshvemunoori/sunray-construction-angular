@@ -1,0 +1,17 @@
+import { InjectionToken } from '@angular/core';
+export declare const WORDPRESS_API_ENDPOINT_PROVIDER: InjectionToken<any>;
+export declare const WORDPRESS_API_CONFIG: InjectionToken<any>;
+export declare const WORDPRESS_API_REQUEST_OPTIONS_BUILDER: InjectionToken<any>;
+export declare const WORDPRESS_API_RESPONSE_PARSER: InjectionToken<any>;
+export declare const WORDPRESS_API_SERVICE: InjectionToken<any>;
+export declare const WORDPRESS_FEATURE_REDUCER: InjectionToken<any>;
+export declare const WORDPRESS_ENTITY_SERVICE: InjectionToken<any>;
+export declare const WORDPRESS_ENTITY_TYPE_PROVIDER: InjectionToken<any>;
+export declare const WORDPRESS_ENTITY_ADAPTER_FACTORY: InjectionToken<any>;
+export declare const WORDPRESS_FEATURE_CONFIG: InjectionToken<any>;
+export declare const WORDPRESS_FEATURE_CONFIG_ATTRIBUTES: InjectionToken<any>;
+export declare const WORDPRESS_FEATURE_NAME: InjectionToken<any>;
+export declare const WORDPRESS_BASE_ENTITY: InjectionToken<any>;
+export declare const WORDPRESS_ENTITY_EFFECTS: InjectionToken<any>;
+export declare const WORDPRESS_CUSTOM_SELECTORS: InjectionToken<any>;
+export declare const WORDPRESS_ENTITY_ATTRIBUTE_BUILDER: InjectionToken<any>;

@@ -1,0 +1,23 @@
+<div class="text-center">
+  <div class="container">
+    <form>
+      <div class="form-items">
+        <div class="document-types-wrapper text-center">
+          <div class="document-type-wrapper"
+            *ngFor="let entity of dueDateTypes$ | async">
+
+            <sunray-site-document-deadline-calculator-document-type
+              [documentType]="entity">
+            </sunray-site-document-deadline-calculator-document-type>
+
+          </div>
+        </div>
+
+      </div>
+    </form>
+
+    <div class="submit">
+      <a href="#" (click)="showAlert" class="btn btn-lg-curved btn-primary btn-lg">Calculate Deadlines</a>
+    </div>
+  </div>
+</div>

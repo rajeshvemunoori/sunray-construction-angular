@@ -1,0 +1,7 @@
+@mixin hamburger-color($color) {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: $color;
+  }
+}

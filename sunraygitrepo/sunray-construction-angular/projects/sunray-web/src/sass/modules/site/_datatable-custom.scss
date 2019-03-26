@@ -1,0 +1,93 @@
+// Data-Tables bootstrap customization
+.dataTables_wrapper .row{
+  width: 100%;
+}
+.dataTables_wrapper select{
+  margin: 0px 10px;
+}
+.dataTables_wrapper table.dataTable thead .sorting_asc:after,.dataTables_wrapper table.dataTable thead .sorting_desc:after,.dataTables_wrapper table.dataTable thead .sorting:after{
+   content: "";
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+
+tr{
+  color: #4c4c4c;
+}
+
+// th {
+//   background-color:$brand-grey;
+// }
+// tr:nth-child(odd)		  { background-color:#fff; }
+// tr:nth-child(even)		{ background-color:$brand-grey; }
+// td:first-child        { font-weight: bold; }
+
+.paginate_button:first-child a{
+  margin-left: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.paginate_button:last-child  a{
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.paginate_button.active a {
+  z-index: 2;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.paginate_button.disabled a{
+  color: #868e96;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+.paginate_button a {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.paginate_button a:focus, .paginate_button:hover {
+  color: #0056b3;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #ddd;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+  padding: 0;
+  margin-left: 0px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  border: none;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+  background: none;
+  border:0px;
+  text-decoration: none;
+}
+table.dataTable.no-footer {
+    border-bottom: 1px solid #e9ecef;
+}
+table.dataTable thead th, table.dataTable thead td {
+  border-bottom: 1px solid #e9ecef;
+}

@@ -1,0 +1,15 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { WordpressEntity } from './wordpress.entity';
+export class ResourceConfigurationEntity extends WordpressEntity {
+}
+ResourceConfigurationEntity.defaultAttributes = {
+    isRoutable: true,
+};
+if (false) {
+    /** @type {?} */
+    ResourceConfigurationEntity.defaultAttributes;
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmVzb3VyY2UtY29uZmlndXJhdGlvbi5lbnRpdHkuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3dvcmRwcmVzcy8iLCJzb3VyY2VzIjpbImxpYi9hcGkvY2xhc3Nlcy9lbnRpdGllcy9yZXNvdXJjZS1jb25maWd1cmF0aW9uLmVudGl0eS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLGVBQWUsRUFBRSxNQUFNLG9CQUFvQixDQUFBO0FBRXBELE1BQU0sT0FBTywyQkFBNEIsU0FBUSxlQUFlOztBQUN2RCw2Q0FBaUIsR0FBTztJQUM3QixVQUFVLEVBQUUsSUFBSTtDQUNqQixDQUFBOzs7SUFGRCw4Q0FFQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFdvcmRwcmVzc0VudGl0eSB9IGZyb20gJy4vd29yZHByZXNzLmVudGl0eSdcblxuZXhwb3J0IGNsYXNzIFJlc291cmNlQ29uZmlndXJhdGlvbkVudGl0eSBleHRlbmRzIFdvcmRwcmVzc0VudGl0eSB7XG4gIHN0YXRpYyBkZWZhdWx0QXR0cmlidXRlczoge30gPSB7XG4gICAgaXNSb3V0YWJsZTogdHJ1ZSxcbiAgfVxufVxuIl19

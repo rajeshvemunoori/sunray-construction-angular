@@ -1,0 +1,8 @@
+@import 'variables';
+
+.animated {
+  -webkit-animation-duration: $animation-duration;
+  animation-duration: $animation-duration;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}

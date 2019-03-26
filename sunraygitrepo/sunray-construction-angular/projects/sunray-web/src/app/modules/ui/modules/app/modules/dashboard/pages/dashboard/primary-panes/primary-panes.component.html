@@ -1,0 +1,46 @@
+<div class="queues-row-wrapper">
+  <div class="standard-queues-wrapper queues-wrapper">
+    <sunray-ui-app-dashboards-data-points
+      [collection$]="standardDataPoints$"
+      [dashboardDataPointTypes$]="dashboardDataPointTypes$"
+      (model)="selectModel($event)"
+      (selectEmitter)="selectItem($event)">
+    </sunray-ui-app-dashboards-data-points>
+  </div>
+
+  <div class="important-queues-wrapper queues-wrapper">
+    <sunray-ui-app-dashboards-data-points
+      [collection$]="importantDataPoints$"
+      [dashboardDataPointTypes$]="dashboardDataPointTypes$"
+      (model)="selectModel($event)"
+      (selectEmitter)="selectItem($event)">
+    </sunray-ui-app-dashboards-data-points>
+  </div>
+</div>
+
+<div class="primary-content-wrapper">
+  <!-- <div *ngIf="isCurrentPane('dashboard-performance');then projectRequestsView else summaryPaneView"></div> -->
+  <div [ngSwitch]="this.getCurrentPane()">
+    <sunray-ui-app-dashboards-performance *ngSwitchCase="'dashboard-performance'"
+      [collection$]="dashboardPerformances$">
+    </sunray-ui-app-dashboards-performance>
+
+    <sunray-projects-requests-list *ngSwitchCase="'project-requests'"
+      [projectRequests$]="dashboardDataPointItems$">
+    </sunray-projects-requests-list>
+
+    <sunray-ui-app-dashboards-summary-panes *ngSwitchCase="'summary'"
+      [comments$]="comments$"
+      [dashboardDataPointTypes$]="dashboardDataPointTypes$"
+      [qualityControlDataPoints$]="qualityControlDataPoints$"
+      (selectEmitter)="selectItem($event)">
+    </sunray-ui-app-dashboards-summary-panes>
+    
+    <sunray-ui-app-dashboards-summary-panes *ngSwitchDefault
+      [comments$]="comments$"
+      [dashboardDataPointTypes$]="dashboardDataPointTypes$"
+      [qualityControlDataPoints$]="qualityControlDataPoints$"
+      (selectEmitter)="selectItem($event)">
+    </sunray-ui-app-dashboards-summary-panes>
+  </div>
+</div>

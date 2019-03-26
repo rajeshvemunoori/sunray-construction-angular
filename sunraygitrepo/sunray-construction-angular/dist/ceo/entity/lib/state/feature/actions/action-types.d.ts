@@ -1,0 +1,8 @@
+export declare enum ActionTypes {
+    ADD_FEATURE = "[EntityFeature] ADD_FEATURE",
+    LOAD_PRIMARY_ENTITY = "[EntityFeature] LOAD_PRIMARY_ENTITY",
+    REGISTER_FEATURE = "[EntityFeature] REGISTER_FEATURE",
+    SELECT_PRIMARY_ENTITY = "[EntityFeature] SELECT_PRIMARY_ENTITY",
+    SET_PRIMARY_ENTITY = "[EntityFeature] SET_PRIMARY_ENTITY",
+    SET_PRIMARY_ENTITY_IDENTIFIER = "[EntityFeature] SET_PRIMARY_ENTITY_IDENTIFIER"
+}

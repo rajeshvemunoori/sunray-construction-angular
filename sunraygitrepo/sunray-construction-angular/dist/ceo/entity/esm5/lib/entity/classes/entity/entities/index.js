@@ -1,0 +1,10 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+export { JsonApiEntity } from './json-api.entity';
+export { ResourceAssociationEntity } from './resource-association.entity';
+export { ResourceAttributeEntity } from './resource-attribute.entity';
+export { ResourceConfigurationEntity } from './resource-configuration.entity';
+export { ResourceValidatorEntity } from './resource-validator.entity';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL2VudGl0eS8iLCJzb3VyY2VzIjpbImxpYi9lbnRpdHkvY2xhc3Nlcy9lbnRpdHkvZW50aXRpZXMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFBRSxhQUFhLEVBQUUsTUFBUSxtQkFBbUIsQ0FBQTtBQUVuRCwwQ0FBYywrQkFBK0IsQ0FBQTtBQUM3Qyx3Q0FBYyw2QkFBNkIsQ0FBQTtBQUMzQyw0Q0FBYyxpQ0FBaUMsQ0FBQTtBQUMvQyx3Q0FBYyw2QkFBNkIsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCB7IEpzb25BcGlFbnRpdHkgfSAgIGZyb20gJy4vanNvbi1hcGkuZW50aXR5J1xuXG5leHBvcnQgKiBmcm9tICcuL3Jlc291cmNlLWFzc29jaWF0aW9uLmVudGl0eSdcbmV4cG9ydCAqIGZyb20gJy4vcmVzb3VyY2UtYXR0cmlidXRlLmVudGl0eSdcbmV4cG9ydCAqIGZyb20gJy4vcmVzb3VyY2UtY29uZmlndXJhdGlvbi5lbnRpdHknXG5leHBvcnQgKiBmcm9tICcuL3Jlc291cmNlLXZhbGlkYXRvci5lbnRpdHknXG5cbiJdfQ==

@@ -1,0 +1,9 @@
+<h3>Default Work Order Comments</h3>
+
+<div class='company-default-work-order-comments-list-wrapper list-wrapper'>
+  <shared-declarables-list
+    [collection$]="collection$"
+    [configHeader$]="collectionHeader$"
+    (actionEmitter)="triggerAction($event)">
+  </shared-declarables-list>
+</div>

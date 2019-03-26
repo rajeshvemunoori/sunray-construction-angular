@@ -1,0 +1,101 @@
+#contact-page{
+	padding-top: 40px;
+}
+p.lead-heading{
+	font-size: 20px;
+	color: #2C3E50;
+	margin-bottom: 0px;
+}
+p.lead-heading, .office-details, .office-type, #lead-label, .contact-text
+{
+	font-family: ProximaNovaRegular;
+}
+.contact-btn{
+	background-color: #fff;
+}
+.office-type, .office-title, .contact-btn
+{
+	color: #0373BB !important;
+}
+#lead-form, #social, #form-block{
+	background-color:#0373BB;
+}
+#social{
+	padding: 20px;
+}
+.office-title, .lead-form-heading,  .social-heading{
+	font-family: ProximaNovaSemibold;	
+}
+.lead-form-heading{
+	color: #fff;
+	font-size: 25px;
+	text-align: left;
+	line-height: 1.3;
+}
+
+.office-type{
+	font-size: 19px;
+}
+.card.shadow{
+	box-shadow:  0px -3px 15px -5px black;
+	.card-body{
+	  padding: 1.7em;
+	}
+}
+.social-heading, #lead-label, .head-text, .contact-text{
+	color: #fff !important;
+}
+#message-block{
+	background-color: #144373;
+	margin-right: -2px !important;
+	img{
+	width: 250px;
+	}
+}
+.contact-text{
+	font-size: 15px;
+	margin-bottom: 80px;
+}
+.head-text{
+	font-size: 25px;
+	font-family: ProximaNovaThin;
+}
+.social-heading{
+	font-size: 16px;
+}
+.purpose-icon{
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.contact-icon{
+  margin: 0px;
+	img{
+		width: 30px;
+	}
+}
+#lead-form{
+  padding: 20px 0;
+  margin-right: -20px;
+	.select2-container--bootstrap .select2-selection--single .select2-selection__rendered{
+		text-align: left !important;
+		font-family: ProximaNovaRegular;
+	}
+}
+.lead-dialog{
+  #form-block{
+		.modal-body{
+		  padding: 15px 25px;
+		  overflow: overlay;
+		}
+	}
+	#message-block{
+	  .modal-body{
+		  padding: 110px 0;
+		  .head-text{
+		    margin: 20px;
+		  }
+		}
+	}
+}

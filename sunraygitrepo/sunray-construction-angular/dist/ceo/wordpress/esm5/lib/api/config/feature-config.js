@@ -1,0 +1,17 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { WordpressEntity } from '../classes/index';
+import { entityConfigs } from './entity-configs/index';
+import { selectors } from './selectors';
+/** @type {?} */
+export var featureName = "cms";
+/** @type {?} */
+export var featureConfig = {
+    name: featureName,
+    entityConfigs: entityConfigs,
+    baseEntityType: WordpressEntity,
+    selectors: selectors
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmVhdHVyZS1jb25maWcuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3dvcmRwcmVzcy8iLCJzb3VyY2VzIjpbImxpYi9hcGkvY29uZmlnL2ZlYXR1cmUtY29uZmlnLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFPQSxPQUFPLEVBQUUsZUFBZSxFQUFFLE1BQU0sa0JBQWtCLENBQUE7QUFFbEQsT0FBTyxFQUFFLGFBQWEsRUFBRSxNQUFNLHdCQUF3QixDQUFBO0FBRXRELE9BQU8sRUFBRSxTQUFTLEVBQUUsTUFBTSxhQUFhLENBQUE7O0FBRXZDLE1BQU0sS0FBTyxXQUFXLEdBQUcsS0FBSzs7QUFDaEMsTUFBTSxLQUFPLGFBQWEsR0FBRztJQUMzQixJQUFJLEVBQUUsV0FBVztJQUNqQixhQUFhLEVBQUUsYUFBYTtJQUM1QixjQUFjLEVBQUUsZUFBZTtJQUMvQixTQUFTLEVBQUUsU0FBUztDQUNyQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE1lbW9pemVkU2VsZWN0b3IgfSBmcm9tICdAbmdyeC9zdG9yZSdcblxuaW1wb3J0IHtcbiAgaUVudGl0eUNvbmZpZyxcbiAgaVJlc291cmNlSWRlbnRpZmllcixcbn0gZnJvbSAnQGNlby9lbnRpdHknXG5cbmltcG9ydCB7IFdvcmRwcmVzc0VudGl0eSB9IGZyb20gJy4uL2NsYXNzZXMvaW5kZXgnXG5cbmltcG9ydCB7IGVudGl0eUNvbmZpZ3MgfSBmcm9tICcuL2VudGl0eS1jb25maWdzL2luZGV4J1xuXG5pbXBvcnQgeyBzZWxlY3RvcnMgfSBmcm9tICcuL3NlbGVjdG9ycydcblxuZXhwb3J0IGNvbnN0IGZlYXR1cmVOYW1lID0gXCJjbXNcIlxuZXhwb3J0IGNvbnN0IGZlYXR1cmVDb25maWcgPSB7XG4gIG5hbWU6IGZlYXR1cmVOYW1lLFxuICBlbnRpdHlDb25maWdzOiBlbnRpdHlDb25maWdzLFxuICBiYXNlRW50aXR5VHlwZTogV29yZHByZXNzRW50aXR5LFxuICBzZWxlY3RvcnM6IHNlbGVjdG9yc1xufVxuIl19

@@ -1,0 +1,22 @@
+<div class="content animated fadeIn"
+  id="learning-center">
+
+  <div class="inner-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <sunray-ui-site-learning-center-page-side-menu
+            [activeItem]="activeItem"
+            [resources$]="appStates$"
+            [resourceName$]="slug$"
+            (itemEmitter)="onResourceSelected($event)">
+          </sunray-ui-site-learning-center-page-side-menu>
+
+        </div>
+        <div class="col-md-9 border-left">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

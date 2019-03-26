@@ -1,0 +1,48 @@
+<div *ngIf="(resourceName$ | async) as resourceName"
+  id="learning-center-side-menu">
+  <ul class="nav flex-column">
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/states/{{resourceName}}">
+        <img alt="/florida-home.svg"
+          src="/assets/frontend/learning-center/side-nav/florida-home.svg">
+        <span class="pl-2">{{ sanitizedResourceName | titlecase }} Home </span>
+      </a>
+    </li>
+    <li class="nav-item" *ngIf="!isActiveItem('e-books')">
+      <a class="nav-link" routerLink="e-books">
+        <img alt="/ebooks.svg"
+          src="/assets/frontend/learning-center/side-nav/ebooks.svg">
+        <span class="pl-2">E-Books</span>
+      </a>
+    </li>
+    <li class="nav-item" *ngIf="!isActiveItem('infographics')">
+      <a class="nav-link" routerLink="infographics">
+        <img alt="/infographics.svg"
+          src="/assets/frontend/learning-center/side-nav/infographics.svg">
+        <span class="pl-2">Infographics</span>
+      </a>
+    </li>
+    <li class="nav-item" *ngIf="!isActiveItem('videos')">
+      <a class="nav-link" routerLink="videos">
+        <img alt="/vedios.svg"
+          src="/assets/frontend/learning-center/side-nav/videos.svg">
+        <span class="pl-2">Videos</span>
+      </a>
+    </li>
+    <li class="nav-item" *ngIf="!isActiveItem('webinars')">
+      <a class="nav-link" routerLink="webinars">
+        <img alt="/webinars.svg"
+          src="/assets/frontend/learning-center/side-nav/webinars.svg">
+        <span class="pl-2">Webinars</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <div class="state-select-wrapper">
+        <sunray-site-state-select
+          [states$]="resources$"
+          (stateEmitter)="onResourceSelected($event)">
+        </sunray-site-state-select>
+      </div>
+    </li>
+  </ul>
+</div>

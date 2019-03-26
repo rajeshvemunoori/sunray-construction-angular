@@ -1,0 +1,13 @@
+<div class="main-wrapper publications-wrapper">
+  <div class="list-wrapper">
+
+    <div class="item-wrapper"
+      *ngFor="let entity of collection$ | async">
+      <div class="publication-item-inner-wrapper">
+        <a [attr.href]="entity.articleUrl" target="_blank">
+          <img src="{{entity.featuredMediaUrl}}" alt="{{entity.renderedTitle}}">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

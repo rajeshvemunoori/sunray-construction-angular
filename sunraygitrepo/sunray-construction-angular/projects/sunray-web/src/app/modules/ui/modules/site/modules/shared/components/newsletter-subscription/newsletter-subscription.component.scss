@@ -1,0 +1,42 @@
+@import "helpers";
+
+.main-wrapper {
+  @include make-container;
+  @include make-container-max-widths;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+
+  input {
+    max-width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid $primary;
+    font-size: $font-size-lg;
+    margin-right: map-get($spacers, 4);
+
+    &::placeholder {
+      font-size: $font-size-lg;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 500px;
+    }
+  }
+
+  a.rocket-image {
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0px !important;
+  }
+}

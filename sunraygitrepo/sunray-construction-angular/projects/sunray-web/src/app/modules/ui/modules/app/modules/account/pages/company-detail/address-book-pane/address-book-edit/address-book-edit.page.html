@@ -1,0 +1,16 @@
+<!--component html goes here -->
+<div class="division-edit-page">
+  <div class='division-edit-manager-wrapper pane-manager-wrapper'>
+    <ceo-shared-declarables-card-select-list
+      [cards$]="paneCards$"
+      (itemEmitter)="activatePane($event)">
+    </ceo-shared-declarables-card-select-list>
+  </div>
+
+  <div class='pane-wrapper division-edit-wrapper'>
+    <ceo-shared-declarables-pane
+      [pane$]="paneManager.activePane$"
+      [inputs]="inputs">
+    </ceo-shared-declarables-pane>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div *ngIf="(menu$ | async) as menu">
+<ul class='navigation-main'>
+  <li class ="list-group-item" *ngFor="let item of menu.items">
+    <a  routerLink="/{{item.url}}">
+      {{item.title}}
+    </a>
+  </li>
+<ul>

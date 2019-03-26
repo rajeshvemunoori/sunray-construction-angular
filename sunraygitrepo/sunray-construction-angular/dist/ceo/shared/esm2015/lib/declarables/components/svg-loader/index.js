@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { SvgLoaderComponent } from './svg-loader.component';
+/** @type {?} */
+export const components = [
+    SvgLoaderComponent,
+];
+export { SvgLoaderComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9kZWNsYXJhYmxlcy9jb21wb25lbnRzL3N2Zy1sb2FkZXIvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFBRSxrQkFBa0IsRUFBRSxNQUFNLHdCQUF3QixDQUFBOztBQUUzRCxNQUFNLE9BQU8sVUFBVSxHQUFVO0lBQy9CLGtCQUFrQjtDQUNuQjtBQUVELE9BQU8sRUFBRSxrQkFBa0IsRUFBRSxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgU3ZnTG9hZGVyQ29tcG9uZW50IH0gZnJvbSAnLi9zdmctbG9hZGVyLmNvbXBvbmVudCdcblxuZXhwb3J0IGNvbnN0IGNvbXBvbmVudHM6IGFueVtdID0gW1xuICBTdmdMb2FkZXJDb21wb25lbnQsXG5dXG5cbmV4cG9ydCB7IFN2Z0xvYWRlckNvbXBvbmVudCB9XG4iXX0=

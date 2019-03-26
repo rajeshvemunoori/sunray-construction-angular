@@ -1,0 +1,17 @@
+<div *ngFor="let rootItem of rootItems$ | async">
+  <sunray-ui-app-print-batch-item
+    [rootItem]="rootItem"
+    [batchItems$]="batchItems$">
+  </sunray-ui-app-print-batch-item>
+</div>
+
+<div class="main-message-wrapper" >
+  <div class="button-wrapper">
+    <div class="button-submit-print">
+      <sunray-common-button
+        [buttonText]="'Submit'"
+        (clickEmitter)="submit()">
+      </sunray-common-button>
+    </div>
+  </div>
+</div>

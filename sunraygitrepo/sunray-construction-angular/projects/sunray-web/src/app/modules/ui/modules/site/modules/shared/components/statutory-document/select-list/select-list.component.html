@@ -1,0 +1,57 @@
+<div id="document-type-selector">
+  <div class="inner-content">
+    <div class="document-type-options-wrapper">
+      <div class="container">
+        <div class="card-group text-center">
+          <div class="card-wrapper selector document-type-option-wrapper"
+            *ngFor="let entity of items$ | async">
+
+            <a class="statutory-document-link" routerLink="/signup">
+              <div class="card"
+                (click)="select(entity)">
+
+                <div class="card-body">
+                  <div class="details-wrapper">
+
+                    <div class="icon-wrapper">
+                      <div class="document-icon">
+                        <mat-icon svgIcon="{{icon(entity)}}"></mat-icon>
+                      </div>
+                    </div>
+
+                    <div class="title-wrapper">
+                      <div class="title">
+                        <p>{{entity.name}}</p>
+                      </div>
+                    </div>
+
+                    <div class="pricing-wrapper">
+                      <div class="pricing">
+                        <p class="small-text">
+                        <a routerLink="{{learnMoreLink(entity)}}">Learn More</a>
+                        </p>
+                        <div class="flag-wrapper">
+                          <div class="flag-slant"></div>
+                          <div class="flag-content">
+                            {{entity.defaultRate | currency}}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="more-info-wrapper">
+                    <p class="small-text more-info">
+                      <a routerLink="/pricing">Send more than 30 notices/month?</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,165 @@
+<div class="page-content-wrap">
+  <div class="content animated fadeIn">
+     <div id="enterprise-banner">
+        <div class="inner-content">
+          <div class="container">
+            <div class="header-wrapper">
+              <br/>
+              <br/>
+              <br/>
+              <h3>The best notice to owner service for enterprise customers, period.</h3>
+              <p>Sunray offers unmatched and most reliable service for your enterprise.</p>
+              <br/>
+              <br/>
+
+              <a ceoClickStopEventBubble
+                class="btn btn-lg btn-white-primary btn-lg-curved"
+                (click)="editContactListMember('enterprise')" href="#">
+
+                CONTACT US FOR PRICING
+              </a>
+              <br/>
+              <br/>
+            </div>
+          </div>
+        </div>
+     </div>
+  </div>
+
+  <div *ngIf="false" class="text-center page-section" id="integrations">
+    <div class="inner-content">
+      <div class="container">
+        <h4>Integrated with the applications you already use</h4>
+
+        <div class="integrations-list-wrapper">
+
+          <div>
+            <img class="first-integration" style="width: 235px" src="/assets/frontend/enterprise/qb-logos.svg"
+              alt="Quickbooks logo preferred rgb">
+          </div>
+
+          <div class="integration-item-wrapper">
+            <img style="width: 210px" src="/assets/frontend/enterprise/foundation.svg" alt="Foundation">
+          </div>
+
+          <div class="integration-item-wrapper">
+            <img style="width: 105px" src="/assets/frontend/enterprise/dropbox.svg" alt="Dropbox">
+          </div>
+
+          <div class="integration-item-wrapper">
+            <img style="width: 196px" src="/assets/frontend/enterprise/procore.svg" alt="Procore">
+          </div>
+
+          <div class="integration-item-wrapper">
+            <img style="width: 134px" src="/assets/frontend/enterprise/sage.svg" alt="Sage">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="enterprise-block grey-background">
+     <div class="container">
+        <div class="row justify-content-md-center">
+           <div class="col-md-2"></div>
+           <div class="col-md-4">
+             <div class="card-body">
+                <img src="/assets/frontend/enterprise/industry-leading-api.svg" alt="Industry Leading API">
+             </div>
+           </div>
+           <div class="col-md-4">
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <h4 class="text-primary">Industry Leading API</h4>
+             <br/>
+             <p>Connect your internal software with SunRay's system and directly upload all your work orders</p>
+           </div>
+           <div class="col-md-2"></div>
+        </div>
+     </div>
+  </div>
+
+  <div class="enterprise-block">
+     <div class="container">
+        <div class="row justify-content-md-center">
+           <div class="col-md-2"></div>
+           <div class="col-md-4">
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <h4 class="text-primary">Eleminate Data Entry with our Excel upload feature</h4>
+             <br/>
+             <p>All our enterprise customers can make use of our excel upload feature to help save time and avoid data entry errors.</p>
+           </div>
+           <div class="col-md-4">
+             <div class="card-body">
+                <img src="/assets/frontend/enterprise/eliminate-data.svg" alt="Eliminate Data">
+             </div>
+           </div>
+           <div class="col-md-2"></div>
+        </div>
+     </div>
+  </div>
+  <div class="enterprise-block video-background primary-testimonial-wrapper">
+    <div class="inner-wrapper">
+      <div class="video-button-wrapper">
+        <div width="100%" height="100%">
+           <img class="center" src="/assets/frontend/enterprise/video-icon.svg" width='20%' alt="Eliminate Data">
+        </div>
+      </div>
+
+      <div class="details-wrapper">
+        <div class="abc-feedback">
+          <img src="/assets/frontend/enterprise/abc.svg" alt="abc">
+          <div class="quote-wrapper">
+            <span class="fa fa-quote-left"></span>
+              Sunray has provided us with a partnership to manage construction documents throughout the United States
+            <span class="fa fa-quote-right"></span>
+          </div>
+          <h4 class="name">RICK RUSSEL</h4>
+          <p class="font-italic">Executive Director - Cutomer Financial Services</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='enterprise-block text-center' id='testimonials-vertical'>
+
+    <!-- Reviews section -->
+    <div id='reviews-section'
+      class='page-section text-center'>
+
+      <div class="section-header text-center">
+        <h2 class="text-primary">{{sections.reviews.heading}}</h2> 
+        <h4>{{sections.reviews.subHeading}}</h4> 
+      </div>
+
+      <div class="section-body">
+        <sunray-site-shared-testimonial-list
+          [collection$]="cmsTestimonials$">
+        </sunray-site-shared-testimonial-list>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="enterprise-block">
+     <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-12 text-center">
+
+            <a ceoClickStopEventBubble
+              class="btn btn-lg btn-primary btn-lg-curved"
+              (click)="editContactListMember('enterprise')" href="#">
+
+              CONTACT US FOR PRICING
+            </a>
+          </div>
+        </div>
+     </div>
+  </div>
+</div>

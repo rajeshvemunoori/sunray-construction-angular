@@ -1,0 +1,120 @@
+@import "helpers";
+
+$header-height: 100px;
+header.header-wrapper {
+  height: $header-height;
+  background-color: $white;
+
+  .logo-wrapper {
+    width: 200px;
+    height: $header-height;
+    padding: 1rem;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.main-wrapper {
+  @include base-border-bottom;
+  overflow-y: scroll;
+
+  &.mobile-navbar-active {
+    background-color: $white;
+    border-bottom: none;
+    position: relative;
+    height: 100vh;
+
+    .navbar-brand {
+      display: none;
+    }
+  }
+}
+
+
+.inner-wrapper {
+  @include make-container;
+  @include make-container-max-widths;
+  position: relative;
+  height: 100%;
+}
+
+.navbar-inner-wrapper {
+  @include make-row;
+}
+
+.navbar-collapse {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.header-navbar-wrapper {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+
+.mobile-navbar-wrapper,
+.navbar-toggler-wrapper {
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+nav.navbar.navbar-expand-lg.navbar-light {
+  justify-content: space-between;
+  width: 100%;
+
+  @include media-breakpoint-down(md) {
+    height: 65px !important;
+  }
+
+  .mobile-navbar-active & {
+    @include media-breakpoint-down(md) {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.navbar-brand {
+	padding-bottom: 0.15rem;
+  width: $header-logo-width;
+
+  @include media-breakpoint-down(md) {
+    width: $header-logo-width-sm;
+  }
+
+  a, img {
+    display: inline-block;
+    width: 100%;
+    min-width: 100%;
+  }
+} 
+
+:host  /deep/ .primary {
+  .navbar-nav {
+    a, a:hover, a:focus {
+      color: $white !important;
+      background-color: transparent;
+    }
+    .nav-item {
+      border: none !important;
+    }
+  }
+}
+
+.tagline {
+  color: $gray-700;
+}
+
+
+:host ::ng-deep {
+  .nav-link {
+    text-transform: uppercase;
+  }
+}

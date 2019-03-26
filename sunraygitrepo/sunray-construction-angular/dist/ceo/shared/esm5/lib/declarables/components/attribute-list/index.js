@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { AttributeListComponent } from './attribute-list.component';
+/** @type {?} */
+export var components = [
+    AttributeListComponent,
+];
+export { AttributeListComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9kZWNsYXJhYmxlcy9jb21wb25lbnRzL2F0dHJpYnV0ZS1saXN0L2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUUsc0JBQXNCLEVBQUUsTUFBTSw0QkFBNEIsQ0FBQTs7QUFFbkUsTUFBTSxLQUFPLFVBQVUsR0FBVTtJQUMvQixzQkFBc0I7Q0FDdkI7QUFFRCxPQUFPLEVBQUUsc0JBQXNCLEVBQUUsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEF0dHJpYnV0ZUxpc3RDb21wb25lbnQgfSBmcm9tICcuL2F0dHJpYnV0ZS1saXN0LmNvbXBvbmVudCdcblxuZXhwb3J0IGNvbnN0IGNvbXBvbmVudHM6IGFueVtdID0gW1xuICBBdHRyaWJ1dGVMaXN0Q29tcG9uZW50LFxuXVxuXG5leHBvcnQgeyBBdHRyaWJ1dGVMaXN0Q29tcG9uZW50IH1cbiJdfQ==

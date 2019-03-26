@@ -1,0 +1,47 @@
+<div [formGroup]="formGroup">
+  <div [ngSwitch]="field.controlType">
+
+    <input *ngSwitchCase="'textbox'"
+      class="form-control"
+      [formControlName]="field.key"
+      [id]="field.key"
+      [type]="field.controlType"
+      [placeholder]="field.placeholder">
+
+    <select *ngSwitchCase="'dropdown'"
+      class="form-control"
+      [id]="field.key"
+      [formControlName]="field.key">
+
+      <option *ngFor="let opt of field.options | async"
+        [value]="opt.key"
+        [selected]="selected(opt)">
+
+        {{opt.value}}
+
+      </option>
+    </select>
+
+    <div *ngSwitchCase="'radio'">
+      <label class="radiobuttonlabel" *ngFor="let opt of field.options">
+        <span>{{opt.key}}</span>
+        <div class="radiobutton">
+          <input [formControlName]="field.key"
+            [type]="field.controlType"
+            [name]="field.key"
+            [value]="opt.value"
+            [checked]="checked(opt.values)">
+          </div>
+      </label>
+    </div>
+
+    <input *ngSwitchCase="'checkbox'"
+      class="form-control"
+      [formControlName]="field.key"
+      [id]="field.key"
+      [type]="field.controlType"
+      [name]="field.key"
+      [checked]="checked([true, 1, 'yes', 'Yes'])">
+
+  <div class="errorMessage" *ngIf="!isValid">{{field.label}} is required</div>
+</div>

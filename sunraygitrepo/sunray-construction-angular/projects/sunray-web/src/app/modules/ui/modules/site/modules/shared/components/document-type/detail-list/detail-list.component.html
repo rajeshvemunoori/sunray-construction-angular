@@ -1,0 +1,42 @@
+<div class="document-types-wrapper">
+  <div class="document-type-wrapper animated fadeIn"
+    *ngFor="let entity of collection$ | async">
+
+    <div class="arrow-right"></div>
+    
+    <div class="inner-wrapper">
+      <div class="step-wrapper">
+        <h4 class="step-number-text">Step {{entity.sequenceOrder}}</h4>
+      </div>
+      <div class="inner-content">
+        <h4 class="nto-deadline-text">{{entity.requestTypeName}}</h4>
+        <div class="deadline-wrap">
+          <h5>Deadline</h5>
+          <h3 class="deadline-days text-primary">{{entity.dueDateDisplayName}}</h3>
+        </div>
+        <div [innerHTML]="entity.description"></div>
+
+        <div class="actions-wrapper">
+          <div class="actions-inner-wrapper">
+            <div class="btn-wrapper">
+              <a class="btn btn-rounded btn-animated btn-primary"
+                routerLink="/signup">
+
+                Send {{entity.requestTypeName}}
+                
+              </a>
+            </div>
+
+            <div class="calculate-link-wrap">
+              <a class="text-secondary"
+                (click)="onCalculateDeadlines()">
+
+                Calculate your Deadlines
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

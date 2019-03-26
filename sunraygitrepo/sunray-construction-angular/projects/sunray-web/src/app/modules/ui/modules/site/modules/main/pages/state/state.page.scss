@@ -1,0 +1,25 @@
+@import "helpers";
+
+#deadline-calculator {
+  > .inner-wrapper {
+    @include make-container;
+    max-width: 950px;
+
+    .title-wrapper {
+      margin-bottom: map-get($spacers, 5);
+    }
+  }
+}
+
+.page-section {
+  &.introduction,
+  &.statutory-documents,
+  &.action-select {
+    padding-bottom: $spacer-y-lg;
+    padding-top: $spacer-y-lg;
+  }
+}
+
+.section-body {
+  padding-top: $spacer-y-lg;
+}

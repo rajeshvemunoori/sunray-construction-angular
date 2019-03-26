@@ -1,0 +1,6 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+export { DeclarablesModule as VendorDeclarablesModule } from './declarables.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3ZlbmRvci8iLCJzb3VyY2VzIjpbImxpYi9kZWNsYXJhYmxlcy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLGlCQUFpQixJQUFJLHVCQUF1QixFQUFFLE1BQU0sc0JBQXNCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgeyBEZWNsYXJhYmxlc01vZHVsZSBhcyBWZW5kb3JEZWNsYXJhYmxlc01vZHVsZSB9IGZyb20gJy4vZGVjbGFyYWJsZXMubW9kdWxlJztcbiJdfQ==

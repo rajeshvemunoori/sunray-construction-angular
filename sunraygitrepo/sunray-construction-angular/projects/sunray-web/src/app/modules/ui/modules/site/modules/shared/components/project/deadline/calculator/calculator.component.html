@@ -1,0 +1,18 @@
+<div *ngIf="project$ | async as project" class="card deadline-calculate">
+  <div class="card-body">
+    <div class="icon-wrap">
+      <img src="{{entity.iconUrl('requestTypeCategory', 'document-types')}}">
+    </div>
+
+    <h4 class="lead-heading mt-3">{{entity.requestTypeName}}</h4>
+    <p class="lead-heading mt-3">{{entity.dueDateAnchorDisplayValue}}</p>
+  </div>
+
+  
+  <div class="card-footer">
+    <ceo-form-item
+      [item]="datepickerItem">
+    </ceo-form-item>
+  </div>
+
+</div>

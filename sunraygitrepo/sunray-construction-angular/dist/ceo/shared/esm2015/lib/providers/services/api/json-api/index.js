@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { ResponseParser as JsonApiResponseParser } from './response-parser.service';
+/** @type {?} */
+export const services = [
+    JsonApiResponseParser,
+];
+export { JsonApiResponseParser };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY2VvL3NoYXJlZC8iLCJzb3VyY2VzIjpbImxpYi9wcm92aWRlcnMvc2VydmljZXMvYXBpL2pzb24tYXBpL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUUsY0FBYyxJQUFJLHFCQUFxQixFQUFFLE1BQU0sMkJBQTJCLENBQUE7O0FBRW5GLE1BQU0sT0FBTyxRQUFRLEdBQVU7SUFDN0IscUJBQXFCO0NBQ3RCO0FBRUQsT0FBTyxFQUFFLHFCQUFxQixFQUFFLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBSZXNwb25zZVBhcnNlciBhcyBKc29uQXBpUmVzcG9uc2VQYXJzZXIgfSBmcm9tICcuL3Jlc3BvbnNlLXBhcnNlci5zZXJ2aWNlJ1xuXG5leHBvcnQgY29uc3Qgc2VydmljZXM6IGFueVtdID0gW1xuICBKc29uQXBpUmVzcG9uc2VQYXJzZXIsXG5dXG5cbmV4cG9ydCB7IEpzb25BcGlSZXNwb25zZVBhcnNlciB9XG4iXX0=

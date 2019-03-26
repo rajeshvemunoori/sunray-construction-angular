@@ -1,0 +1,98 @@
+@import "helpers";
+
+.page-inner-wrapper.page-section {
+  padding-top: map-get($spacers, 6);
+}
+
+.content-wrapper {
+  @include make-container;
+  @include make-container-max-widths;
+
+  @include media-breakpoint-up(md) {
+    max-width: 800px;
+  }
+}
+
+.form-control,
+.form-group {
+  margin: map-get($spacers, 2) 0px;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  padding: 1rem;
+  border-radius: 4px;
+
+  &::placeholder {
+    font-size: $font-size-base;
+  }
+}
+
+.already-account {
+  color: #0075ba;
+  .login{
+    color: #f6931e;
+  }
+}
+
+.submit-button {
+  padding: 50px;
+}
+
+.icon-wrapper {
+  display: inline-block;
+  padding: 0px $spacer;
+
+  .icon-inner-wrapper {
+    width: 150px;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.submit-section-wrapper {
+  @include make-row;
+  justify-content: flex-start;
+  padding-top: map-get($spacers, 4);
+}
+
+.button-wrapper,
+.icon-wrapper {
+  @include make-col-ready;
+  @include flex-child;
+  flex-grow: 0;
+}
+
+.button-outer-wrapper {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding-left: map-get($spacers, 5);
+
+  .privacy-policy {
+    margin: $spacer 0;
+    display: -webkit-box;
+
+    .checkbox-wrapper {
+      input {
+        width: $spacer * 1.5; 
+        height: $spacer * 1.5;
+      }
+    }
+  }
+
+  .button-wrapper {
+    button.btn {
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+
+.additional-links-wrapper {
+  text-align: right;
+  margin: map-get($spacers, 3) 0;
+}

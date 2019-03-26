@@ -1,0 +1,93 @@
+@import 'helpers';
+
+.mobile-navbar-main-wrapper {
+  text-align: right;
+  z-index: $mobile-navbar-z-index;
+}
+
+.mobile-navbar-inner-wrapper {
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+}
+
+.logo-wrapper {
+  margin: auto;
+  position: absolute;
+}
+
+:host  /deep/ .menu-wrapper {
+  .navbar-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
+:host  /deep/ .nav-wrapper {
+  font-family: $headings-font-family;
+}
+
+:host  /deep/ .primary {
+  span, svg, svg path {
+    color: $white;
+    fill: $white !important;
+  }
+}
+
+:host  /deep/ .menu-wrapper {
+
+  .collapse {
+    display: block !important;
+  }
+
+  .menu {
+    .nav-item.dropdown,
+    .dropdown-menu {
+      max-width: 100%;
+      background-color: transparent !important;
+
+      .dropdown-header {
+        color: $white;
+      }
+
+      div, li {
+        background-color: transparent !important;
+      }
+
+      a, .dropdown-header {
+        padding-left:  0px !important;
+      }
+    }
+  }
+}
+
+:host  /deep/ .dropdown-menu {
+  display: block;
+}
+
+:host  /deep/ .paid-button {
+  justify-content: center;
+
+  a.btn {
+    background-color: $white !important;
+    color: $primary;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .navs-wrapper {
+    @include make-row;
+  }
+
+  .get-paid-wrapper {
+    @include make-col-ready;
+    margin-bottom: $spacer;
+    text-align: center;
+  }
+
+  .menu-wrapper,
+  .nav-wrapper {
+    @include make-col-ready;
+    @include make-col(6);
+  }
+}

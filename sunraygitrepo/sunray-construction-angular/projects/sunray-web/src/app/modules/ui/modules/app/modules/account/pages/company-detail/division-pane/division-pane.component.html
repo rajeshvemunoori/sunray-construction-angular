@@ -1,0 +1,22 @@
+
+<div class="division-pane-container container-detail">
+  <div class="header-wrapper">
+   <sunray-ui-app-shared-header
+     [headerTitle]="'Regions/Divisions'"
+     [buttonTitle]="'Add Division'"
+     [searchFlag]="true"
+     (actionEmitter) = "add()"
+     (searchKeyEmitter) = "search($event)">
+   </sunray-ui-app-shared-header>
+  </div>
+  <div class="division-pane-container-body container-body">
+   <shared-declarables-table
+     [collection$]="collection$"
+     [configHeader$]="collectionHeader$"
+     [itemActions$]="itemActions$"
+     (actionEmitter)="triggerAction($event)">
+   </shared-declarables-table>
+  </div>
+  <div class="division-pane-container-footer container-footer">
+  </div>
+</div>

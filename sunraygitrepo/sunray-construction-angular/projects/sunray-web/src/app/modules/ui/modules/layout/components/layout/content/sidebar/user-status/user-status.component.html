@@ -1,0 +1,10 @@
+<div *ngIf="(userAccount$ | async) as userAccount" class="user-status-inner-wrapper">
+  <div class="image-wrapper">
+    <img src="assets/img/sunray-logo.svg">
+  </div>
+  <div class="content-wrapper">
+    <strong>{{userAccount.fullName}}</strong>
+    <br/>
+    <strong>Online</strong>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div *ngIf="isEdit; then editTemplate else showTemplate">
+</div>
+
+<ng-template #showTemplate>
+  <td *ngFor="let attributeEntity of attributeEntities$ | async">
+    {{ getValue(attributeEntity) }}
+  </td>
+  <td>
+    <a *ngFor="let action of itemActions$ | async"
+    (click)="triggerAction(entity, action.name)">
+      <img  [src]="action.attributes['image-url']"  [alt]="action.attributes['name']"/>
+    </a>
+  </td>
+</ng-template>
+
+<ng-template #editTemplate>
+  <td *ngFor="let input of inputGroup">
+    <shared-declarables-input
+      [field]="input" [formGroup]="formGroup">
+    </shared-declarables-input>
+  </td>
+  <td>
+    <a (click)="submit()">
+      save
+    </a>
+    <a (click)="cancel()">
+      cancel
+    </a>
+  </td>
+</ng-template>

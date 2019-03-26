@@ -1,0 +1,34 @@
+<div class="page-inner-wrapper animated fadeIn">
+  <sunray-site-shared-content-header
+    [heading]="'Our Mission and Vision'"
+    [subHeading]="'SunRay Construction Solutions mission is to be the best and easiest construction document	service in the U.S.A'">
+  </sunray-site-shared-content-header>
+
+  <div id="our-mission-container">
+    <div class="container mission-image-wrapper">
+      <img src="/assets/frontend/our-mission/our-mission.png" alt="Our mission">
+    </div>
+
+    <div id="mission-section">
+      <div class="inner-content">
+
+        <div class="container">
+          <div class="text-center title-wrapper">
+            <h5>We fulfill that mission by</h5>
+          </div>
+
+      <div class="mission-list-wrapper">
+        <div *ngFor="let entity of missionItems"
+          class="mission-item-wrapper">
+
+          <div class="inner-wrapper card text-center bg-body-gray-100">
+            <div class="card-body">
+              <img src="{{entity.url}}" alt="{{entity.alt}}">
+              <p>{{entity.body}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

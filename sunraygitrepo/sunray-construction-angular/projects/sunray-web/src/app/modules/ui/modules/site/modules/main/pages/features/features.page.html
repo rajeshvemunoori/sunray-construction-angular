@@ -1,0 +1,58 @@
+<div class="main-wrapper animated fadeIn">
+  <div class="page-section primary">
+    <div class="banner-container features-container" id="features-block">
+      <div class="title-wrapper text-center">
+        <h4>Intelligent Construction Payment Platform</h4>
+      </div>
+
+      <div class="body-wrapper">
+        <div class="left-features-wrapper">
+          <sunray-ui-site-feature-list
+            [collection]="leftSideFeatures()">
+          </sunray-ui-site-feature-list>
+        </div>
+
+        <div class="image-section-wrapper">
+          <img alt="Intelligent construction" class="feature-img"
+            src="/assets/frontend/Intelligent/Intelligent-Construction.png">
+        </div>
+
+        <div class="right-features-wrapper">
+          <sunray-ui-site-feature-list
+            [collection]="rightSideFeatures()">
+          </sunray-ui-site-feature-list>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-body-gray-100 page-section detailed-features"
+    *ngFor="let entity of featureDetails">
+    <div class="inner-wrapper">
+      <div class="feature-wrapper">
+        <div class="image-wrapper">
+          <img src="{{entity.image.main}}">
+        </div>
+        <div class="item-wrapper">
+          <sunray-ui-site-feature-detail
+            [entity]="entity">
+          </sunray-ui-site-feature-detail>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-section bg-body-dark-2 guarantee-section">
+    <div class="features-container">
+      <div class="title-wrapper text-center">
+        <h2>SunRay's Guarantee</h2>
+      </div>
+
+      <div class="body-wrapper">
+        <sunray-ui-site-feature-list
+          [collection]="featureGuarantees">
+        </sunray-ui-site-feature-list>
+      </div>
+    </div>
+  </div>
+</div>

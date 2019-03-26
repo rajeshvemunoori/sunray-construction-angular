@@ -1,0 +1,12 @@
+import * as EntityActions from './entity.action-classes';
+export { EntityActions };
+export { EntityAction } from './entity.action-classes';
+export { actions as EntityActionsMap } from './entity.actions';
+export * from './entity.adapter';
+export * from './entity-adapter.factory';
+export * from './entity-type.factory';
+export * from './entity.collection';
+export * from './entity.config';
+export * from './entity.effects-config';
+export * from './reducer/index';
+export * from './entities/index';

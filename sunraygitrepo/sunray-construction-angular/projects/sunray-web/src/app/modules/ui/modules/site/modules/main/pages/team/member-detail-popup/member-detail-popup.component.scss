@@ -1,0 +1,96 @@
+@import "helpers";
+
+
+.fav-quote-wrap {
+  padding-top: 2rem;
+}
+.member-image {
+  padding-left: 3rem;
+}
+.team-icon {
+  width: 80px;
+  padding-top: 1rem;
+  max-width: 100%;
+}
+.commas {
+  left: -36px;
+  top: 15px;
+}
+.modal-quote {
+  padding-left: 3rem;
+}
+
+.modal-our-team {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.modal-title-content {
+  margin-left: $spacer-x-xs;
+  color: $primary;
+  font-weight: bold;
+}
+
+.team-data {
+  padding-top: 1rem;
+  text-align: left;
+}
+
+.modal-our-team-content {
+  font-size: 17px;
+  color: #111;
+}
+
+.story {
+  padding-top: 2rem;
+  .story-heading {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .story-content {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.story-section {
+  margin-top: $spacer-y-md;
+}
+
+.info-wrap {
+  text-align: center;
+  padding-top: $spacer-y-md;
+}
+
+.trivia-item-wrap {
+  @include make-container;
+}
+
+
+@include size-lg {
+  .info-wrap,
+  .fav-quote-wrap {
+    @include make-col-ready;
+  }
+
+  .info-wrap {
+    @include make-col(5);
+  }
+
+  .fav-quote-wrap {
+    @include make-col(7);
+  }
+
+  .trivia-item-wrap {
+    @include make-col(6);
+
+    .icon-wrap {
+      @include make-col(4);
+    }
+
+    .team-data {
+      @include make-col(8);
+    }
+  }
+}
+

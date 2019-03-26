@@ -1,0 +1,11 @@
+@mixin flex-child {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+@mixin flex-parent-vertical-aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

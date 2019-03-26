@@ -1,0 +1,109 @@
+@import "helpers";
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+.card-wrapper {
+  @include make-col(3);
+  .card-inner-wrapper {
+    position: relative;
+  }
+}
+
+$size: 20px;
+$margin: 0px;
+
+label {
+  color: $gray-600;
+  font-size: 16px;
+}
+
+.checkbox-row {
+  padding-top: $spacer * 1;
+}
+
+.button-wrapper {
+  text-align: center;
+  padding-top: $spacer * 1;
+}
+
+.checkbox-wrapper {
+  padding-left: $spacer * 1;
+
+  .checkbox-inner-wrapper {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid $gray-400;
+    display: inline-block;
+    margin-top: $margin;
+
+    .checkbox {
+      height: 100%;
+      width: 100%;
+      background-color: $white;
+      border-radius: 50%;
+
+      &:not(.active) {
+        display: none;
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+}
+
+#fileselector {
+  .selector {
+    width: 156px;
+    border: 1px solid #ced4da;
+    padding: $spacer * 1;
+    text-align: center;
+  }
+}
+
+#upload-file-selector {
+  display:none;   
+}
+.margin-correction {
+  margin-right: 10px;   
+}
+
+.radio-button {
+  color: $gray-600 !important;
+  padding-right: $spacer * 7 !important;
+  //padding-left: $spacer * 1 !important;
+  .mat-radio-outer-circle {
+    border: 2px solid $gray-400 !important;
+  }
+}
+
+select.form-control {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  height: calc(2.25rem + 4px) !important;
+}
+
+textarea.form-control {
+  &::placeholder {
+    font-size: $font-size-base;
+  }
+}
+
+.upload-file-label {
+  cursor: pointer;
+}
+
+input, select {
+  border-radius: 0px;
+}
+
+.form-row {
+  margin-bottom: $spacer-y-md;
+}

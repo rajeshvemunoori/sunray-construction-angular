@@ -1,0 +1,255 @@
+@import "helpers";
+
+$video-background-height: 480px;
+
+.page-content-wrap {
+  background-color: $white;
+}
+
+#enterprise-banner {
+  background-image: url("/assets/frontend/enterprise/enterprise-header.svg");
+  color: $white;
+  background-size: cover;
+  min-height: 400px;
+
+  .inner-content {
+    padding-top: 30px;
+  }
+  .header-wrapper {
+    padding-left: 56px;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .btn-white-primary {
+    border-color: $white;
+  }
+
+  .nav-item {
+    text-align: -webkit-center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .d-table-cell {
+    padding: 5px;
+  }
+
+  a.orange-button {
+    background-color: #FF8800;
+    border-color: #FF8800;
+  }
+
+  a.green-button {
+    background-color: #00C148;
+    border-color: #00C148;
+  }
+
+  .banner-container {
+    padding: 0px 30px;
+    .banner-images {
+      position: relative;
+      margin-top: 10px;
+      overflow: hidden;
+      img {
+        width: 528px;
+        height: 302px;
+        display: inline-block;
+      }
+      img:first-child, img:last-child {
+        position: relative;
+      	top: 50px;
+      	opacity: 0.4;
+      }
+      img:first-child {
+        right: 105px;
+      }
+      img:last-child {
+      	left: 105px;
+      }
+
+      .centre-image {
+        position: absolute;
+        z-index: 1;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.grey-background {
+  background-color: $gray-100;
+}
+
+.video-background {
+  background-image: url("/assets/frontend/enterprise/video.svg");
+  background-size: cover;
+  min-height: $video-background-height;
+}
+
+.enterprise-block {
+  padding: map-get($spacers, 5) 0px;
+
+  p {
+    color: #787878;
+  }
+
+  .abc-feedback {
+    text-align: center;
+
+    img {
+      max-width: 100px;
+    }
+  }
+
+  .name {
+    border-top: 2px solid #9C46BC;
+    padding-top: 10px;
+    display: inline-block;
+    margin-top: $spacer;
+  }
+
+  .font-italic {
+    font-style: italic;
+  }
+
+  .center {
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      top: 35%;
+      left: 45%;
+    }
+  }
+}
+
+#testimonials-vertical {
+  background-color: $white;
+}
+
+#enterprise-banner{
+  background-image: url("/assets/frontend/enterprise/enterprise-header.svg");
+    color: #ffffff;
+    background-size: cover;
+
+    .inner-content{
+      padding-top: 30px;
+    }
+    h3{
+      font-size: 2em;
+      font-family: ProximaNovaSemibold;
+    }
+    p{
+      font-size: 15px;
+    }
+    .nav-item{
+      text-align: -webkit-center;
+      margin: 0px;
+      padding: 0px;
+    }
+    .d-table-cell{
+      padding: 5px;
+    }
+    a.orange-button{
+      background-color: #FF8800;
+      border-color: #FF8800;
+    }
+    a.green-button{
+      background-color: #00C148;
+      border-color: #00C148;
+  }
+  .banner-container{
+    padding: 0px 30px;
+    .banner-images{
+      position: relative;
+      margin-top: 10px;
+      overflow: hidden;
+      img{
+        width: 528px;
+        height: 302px;
+        display: inline-block;
+      }
+      img:first-child, img:last-child{
+        position: relative;
+      	top: 50px;
+      	opacity: 0.4;
+      }
+      img:first-child{
+        right: 105px;
+      }
+      img:last-child{
+      	left: 105px;
+      }
+      .centre-image{
+	position: absolute;
+	z-index: 1;
+	margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+
+.primary-testimonial-wrapper {
+  @include make-container;
+  //@include make-container-max-widths;
+
+  .inner-wrapper {
+    @include make-row;
+    min-height: $video-background-height;
+  }
+
+  .video-button-wrapper,.details-wrapper {
+    @include make-col-ready;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .video-button-wrapper {
+      padding: map-get($spacers, 5) 0px;
+      text-align: center;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .video-button-wrapper {
+      @include make-col(8);
+    }
+
+    .details-wrapper {
+      @include make-col(4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.integrations-list-wrapper {
+  @include make-row;
+  justify-content: space-around;
+
+  .integration-item-wrapper {
+    @include make-col-ready;
+    margin: map-get($spacers, 3);
+    min-width: 200px;
+    flex-basis: 200px;
+    flex-shrink: 0;
+
+    img {
+      @include img-fluid;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<div class="details-items-wrapper">
+  <div class="details-item-wrapper animated fadeIn">
+
+    <div class="tab-inner-wrapper">
+      <div class="statutory-documents-wrapper">
+        <div class="statutory-document-wrapper"
+          *ngFor="let entity of projectTypeRequestTypes$ | async">
+
+          <div class="inner-content">
+            <h3 class="nto-deadline-text">Step {{entity.sequenceOrder}}</h3>
+            <h4 class="nto-deadline-text">{{entity.requestTypeName}} Deadline</h4>
+            <h3 class="deadline-days text-primary">45 days from first day of furnishing</h3>
+            <div [innerHTML]="entity.requestTypeName"></div>
+
+            <div class="actions-wrapper">
+              <div class="actions-inner-wrapper">
+                <div class="btn-wrapper">
+                  <a class="btn btn-lg btn-rounded btn-animated btn-primary"
+                    routerLink="/signup">
+
+                    Send {{entity.requestTypeName}}
+                    
+                  </a>
+                </div>
+
+                <div class="calculate-link-wrap">
+                  <a class="orange"
+                    (click)="onCalculateDeadlines()">
+
+                    Calculate your Deadlines
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

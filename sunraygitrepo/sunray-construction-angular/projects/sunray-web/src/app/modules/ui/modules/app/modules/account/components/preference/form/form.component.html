@@ -1,0 +1,18 @@
+<div class="form-group">
+  <div *ngIf="formGroup">
+    <form [formGroup]="formGroup">
+      <sunray-ui-app-account-company-edit-preference-form-group
+        [inputGroup]="inputGroup"
+        [formGroup]="formGroup">
+      </sunray-ui-app-account-company-edit-preference-form-group>
+    </form>
+  </div>
+  <div class="accountLogo">
+    <h6>Account Logo</h6>
+    <div class="uploadFile">
+      <span>Upload Your LOGO here</span>
+      <!-- <span> </span> -->
+      <!-- <img src ="assets/img/icons/edit.png"/> -->
+    </div>
+  </div>
+</div>

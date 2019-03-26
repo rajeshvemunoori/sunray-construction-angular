@@ -1,0 +1,60 @@
+<div aria-hidden='true' aria-labelledby='exampleModalLabel'
+ class='modal' id='searchModal' role='dialog' tabindex='-1'></div>
+<div class='content'>
+   <div class='container'>
+      <div class='public-notice mx-5 px-5'></div>
+   </div>
+   <div class='text-center' id='registrations-container'>
+      <div class='inner-content'>
+         <div class='container' *ngIf="entity$ | async as seminar">
+            <h4 class='text-primary'>{{ seminar.title.rendered }} in {{ seminar['event-date'] | date : "fullDate" }}</h4>
+            <div class='seminar-detail-section'>
+               <div class='row'>
+                  <div class='col-md-6'>
+                     <ngb-accordion [closeOthers]="true">
+                       <ngb-panel *ngFor="let content of seminar['seminar-content']; let index = index"
+                         class='question-text-left' id="static-{{ index }}"
+                         title="{{ content.post_title }}">
+
+                           <ng-template ngbPanelContent>
+                             {{ content.post_content }}
+                           </ng-template>
+
+                        </ngb-panel>
+                     </ngb-accordion>
+                  </div>
+                  <div class='col-md-6'>
+                     <div class='seminar-registration-form'>
+                        <div class='row'>
+                           <div class='col-md-6'>
+                              <p>
+                                {{ seminar['event-date'] | date : "fullDate" }}
+                                <br/>
+                                Start Time: {{ seminar['start-time'] }}
+                                <br/>
+                                End Time: {{ seminar['end-time'] }}
+                                <br/>
+                                Price: {{ seminar.price | currency }}
+                              </p>
+                           </div>
+                           <div class='col-md-6'>
+                              <p>Address:</p>
+                              <p>Doubletree Suites by Hilton Naples 12200 Tamiami Trail North, Naples, Florida 34110</p>
+                           </div>
+                        </div>
+                        <div class='button-wrap'>
+                          <a appExternalUrl class="btn btn-white-secondary btn-lg btn-lg-curved"
+                            href="#" (click)="goToUrl(seminar.registartionUri)">
+
+                            REGISTER
+                          </a>
+                        </div>
+                     </div>
+                     <br/>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

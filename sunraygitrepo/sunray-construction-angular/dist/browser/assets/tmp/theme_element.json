@@ -1,0 +1,203 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 1,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-teal"
+      }
+    },
+    {
+      "id": 2,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 2,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-blue"
+      }
+    },
+    {
+      "id": 3,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 3,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-salmon"
+      }
+    },
+    {
+      "id": 4,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 4,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-green"
+      }
+    },
+    {
+      "id": 5,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 5,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-teal"
+      }
+    },
+    {
+      "id": 6,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 6,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-pink"
+      }
+    },
+    {
+      "id": 7,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 7,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-salmon"
+      }
+    },
+    {
+      "id": 8,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 8,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-green"
+      }
+    },
+    {
+      "id": 9,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 9,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-pink"
+      }
+    },
+    {
+      "id": 10,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 10,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-salmon"
+      }
+    },
+    {
+      "id": 11,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 11,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-green"
+      }
+    },
+    {
+      "id": 12,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 12,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-teal"
+      }
+    },
+    {
+      "id": 13,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 13,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-pink"
+      }
+    },
+    {
+      "id": 14,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 14,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-salmon"
+      }
+    },
+    {
+      "id": 15,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 15,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-green"
+      }
+    },
+    {
+      "id": 16,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "dashboards.component",
+        "element_id": 16,
+        "element_type": "DashboardDataPointType",
+        "style": "brand-pink"
+      }
+    },
+    {
+      "id": 17,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "print.batch.list.component",
+        "element_type": "print_batch",
+        "style": ["brand-blue", "brand-pink", "brand-green", "brand-salmon"]
+      }
+    },
+    {
+      "id": 18,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "status.component",
+        "element_id": 1,
+        "element_type": "BatchItemPrintStatus",
+        "style": "green"
+      }
+    },
+    {
+      "id": 19,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "status.component",
+        "element_id": 2,
+        "element_type": "BatchItemPrintStatus",
+        "style": "red"
+      }
+    },
+    {
+      "id": 20,
+      "type": "theme-elements",
+      "attributes": {
+        "page": "status.component",
+        "element_id": 3,
+        "element_type": "BatchItemPrintStatus",
+        "style": "orange"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+@import 'helpers';
+
+#e-books {
+  .container {
+    padding-top: $spacer * 1;
+  }
+  .card {
+    border: none;
+    padding: $spacer * 1;
+    color: $primary;
+    img {
+      height: 200px;
+    }
+  }
+}

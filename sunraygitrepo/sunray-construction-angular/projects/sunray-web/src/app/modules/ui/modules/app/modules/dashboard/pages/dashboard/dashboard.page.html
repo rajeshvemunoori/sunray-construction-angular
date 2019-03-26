@@ -1,0 +1,45 @@
+<div *ngIf="false">
+  <div *ngIf="(userAccount$ | async) as userAccount">
+    <h1> {{userAccount.email}} </h1>
+  </div>
+
+  <div *ngIf="(dashboardDataPointContext$ | async) as context">
+    <h1> The context id is {{context.id}} </h1>
+  </div>
+
+  <div *ngFor="let entity of dashboardDataPointTypes$ | async">
+    <h1> {{entity.name}} </h1>
+  </div>
+
+  <div *ngFor="let entity of dashboardDataPointContexts$ | async">
+    <h1> {{entity.name}} </h1>
+  </div>
+
+  <div *ngFor="let entity of dashboardDataPoints$ | async">
+    <h1> {{entity.displayValue}} </h1>
+    <h1> {{entity.value}} </h1>
+  </div>
+</div>
+
+
+<div *ngIf="isDashboardType('supervisor')">
+  <sunray-ui-app-dashboards-dropdown
+    [collection]="accountManagers"
+    (selectEmitter)="selectName($event)">
+  </sunray-ui-app-dashboards-dropdown>
+</div>
+
+<div class="workspace-body-wrapper">
+  <div *ngIf="isLaunched()">
+    <sunray-ui-app-dashboards-primary-panes
+      [activeDataPoint]="activeDataPoint"
+      [comments$]="comments$"
+      [dashboardDataPoints$]="dashboardDataPoints$"
+      [dashboardDataPointItems$]="dashboardDataPointItems$"
+      [dashboardDataPointTypes$]="dashboardDataPointTypes$"
+      [router]="current_url"
+      (selectEmitter)="onDataPointSelect($event)">
+    </sunray-ui-app-dashboards-primary-panes>
+  </div>
+</div>
+

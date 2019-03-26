@@ -1,0 +1,22 @@
+<div class="user-pane-container container-detail">
+  <div class="header-wrapper">
+    <sunray-ui-app-shared-header
+      [headerTitle]="'Users'"
+      [buttonTitle]="'Add a Contact'"
+      [searchFlag]="true"
+      (actionEmitter) = "add()"
+      (searchKeyEmitter) = "search($event)">
+    </sunray-ui-app-shared-header>
+  </div>
+  <div class="user-pane-container-body container-body">
+    <sunray-ui-app-shared-table
+      [collection$]="collection$"
+      [configHeader$]="collectionHeader$"
+      [searchAttributes]="searchAttributes"
+      [itemActions$]="itemActions$"
+      (actionEmitter)="triggerAction($event)">
+    </sunray-ui-app-shared-table>
+  </div>
+  <div class="user-pane-container-footer container-footer">
+  </div>
+</div>

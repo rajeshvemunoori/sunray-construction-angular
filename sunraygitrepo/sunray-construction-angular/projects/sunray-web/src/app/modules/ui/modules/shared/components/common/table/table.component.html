@@ -1,0 +1,26 @@
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th >Document #</th>
+      <th *ngFor="let name of tableHeaders">{{name}}</th>
+      <th>
+        Actions
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let entity of items$ | async">
+      <td>
+        {{entity.id}}
+      </td>
+      <td *ngFor="let name of tableHeaders">{{entity.getAttr(name)}}</td>
+      <td class="action-wrapper">
+        <span class="action">
+          <a href="" (click)="selectEntity(entity)">
+            {{actionText}}
+          </a>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>

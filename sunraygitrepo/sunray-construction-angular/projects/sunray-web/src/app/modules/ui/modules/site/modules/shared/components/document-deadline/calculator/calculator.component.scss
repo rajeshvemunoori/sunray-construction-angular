@@ -1,0 +1,59 @@
+@import 'helpers';
+
+.information {
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+.deadline-submit-button {
+  padding: 2rem;
+}
+
+.user-information {
+  margin: 2rem;
+
+}
+
+.deadline-dropdowns {
+  text-align: center;
+  padding-right: 25px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.deadline-your-info {
+  color: white;
+}
+
+.form-items {
+  @include make-row;
+}
+
+.form-group {
+  @include make-col-ready;
+  @include make-col(6);
+
+  &.submit {
+    @include make-col(12);
+  }
+}
+
+.document-types-wrapper {
+  @include make-row;
+}
+
+.document-type-wrapper {
+  @include make-col-ready;
+
+  @include size-lg {
+    @include make-col(4);
+  }
+}
+
+.form-group {
+  display: none;
+}
+
+.submit {
+  margin-top: $spacer-y-lg;
+}

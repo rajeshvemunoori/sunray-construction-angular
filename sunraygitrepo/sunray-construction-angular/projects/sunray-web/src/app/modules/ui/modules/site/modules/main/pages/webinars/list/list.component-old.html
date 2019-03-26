@@ -1,0 +1,101 @@
+<div class="page">
+  <div class="container">
+    <h4 class="heading text-center">Upcoming Webinars</h4>
+    <p class="sub-heading text-center">Learn the tricks on Preliminary Notices, Liens, Claims on Bonds & more with Industry Leaders</p>
+  </div>
+</div>
+<div id="webinars">
+  <div class="inner-container">
+    <div class="container">
+      <div class="slider-webinar-row">
+        <div class="row justify-content-md-center">
+          <% @webinars.each do |webinar| %>
+            <div class="col-md-4 webinar-col mt-4">
+              <a class="show-webinar" href="<%= upcoming_webinar_path(title: webinar.param_link) %>">
+                <%= image_tag(webinar.cover_picture.url(:cover), class: "webinar-img blur") %>
+                <div class="hover-img">
+                  <%= image_tag('webinars/webinar_hover.svg') %>
+                </div>
+              </a>
+              <div class="text-box text-left">
+                <h5 class="text-primary">
+                  <%= link_to webinar.title, upcoming_webinar_path(title: webinar.param_link) %>
+                </h5>
+                <p class="time text-black">
+                  <%= days(webinar) %>
+                </p>
+                <p class="text-black">
+                  <%= webinar.start_time.strftime("%A, %b %d") %>
+                  <br/>
+                  <%= webinar.start_time.strftime("%I:%M %p") %>
+                </p>
+                <br/>
+                <div class="row justify-content-md-center">
+                  <div class="col-md-5">
+                    <div class="more-btn">
+                      <a class="int-btn" href="<%= webinar.register_url %>" target="<%= :_blank %>">
+                        <button class="btn btn-primary btn-lg">REGISTER</button>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- .col-md-7
+                  -->
+                  <!-- 	%p.calendar.text-primary
+                  -->
+                  <!-- 		ADD TO CALENDAR
+                  -->
+                  <!-- 		%span.ml-1=link_to image_tag("webinars/add_to_calendar.svg", class: "calendar_img"), ics_export_path(format: :ics, webinar_id: webinar.id)
+                  -->
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="upcoming-webinar-row">
+        <% if @webinars.present? %>
+          <% count = 3 %>
+          <% if @total_webinar_count > @webinar_count	 %>
+            <div class="view-all-container">
+              <hr/>
+              <div class="more-btn text-right">
+                <a class="int-btn" data-remote="true" href="<%= webinars_path(webinar_count: @webinar_count + count, webinar_flag: true) %>">
+                  <button class="btn btn-primary btn-lg">VIEW MORE</button>
+                </a>
+              </div>
+            </div>
+          <% else %>
+            <br/>
+            <div class="hr-container">
+              <hr/>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="inner-content" id="free_webinars">
+    <div class="container">
+      <div class="free-webinars-container">
+        <h4 class="text-black text-center">Watch Our Free Webinars		</h4>
+        <div class="row justify-content-md-center alignment">
+          <div class="col-md-3">
+            <form method="get">
+              <%= select_tag :state, options_for_select(State.all.collect{|s| [s.name, s.id]}, @state.id),{class: "state-select2 form-control", onchange: "selectState(this.value, event)"} %>
+            </form>
+          </div>
+          <div class="col-md-3" id="webinar-select">
+            <form method="get">
+              <%= select_tag :topic, options_for_select(LearningCentre::TOPICS.map{|event| [event, event.parameterize.underscore]}, "get_paid"),{class: "state-select2 form-control", onchange: "selectWebinar(this.value, event)"} %>
+            </form>
+          </div>
+        </div>
+        <div class="free-webinars-row">
+          <%= render "free_webinar" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render "testimonials" %>
+</div>
+

@@ -1,0 +1,14 @@
+<div  class="site-component-wrapper animated fadeIn"
+  *ngIf="shouldDisplaySite()">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="intro-wrapper animated fadeIn"
+  [@intro]="introStatus"
+  (@intro.done)="onIntroDone($event)">
+
+  <div class="logo-wrapper">
+    <mat-icon class="svg-wrapper" svgIcon="sunray/logo">
+    </mat-icon>
+  </div>
+</div>

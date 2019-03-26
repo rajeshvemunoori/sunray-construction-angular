@@ -1,0 +1,36 @@
+@import "helpers";
+
+.deadline-calculate {
+  margin: map-get($spacers, 3);
+}
+
+.card {
+  @include make-container;
+  padding-top: $spacer-y-md;
+  padding-bottom: $spacer-y-md;
+  border-radius: 15px;
+  height: 100%;
+}
+
+.lead-heading {
+  padding-bottom: $spacer-y-md;
+}
+
+.deadline-card-text {
+  padding: 2rem;
+}
+
+.btn {
+  border-color: $input-border-color;
+}
+
+.icon-wrap {
+  img {
+    width: 80px;
+    @include img-fluid;
+  }
+}
+
+.card-body,
+.card-footer {
+}

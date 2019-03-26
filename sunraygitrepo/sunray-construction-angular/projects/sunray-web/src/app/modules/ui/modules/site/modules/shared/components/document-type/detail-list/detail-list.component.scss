@@ -1,0 +1,98 @@
+@import 'helpers';
+
+.document-type-wrapper {
+  position: relative;
+  padding-top: $spacer-y-md;
+  padding-bottom: $spacer-y-md;
+
+  @include size-sm {
+    .arrow-right {
+      display: none;
+    }
+  }
+
+  @include size-lg {
+    padding-left: $spacer-x-lg;
+    padding-top: $spacer-y-lg;
+    padding-bottom: $spacer-y-lg;
+    @include base-border-left(2px, $primary);
+
+    .arrow-right {
+      position: absolute;
+      left: 0px;
+      top: $spacer-y-lg + 1rem;
+      @include arrow-right(20px, $primary);
+    }
+  }
+
+
+  .inner-wrapper {
+    @include base-border;
+    border-radius: $border-radius;
+  }
+}
+
+.step-wrapper {
+  @include base-border-bottom;
+  border-color: $primary;
+  background-color: $gray-200;
+  color: $primary;
+  padding: $spacer-y-xs $spacer-x-md;
+
+  @include size-lg {
+    display: inline-block;
+    padding: $spacer-y-sm $spacer-x-md;
+  }
+
+  .step-number-text {
+    margin-bottom: 0;
+  }
+}
+
+.inner-content {
+  padding: $spacer-y-md $spacer-x-sm;
+
+  @include size-lg {
+    padding: $spacer-y-lg $spacer-x-lg;
+  }
+}
+
+.deadline-wrap, .actions-wrapper {
+  padding: $spacer-y-md 0;
+}
+
+.actions-inner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include size-sm {
+    flex-flow: column;
+  }
+
+  .calculate-link-wrap {
+    a {
+      font-size: $font-size-lg;
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
+      
+      &:hover {
+        //color: $secondary !important;
+      }
+    }
+  }
+}
+
+
+.btn-wrapper {
+  @include size-sm {
+    max-width: 100%;
+    padding-bottom: $spacer-y-lg;
+
+    .btn {
+      max-width: 100%;
+      white-space: normal;
+    }
+  }
+}

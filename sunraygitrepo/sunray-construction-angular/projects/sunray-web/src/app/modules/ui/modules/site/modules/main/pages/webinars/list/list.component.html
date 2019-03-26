@@ -1,0 +1,141 @@
+<div class='content'>
+  <div class='container'>
+    <div class='public-notice mx-5 px-5'>
+    </div>
+  </div>
+  <div class='page'>
+    <div class='container'>
+      <h4 class='heading text-center'>
+        Upcoming Webinars
+      </h4>
+      <p class='sub-heading text-center'>
+        Learn the tricks on Preliminary Notices, Liens, Claims on Bonds & more with Industry Leaders
+      </p>
+    </div>
+  </div>
+
+  <div id='webinars'>
+    <div class='inner-container'>
+      <div class='container'>
+        <div class='slider-webinar-row'>
+          <div class='row justify-content-md-center'>
+            <div class='col-md-4 webinar-col mt-4'
+              *ngFor="let entity of webinars$ | async" >
+
+              <div class='show-webinar' >
+                <a class='show-webinar' routerLink='/webinars/{{entity.id}}'>
+                  <img alt="5th webinar" class="webinar-img blur"
+                  src="{{entity.featuredMediaUrl}}">
+                  <div class='hover-img'>
+                    <img alt="Webinar hover"
+                    src="/assets/frontend/webinars/webinar-hover.svg">
+                  </div>
+                </a>
+              </div>
+              <div class='text-box text-left'>
+                <h5 class='text-primary'>
+                </h5>
+                <p class='time text-black'>
+                 In {{ waitingPeriod(entity['event-start-date']) }}
+                </p>
+                <p class='text-black'>
+                {{ dateDisplay(entity['event-start-date']) | date : "fullDate" }}<br>
+                {{ timeFormat(entity['start-time']) }}
+                </p>
+                <br>
+                <div class='row justify-content-md-center'>
+                  <div class='more-btn'>
+                    <a class='btn btn-primary btn-lg btn-lg-curved' href="{{entity.registrationUri}}"
+                      target='_blank'>
+
+                      REGISTER
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class='upcoming-webinar-row'>
+          <div class='view-all-container'>
+            <hr>
+            <div class='more-btn text-right'>
+              <a class='int-btn'>
+                <button class='btn btn-primary btn-lg'
+                 *ngIf ="paginationLimit < (webinars$ | async).entities.length"
+                 (click)="showMoreItems()">
+                  VIEW MORE
+                </button> &nbsp;
+                <button class='btn btn-primary btn-lg'
+                *ngIf ="paginationLimit > 3" (click)="showLessItems()">
+                  VIEW LESS
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='inner-content' id='free_webinars'>
+      <div class='container'>
+        <div class='free-webinars-container'>
+          <h4 class='text-black text-center'>Watch Our Free Webinars</h4>
+          <div class='row justify-content-md-center alignment'>
+            <div class='col-md-3'>
+              <sunray-site-state-select
+                [states$]="states$"
+                (stateEmitter)="onStateSelected($event)">
+              </sunray-site-state-select>
+            </div>
+            <div class='col-md-3' id='webinar-select'>
+              <form method='get'>
+                <select class="state-select2 form-control" id="topic">
+                  <option *ngFor="let doc of documentRequests"
+                   [value]="doc.id">{{doc.name}}</option>
+                </select>
+              </form>
+            </div>
+          </div>
+
+          <sunray-site-learning-center-shared-content-body
+            [contentType]="'webinar'"
+            [contentList$]="recordedWebinars$">
+          </sunray-site-learning-center-shared-content-body>
+        </div>
+      </div>
+    </div>
+
+    <div class='text-center' id='testimonials-vertical'>
+      <sunray-site-shared-testimonial-list
+       [collection$]="cmsTestimonials$">
+      </sunray-site-shared-testimonial-list>
+
+      <!-- Reviews section -->
+      <div id='reviews-section'
+        class='page-section alternate text-center'>
+
+        <div class="section-header text-center">
+          <h2 class="text-primary">{{sections.reviews.heading}}</h2> 
+          <h4>{{sections.reviews.subHeading}}</h4> 
+        </div>
+
+        <div class="section-body">
+          <sunray-site-shared-testimonial-list
+            [collection$]="cmsTestimonials$">
+          </sunray-site-shared-testimonial-list>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div id="button">
+        <div class='row'>
+          <div class='col-12'>
+            <!-- <a class='btn btn-primary btn-lg btn-lg-curved' [routerLink]="'../../signup'">SIGN ME UP</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+@mixin base-border(
+  $border-width: $border-width,
+  $border-color: $border-color,
+  $border-style: solid) {
+
+  border: $border-width $border-style $border-color;
+}
+
+@mixin base-border-bottom(
+  $border-width: $border-width,
+  $border-color: $border-color,
+  $border-style: solid) {
+
+  border-bottom: $border-width $border-style $border-color;
+}
+
+@mixin base-border-right(
+  $border-width: $border-width,
+  $border-color: $border-color,
+  $border-style: solid) {
+
+  border-right: $border-width $border-style $border-color;
+}
+
+@mixin base-border-left(
+  $border-width: $border-width,
+  $border-color: $border-color,
+  $border-style: solid) {
+
+  border-left: $border-width $border-style $border-color;
+}
+
+@mixin base-border-bottom-left(
+  $border-width: $border-width,
+  $border-color: $border-color,
+  $border-style: solid) {
+
+  border-bottom: $border-width $border-style $border-color;
+  border-left: $border-width $border-style $border-color;
+}
+
+@mixin base-border-bottom-right(
+  $border-width: $border-width,
+  $border-color: $border-color,
+  $border-style: solid) {
+
+  border-bottom: $border-width $border-style $border-color;
+  border-right: $border-width $border-style $border-color;
+}

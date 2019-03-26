@@ -1,0 +1,15 @@
+<div class="project-files-container container-detail">
+  <div class="header-wrapper">
+     <sunray-ui-app-shared-header
+       [headerTitle]="'Project Files'"
+       [searchFlag]="false">
+     </sunray-ui-app-shared-header>
+  </div>
+  <div class="project-files-container-body container-body">
+    <sunray-ui-app-shared-table
+      [collection$]="collection$"
+      [configHeader$]="header$"
+      (actionEmitter)="triggerAction($event)">
+    </sunray-ui-app-shared-table>
+  </div>
+</div>

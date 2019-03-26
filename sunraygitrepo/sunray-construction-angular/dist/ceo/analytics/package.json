@@ -1,0 +1,21 @@
+{
+  "name": "@ceo/analytics",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "main": "bundles/ceo-analytics.umd.js",
+  "module": "fesm5/ceo-analytics.js",
+  "es2015": "fesm2015/ceo-analytics.js",
+  "esm5": "esm5/ceo-analytics.js",
+  "esm2015": "esm2015/ceo-analytics.js",
+  "fesm5": "fesm5/ceo-analytics.js",
+  "fesm2015": "fesm2015/ceo-analytics.js",
+  "typings": "ceo-analytics.d.ts",
+  "metadata": "ceo-analytics.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

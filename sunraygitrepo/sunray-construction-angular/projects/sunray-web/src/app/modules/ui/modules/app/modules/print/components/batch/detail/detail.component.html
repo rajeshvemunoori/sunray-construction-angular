@@ -1,0 +1,12 @@
+<div class="main-message-wrapper">
+  <h4 class="main-message"> Print {{ item?.getAttr("name") }}</h4>
+  <h5 class="status-message"> Batch Status: <span [ngClass]="getMsgClass((rootItem$ | async))"> {{(rootItem$ | async)?.printMessage()}} </span></h5>
+</div>
+
+<div class="container">
+  <sunray-ui-app-print-batch-item-status
+    [item]="rootItem$ | async"
+    [collection$] = "batchItems$">
+  </sunray-ui-app-print-batch-item-status>
+</div>
+ 

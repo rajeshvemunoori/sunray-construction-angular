@@ -1,0 +1,9 @@
+<div *ngIf="menu$ | async as menu" class="footer-menu">
+  <p class="footer-heading">
+    <b>Resources</b>
+  </p>
+
+  <ceo-navigation
+    [navigationMenu]="menu">
+  </ceo-navigation>
+</div>

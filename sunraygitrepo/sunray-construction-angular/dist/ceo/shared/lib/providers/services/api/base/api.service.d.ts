@@ -1,0 +1,31 @@
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { iApiService, iApiRequestPayload } from '../../../interfaces/index';
+import { CsvToJsonService } from '../../csv-to-json.service';
+import { RequestUrlBuilder } from './request-url-builder.service';
+import { RequestOptionsBuilder } from './request-options-builder.service';
+import { ResponseParser } from './response-parser.service';
+export declare class ApiService implements iApiService {
+    private http;
+    private csvToJsonService;
+    private responseParser;
+    private urlBuilder;
+    private optionsBuilder;
+    constructor(http: HttpClient, csvToJsonService: CsvToJsonService, responseParser: ResponseParser, urlBuilder: RequestUrlBuilder, optionsBuilder: RequestOptionsBuilder);
+    post$(payload: iApiRequestPayload): Observable<any>;
+    delete$(payload: iApiRequestPayload): Observable<any>;
+    get$(payload: iApiRequestPayload): Observable<any>;
+    put$(payload: iApiRequestPayload): Observable<any>;
+    update$(payload: iApiRequestPayload): Observable<any>;
+    create$(payload: iApiRequestPayload): Observable<any>;
+    private handleRequest$;
+    private handleError$;
+    private executeRequest$;
+    private getUrl;
+    private getHttpOpts;
+    private processedResponse$;
+    private jsonData$;
+    private sanitizedData;
+    private buildApiResponse;
+    private csvToJsonData$;
+}

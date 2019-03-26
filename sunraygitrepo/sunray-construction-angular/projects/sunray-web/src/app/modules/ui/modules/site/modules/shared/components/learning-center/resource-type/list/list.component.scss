@@ -1,0 +1,38 @@
+@import "helpers";
+
+.card {
+  padding: 0px $spacer;
+  background-color: $gray-100;
+
+  &:hover {
+    background-color: $white;
+    .btn-primary {
+      background-color: $primary !important;
+      color: $white;
+    }
+  }
+
+  .btn-primary {
+    background-color: $white !important;
+    color: $primary;
+  }
+
+  .card-body {
+    //padding-top: 0px;
+  }
+}
+
+.content-wrap {
+  padding: $spacer-y-md 0px 0px;
+}
+
+.purpose-icon {
+  .learning-center-images {
+    width: 50px;
+  }
+}
+
+.card-deck-wrap {
+  @include make-container;
+  @include make-container-max-widths;
+}

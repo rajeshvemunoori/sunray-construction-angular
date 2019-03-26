@@ -1,0 +1,14 @@
+@import "helpers";
+
+.content-header-wrapper {
+  margin: map-get($spacers, 4) auto map-get($spacers, 6);
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    max-width: 60%;
+  }
+
+  @include media-breakpoint-down(md) {
+    max-width: 80%;
+  }
+}

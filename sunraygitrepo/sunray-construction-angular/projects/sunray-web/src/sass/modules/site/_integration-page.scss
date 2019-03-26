@@ -1,0 +1,77 @@
+p.int-heading{
+	font-size: 22px;
+	font-family:LatoLight;
+}
+p.content, p.lead-content{
+	font-size: 15px;
+	color: #686868;
+	font-family: ProximaNovaRegular;
+}
+a.int-btn{
+	button{
+	font-size: 14px;
+	border-radius: 100px;
+	cursor: pointer;
+	font-family: ProximaNovaRegular;
+	}
+	.btn-primary:hover {background-color: #024 !important;border-color: #024 !important;}
+}
+
+
+.col-md-3.text-center.padding{
+	margin: 0 40px 75px 0;
+}
+.dropbox-section{
+	margin-right: 0px !important;
+}
+
+h4.highlight{
+	color: #fff;
+	font-size: 23px;
+	padding: 50px 0px 50px 0px;
+	font-family: ProximaNovaRegularItalic;
+	span{font-family: ProximaNovaBoldItalic;}
+}
+
+h4.heading{
+	color: #0373BB;
+	font-family: ProximaNovaBold;
+	margin-bottom: 15px;
+	font-size: 28px;
+}
+
+p.sub-heading{
+	font-size: 13.9px;
+	font-family: ProximaNovaRegular;
+	color: #5a5656;
+	margin: 0px;
+}
+
+.integration-page{
+	margin-top: 50px;
+}
+
+.drop > img{
+	height: 80px;
+	width: 90px;
+}
+
+.foundation > img {
+	height: 60px;
+	width: 150px;	
+}
+
+.quickbooks > img {
+	height: 60px;
+	width: 200px;
+}
+
+.procure > img {
+	height: 20px;
+	width: 150px;	
+}
+
+.sage > img {
+	height: 40px;
+	width: 100px;	
+}
