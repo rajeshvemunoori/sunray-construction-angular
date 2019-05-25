@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BETA", ".", "{1427AAA2-0E7F-4869-8D64-5A076C55F9E2}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/BETA"
+		Debug.AspNetCompiler.PhysicalPath = "D:\RajeshVemunoori\RAJESHV\PROJECTS\ApproveIt\Application\BETA\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\BETA\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/BETA"
+		Release.AspNetCompiler.PhysicalPath = "D:\RajeshVemunoori\RAJESHV\PROJECTS\ApproveIt\Application\BETA\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\BETA\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "22056"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1427AAA2-0E7F-4869-8D64-5A076C55F9E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1427AAA2-0E7F-4869-8D64-5A076C55F9E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

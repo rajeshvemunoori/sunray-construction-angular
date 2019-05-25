@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ApproveIt - login</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Bootstrap -->
+	<link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/approveiti2.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+	html { 
+  background: url(img/BG.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+	</style>
+  </head>
+  <body>
+   <header class=" ">
+	<img  class="applogo" src="img/approveIt_logo.png">
+	<div class="nav-modal">
+		<div class="blob"></div>
+		<nav>
+			<ul>
+				<li><a href="#">HOME</a> </li>
+				<li><a href="#">ABOUT</a>
+					<ul>
+						<li><a href="#">ABOUT PRODUCT</a></li>
+						<li><a href="#">HOW TO USE</a></li>
+						<li><a href="#">INSTRUCTIONS</a></li>
+					</ul>
+				</li>
+			 	<li><a href="#">HELP</a>
+					<ul>
+						<li><a href="#">CONTACT US</a></li>
+						<li><a href="#">MAIL US</a></li>
+						 
+					</ul>
+				</li>
+				<li><a href="#">CONTACT</a></li>
+				 
+			</ul>
+		</nav>
+	</div>
+	<div class="head">
+		<!-- <a href="#" class="tile socialmedia"><i class="fa fa-facebook-official"></i></a>
+		<a href="#" class="tile socialmedia"><i class="fa fa-instagram"></i></a>
+		<a href="#" class="tile socialmedia"><i class="fa fa-twitter-square"></i></a>
+	 -->	<div class="tile burger">
+			<div class="meat">
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+			</div>
+		</div>
+	</div>
+</header>
+ 
+<div class="container login-container absolute-center"  >
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 login-form  ">
+                    <h3 class="form-header-txt">LOGIN</h3>
+                    <div class="login-block-setting">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-rounded" placeholder="Your Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-rounded" placeholder="Your Password *" value="" />
+                        </div>
+                        <div class="form-group">
+                               <input type="submit" class="btnSubmit" value="Login " /> <input type="button" value="Signup Here!"   class="btnSignup" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#signuphere" />
+                        </div>
+                         <div class="form-group">
+							<input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+						    <label for="styled-checkbox-1">Remember me</label>  
+							<div class="pull-right forgot-password-div-setting"> <a href="#" class="ForgetPwd  color-green" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#forgotpswd" >Forget Password?</a></div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+ 
+<footer id="footer" class="row">
+	<div class="container text-center">
+		 
+                <span class="fr">&copy; 2018. All rights reserved.</span><strong>Xtramile Soft</strong> | ApproveIt
+         
+
+	</div>
+</footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="lazyload.min.js"></script>
+	<script>
+  $(document).ready(function() {
+
+	$('.burger').click(function(){
+		$('header').toggleClass('clicked');
+	});
+
+	$('nav ul li').click(function(){
+		$('nav ul li').removeClass('selected');
+		$('nav ul li').addClass('notselected');
+		$(this).toggleClass('selected');
+		$(this).removeClass('notselected');
+	});
+	
+});
+</script>
+
+
+<!-- Forgor password Block -->
+<div class="modal fade" id="forgotpswd"   role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top:15%;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Forgot Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+		 <label class="form-label" for="pwd">Password:</label>
+                            <input type="text" class="form-control form-rounded" placeholder="Your Email *" value="" />
+         </div>
+		 <div class="form-group">
+			<label class="form-label" for="pwd"> Your password will be mailed to the above email id.</label>
+		 </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Signup Block -->
+<div class="modal fade" id="signuphere"   role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top:15%;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Signup </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        
+        </button>
+      </div>
+      <div class="modal-body">
+         <div class="block-setting block1">
+						<div class="icon-block"><i class="fa fa-user fa-2x" aria-hidden="true"></i></div>
+						<div class="text-block"><a href="#">USER&emsp;<i class="fa fa-long-arrow-right  " aria-hidden="true"></i></a></div>
+					</div>
+					<div class="block-setting block2">
+						<div class="icon-block"><i class="fa fa-sitemap fa-2x" aria-hidden="true"></i></div>
+						<div class="text-block"><a href="#">ORGANIZATION&emsp;<i class="fa fa-long-arrow-right  " aria-hidden="true"></i></a></div>
+					</div>
+					<div class="block-setting block3">
+						<div class="icon-block"><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i></div>
+						<div class="text-block"><a href="#">VENDOR&emsp;<i class="fa fa-long-arrow-right animated  " aria-hidden="true"></i></a></div>
+					</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

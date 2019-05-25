@@ -1,0 +1,865 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Codemerx.WebForms</name>
+    </assembly>
+    <members>
+        <member name="T:Codemerx.jqGrid.Tools.jqGridDataFrame">
+            <summary>
+            jqGridDataFrame stores all the data send back as a response to jqGrid AJAX data request.
+            </summary>
+            <remarks>Create an instance of this class providing all the data required by the constructors.
+            Then use the <see cref="M:Codemerx.jqGrid.Tools.jqGridDataFrame.GetJSON"/> method to get the data back in JSON format.
+            The resulting string can then be sent back as a reply to jqGri AJAX data request.</remarks>
+        </member>
+        <member name="M:Codemerx.jqGrid.Tools.jqGridDataFrame.#ctor(System.Int32,System.Int32,System.Int32,Codemerx.jqGrid.Tools.JSONGridRow[],System.Collections.Hashtable)">
+            <summary>
+            Initializes an instance of <see cref="T:Codemerx.jqGrid.Tools.jqGridDataFrame"/>
+            </summary>
+            <param name="pageNumber">The number of data page to display in jqGrid</param>
+            <param name="allRowsCount">The total number of data records currently bound to jqGrid.</param>
+            <param name="pagesCount">The total number of pages in jqGrid.</param>
+            <param name="data"> An array of <see cref="T:Codemerx.jqGrid.Tools.JSONGridRow"/> objects. Each <see cref="T:Codemerx.jqGrid.Tools.JSONGridRow"/> object represents a single row of
+            data displayed by jqGrid.</param>
+            <param name="customData">Used to send custom data together with the response. jqGrid will not automatically display that data. It could be accessed by custome javascrpt code
+            on the client side, though.</param>
+        </member>
+        <member name="M:Codemerx.jqGrid.Tools.jqGridDataFrame.#ctor(System.Int32,System.Int32,System.Int32,Codemerx.jqGrid.Tools.JSONGridRow[],System.Collections.Hashtable,System.Web.Script.Serialization.JavaScriptSerializer)">
+            <summary>
+            Initializes an instance of <see cref="T:Codemerx.jqGrid.Tools.jqGridDataFrame"/>
+            </summary>
+            <param name="pageNumber">The number of the data page to display in jqGrid when this data frame is received.</param>
+            <param name="allRowsCount">The total number of data records currently bound to jqGrid.</param>
+            <param name="pagesCount">The total number of pages in jqGrid.</param>
+            <param name="data"> An array of <see cref="T:Codemerx.jqGrid.Tools.JSONGridRow"/> objects. Each <see cref="T:Codemerx.jqGrid.Tools.JSONGridRow"/> object represents a single row of
+            data displayed by jqGrid.</param>
+            <param name="customData">Used to send custom data together with the response. jqGrid will not automatically display that data. It could be accessed by custome javascrpt code
+            on the client side, though.</param>
+            <param name="customSerializer">A <see cref="T:System.Web.Script.Serialization.JavaScriptSerializer"/> used to do the JSON serialization. Using ths parameter
+            custom serialization properties can be provided </param>
+        </member>
+        <member name="M:Codemerx.jqGrid.Tools.jqGridDataFrame.GetJSON">
+            <summary>
+            Gets the JSON string that holds all the data in this instance of <see cref="T:Codemerx.jqGrid.Tools.jqGridDataFrame"/>
+            </summary>
+            <returns>The JSON string that holds all the data in this instance of <see cref="T:Codemerx.jqGrid.Tools.jqGridDataFrame"/></returns>
+        </member>
+        <member name="P:Codemerx.jqGrid.Tools.jqGridDataFrame.page">
+            <summary>
+            The number of data page to display in jqGrid.
+            </summary>
+        </member>
+        <member name="P:Codemerx.jqGrid.Tools.jqGridDataFrame.records">
+            <summary>
+            The total number of data records currently bound to jqGrid.
+            </summary>
+        </member>
+        <member name="P:Codemerx.jqGrid.Tools.jqGridDataFrame.rows">
+            <summary>
+            An array of <see cref="T:Codemerx.jqGrid.Tools.JSONGridRow"/> objects. Each <see cref="T:Codemerx.jqGrid.Tools.JSONGridRow"/> object represents a single row of
+            data displayed by jqGrid.
+            </summary>
+        </member>
+        <member name="P:Codemerx.jqGrid.Tools.jqGridDataFrame.total">
+            <summary>
+            The total number of pages in jqGrid.
+            </summary>
+        </member>
+        <member name="P:Codemerx.jqGrid.Tools.jqGridDataFrame.userdata">
+            <summary>
+            Used to send custom data together with the response. jqGrid will not automatically display that data. It could be accessed by custome javascrpt code
+            on the client side, though.
+            </summary>
+        </member>
+        <member name="T:Codemerx.jqGrid.Tools.JSONGridRow">
+            <summary>
+            Represents a jqGrid row in the data send back as a response to jqGrid AJAX data request.
+            </summary>
+        </member>
+        <member name="M:Codemerx.jqGrid.Tools.JSONGridRow.#ctor(System.String,System.Object[])">
+            <summary>
+            Initilizes a new instance of <see cref="T:Codemerx.jqGrid.Tools.JSONGridRow"/>.
+            </summary>
+            <param name="ID">The unique ID of the jqGrid row represented by this instance of <see cref="T:Codemerx.jqGrid.Tools.JSONGridRow"/></param>
+            <param name="cells">An array of objects representing the cell values of the jqGrid row represented by this instance of <see cref="T:Codemerx.jqGrid.Tools.JSONGridRow"/>.</param>The number of elements in this array should equal the number of columns defined in jqGrid colModel.
+        </member>
+        <member name="P:Codemerx.jqGrid.Tools.JSONGridRow.id">
+            <summary>
+            The unique ID of the jqGrid row represented by this instance of <see cref="T:Codemerx.jqGrid.Tools.JSONGridRow"/>
+            </summary>
+        </member>
+        <member name="P:Codemerx.jqGrid.Tools.JSONGridRow.cell">
+            <summary>
+            An array of objects representing the cell values of the jqGrid row represented by this instance of <see cref="T:Codemerx.jqGrid.Tools.JSONGridRow"/>.
+            The number of elements in this array should equal the number of columns defined in jqGrid colModel.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Events.AddEventArgs">
+            <summary>
+            The Adding event stores information about the added gri row in this class.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Events.AddEventArgs.NewColumnValues">
+            <summary>
+            A dictionary where the data source column name is the key and the user assigned value to that column is the value. 
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Events.DeleteEventArgs">
+            <summary>
+            The Deleting event stores the deletion information in an instance of this class.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Codemerx.WebForms.Events.DeleteEventArgs.ColumnValues" -->
+        <member name="P:Codemerx.WebForms.Events.DeleteEventArgs.RowID">
+            <summary>
+            The unique ID of the row to be deleted as assigned by Codemerx jqGrid when sending the data to the browser.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Events.EditEventArgs">
+            <summary>
+            The Editing event stores information about the grid row edit in this class.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Events.EditEventArgs.RowID">
+            <summary>
+            The unique ID of the row to be modified as assigned by Codemerx jqGrid when sending the data to the browser.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Events.EditEventArgs.NewColumnValues">
+            <summary>
+            A dictionary where the data source column name is the key and the user assigned value to that column is the value. 
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Events.EditEventArgs.OriginalColumnValues">
+            <summary>
+            A dictionary where the data source column name is the key and the value originally displayed to the user for that column is the value. 
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Events.PagingEventArgs">
+            <summary>
+            The Paging event uses this calss to store all the sorting properties.
+            </summary>
+            
+        </member>
+        <member name="P:Codemerx.WebForms.Events.PagingEventArgs.PageNumber">
+            <summary>
+            The page number.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Events.PagingEventArgs.PageSize">
+            <summary>
+            The number of rows the page contains.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Events.SearchEventArgs">
+            <summary>
+            The Searching event stores all the search properties in an instance of this class.
+            </summary>
+            
+        </member>
+        <member name="P:Codemerx.WebForms.Events.SearchEventArgs.SearchGroup">
+            <summary>
+            The <see cref="T:Codemerx.WebForms.Events.SearchGroup"/> storing the search data as provided by the user.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Events.SearchGroup">
+            <summary>
+            Defines the search conditions, i.e. the search operators (e.g. 'begibs with') and search strings (e.g. 'John'), for a set of columns together with the logical operator (e.g. AND) 
+            used to combine these search conditions.
+            </summary>
+            <remarks>A search group can also contain one or more SearchGroups. That allows expressing complex searches of the kind ColumnA == 'a' AND (ColumnB == true OR ColumnC == true).
+             ColumnA == 'a' will be a SearchGroup that contains another SearchGroup for ColumnB == true OR ColumnC == true.</remarks>
+             
+        </member>
+        <member name="P:Codemerx.WebForms.Events.SearchGroup.LogicalOperator">
+            <summary>
+            The logical operator (AND or OR) used to combine the search conditions in the SearchGroup.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Events.SearchGroup.ColumnsSearchConditions">
+            <summary>
+            A dictionary which has column names for keys and the search condition provided by the user for the respective column name for values.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Events.SearchGroup.SearchGroups">
+            <summary>
+            A list of SearchGroups combined with this SearchGroup via the LogicalOperator.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Events.SortingEventArgs">
+            <summary>
+            The sorting event uses this calss to store all the sorting properties.
+            </summary>
+            
+        </member>
+        <member name="P:Codemerx.WebForms.Events.SortingEventArgs.ColumnsSortOrders">
+            <summary>
+            A <see cref="T:System.Collections.Specialized.OrderedDictionary"/> which keys are column data source fields. The values are instances of <see cref="T:System.Web.UI.WebControls.SortDirection"/> enumeration.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Events.SortingEventArgs.ReplacementSortExpression">
+            <summary>
+            If set to a value different than empty string the grid will use this expression to perform sorting. Otherwise the grid will c onstruct its own sort expression.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Events.UpdatedEventArgs">
+            <summary>
+            Stores information about grid data update (add/edit/delete).
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Events.UpdatedEventArgs.Exception">
+            <summary>
+            The exception that might have occurred when performing the update operation that raised this event. NULL if no exception occurred.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Events.UpdatedEventArgs.Handled">
+            <summary>
+            The event handler sets this to true if it handles the exception. If not set to true the exception will be rethrown. Default value is false.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Events.UpdatedEventArgs.AffectedRows">
+            <summary>
+            The number of rows in the datasource that got changed as a result of the update operation.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.LogicalOperator">
+            <summary>
+            A list of logical operators used in various scenarios by Codemerx jqGrid.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.GridProperties.EditProperties">
+            <summary>
+            Exposes a number of properties that allow setting up editing the grid data.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.StateManagingItem">
+            <summary>
+            Internal class supporting Codemerx jqGrid infrastrucutre. Not intended for external usage.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Utilities.IDirtyStateManager">
+            <summary>
+            Internal class supporting Codemerx jqGrid infrastrucutre. Not intended for external usage.
+            </summary>
+        </member>
+        <member name="M:Codemerx.WebForms.StateManagingItem.SetDirty">
+            <summary>
+            Explicitly marks the view state as changed. Thus the view state will be recorded and sent to the client side even if no changes occurred.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.StateManagingItem.IsTrackingViewState">
+            <summary>
+            If true any changes made to the item will be recorded in the view state.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.EditProperties.EditOnClick">
+            <summary>
+            If true the contents of a given grid cell can be edited when the cell is clicked on. Default value is false.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.EditProperties.ToolbarEnabled">
+            <summary>
+            If set to true various data manipulation buttons will be displayed in jqGrid pager. This option has no effect if 
+            jqGrid pager is not displayed (<see cref="p:Codemerx.WebForms.GridProperties.PagingProperties.Pager"/>). Default value is true.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.EditProperties.DisplayAdd">
+            <summary>
+            If true an 'Add' button appears in jqGrid pager and allows adding new rows to the grid. Default value is true.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.EditProperties.DisplayDelete">
+            <summary>
+            If true an 'Delete' button appears in jqGrid pager and allows deleting grid rows. Default value is true.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.EditProperties.DisplayEdit">
+            <summary>
+            If true an 'Edit' button appears in jqGrid pager and allows editing grid rows. Default value is true.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.EditProperties.DisplayView">
+            <summary>
+            If true an 'View' button appears in jqGrid pager and allows detailed viewing grid rows. Default value is true.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.EditProperties.DisplayRefresh">
+            <summary>
+            If true an 'Refresh' button appears in jqGrid pager and allows refreshing grid. Default value is true.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.EditProperties.DisplaySearch">
+            <summary>
+            If true an 'Search' button appears in jqGrid pager and allows searching grid data. Default value is true.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.PageSize">
+            <summary>
+            Defines the size of a page of data in Codemerx jqGrid.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.PageSize.Size">
+            <summary>
+            A  integer specifying a page size that the user can choose in jqGrid pager. 
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.SelectItem">
+            <summary>
+            Holds an select control item.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.SelectItem.Item">
+            <summary>
+            A string in the format Label:Value. Label will get displayed in teh select control and Value will be posted to the server when Label is selected.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Searching.ColumnSearchCondition">
+            <summary>
+            Defines the search condition for a single grid column
+            </summary>
+            
+        </member>
+        <member name="P:Codemerx.WebForms.Searching.ColumnSearchCondition.SearchString">
+            <summary>
+            The value to search for
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Searching.ColumnSearchCondition.SearchOperator">
+            <summary>
+            The operator to apply to the search string.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.TextAlignment">
+            <summary>
+            The text allignments suported by Codemerx jqGrid.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Utilities.StateManagedPlainItemCollection`1">
+            <summary>
+            A collection of view state aware items. Exposes standard collection methods.
+            </summary>
+            <typeparam name="Member"> </typeparam>
+        </member>
+        <member name="T:Codemerx.WebForms.StateManagingItemsCollection`1">
+            <summary>
+            A collection of view state aware items that might in turn be also such collections. Exposes standard collection methods.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Utilities.ICompoundStateManager">
+            <summary>
+            Internal class supporting Codemerx jqGrid infrastrucutre. Not intended for external usage.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Column">
+            <summary>
+            Represents a Codemerx jqGrid column and all its properties.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.Utilities.CompoundStateManagingItem">
+            <summary>
+            Internal class supporting Codemerx jqGrid infrastrucutre. Not intended for external usage.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.ColumnCssClass">
+            <summary>"The CSS Class to be applied only to this column, if any.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.DataSourceField">
+            <summary>
+            The name of the data source column that provides the values in this column.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.Hidden">
+            <summary>
+            If true HTML markup for the column will be generated but the grid will not display the column.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.Editable">
+            <summary>
+            If true the column will be editable.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.Title">
+            <summary>
+            A custom title to be displayed as a column header. By default the data source field name will be displayed there.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.DataSourcePrimaryKey">
+            <summary>
+            True if the data source field for this column is a primary key.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.Resizable">
+            <summary>
+            If true the user will be able to resize the column.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.Searchable">
+            <summary>
+            If false searches on this column contents will be impossible.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.DefaultSearchValue">
+            <summary>
+            The default search string to be displayed for this column when the user initiates search.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.SearchOperators">
+            <summary>
+            The search operations applicable to this colum, e.g. 'begins with', 'greater than', etc.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.SearchControlType">
+            <summary>
+            The type of search this column supports. If TextBox gets chosen the user can supply random search string. DropDown provides a finite set of predefined choices.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.SearchSelectControlConstants">
+            <summary>
+            The possible search values in the dropdown if SearchControlType is DropDown. Ignored otherwise.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.ToolTip">
+            <summary>
+            If ture a tooltip will be shown when hovering over a cell in this column.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.Sortable">
+            <summary>
+            If true the user can sort the grid based on this column.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.TextAlign">
+            <summary>
+            The alignment of the text in the column.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.Column.Width">
+            <summary>
+            The column width.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.SearchControlType">
+            <summary>
+            Defines the types of controls that can be used in search.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.GridProperties.DataDisplayProperties">
+            <summary>
+            Exposes a number of settings that define how Codemerx jqGrid displays the data it is bound to.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.DataDisplayProperties.Viewrecords">
+            <summary>
+            If true jqGrid will display the total number of records in the pager bar.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.DataDisplayProperties.PagingProperties">
+            <summary>
+            A collection of all the settings affecting jqGrid paging.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.DataDisplayProperties.SortingProperties">
+            <summary>
+            A collection of all the settings affecting jqGrid sorting.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.DataDisplayProperties.AutoEncode">
+            <summary>
+            If true the grid HTML encodes the incoming  and posted data. Corresponds to jqGrid option 'autoencode'. 
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.DataDisplayProperties.TextDirectionRightToLeft">
+            <summary>
+            If set to true jqGrid displays text right to left. Default value is false. Corresponds to jqGrid option 'direction'.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.DataDisplayProperties.NumberRows">
+            <summary>
+            If set to true an additional column showing the row number is added to the grid. Default value is false. Correspons to jqGrid option 'rownumbers'.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.GridProperties.InColumnSearchProperties">
+            <summary>
+            The values of the properties of this class define the set up of Codemerx jqGrid in column search.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.InColumnSearchProperties.ShowAlways">
+            <summary>
+            If true the grid will always display an extra row of text/select input fields which values could be used to search the gird data.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.InColumnSearchProperties.SearchOnEnter">
+            <summary>
+            If true the search will start when 'Enter' is pressed in the search field. Otherwise search will start immediately when a new character is typed in the search field.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.InColumnSearchProperties.DisplaySearchOperators">
+            <summary>
+            Displays a selection of <see cref="T:Codemerx.WebForms.SearchOperator"/> in each column for the user to choose from when searching.
+            The search actions available for each column are taken from <see cref="P:Codemerx.WebForms.Column.SearchOperators"/>.
+            By default all search actions are enabled in <see cref="P:Codemerx.WebForms.Column.SearchOperators"/>.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.InColumnSearchProperties.DefaultSearchAction">
+            <summary>
+            The search action to be applied if nothing gets chosen explicitly by the user. By default this is set to "Begins With". 
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.InColumnSearchProperties.GroupingOperator">
+            <summary>
+            Defines the logical grouping of the search values for the grid columns. By default this is set to AND.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.GridProperties.PagingProperties">
+            <summary>
+            Holds various properties that define COdemerx jqGrid paging behavior.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.PagingProperties.CurrentPage">
+            <summary>
+            The number of the page to be displayed in jqGrid.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.PagingProperties.Pager">
+            <summary>
+            If true jqGrid will display a pager.
+            </summary>
+            <remarks>The pager is a collection of UI elements that enable navigation in paged data. Using the pager one could open the next or previous page or 
+            jump to a random page .
+            </remarks>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.PagingProperties.PageSize">
+            <summary>
+            Specifies how many records should be placed on each jqGrid page.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.PagingProperties.PageSizePicker">
+            <summary>
+            Specifies the possible page sizes the user will be able to choose from in the jqGrid pager.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.PagingProperties.VirtualScroll">
+            <summary>
+            When set to a value different than VirtualScrollKind.None enables scroll virtualization in the grid. Default value is VirtualScrollKind.None.
+            Correspons to jqGrid option 'scroll'.
+            </summary>
+            <remarks>
+            With scroll virtualization enabled the user experience is the same as if all the avalable data is loaded initially and one can just scroll up and down
+            through it. Paging can be disabled in this mode. In order for this to work in the background the grid requests new pages of data from the server when the scroll position changes.
+            If this property is set to VirtualScrollKind.Dynamic the grid keeps on the client side only the last page of data loaded. If set to VirtualScrollKind.AllRowsUpToCurrentPosition
+            the gri keeps on the client side all the data pages up to the current scroll position.
+            </remarks>
+        </member>
+        <member name="T:Codemerx.WebForms.SearchOperatorHolder">
+            <summary>
+            Holds a search operator supported by jqGrid, e.g. 'begins with','greater than', etc.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.SearchOperator">
+            <summary>
+            A search operator supported by jqGrid
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.GridProperties.SortingProperties">
+            <summary>
+            Defines the sorting properties of Codemerx jqGrid.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.SortingProperties.MultiSort">
+            <summary>
+            If true jqGrid can be sorted on more than one column. Otherwise jqGrid can be sorted on singel column only. 
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.SortingProperties.ColumnsInitialSortOrder">
+            <summary>
+            Determines which columns should be sorted and in what direction.
+            </summary>
+            <remarks> <para>The <see cref="P:Codemerx.WebForms.Column.DataSourceField"/> value should be used as a key in this dictionary. <see cref="T:System.Web.UI.WebControls.SortDirection"/>
+            should be used as value.</para> 
+            <para>Putting more than one value in will not have effect unless <see cref="P:Codemerx.WebForms.GridProperties.SortingProperties.MultiSort"/> is set to true.</para> 
+            <para>The columns will be sorted in the same order they are added to this dictionary, i.e. if column A is added first and column B second then A will be sorted first and 
+            then B will be sorted preserving the sorting of A.</para>
+            <para>To set this value in ASP.NET markup use the following format "ColumnName1 asc, ColumnName2 desc,...."</para></remarks>
+        </member>
+        <member name="T:Codemerx.WebForms.GridProperties.VisualProperties">
+            <summary>
+            The properties of this class define the appearance of Codemerx jqGrid.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.Language">
+            <summary>
+            Use CultureInfo.ThreeLetterISOLanguageName value to set this property. Supports ISO639-2 values
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.Theme">
+            <summary>
+            Choses one of the predefined CSS themes to apply to this instance of jqGrid.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.Caption">
+            <summary>
+            Gets or sets the grid caption.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.AutoHeight">
+            <summary>
+            If ture jqGrid will set its height to the smallest possible value that makes vertical scroll unnecessary.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.AlternatingRowColor">
+            <summary>
+            If set to true two different colors will be used for row background and no two adjacent rows will have the same color. False by default. 
+            Corresponds to jqGrid option 'altRows'.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.AutoWidth">
+            <summary>
+            If true the grid width is set to the width of the parent element. This happens upon initialization only and does not automatically reflect changes later on in
+            application lifetime. Dfault value is false. Corresponds to jqGrid option 'autowidth'.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.GridEmptyMessage">
+            <summary>
+            The custom message to be displayed inside the grid when the server returns 0 rows of data.Corresponds to jqGrid option 'emptyrecords'.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.ForceFitColumns">
+            <summary>
+            If set to true when a column width gets changed by the user the other column widths change accordingly so that no horizontal scrollbar is needed. 
+            Default value is false.
+            Corresponds to jqGrid option 'forceFit'.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.ShowCollapsed">
+            <summary>
+            If set to true initially just the grid caption and an expander are visible. No data is loaded at this point. The gri gets displayed and the data loaded when the user
+            clcks on the expander. Default value is false.
+            Corresponds to jqGrid option 'hiddengrid'.
+            </summary>
+            <remarks>The Caption property must have a value for this property to function correctly.</remarks>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.ShowExpandCollapseButton">
+            <summary>
+            If set to true an expander is displayed next to the grid caption that allows expanding and collapsing the grid rows. Default value is false.
+            Corresponds to jqGrid option 'hidegrid'.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.HooverCursorOverRows">
+            <summary>
+            If set to false there is no visible effect of hoovering over the grid rows.Default value is true. Corresponds to jqGrid option 'hoverrows'.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.LoadingMessage">
+            <summary>
+            The custom message to display while loading data from the server. Corresponds to jqGrid option 'loadtext'.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.GridProperties.VisualProperties.BlockOnLoad">
+            <summary>
+            If true all actions on the grid will be disabled while loading data. Default value is false. Corresponds to jqGrid option 'loadui:block'.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.jqGrid">
+            <summary>
+            The Codemerx jqGrid ASP.NET Webforms server control.
+            </summary>
+            
+        </member>
+        <member name="M:Codemerx.WebForms.jqGrid.OnPaging(Codemerx.WebForms.Events.PagingEventArgs)">
+            <summary>
+            Handles the Paging event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Codemerx.WebForms.jqGrid.OnSorting(Codemerx.WebForms.Events.SortingEventArgs)">
+            <summary>
+            Handles the Sorting event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Codemerx.WebForms.jqGrid.OnSearching(Codemerx.WebForms.Events.SearchEventArgs)">
+            <summary>
+            Handles the Searching event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Codemerx.WebForms.jqGrid.OnEdited(Codemerx.WebForms.Events.UpdatedEventArgs)">
+            <summary>
+            Handles the Edited event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Codemerx.WebForms.jqGrid.OnDeleted(Codemerx.WebForms.Events.UpdatedEventArgs)">
+            <summary>
+            Handles the Deleted event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Codemerx.WebForms.jqGrid.OnAdded(Codemerx.WebForms.Events.UpdatedEventArgs)">
+            <summary>
+            Handles the Added event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Codemerx.WebForms.jqGrid.OnEditing(Codemerx.WebForms.Events.EditEventArgs)">
+            <summary>
+            Handles the Editing event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Codemerx.WebForms.jqGrid.OnDeleting(Codemerx.WebForms.Events.DeleteEventArgs)">
+            <summary>
+            Handles the Deleting event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Codemerx.WebForms.jqGrid.OnAdding(Codemerx.WebForms.Events.AddEventArgs)">
+            <summary>
+            Handles the Adding event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Codemerx.WebForms.jqGrid.IsBindableType(System.Type)">
+            <summary>
+            Similarly to Microsoft Web Forms controls IsBindableType methods overriding this method enables automatically filtering what data types the 
+            grid can display. If this method returns true on the data type of a data source schema field a grid column will get generated
+            for that field. Otherwise the grid will not display that field.
+            </summary>
+            <param name="type">The type to check.</param>
+            <returns></returns>
+        </member>
+        <member name="E:Codemerx.WebForms.jqGrid.Editing">
+            <summary>
+            Raised after new values for an edited row are submitted to the server but BEFORE anything gets written to the database
+            </summary>
+        </member>
+        <member name="E:Codemerx.WebForms.jqGrid.Edited">
+            <summary>
+            Raised after new values for an edited row are written to the database
+            </summary>
+        </member>
+        <member name="E:Codemerx.WebForms.jqGrid.Deleting">
+            <summary>
+            Raised after a delete request is submitted to the server but BEFORE anything gets written to the database
+            </summary>
+        </member>
+        <member name="E:Codemerx.WebForms.jqGrid.Deleted">
+            <summary>
+            Raised after a delete is executed in the database
+            </summary>
+        </member>
+        <member name="E:Codemerx.WebForms.jqGrid.Adding">
+            <summary>
+            Raised after a new data row is submitted to the server but BEFORE anything gets written to the database
+            </summary>
+        </member>
+        <member name="E:Codemerx.WebForms.jqGrid.Added">
+            <summary>
+            Raised after a new data row is written to the database
+            </summary>
+        </member>
+        <member name="E:Codemerx.WebForms.jqGrid.Searching">
+            <summary>
+            Raised BEFORE the grid searches the data based on the user provided search criteria.
+            </summary>
+        </member>
+        <member name="E:Codemerx.WebForms.jqGrid.Sorting">
+            <summary>
+            Raised BEFORE the grid sorts the data.
+            </summary>
+        </member>
+        <member name="E:Codemerx.WebForms.jqGrid.Paging">
+            <summary>
+            Raised BEFORE the grid pages the data.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.Columns">
+            <summary>
+            The grid columns.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.DataURL">
+            <summary>
+            The URL that the grid uses to requet data. Setting this to a custom value allows manuallly parsing requests and sending data to the grid.
+            The default value lets each instance of Codemerx jqGrid handle its own data requests automatically using the data source it is bound to.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.EditURL">
+            <summary>
+            The URL that the grid uses to send edit/add/delete requests. Setting this to a custom value allows manual handling of these requests.
+            The default value lets each instance of Codemerx jqGrid handle these requests automatically using the data source it is bound to.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.LoadOnce">
+            <summary>
+            If true all the data is sent to the client side on the first request. Any further manipulations to the data (e.g. paging, sorting, filtering, search, etc.) are done on the client side.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.MultiSelect">
+            <summary>
+            If true the grid allows selecting more than one row. Default value is false.  Corresponds to jqGrid option 'multiselect'.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.AddjQueryJSToPage">
+            <summary>
+            If true the jQuery version used by Codemerx jqGrid will be added to the page where the grid resides. jQuery should
+            be manually added to page for Codemerx jqGrid to function properly if this property is set to false. true by default.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.AddjqGridJSToPage">
+            <summary>
+            If true the jqGrid Javascript code will be added to the page where Codemerx jqGrid resides. If set to false a version of jqGrid source
+            should be manually added to page for Codemerx jqGrid to function properly. true by default.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.AddjqGridCSSToPage">
+            <summary>
+            If true the jqGrid CSS file will be added to the head of the page. If false a version of the jqGrid CSS file should be manually added to the page 
+            for Codemerx jqGrid to function properly. true by default.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.AddjQueryThemeToPage">
+            <summary>
+            If true a JQuery CSS theme file will be added to the head of the page. If false a version of the JQuery CSS theme should be manually added to the page 
+            for Codemerx jqGrid to function properly. true by default.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.AddjqGridLocaleToPage">
+            <summary>
+            If true the jqGrid locale Javascript file will be added to the head of the page. If false a version of the jqGrid locale Javascript  file should be manually added to the page 
+            for Codemerx jqGrid to function properly. true by default.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.DataDisplayProperties">
+            <summary>
+            A collection of properties defining how jqGrid displays data.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.VisualProperties">
+            <summary>
+            A collection of properties defining how jqGrid looks like.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.InColumnSearchProperties">
+            <summary>
+            A collection of properties defining how jqGrid in column search behaves when enabled.
+            </summary>
+        </member>
+        <member name="P:Codemerx.WebForms.jqGrid.EditProperties">
+            <summary>
+            A collection of properties defining the appearance and behavior of jqGrid navigation.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.ThemerollerThemes">
+            <summary>
+            The JQuery Themeroller themes provided by Codemerx jqGrid.
+            </summary>
+        </member>
+        <member name="T:Codemerx.WebForms.VirtualScrollKind">
+            <summary>
+            The virtual scrolling modes supported by Codemerx jqGrid.
+            </summary>
+        </member>
+    </members>
+</doc>
