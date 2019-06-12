@@ -1,0 +1,530 @@
+﻿.add
+{
+    background: #0276FD url(../images/icons/add.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .add:hover, .add:focus
+    {
+        background: #499DF5 url(../images/icons/add.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.log_in
+{
+    background: #0276FD url(../images/icons/lock_open.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .log_in:hover, .log_in:focus
+    {
+        background: #499DF5 url(../images/icons/lock_open.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.fgtpwd
+{
+    background: #0276FD url(../images/icons/help.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .fgtpwd:hover, .fgtpwd:focus
+    {
+        background: #499DF5 url(../images/icons/help.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.ok
+{
+    background: #0276FD url(../images/icons/tick.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .ok:hover, .ok:focus
+    {
+        background: #499DF5 url(../images/icons/tick.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.close
+{
+    background: #0276FD url(../images/icons/cross.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .close:hover, .close:focus
+    {
+        background: #499DF5 url(../images/icons/cross.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.refresh
+{
+    background: #0276FD url(../images/icons/arrow_rotate_anticlockwise.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .refresh:hover, .refresh:focus
+    {
+        background: #499DF5 url(../images/icons/arrow_rotate_anticlockwise.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.save
+{
+    background: #8fc857 url(../images/icons/disk.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .save:hover, .save:focus
+    {
+        background: #8fbb44 url(../images/icons/disk.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.export
+{
+    background: #0276FD url(../images/icons/export_excel.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .export:hover, .export:focus
+    {
+        background: #499DF5 url(../images/icons/export_excel.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.edit
+{
+    background: #0276FD url(../images/icons/pencil.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .edit:hover, .edit:focus
+    {
+        background: #499DF5 url(../images/icons/pencil.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.del
+{
+    background: #0276FD url(../images/icons/bin.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .del:hover, .del:focus
+    {
+        background: #499DF5 url(../images/icons/bin.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.upl
+{
+    background: #0276FD url(../images/icons/upload.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .upl:hover, .upl:focus
+    {
+        background: #499DF5 url(../images/icons/upload.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.load
+{
+    background: #0276FD url(../images/icons/Load.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .load:hover, .load:focus
+    {
+        background: #499DF5 url(../images/icons/Load.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.clr
+{
+    background: #0276FD url(../images/icons/clear.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .clr:hover, .clr:focus
+    {
+        background: #499DF5 url(../images/icons/clear.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.cpy
+{
+    background: #0276FD url(../images/icons/copy.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .cpy:hover, .cpy:focus
+    {
+        background: #499DF5 url(../images/icons/copy.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.rej
+{
+    background: #0276FD url(../images/icons/delet_cancel.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .rej:hover, .rej:focus
+    {
+        background: #499DF5 url(../images/icons/delet_cancel.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.bck
+{
+    background: #0276FD url(../images/icons/back.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .bck:hover, .bck:focus
+    {
+        background: #499DF5 url(../images/icons/back.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.imp
+{
+    background: #0276FD url(../images/icons/import.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .imp:hover, .imp:focus
+    {
+        background: #499DF5 url(../images/icons/import.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.nxt
+{
+    background: #0276FD url(../images/icons/forward.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .nxt:hover, .nxt:focus
+    {
+        background: #499DF5 url(../images/icons/forward.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.rcv
+{
+    background: #0276FD url(../images/icons/inbox.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .rcv:hover, .rcv:focus
+    {
+        background: #499DF5 url(../images/icons/inbox.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.go
+{
+    background: #0276FD url(../images/icons/right.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .go:hover, .go:focus
+    {
+        background: #499DF5 url(../images/icons/right.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.rtn
+{
+    background: #0276FD url(../images/icons/retain.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .rtn:hover, .rtn:focus
+    {
+        background: #499DF5 url(../images/icons/retain.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.rmnd
+{
+    background: #0276FD url(../images/icons/clock.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .rmnd:hover, .rmnd:focus
+    {
+        background: #499DF5 url(../images/icons/clock.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.cnvrt
+{
+    background: #0276FD url(../images/icons/money.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .cnvrt:hover, .cnvrt:focus
+    {
+        background: #499DF5 url(../images/icons/money.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.print
+{
+    background: #0276FD url(../images/icons/printer.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .print:hover, .print:focus
+    {
+        background: #499DF5 url(../images/icons/printer.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.hist
+{
+    background: #0276FD url(../images/icons/history.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .hist:hover, .hist:focus
+    {
+        background: #499DF5 url(../images/icons/history.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.email
+{
+    background: #0276FD url(../images/icons/email.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .email:hover, .email:focus
+    {
+        background: #499DF5 url(../images/icons/email.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.park
+{
+    background: #0276FD url(../images/icons/park.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .park:hover, .park:focus
+    {
+        background: #499DF5 url(../images/icons/park.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.ext
+{
+    background: #0276FD url(../images/icons/expand.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .ext:hover, .ext:focus
+    {
+        background: #499DF5 url(../images/icons/expand.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.fwd
+{
+    background: #0276FD url(../images/icons/forwarddouble.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .fwd:hover, .fwd:focus
+    {
+        background: #499DF5 url(../images/icons/forwarddouble.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.batch
+{
+    background: #0276FD url(../images/icons/database_run.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .batch:hover, .batch:focus
+    {
+        background: #499DF5 url(../images/icons/database_run.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.attachment
+{
+    background: #0276FD url(../images/icons/attachmentblue.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .attachment:hover, .attachment:focus
+    {
+        background: #499DF5 url(../images/icons/attachmentblue.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.start
+{
+    background: #0276FD url(../images/icons/play-green.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .start:hover, .start:focus
+    {
+        background: #499DF5 url(../images/icons/play-green.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+
+.end
+{
+    background: #0276FD url(../images/icons/player_stop.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .end:hover, .end:focus
+    {
+        background: #499DF5 url(../images/icons/player_stop.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.lst
+{
+    background: #0276FD url(../images/icons/list_all_participants.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .lst:hover, .lst:focus
+    {
+        background: #499DF5 url(../images/icons/list_all_participants.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.timesheet
+{
+    background: #0276FD url(../images/icons/event_time.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .timesheet:hover, .timesheet:focus
+    {
+        background: #499DF5 url(../images/icons/event_time.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.sync
+{
+    background: #0276FD url(../images/icons/recur.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .sync:hover, .sync:focus
+    {
+        background: #499DF5 url(../images/icons/recur.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.addItem
+{
+    background: #0276FD url(../images/icons/1411060754_add.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .addItem:hover, .addItem:focus
+    {
+        background: #499DF5 url(../images/icons/1411060754_add.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.import
+{
+    background: #0276FD url(../images/icons/1411060749_emblem-downloads.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .import:hover, .import:focus
+    {
+        background: #499DF5 url(../images/icons/1411060749_emblem-downloads.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.crop
+{
+    background: #0276FD url(../images/icons/1411666582_image-crop.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .crop:hover, .crop:focus
+    {
+        background: #499DF5 url(../images/icons/1411666582_image-crop.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.transfer
+{
+    background: #0276FD url(../images/icons/LORRY.PNG) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .transfer:hover, .transfer:focus
+    {
+        background: #499DF5 url(../images/icons/LORRY.PNG) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.accclass
+{
+    background: #0276FD url(../images/icons/chart_organisation.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .accclass:hover, .accclass:focus
+    {
+        background: #499DF5 url(../images/icons/chart_organisation.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }
+
+.search
+{
+    background: #0276FD url(../images/icons/magnifier.png) no-repeat center center;
+    background-position: 5px 40% !important;
+}
+
+    .search:hover, .search:focus
+    {
+        background: #499DF5 url(../images/icons/magnifier.png) no-repeat center center;
+        background-position: 5px 40% !important;
+    }

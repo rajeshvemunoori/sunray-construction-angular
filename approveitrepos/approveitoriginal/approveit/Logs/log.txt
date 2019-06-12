@@ -1,0 +1,82 @@
+Get Accounts_C# (erGetClassificDetails) START:2015.05.08 05:54:57.8040
+Get Accounts_C# (erGetClassificDetails) END:2015.05.08 05:54:57.9132
+Get Classes_C# (getClassRef) START:2015.05.08 05:54:57.9288
+Get Classes_C# (getClassRef) END:2015.05.08 05:54:57.9912
+Get Drafts_C# (getDraftItems) START:2015.05.08 05:54:58.0224
+Get Drafts_C# (getDraftItems) END:2015.05.08 05:54:58.0692
+Get Budget Details_C# (getDeptBudgCetDetails) START:2015.05.08 05:55:08.6305
+Get Budget Details_C# (getDeptBudgetDetails) END:2015.05.08 05:55:08.7709
+Get Drafts_C# (getDraftItems) START:2015.05.08 05:55:23.2166
+Get Drafts_C# (getDraftItems) END:2015.05.08 05:55:23.2478
+Add Drafts_C# (addExpensewithDrafts) START:2015.05.08 05:55:29.4254
+Add Drafts_C# (addExpensewithDrafts) END:2015.05.08 05:55:29.5814
+Check Similar Vendor_C# (checkVendorExist) START:2015.05.08 05:55:33.4034
+Check Similar Vendor_C# (checkVendorExist) END:2015.05.08 05:55:33.4502
+
+Get Accounts_C# (erGetClassificDetails) START:2015.05.08 08:13:13.7435
+Get Accounts_C# (erGetClassificDetails) END:2015.05.08 08:13:13.9151
+Get Classes_C# (getClassRef) START:2015.05.08 08:13:13.9307
+Get Classes_C# (getClassRef) END:2015.05.08 08:13:14.0243
+Get Drafts_C# (getDraftItems) START:2015.05.08 08:13:14.0555
+Get Drafts_C# (getDraftItems) END:2015.05.08 08:13:14.0867
+Get Budget Details_C# (getDeptBudgCetDetails) START:2015.05.08 08:13:18.8759
+Get Budget Details_C# (getDeptBudgetDetails) END:2015.05.08 08:13:19.0319
+Add Drafts_C# (addExpensewithDrafts) START:2015.05.08 08:13:45.0371
+Add Drafts_C# (addExpensewithDrafts) END:2015.05.08 08:13:45.2399
+Check Similar Vendor_C# (checkVendorExist) START:2015.05.08 08:13:49.9044
+Check Similar Vendor_C# (checkVendorExist) END:2015.05.08 08:13:49.9668
+
+Get Accounts_C# (erGetClassificDetails) START:2015.05.08 08:25:07.1639
+Get Accounts_C# (erGetClassificDetails) END:2015.05.08 08:25:07.2263
+Get Classes_C# (getClassRef) START:2015.05.08 08:25:07.2263
+Get Classes_C# (getClassRef) END:2015.05.08 08:25:07.2887
+Get Drafts_C# (getDraftItems) START:2015.05.08 08:25:07.3043
+Get Drafts_C# (getDraftItems) END:2015.05.08 08:25:07.3355
+Get Budget Details_C# (getDeptBudgCetDetails) START:2015.05.08 08:25:12.7799
+Get Budget Details_C# (getDeptBudgetDetails) END:2015.05.08 08:25:12.8735
+Add Drafts_C# (addExpensewithDrafts) START:2015.05.08 08:25:42.3573
+Add Drafts_C# (addExpensewithDrafts) END:2015.05.08 08:25:42.4977
+Check Similar Vendor_C# (checkVendorExist) START:2015.05.08 08:25:52.2946
+Check Similar Vendor_C# (checkVendorExist) END:2015.05.08 08:25:52.3726
+
+
+Get Accounts_C# (erGetClassificDetails) START:2015.05.08 09:04:25.7641
+Get Accounts_C# (erGetClassificDetails) END:2015.05.08 09:04:25.8733
+Get Classes_C# (getClassRef) START:2015.05.08 09:04:25.8889
+Get Classes_C# (getClassRef) END:2015.05.08 09:04:25.9357
+Get Drafts_C# (getDraftItems) START:2015.05.08 09:04:25.9669
+Get Drafts_C# (getDraftItems) END:2015.05.08 09:04:26.0137
+Get Budget Details_C# (getDeptBudgCetDetails) START:2015.05.08 09:04:30.2413
+Get Budget Details_C# (getDeptBudgetDetails) END:2015.05.08 09:04:30.3661
+Add Drafts_C# (addExpensewithDrafts) START:2015.05.08 09:05:08.3835
+Add Drafts_C# (addExpensewithDrafts) END:2015.05.08 09:05:08.5395
+Check Similar Vendor_C# (checkVendorExist) START:2015.05.08 09:05:14.9043
+Check Similar Vendor_C# (checkVendorExist) END:2015.05.08 09:05:14.9355
+
+
+Get Accounts_C# (erGetClassificDetails) START:2015.05.08 09:21:51.1838
+Get Accounts_C# (erGetClassificDetails) END:2015.05.08 09:21:51.2306
+Get Classes_C# (getClassRef) START:2015.05.08 09:21:51.2462
+Get Classes_C# (getClassRef) END:2015.05.08 09:21:51.2930
+Get Drafts_C# (getDraftItems) START:2015.05.08 09:21:51.3086
+Get Drafts_C# (getDraftItems) END:2015.05.08 09:21:51.3398
+Get Budget Details_C# (getDeptBudgCetDetails) START:2015.05.08 09:21:58.6719
+Get Budget Details_C# (getDeptBudgetDetails) END:2015.05.08 09:21:58.7655
+Add Drafts_C# (addExpensewithDrafts) START:2015.05.08 09:22:44.0841
+Add Drafts_C# (addExpensewithDrafts) END:2015.05.08 09:22:44.2401
+Check Similar Vendor_C# (checkVendorExist) START:2015.05.08 09:22:47.9529
+Check Similar Vendor_C# (checkVendorExist) END:2015.05.08 09:22:48.0153
+Get Drafts_C# (getDraftItems) START:2015.05.09 13:26:40.9892
+Get Drafts_C# (getDraftItems) END:2015.05.09 13:26:41.8853
+Get Accounts_C# (erGetClassificDetails) START:2015.05.09 13:45:02.8792
+Get Accounts_C# (erGetClassificDetails) END:2015.05.09 13:45:06.1654
+Get Classes_C# (getClassRef) START:2015.05.09 13:45:06.1804
+Get Classes_C# (getClassRef) END:2015.05.09 13:45:12.7208
+Get Drafts_C# (getDraftItems) START:2015.05.09 13:45:12.7408
+Get Drafts_C# (getDraftItems) END:2015.05.09 13:45:13.3298
+Get Accounts_C# (erGetClassificDetails) START:2015.05.09 13:54:44.6295
+Get Accounts_C# (erGetClassificDetails) END:2015.05.09 13:54:47.8937
+Get Classes_C# (getClassRef) START:2015.05.09 13:54:47.9047
+Get Classes_C# (getClassRef) END:2015.05.09 13:54:59.5734
+Get Drafts_C# (getDraftItems) START:2015.05.09 13:54:59.6104
+Get Drafts_C# (getDraftItems) END:2015.05.09 13:55:00.1974

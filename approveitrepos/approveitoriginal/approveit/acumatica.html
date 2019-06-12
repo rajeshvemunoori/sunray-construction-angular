@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        var filteredProj = [];
+        $(document).ready(function () {
+            abc();
+        });
+
+        function abc() {
+            document.getElementById("prg").style.display = "block";
+            $.ajax({
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                url: "http://xmskiran/AcumaticaERP/OData/Z%20Project%20Summary/?$format=json",
+                data: "",
+                dataType: "json",
+                beforeSend: function (xhr) {                    
+                    xhr.setRequestHeader('Authorization', 'Basic ' + btoa('admin:Eclipse@123'));
+                },
+                success: function (data) {
+                    var retStr = data;
+                    var mainData = retStr.value;
+                    console.log("mainData: " + JSON.stringify(mainData));
+                    for (var i = 0; i < mainData.length; i++) {
+                        if (mainData[i].Project == "P1        ")
+                            filteredProj = mainData[i];
+                    }
+                    console.log("filteredProj: " + JSON.stringify(filteredProj));
+                    document.getElementById("lblProjDesc").innerHTML = filteredProj.Description;
+                    document.getElementById("lblProjName").innerHTML = filteredProj.Project;
+                    document.getElementById("lblOriginalContract").innerHTML = parseFloat(filteredProj.OriginalContract).toFixed(2);
+                    document.getElementById("llOriginalEstimate").innerHTML = parseFloat(filteredProj.OriginalEstimate).toFixed(2);
+                    document.getElementById("lblOriginalProfit").innerHTML = (parseFloat(filteredProj.OriginalContract) - parseFloat(filteredProj.OriginalEstimate)).toFixed(2);
+                    document.getElementById("lblOriginalMarkup").innerHTML = ((parseFloat(filteredProj.OriginalContract) - parseFloat(filteredProj.OriginalEstimate)) / parseFloat(filteredProj.OriginalEstimate)).toFixed(2);
+                    document.getElementById("lblChangeOrders").innerHTML = parseFloat(filteredProj.ApprovedContractChanges).toFixed(2);
+                    document.getElementById("lblEstimateChanges").innerHTML = 0.000;
+                    document.getElementById("lblRevisedContract").innerHTML = parseFloat(filteredProj.RevisedContract).toFixed(2);
+                    document.getElementById("lblRevisedEstimate").innerHTML = parseFloat(filteredProj.RevisedEstimate).toFixed(2);
+                    document.getElementById("lblRevisedProfit").innerHTML = (parseFloat(filteredProj.RevisedContract) - parseFloat(filteredProj.RevisedEstimate)).toFixed(2);
+                    document.getElementById("lblRevisedMarkup").innerHTML = (parseFloat(filteredProj.RevisedEstimate) != 0 ? ((parseFloat(filteredProj.RevisedContract) - parseFloat(filteredProj.RevisedEstimate)) / parseFloat(filteredProj.RevisedEstimate)) : 0.000).toFixed(2);
+                    document.getElementById("prg").style.display = "none";
+                },
+                error: function (result) {
+                    console.log("error: " + JSON.stringify(result));
+                    document.getElementById("prg").style.display = "none";
+                }
+            });
+        }
+    </script>
+    <style>
+        table, th, td {
+            font-size: 1.1em;
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+            table#t01 tr:nth-child(odd) {
+                background-color: #eee;
+            }
+
+            table#t01 tr:nth-child(even) {
+                background-color: #fff;
+            }
+
+            table#t01 th {
+                background-color: cadetblue;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <progress id="prg" style="display: none"></progress>
+    <table id="t01">
+        <tr>
+            <th colspan="8">Profit Analysis For
+                        <label id="lblProjDesc"></label>
+                -
+                        <label id="lblProjName"></label>
+            </th>
+        </tr>
+        <tr>
+            <th colspan="2">Contract</th>
+            <th colspan="2">Estimate</th>
+            <th colspan="2">Profit</th>
+            <th colspan="2">Markup</th>
+        </tr>
+        <tr>
+            <td>Original Contract</td>
+            <td>
+                <label id="lblOriginalContract"></label>
+            </td>
+            <td>Original Estimate</td>
+            <td>
+                <label id="llOriginalEstimate"></label>
+            </td>
+            <td>Original Profit</td>
+            <td>
+                <label id="lblOriginalProfit"></label>
+            </td>
+            <td>Original Markup</td>
+            <td>
+                <label id="lblOriginalMarkup"></label>
+            </td>
+        </tr>
+        <tr>
+            <td>Change Orders</td>
+            <td>
+                <label id="lblChangeOrders"></label>
+            </td>
+            <td>Estimate Changes</td>
+            <td>
+                <label id="lblEstimateChanges"></label>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Revised Contract</td>
+            <td>
+                <label id="lblRevisedContract"></label>
+            </td>
+            <td>Revised Estimate</td>
+            <td>
+                <label id="lblRevisedEstimate"></label>
+            </td>
+            <td>Revised Profit</td>
+            <td>
+                <label id="lblRevisedProfit"></label>
+            </td>
+            <td>Revised Markup</td>
+            <td>
+                <label id="lblRevisedMarkup"></label>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
